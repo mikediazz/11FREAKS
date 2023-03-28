@@ -1,0 +1,65 @@
+﻿<Window x:Class="_11FREAKS.Presentacion.Inicio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_11FREAKS.Presentacion"
+        mc:Ignorable="d"
+        Title="11 FREAKS" Height="600" Width="1000" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Icon="/Resources/Logo11Freaks.png" ResizeMode="NoResize">
+
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/bgStadium.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Image x:Name="logo" Source="/Resources/Logo11Freaks.png" Margin="726,164,92,264">
+            <Image.ToolTip>
+                <ToolTip Content="Desarrollado Por Miguel Díaz Osa sin fines lucrativos"/>
+            </Image.ToolTip>
+        </Image>
+        
+        <Image x:Name="iconoUsuario" Source="/Resources/iconoUsuario.png" Margin="410,58,420,362"/>
+
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Center" Margin="0,257,0,0" TextWrapping="Wrap" Text="RetroSlasher" VerticalAlignment="Top" Width="230" Height="40" FontSize="25">
+            <TextBox.ToolTip>
+                <ToolTip Content="Introduzca Nombre Usuario"/>
+            </TextBox.ToolTip>
+        </TextBox>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Center" Margin="0,337,0,0"  VerticalAlignment="Top" RenderTransformOrigin="0.542,-2.225" Width="230" Height="40" FontSize="25">
+            <PasswordBox.ToolTip>
+                <ToolTip Content="Introduzca Su Contraseña"/>
+            </PasswordBox.ToolTip>
+        </PasswordBox>
+        <Label Content="USUARIO" Foreground="White" HorizontalAlignment="Left" Margin="245,257,0,0" VerticalAlignment="Top" Width="150" Height="40" FontSize="18" FontWeight="Bold">
+            <Label.ToolTip>
+                <ToolTip Content="El Usuario Tendrá una longitud máxima de 20 caracteres"/>
+            </Label.ToolTip>
+        </Label>
+        <Label Content="CONTRASEÑA" Foreground="White" HorizontalAlignment="Left" Margin="240,337,0,0" VerticalAlignment="Top" Width="160" Height="40" FontSize="18" FontWeight="Bold">
+            <Label.ToolTip>
+                <ToolTip Content="Longitud Mínima Contraseña será de 7 caracteres, y contendrá al menos 1 Mayúscula y un Número"/>
+            </Label.ToolTip>
+        </Label>
+        <Button x:Name="btnInicioSesion" Content="INICIAR SESIÓN" Margin="325,415,327,0" VerticalAlignment="Top" Height="44" FontSize="16" FontWeight="Bold" Click="btnInicioSesion_Click">
+
+        </Button>
+
+        <Button x:Name="btnRegistrarse" Content="REGÍSTRATE" HorizontalAlignment="Left" Margin="738,420,0,0" VerticalAlignment="Top" Height="37" Width="170" FontWeight="Bold" Click="btnRegistrarse_Click">
+            <Button.ToolTip>
+                <ToolTip Content="Introduzca Su Contraseña"/>
+            </Button.ToolTip>
+        </Button>
+        <Label Content="¿NO TIENES CUENTA?" HorizontalAlignment="Left" Margin="755,389,0,0" VerticalAlignment="Top" Width="135" Height="28" FontStyle="Italic" Foreground="White">
+            <Label.ToolTip>
+                <ToolTip Content="Longitud Mínima Contraseña será de 7 caracteres"/>
+            </Label.ToolTip>
+        </Label>
+
+        <Image x:Name="foto"  HorizontalAlignment="Left"  Height="200" Width="200" VerticalAlignment="Center" Margin="75,0,0,0" />
+        <Label Content="*NOTA* ADMINISTRADOR CONTRASEÑA--> 1234" Visibility="Collapsed" HorizontalAlignment="Left" Margin="25,168,0,0" VerticalAlignment="Top" Height="45" Width="350" Foreground="White" FontSize="15"/>
+
+
+    </Grid>
+</Window>

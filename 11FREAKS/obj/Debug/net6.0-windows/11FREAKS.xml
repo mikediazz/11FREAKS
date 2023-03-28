@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>11FREAKS</name>
+    </assembly>
+    <members>
+        <member name="T:_11FREAKS.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.Conectar(System.String,System.String)">
+            <summary>
+                Función Para Hacer Conexión a BBDD
+            </summary>
+            <param name="usuario">
+                Recibimos Usuario del Login o Para Hacer Consulta
+            </param>
+            <param name="contraseña"></param>
+                Recibimos la Contraseña del Usuario
+            <returns>
+                Devuelve un Booleano dependiendo del Resultado
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.CompruebaPermisos">
+            <summary>
+                Método para Comprobar los Permisos de un Usuario
+            </summary>
+            <returns>
+                Devuelve Si Un Usuario es Admin
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.DevuelveUsuario">
+            <summary>
+                Método para obtener Usuario actual
+            </summary>
+            <returns>
+                Devuelve Nombre Usuario actual
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.DevuelveEquipoFav">
+            <summary>
+                Método para obtener Equipo Favorito del Usuario
+            </summary>
+            <returns>
+                Devuelve ID Equipo Favorito del Usuario actual
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.CompruebaPassword(System.String,System.String)">
+            <summary>
+                Método para Comprobar que la Contraseña es Segura 
+            </summary>
+            <param name="password">
+                Recibimos la Contraseña del Usuario
+            </param>
+            <returns>
+                Devuelve si cumple los requisitos mínimos de seguridad
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.CrearUsuario(System.String,System.String,System.String)">
+            <summary>
+                Método para crer Usuario (SIGN UP)
+            </summary>
+            <param name="usuario">
+                Recibimos Usuario del Login o Para Hacer Consulta
+            </param>
+            <param name="contraseña">
+                Recibimos Contraseña del Usuario
+            </param>
+            <param name="idEquipo">
+                Recibimos id Equipo Favorito (PUEDE SER NULO)
+            </param>
+            <returns>
+                Devuelve un Booleano con el Resultado de la Operación
+                <see cref="T:System.Boolean"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.CrearUsuario(System.String,System.String,System.Boolean,System.String)">
+             <summary>
+                 Función Para Crear Usuario (TIPO ADMINISTRADOR)
+             </summary>
+             <param name="usuario">
+                 Recibimos Usuario del Login o Para Hacer Consulta
+             </param>
+             <param name="contraseña"></param>
+                 Recibimos la Contraseña del Usuario
+            
+             <param name="admin"></param>
+                 Recibimos si el Usuario es Administrador
+                 
+             <param name="idEquipo"></param>
+                 Recibimos el Id de su Equipo Favorito (en caso de que tenga)
+             <returns>
+                 Devuelve un Booleano con el Resultado de la Operación
+                 <see cref="T:System.Boolean"/>
+             </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.BorrarUsuario(System.String)">
+            <summary>
+                Función Para Borrar Usuario
+            </summary>
+            <param name="usuario">
+                Recibimos Usuario  Para Hacer Borrado
+            </param>
+            <returns>
+                Devuelve un Booleano con el Resultado de la Operación
+                <see cref="T:System.Boolean"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.ConsultaUsuarios">
+             <summary>
+                 Función Para Mostrar Todos los Usuarios Registrados
+             </summary>
+            <returns>
+                 Devuelve un ArrayList con todos los Usuario Registrados
+                 <see cref="T:System.Collections.ArrayList"/>
+             </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.BorrarDatosEquipos">
+            <summary>
+                Función Para Borrar los Datos Desactualizados de los Equipos
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.CargarDatosEquipos(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+                Función Para Cargar los Datos Actualizados de los Equipos
+            </summary>
+            <param name="id">Recibimos el Identificador del Equipo</param>
+            <param name="nombre">Recibimos el Nombre del Equipo</param>
+            <param name="año">Recibimos el Año de Fundación del Equipo</param>
+            <param name="logo">Recibimos la ruta del Logo del Equipo</param>
+            <param name="estadio">Recibimos el Estadio del Equipo</param>  
+            <param name="ciudad">Recibimos la Ciudad del Equipo</param>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.BuscarEquipo(System.String)">
+            <summary>
+                Función Para Buscar Datos de un Equipo
+            </summary>
+            <param name="nombre">
+                Recibimos el Nombre del Equipo
+            </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.MiInfoEquipo(System.String)">
+            <summary>
+                Función Para Obtener información de la BD de un Equipo
+            </summary>
+            <param name="id">
+                Recibimos Id del Equipo a Consultar
+            </param>
+            <returns>
+                Devuelve Objeto Equipo, o Nulo en su defecto
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.CambiarEquipo(System.String,System.String)">
+            <summary>
+                Función Para Obtener información de la BD de un Equipo
+            </summary>
+            <param name="id">
+                Recibimos Id del Equipo a Consultar
+            </param>
+            <returns>
+                Devuelve Objeto Equipo, o Nulo en su defecto
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.ConsultaEquipos">
+             <summary>
+                 Función Para Mostrar Todos los Equipos
+             </summary>
+            <returns>
+                 Devuelve un ArrayList con todos los Equipos
+                 <see cref="T:System.Collections.ArrayList"/>
+             </returns>
+        </member>
+        <member name="T:_11FREAKS.Presentacion.BusquedaUsuarios">
+            <summary>
+            Clase Interacción con BusquedaUsuarios.xaml || Control Personalizado para la Busqueda de Usuarios Registrados
+            </summary>
+            <summary>
+            BusquedaUsuarios
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.BusquedaUsuarios.btnBuscar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Vinculada al Botón Buscar
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.BusquedaUsuarios.MenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Gestiona Interacción con Elementos de ListBox Usuarios --> Permite Borrado de Usuarios
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.BusquedaUsuarios.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:_11FREAKS.Presentacion.GestionUsuarios">
+            <summary>
+            Clase GestionUsuarios.xaml || Tiene la función de administrar usuarios (SOLO ACCESIBLE POR ADMINISTRADORES) 
+            </summary>
+            <summary>
+            GestionUsuarios
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.GestionUsuarios.btnRegistrarse_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Asociada al Botón "CREAR USUARIO" de la ventana de Registro
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.GestionUsuarios.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:_11FREAKS.Presentacion.Inicio">
+            <summary>
+            Clase Interacción Inicio.xaml || Es la ventana de Login (PODREMOS CREAR USUARIO O INICIAR SESIÓN)
+            </summary>
+            <summary>
+            Inicio
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Inicio.btnInicioSesion_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función  Vinculada al Botón Iniciar Sesión --> Nos Envía a la Ventana "PRINCIPAL"
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Inicio.btnRegistrarse_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Vinculada al Botón Registrarse --> Nos Envía a la Ventana "REGISTRO"
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Inicio.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Para Dar la Bienvenida al Usuario
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Inicio.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:_11FREAKS.Presentacion.MiEquipo">
+            <summary>
+            Lógica de interacción para MiEquipo.xaml
+            </summary>
+            <summary>
+            MiEquipo
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.MiEquipo.menuInicio_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Deprecated
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.MiEquipo.menuCerrarSesion_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Método Para Volver al Inicio (Login)
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.MiEquipo.menuPlantilla_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Método Vinculado al Botón Plantilla
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.MiEquipo.MenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Oculta Listbox
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.MiEquipo.miListBox_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Método Controla el Indice de Lista en Plantilla para Mostrar su Foto
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.MiEquipo.menuEstadisticasEquipo_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Método Vinculado al Botón Estadiísticas Equipo
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.MiEquipo.MenuItem_Click_1(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Método Para Ocultar Vistas de Estadísticas de Equipo
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.MiEquipo.MenuItem_Click_2(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Método Para Ocultar Vistas de Plantilla
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.MiEquipo.menuLesiones_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Método Vinculado al Botón Lesiones Reportadas
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.MiEquipo.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:_11FREAKS.Presentacion.Principal">
+            <summary>
+            Clase Interacción con Principal.xaml || Ventana Principal del Proyecto
+            </summary>
+            <summary>
+            Principal
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.DevuelveIncio">
+            <summary>
+                Función Retorna Ventana Incio
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.menuConsultarUsuarios_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Vinculada al Botón Consultar Usuario
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.menuAñadirAdmin_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Vinculada al Botón Añadir Admin
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.menuCerrarSesion_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Vinculada al Botón Cerrar Sesión
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.menuVerClasificacion_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Vinculada al Botón Ver Clasificación
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.menuMaximosGoleadores_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Vinculada al Botón Máximos Goleadores
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.menuMaximosAsistentes_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Vinculada al Botón Máximos Asistentes
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.menuMaximosRojas_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Vinculada al Botón Máximos Expulsados
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.menuMaximosAmarillas_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Vinculada al Botón Top Amarillas
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.MenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Oculta Vistas Clasificación
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.menuVerEquipo_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Nos Envía a ventana MiEquipo
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.menuSalir_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Vinculada al Botón Salir
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Principal.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:_11FREAKS.Presentacion.RegistroUsuario">
+            <summary>
+            Lógica de interacción para RegistroUsuario.xaml
+            </summary>
+            <summary>
+            RegistroUsuario
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.RegistroUsuario.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:_11FREAKS.Resources.Resource1">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.adminLogo">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.Ayuda11Freaks">
+            <summary>
+              Busca un recurso adaptado de tipo System.Byte[].
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.bgStadium">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.campoFutbol">
+            <summary>
+              Busca un recurso adaptado de tipo System.Byte[].
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.fondoLogin">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.fondoMain">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.freaksBBDD">
+            <summary>
+              Busca un recurso adaptado de tipo System.Byte[].
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.iconoUsuario">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.Logo11Freaks">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

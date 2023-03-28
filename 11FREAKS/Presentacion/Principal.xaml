@@ -1,0 +1,161 @@
+﻿<Window x:Class="_11FREAKS.Presentacion.Principal"
+        xmlns:uc="clr-namespace:_11FREAKS.Presentacion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_11FREAKS.Presentacion"
+        mc:Ignorable="d"
+        Title="Principal" Height="700" Width="1200" Closed="Window_Closed" WindowState="Maximized" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Resources/Logo11Freaks.png">
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/fondoMain.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Image x:Name="logo" Source="/Resources/Logo11Freaks.png" Margin="606,50,-6,184" Width="200" Height="200" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <Image.ToolTip>
+                <ToolTip Content="Desarrollado Por Miguel Díaz Osa sin fines lucrativos"/>
+            </Image.ToolTip>
+        </Image>
+
+
+
+        <Menu Width="Auto" Height="50" Background="ForestGreen" VerticalAlignment="Top">
+            <MenuItem x:Name="menuInicio" Header="INICIO" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White">
+                <MenuItem x:Name="menuCerrarSesion" Header="CERRAR SESIÓN" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCerrarSesion_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="CERRAR SESIÓN Y SALIR A PANTALLA INCIO"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuSalir" Header="SALIR" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuSalir_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="SALIR DE 11FREAKS"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+
+
+            <MenuItem x:Name="menuMiEquipo" Header="MI EQUIPO" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuMiEquipo_Click">
+                <MenuItem x:Name="menuCambiarMiEquipo" Header="CAMBIAR MI EQUIPO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCambiarMiEquipo_Click" >
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="CAMBIA TU EQUIPO FAVORITO"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuVerEquipo" Header="IR A MI EQUIPO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuVerEquipo_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="CONSULTA ESTADÍSTICAS Y DATOS DE TU EQUIPO FAVORITO"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+
+
+            <MenuItem x:Name="menuClasificacion" Header="CLASIFICACIÓN" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" >
+                <MenuItem x:Name="menuVerClasificacion" Header="VER CLASIFICACIÓN" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuVerClasificacion_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="ECHA UN VISTAZO A COMO LA LIGA"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuMaximosGoleadores" Header="TOP GOLEADORES" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuMaximosGoleadores_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="ESTOS SON LOS GOLEADORES DE LA LIGA"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuMaximosAsistentes" Header="TOP ASISTENTES" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuMaximosAsistentes_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="ESTOS SON LOS MAYORES ASISTENTES DE LA LIGA"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuMaximosRojas" Header="TOP EXPULSADOS" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuMaximosRojas_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="ESTOS SON LOS JUGADOERS MÁS EXPULSADOS DE LA LIGA"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuMaximosAmarillas" Header="TOP AMARILLAS" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuMaximosAmarillas_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="ESTOS SON LOS JUGADOERS CON MÁS AMARILLAS DE LA LIGA"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+
+
+            <MenuItem x:Name="menuAjustes" Header="AJUSTES" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White">
+                <MenuItem.ToolTip>
+                    <ToolTip Content="ACCEDE A LA CONFIGURACIÓN DE 11FREAKS"/>
+                </MenuItem.ToolTip>
+                <MenuItem x:Name="menuOcultarLogo" Header="OCULTAR LOGO 11FREAKS" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuOcultarLogo_Click" >
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="OCULTE EL LOGO DE 11FREAKS"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+
+            <MenuItem x:Name="menuAyuda" Header="AYUDA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuAyuda_Click">
+                <MenuItem.ToolTip>
+                    <ToolTip Content="AQUÍ PODRÁS ENCONTRAR LA AYUDA QUE NECESITAS"/>
+                </MenuItem.ToolTip>
+            </MenuItem>
+
+
+            <MenuItem  x:Name="menuOpcAdmin" Header="OPCIONES ADMIN"  FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" IsEnabled="False" Visibility="Hidden">
+                <MenuItem x:Name="menuAñadirAdmin" Header="AÑADIR ADMIN" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuAñadirAdmin_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="OTORGUE PERMISOS DE ADMINISTRADOR A UN USUARIO"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuCrearUsuario" Header="CREAR USUARIO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="CREE UN USUARIO"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuConsultarUsuarios" Header="CONSULTAR USUARIOS" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuConsultarUsuarios_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="HAGA CONSULTA GENÉRICO O INDIVIDUALIZADA DE LOS USUARIOS"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+
+        </Menu>
+
+
+
+
+
+
+
+
+
+        <Expander x:Name="expanderUsers" ExpandDirection="Left" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="0" Background="Gray" Visibility="Hidden">
+            <Expander.Header>
+                <TextBlock Text="Búsqueda Usuarios" VerticalAlignment="Center" FontSize="12" FontWeight="Bold">
+                    <TextBlock.LayoutTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.LayoutTransform></TextBlock>
+            </Expander.Header>
+
+            <uc:BusquedaUsuarios x:Name="control"/>
+        </Expander>
+
+        <Label x:Name="indicadorLbox" Content="" Visibility="Visible"  Margin="300,132,700,514" Height="38" Width="500" FontWeight="Black" FontSize="20" Foreground="White"/>
+        <ListBox x:Name="miListBox" Visibility="Hidden" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800" Height="350" SelectionChanged="miListBox_SelectionChanged">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="OCULTAR" Click="MenuItem_Click"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+            <ListBox.ToolTip>
+                <ToolTip Content="PUEDE OCULTAR ESTA VISTA PULSANDO CLICK DERECHO, O BUSCAR INFORMACIÓN DESDE CLASIFICACIÓN"/>
+            </ListBox.ToolTip>
+        </ListBox>
+        
+        
+
+
+    </Grid>
+</Window>
