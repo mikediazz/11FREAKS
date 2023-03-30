@@ -14,7 +14,7 @@ namespace _11FREAKS.Datos
 {
     internal class API_FOOTBALL
     {
-        
+        /*
         private async Task<string> VerPlantilla(object sender, RoutedEventArgs e)
         {
 
@@ -80,6 +80,6 @@ namespace _11FREAKS.Datos
                 timeout: 5000,
                 buttons: MessageBoxButtons.OK);
             }
-        }
+        }*/
     }
 }

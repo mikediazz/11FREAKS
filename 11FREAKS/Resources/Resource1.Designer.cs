@@ -61,6 +61,16 @@ namespace _11FREAKS.Resources {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        public static byte[] _60s_Scoreboard {
+            get {
+                object obj = ResourceManager.GetObject("_60s_Scoreboard", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap adminLogo {

@@ -22,7 +22,7 @@
         
         <Image x:Name="iconoUsuario" Source="/Resources/iconoUsuario.png" Margin="410,58,420,362"/>
 
-        <TextBox x:Name="txtUsuario" HorizontalAlignment="Center" Margin="0,257,0,0" TextWrapping="Wrap" Text="RetroSlasher" VerticalAlignment="Top" Width="230" Height="40" FontSize="25">
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Center" Margin="0,257,0,0" TextWrapping="Wrap" Text="RetroSlasher" VerticalAlignment="Top" Width="230" Height="40" FontSize="25" >
             <TextBox.ToolTip>
                 <ToolTip Content="Introduzca Nombre Usuario"/>
             </TextBox.ToolTip>
