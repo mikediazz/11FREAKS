@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\60s Scoreboard.ttf" />
     <None Remove="Resources\adminLogo.png" />
     <None Remove="Resources\Ayuda11Freaks.pdf" />
     <None Remove="Resources\bgStadium.jpg" />
@@ -42,6 +43,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\60s Scoreboard.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\adminLogo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

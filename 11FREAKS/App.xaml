@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:_11FREAKS"
              StartupUri="/Presentacion/Inicio.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="Marcador">/Resources/60s Scoreboard.ttf#60s Scoreboard</FontFamily> 
     </Application.Resources>
 </Application>

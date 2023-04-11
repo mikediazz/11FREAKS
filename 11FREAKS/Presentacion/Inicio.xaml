@@ -8,6 +8,19 @@
         Title="11 FREAKS" Height="600" Width="1000" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Icon="/Resources/Logo11Freaks.png" ResizeMode="NoResize">
 
 
+    <Window.Resources>
+        <Style x:Key="estiloMarcador" TargetType="Label">
+            <Setter Property="FontFamily" Value="60s Scoreboard"/>
+            <Setter Property="Background" Value="Black" />
+            <Setter Property="Foreground" Value="Red" />
+            <Setter Property="FontSize" Value="70" />
+            <Setter Property="Padding" Value="8" />
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+
+
     <Grid>
 
         <Grid.Background>
@@ -59,6 +72,7 @@
 
         <Image x:Name="foto"  HorizontalAlignment="Left"  Height="200" Width="200" VerticalAlignment="Center" Margin="75,0,0,0" />
         <Label Content="*NOTA* ADMINISTRADOR CONTRASEÑA--> 1234" Visibility="Collapsed" HorizontalAlignment="Left" Margin="25,168,0,0" VerticalAlignment="Top" Height="45" Width="350" Foreground="White" FontSize="15"/>
+        <Label x:Name="lblMarcador" Content="RMA 2-1 ATM" Margin="40,28,355,395" Style="{StaticResource estiloMarcador}" Visibility="Hidden" />
 
 
     </Grid>

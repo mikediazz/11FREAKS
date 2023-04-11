@@ -6,6 +6,12 @@
         xmlns:local="clr-namespace:_11FREAKS.Presentacion"
         mc:Ignorable="d"
         Title="MiEquipo" Height="700" Width="1200" Icon="/Resources/Logo11Freaks.png" WindowState="Maximized" ResizeMode="NoResize">
+
+    <Window.Resources>
+        
+    </Window.Resources>
+    
+    
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/campoFutbol.avif" Stretch="UniformToFill"/>
