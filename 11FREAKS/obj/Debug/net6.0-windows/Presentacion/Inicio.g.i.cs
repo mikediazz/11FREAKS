@@ -117,7 +117,7 @@ namespace _11FREAKS.Presentacion {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/11FREAKS;V1.0.0.0;component/presentacion/inicio.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/11FREAKS;component/presentacion/inicio.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Presentacion\Inicio.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

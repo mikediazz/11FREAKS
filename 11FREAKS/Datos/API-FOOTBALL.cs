@@ -14,8 +14,8 @@ namespace _11FREAKS.Datos
 {
     internal class API_FOOTBALL
     {
-        /*
-        private async Task<string> VerPlantilla(object sender, RoutedEventArgs e)
+        
+       /* internal async Task<string> VerPlantilla(object sender, RoutedEventArgs e)
         {
 
             string respuesta;

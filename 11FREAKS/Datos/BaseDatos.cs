@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Markup;
 using System.Collections;
+using System.Security.Cryptography;
 
 namespace _11FREAKS.Datos
 {
@@ -44,6 +45,26 @@ namespace _11FREAKS.Datos
             bool conDisponible = false;
 
 
+
+            string hash = String.Empty;
+
+            
+            using (SHA256 sha256 = SHA256.Create())         // Inicializamos a SHA256 la Contraseña de Login
+            {
+                byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(contraseña));      //Hasheo
+
+                foreach (byte b in hashValue)       //Convertimos Hash de Byte[] -> String
+                {
+                    hash += $"{b:X2}";
+                }
+            }
+
+
+
+           
+
+
+
             if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
             {
                 conexion.Close();
@@ -52,7 +73,7 @@ namespace _11FREAKS.Datos
             {     
                 if (conexion == null){
                     conexion = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
-                    comando = new SQLiteCommand("SELECT * FROM Usuarios WHERE Usuario='" + usuario + "' and Password='" + contraseña + "'", conexion);
+                    comando = new SQLiteCommand("SELECT * FROM Usuarios WHERE Usuario='" + usuario + "' and Password='" + hash + "'", conexion);
                     
                     conexion.Open();
                     lector = comando.ExecuteReader();
@@ -166,7 +187,7 @@ namespace _11FREAKS.Datos
 
 
             ///////////////////COMPROBACIÓN CONTRASEÑA///////////////////
-            if (password.Length > 7)
+            if (password.Length > 6)
             {                       //COMPRUEBA LONGITUD MÍNIMA
                 for (int i = 0; i < password.Length; i++)
                 {
@@ -232,7 +253,7 @@ namespace _11FREAKS.Datos
 
 
         /// <summary>
-        ///     Método para crer Usuario (SIGN UP)
+        ///     Método para crer Usuario (SIGN UP) --> Encriptamos Contraseña
         /// </summary>
         /// <param name="usuario">
         ///     Recibimos Usuario del Login o Para Hacer Consulta
@@ -251,12 +272,31 @@ namespace _11FREAKS.Datos
         {
             bool conDisponible = false;
 
+
+            //////// HASHEO PASSWORD ////////
+            string hash = String.Empty;
+
+            using (SHA256 sha256 = SHA256.Create())         // Inicializamos SHA256
+            {
+                byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(contraseña));  //Hasheamos Password
+
+                foreach (byte b in hashValue) //Convertimos el Hash de Byte[] -> String
+                {
+                    hash += $"{b:X2}";
+                }
+            }
+
+           // MessageBox.Show("EL HASH DE LA CONTRASEÑA ES -->"+hash);
+
+
+
+
             try
             {
                 if (conexion2 == null)
                 {
                     conexion2 = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
-                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" +usuario+ "' , '" +contraseña+ "', 'false', '"+idEquipo+"'); ", conexion2);
+                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" +usuario+ "' , '" +hash+ "', 'false', '"+idEquipo+"'); ", conexion2);
 
                     conexion2.Open();
                     MessageBox.Show(comando2.ExecuteNonQuery().ToString());
@@ -277,6 +317,8 @@ namespace _11FREAKS.Datos
             {
                 MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
             }
+
+
 
             return conDisponible;
         }
@@ -305,12 +347,33 @@ namespace _11FREAKS.Datos
         public bool CrearUsuario(string usuario, string contraseña, bool admin, string idEquipo)     //MÉTODO PARA CREAR ADMIN
         {
             bool conDisponible = false;
+
+
+            //////// HASHEO PASSWORD ////////
+            string hash = String.Empty;
+
+            using (SHA256 sha256 = SHA256.Create())         // Inicializamos SHA256
+            {
+                byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(contraseña));  //Hasheamos Password
+
+                foreach (byte b in hashValue) //Convertimos el Hash de Byte[] -> String
+                {
+                    hash += $"{b:X2}";
+                }
+            }
+
+
+
+
+
+
+
             try
             {
                 if (conexion2 == null)
                 {
                     conexion2 = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
-                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" + usuario + "' , '" + contraseña + "', '"+admin+"', '"+idEquipo+"'); ", conexion2);
+                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" + usuario + "' , '" + hash + "', '"+admin+"', '"+idEquipo+"'); ", conexion2);
 
                     conexion2.Open();
                     MessageBox.Show(comando2.ExecuteNonQuery().ToString());
