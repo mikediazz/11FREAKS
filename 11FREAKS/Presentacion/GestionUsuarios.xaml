@@ -24,12 +24,12 @@
                 <ToolTip Content="Introduzca Contraseña Que Desee Tener"/>
             </PasswordBox.ToolTip>
         </PasswordBox>
-        <Label Content="USUARIO" HorizontalAlignment="Left" Margin="320,121,0,0" VerticalAlignment="Top" Width="80" Height="28" FontWeight="Bold">
+        <Label x:Name="lbl1" Content="USUARIO" HorizontalAlignment="Left" Margin="320,121,0,0" VerticalAlignment="Top" Width="290" Height="28" FontWeight="Bold">
             <Label.ToolTip>
                 <ToolTip Content="El Usuario Tendrá una longitud máxima de 20 caracteres"/>
             </Label.ToolTip>
         </Label>
-        <Label Content="CONTRASEÑA" HorizontalAlignment="Left" Margin="320,189,0,0" VerticalAlignment="Top" Width="95" Height="28" FontWeight="Bold">
+        <Label x:Name="lbl2" Content="CONTRASEÑA" HorizontalAlignment="Left" Margin="320,186,0,0" VerticalAlignment="Top" Width="225" Height="28" FontWeight="Bold">
             <Label.ToolTip>
                 <ToolTip Content="Longitud Mínima Contraseña será de 7 caracteres"/>
             </Label.ToolTip>
@@ -45,7 +45,7 @@
                 <ToolTip Content="Introduzca Dirección de Correo Válida"/>
             </TextBox.ToolTip>
         </TextBox>
-        <Label x:Name="lblEmail" Content="EMAIL" HorizontalAlignment="Left" Margin="320,251,0,0" VerticalAlignment="Top" Width="95" Height="28" FontWeight="Bold">
+        <Label x:Name="lbl3" Content="EMAIL" HorizontalAlignment="Left" Margin="320,248,0,0" VerticalAlignment="Top" Width="235" Height="28" FontWeight="Bold">
             <Label.ToolTip>
                 <ToolTip Content="Email de Contacto"/>
             </Label.ToolTip>

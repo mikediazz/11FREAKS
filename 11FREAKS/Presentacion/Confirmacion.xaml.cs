@@ -21,11 +21,17 @@ namespace _11FREAKS.Presentacion
     public partial class Confirmacion : Window
     {
         Principal principal;
+        GestionUsuarios gestion;
         bool respuesta;
         public Confirmacion(Principal prin)
         {
             InitializeComponent();
             principal = prin;
+        }
+        public Confirmacion(GestionUsuarios gest)
+        {
+            InitializeComponent();
+            gestion = gest;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

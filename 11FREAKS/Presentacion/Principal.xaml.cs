@@ -125,7 +125,7 @@ namespace _11FREAKS.Presentacion
         /// </summary>
         private void menuAñadirAdmin_Click(object sender, RoutedEventArgs e)
         {
-            GestionUsuarios gesUsers = new GestionUsuarios(this);
+            GestionUsuarios gesUsers = new GestionUsuarios(this,miBaseDatos,1);     //CASO DE USO PARA AÑADIR ADMIN
             this.Hide();
             gesUsers.ShowDialog();
         }
@@ -597,16 +597,14 @@ namespace _11FREAKS.Presentacion
 
         private void menuCambiarUsuario_Click(object sender, RoutedEventArgs e)
         {
-            Confirmacion confirmacion = new Confirmacion(this);
-            confirmacion.ShowDialog();
-            confirmacion.DevuelveRespuesta();           //OBTENEMOS RESPUESTA DE CONFIRMACIÓN
+            GestionUsuarios gest = new GestionUsuarios(this,miBaseDatos, 2);
+            gest.ShowDialog();
         }
 
         private void menuCambiarContraseña_Click(object sender, RoutedEventArgs e)
         {
-            Confirmacion confirmacion = new Confirmacion(this);
-            confirmacion.ShowDialog();
-            confirmacion.DevuelveRespuesta();           //OBTENEMOS RESPUESTA DE CONFIRMACIÓN
+            GestionUsuarios gest = new GestionUsuarios(this,miBaseDatos, 3);
+            gest.ShowDialog();
         }
 
         private void menuBorrarCuenta_Click(object sender, RoutedEventArgs e)
@@ -635,8 +633,6 @@ namespace _11FREAKS.Presentacion
 
             }
              
-
-
         }
 
     }

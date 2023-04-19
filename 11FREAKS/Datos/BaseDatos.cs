@@ -494,7 +494,7 @@ namespace _11FREAKS.Datos
                     comando2 = new SQLiteCommand("DELETE from Usuarios Where Usuario = '" + usuario + "' ; ", conexion2);
 
                     conexion2.Open();
-                    MessageBox.Show(comando2.ExecuteNonQuery().ToString());
+                    comando2.ExecuteNonQuery().ToString();          //MessageBox?
                     conexion2.Close();
 
 
@@ -879,6 +879,55 @@ namespace _11FREAKS.Datos
 
 
 
+
+
+        public void CambiarContraseña(string nuevaPass)
+        {
+            if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+
+            //////// HASHEO PASSWORD ////////
+            string hash = String.Empty;
+
+            using (SHA256 sha256 = SHA256.Create())         // Inicializamos SHA256
+            {
+                byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(nuevaPass));  //Hasheamos Password
+
+                foreach (byte b in hashValue) //Convertimos el Hash de Byte[] -> String
+                {
+                    hash += $"{b:X2}";
+                }
+            }
+
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
+                    comando = new SQLiteCommand("UPDATE Usuarios SET Password='" + hash + "' WHERE Usuario='" + nomusuario + "'", conexion);
+
+                    conexion.Open();                                                                         //CARGAMOS TODOS LOS DATOS ACTUALIZADOSs
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show("HAS CAMBIADO TU CONTRASEÑA");
+
+                }
+                else
+                {
+                    MessageBox.Show("*NO SE PUDO COMPLETAR LA OPERACIÓN*");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+        }
 
 
 

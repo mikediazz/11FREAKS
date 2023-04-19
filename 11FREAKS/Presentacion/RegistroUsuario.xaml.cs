@@ -150,7 +150,7 @@ namespace _11FREAKS.Presentacion
                 }
 
                 var mensajeTemporal = AutoClosingMessageBox.Show(
-                text: "HA SIDO CREADO ACTUALIZADOS A DÍA " + DateTime.Now.ToString(),
+                text: "PLANTILLAS ACTUALIZADAS A DÍA " + DateTime.Now.ToString(),
                 caption: "EQUIPO DE 11FREAKS",
                 timeout: 2500,
                 buttons: MessageBoxButtons.OK);
@@ -166,19 +166,19 @@ namespace _11FREAKS.Presentacion
 
         private void listBoxEquipos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var mensajeTemporal = AutoClosingMessageBox.Show(
+            /*var mensajeTemporal = AutoClosingMessageBox.Show(
             text: "INDICE SELECCIONADO "+listBoxEquipos.SelectedIndex,
             caption: "EQUIPO DE 11FREAKS",
             timeout: 2500,
-            buttons: MessageBoxButtons.OK);
+            buttons: MessageBoxButtons.OK);*/
 
             idEquipo= miBaseDatos.BuscarEquipo(listBoxEquipos.Items[listBoxEquipos.SelectedIndex].ToString());
 
-            var mensajeTemporal2 = AutoClosingMessageBox.Show(
+            /*var mensajeTemporal2 = AutoClosingMessageBox.Show(
             text: listBoxEquipos.Items[listBoxEquipos.SelectedIndex].ToString(),
             caption: "EQUIPO DE 11FREAKS",
             timeout: 2500,
-            buttons: MessageBoxButtons.OK);
+            buttons: MessageBoxButtons.OK);*/
 
 
         }
