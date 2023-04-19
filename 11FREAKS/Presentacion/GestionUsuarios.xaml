@@ -14,32 +14,42 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="txtUsuario" HorizontalAlignment="Center" Margin="0,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="22">
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Center" Margin="0,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="22">
             <TextBox.ToolTip>
                 <ToolTip Content="Introduzca Nombre Usuario Que Desee Tener"/>
             </TextBox.ToolTip>
         </TextBox>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Center" Margin="0,251,0,0"  VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.542,-2.225" Height="22">
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Center" Margin="0,214,0,0"  VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.542,-2.225" Height="22">
             <PasswordBox.ToolTip>
                 <ToolTip Content="Introduzca Contraseña Que Desee Tener"/>
             </PasswordBox.ToolTip>
         </PasswordBox>
-        <Label Content="USUARIO" HorizontalAlignment="Left" Margin="320,158,0,0" VerticalAlignment="Top" Width="80" Height="28" FontWeight="Bold">
+        <Label Content="USUARIO" HorizontalAlignment="Left" Margin="320,121,0,0" VerticalAlignment="Top" Width="80" Height="28" FontWeight="Bold">
             <Label.ToolTip>
                 <ToolTip Content="El Usuario Tendrá una longitud máxima de 20 caracteres"/>
             </Label.ToolTip>
         </Label>
-        <Label Content="CONTRASEÑA" HorizontalAlignment="Left" Margin="320,226,0,0" VerticalAlignment="Top" Width="95" Height="28" FontWeight="Bold">
+        <Label Content="CONTRASEÑA" HorizontalAlignment="Left" Margin="320,189,0,0" VerticalAlignment="Top" Width="95" Height="28" FontWeight="Bold">
             <Label.ToolTip>
                 <ToolTip Content="Longitud Mínima Contraseña será de 7 caracteres"/>
             </Label.ToolTip>
         </Label>
-        <Button x:Name="btnRegistrarAdmin" Content="CREAR ADMINISTRADOR" Margin="320,299,320,0" VerticalAlignment="Top" Height="45" FontSize="12" FontWeight="Bold" Click="btnRegistrarse_Click">
+        <Button x:Name="btnRegistrarAdmin" Content="CREAR ADMINISTRADOR" Margin="560,187,80,0" VerticalAlignment="Top" Height="45" FontSize="12" FontWeight="Bold" Click="btnRegistrarse_Click">
             <Button.ToolTip>
                 <ToolTip Content="PULSE PARA CREAR SU CUENTA"/>
             </Button.ToolTip>
         </Button>
-        <Image Source="/Resources/adminLogo.png" HorizontalAlignment="Left" Height="100" Margin="354,53,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.05,0.1"/>
+        <Image Source="/Resources/adminLogo.png" HorizontalAlignment="Left" Height="100" Margin="354,19,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.05,0.1"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Center" Margin="0,276,0,0"  VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.542,-2.225" Height="22">
+            <TextBox.ToolTip>
+                <ToolTip Content="Introduzca Dirección de Correo Válida"/>
+            </TextBox.ToolTip>
+        </TextBox>
+        <Label x:Name="lblEmail" Content="EMAIL" HorizontalAlignment="Left" Margin="320,251,0,0" VerticalAlignment="Top" Width="95" Height="28" FontWeight="Bold">
+            <Label.ToolTip>
+                <ToolTip Content="Email de Contacto"/>
+            </Label.ToolTip>
+        </Label>
 
     </Grid>
 </Window>

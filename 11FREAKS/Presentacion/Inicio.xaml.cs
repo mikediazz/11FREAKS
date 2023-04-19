@@ -39,7 +39,7 @@ namespace _11FREAKS.Presentacion
             miBaseDatos = new Datos.BaseDatos();
             if (miBaseDatos.Conectar(txtUsuario.Text, txtPassword.Password) == true)
             {
-                Principal principal = new Principal(this, miBaseDatos);
+                Principal principal = new Principal(this, miBaseDatos, txtUsuario.Text);
                 this.Hide();
                 principal.ShowDialog();
             }

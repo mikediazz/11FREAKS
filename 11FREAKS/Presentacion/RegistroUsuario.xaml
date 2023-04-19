@@ -30,7 +30,7 @@
                 <ToolTip Content="Longitud Mínima Contraseña será de 7 caracteres, Contendrá al menos una Mayúscula, y no puede contener Caracteres Especiales "/>
             </Label.ToolTip>
         </Label>
-        <Button x:Name="btnRegistrarse" Content="CREAR CUENTA" Margin="326,290,326,0" VerticalAlignment="Top" Height="44" FontSize="16" FontWeight="Bold" Click="btnRegistrarse_Click">
+        <Button x:Name="btnRegistrarse" Content="CREAR CUENTA" Margin="511,324,141,0" VerticalAlignment="Top" Height="44" FontSize="16" FontWeight="Bold" Click="btnRegistrarse_Click">
             <Button.ToolTip>
                 <ToolTip Content="PULSE PARA CREAR SU CUENTA"/>
             </Button.ToolTip>
@@ -46,7 +46,17 @@
                 <ToolTip Content="Longitud Mínima Contraseña será de 7 caracteres"/>
             </Label.ToolTip>
         </Label>
-        <TextBlock x:Name="txtRespuesta" Visibility="Hidden" HorizontalAlignment="Left" Margin="500,306,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="255" Height="105" />
+        
+        <TextBox x:Name="txtEmail" Visibility="Visible" HorizontalAlignment="Left" Margin="250,308,0,0"  VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.542,-2.225" Height="22">
+            <TextBox.ToolTip>
+                <ToolTip Content="Introduzca Dirección de Correo de contacto"/>
+            </TextBox.ToolTip>
+        </TextBox>
+        <Label Content="EMAIL" HorizontalAlignment="Left" Margin="250,280,0,0" VerticalAlignment="Top" Width="95" Height="28" FontWeight="Bold">
+            <Label.ToolTip>
+                <ToolTip Content="Introduzca un Email de contacto"/>
+            </Label.ToolTip>
+        </Label>
 
     </Grid>
 

@@ -51,6 +51,22 @@
                 Devuelve Nombre Usuario actual
             </returns>
         </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.DevuelveCorreo">
+            <summary>
+                Método para obtener Email actual
+            </summary>
+            <returns>
+                Devuelve Nombre Email actual
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BaseDatos.DevuelveCorreo(System.String)">
+            <summary>
+                Método para obtener Email de un tercero
+            </summary>
+            <returns>
+                Devuelve Nombre Email de un tercero
+            </returns>
+        </member>
         <member name="M:_11FREAKS.Datos.BaseDatos.DevuelveEquipoFav">
             <summary>
                 Método para obtener Equipo Favorito del Usuario
@@ -70,7 +86,7 @@
                 Devuelve si cumple los requisitos mínimos de seguridad
             </returns>
         </member>
-        <member name="M:_11FREAKS.Datos.BaseDatos.CrearUsuario(System.String,System.String,System.String)">
+        <member name="M:_11FREAKS.Datos.BaseDatos.CrearUsuario(System.String,System.String,System.String,System.String)">
             <summary>
                 Método para crer Usuario (SIGN UP) --> Encriptamos Contraseña
             </summary>
@@ -88,7 +104,7 @@
                 <see cref="T:System.Boolean"/>
             </returns>
         </member>
-        <member name="M:_11FREAKS.Datos.BaseDatos.CrearUsuario(System.String,System.String,System.Boolean,System.String)">
+        <member name="M:_11FREAKS.Datos.BaseDatos.CrearUsuario(System.String,System.String,System.Boolean,System.String,System.String)">
              <summary>
                  Función Para Crear Usuario (TIPO ADMINISTRADOR)
              </summary>
@@ -203,6 +219,19 @@
             </summary>
         </member>
         <member name="M:_11FREAKS.Presentacion.BusquedaUsuarios.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:_11FREAKS.Presentacion.Confirmacion">
+            <summary>
+            Lógica de interacción para Confirmacion.xaml
+            </summary>
+            <summary>
+            Confirmacion
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Confirmacion.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>

@@ -10,6 +10,9 @@
     <Compile Update="Presentacion\BusquedaUsuarios.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Presentacion\Confirmacion.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Presentacion\GestionUsuarios.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -21,7 +24,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Resources\Resource1.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Presentacion\BusquedaUsuarios.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Presentacion\Confirmacion.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Presentacion\GestionUsuarios.xaml">

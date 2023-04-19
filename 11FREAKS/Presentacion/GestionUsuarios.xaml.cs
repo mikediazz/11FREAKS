@@ -54,7 +54,7 @@ namespace _11FREAKS.Presentacion
                     caption: "EQUIPO DE 11FREAKS",
                     timeout: 1500,
                     buttons: MessageBoxButtons.OK);
-                    miBaseDatos.CrearUsuario(txtUsuario.Text, txtPassword.Password, true, null);  //CREAMOS ADMIN
+                    miBaseDatos.CrearUsuario(txtUsuario.Text, txtPassword.Password, true, null, txtEmail.Text);  //CREAMOS ADMIN
 
                     this.Hide();
                     principal.ShowDialog();

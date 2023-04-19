@@ -52,17 +52,33 @@ namespace _11FREAKS.Presentacion
                 }
                 else
                 {
-                    var mensajeTemporal = AutoClosingMessageBox.Show(
-                    text: "**USUARIO CREADO**    ID EQUIPO"+idEquipo,
-                    caption: "EQUIPO DE 11FREAKS",
-                    timeout: 1500,
-                    buttons: MessageBoxButtons.OK);
-                    miBaseDatos.CrearUsuario(txtUsuario.Text, txtPassword.Password, idEquipo);          //CREAMOS USUARIO
+                    if (CompruebaCampos() > 0)
+                    {
+                        var mensajeTemporal = AutoClosingMessageBox.Show(
+                        text: "**DEBE RELLENAR TODOS LOS CAMPOS PARA COMPLETAR EL REGISTRO**",
+                        caption: "EQUIPO DE 11FREAKS",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        miBaseDatos.CrearUsuario(txtUsuario.Text, txtPassword.Password, idEquipo, txtEmail.Text);          //CREAMOS USUARIO
 
+                        var mensajeTemporal = AutoClosingMessageBox.Show(
+                        text: "**USUARIO CREADO**    ID EQUIPO",
+                        caption: "EQUIPO DE 11FREAKS",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
 
-                    Principal principal = new Principal(inicio, miBaseDatos);
-                    this.Hide();
-                    principal.ShowDialog();
+                        Correo mailBienvenida=new Correo();                                                 //ENVIAMOS CORREO DE BIENVENIDA AL USUARIO
+                        mailBienvenida.CorreoBienvenida(txtEmail.Text);
+                        
+                        
+                        Principal principal = new Principal(inicio, miBaseDatos, txtUsuario.Text);
+                        this.Hide();
+                        principal.ShowDialog();
+                    }
+                    
                 }
 
             }
@@ -111,8 +127,6 @@ namespace _11FREAKS.Presentacion
                 {
                     response.EnsureSuccessStatusCode();
                     var body = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine(body);
-                    txtRespuesta.Text=body;
                     jsonBingMaps = JsonDocument.Parse(body);
                 }
 
@@ -168,5 +182,29 @@ namespace _11FREAKS.Presentacion
 
 
         }
+
+
+
+        private int CompruebaCampos()
+        {
+            int comprobador=0;          //VARIABLE COMPROBACIÓN REQUISITOS
+
+            if(txtUsuario==null || txtUsuario.Text == string.Empty)
+            {
+                comprobador +=1;
+            }
+            if (txtPassword == null || txtPassword.Password == string.Empty)
+            {
+                comprobador += 1;
+            }
+            if (txtEmail == null || txtEmail.Text == string.Empty)
+            {
+                comprobador += 1;
+            }
+
+            return comprobador;
+        }
+
+
     }
 }

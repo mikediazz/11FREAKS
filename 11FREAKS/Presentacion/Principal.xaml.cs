@@ -38,12 +38,16 @@ namespace _11FREAKS.Presentacion
     {
         private Datos.BaseDatos miBaseDatos;
         Inicio inicio;
+        string usuario;
+        public bool Respuesta {get;set;}
 
-        public Principal(Inicio winInicio, BaseDatos bd)                            //CONSTRUCTOR
+
+        public Principal(Inicio winInicio, BaseDatos bd, string user)                            //CONSTRUCTOR
         {
             InitializeComponent();
             inicio= winInicio;
             miBaseDatos= bd;
+            usuario = user;
 
             if (miBaseDatos.CompruebaPermisos())                        //EN CASO QUE SEA ADMIN, SE HABILITAN OPCIONES EXCLUSIVAS
             {
@@ -451,6 +455,19 @@ namespace _11FREAKS.Presentacion
 
         private void miListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var mensajeTemporal = AutoClosingMessageBox.Show(
+            text: "INDICE SELECCIONADO " + miListBox.SelectedIndex,
+            caption: "EQUIPO DE 11FREAKS",
+            timeout: 2500,
+            buttons: MessageBoxButtons.OK);
+
+            string idEquipo = miBaseDatos.BuscarEquipo(miListBox.Items[miListBox.SelectedIndex].ToString());
+
+            var mensajeTemporal2 = AutoClosingMessageBox.Show(
+            text: miListBox.Items[miListBox.SelectedIndex].ToString(),
+            caption: "EQUIPO DE 11FREAKS",
+            timeout: 2500,
+            buttons: MessageBoxButtons.YesNo);
 
         }
 
@@ -502,13 +519,125 @@ namespace _11FREAKS.Presentacion
             logo.Visibility = Visibility.Hidden;
         }
 
-        private void menuCambiarMiEquipo_Click(object sender, RoutedEventArgs e)
+        private async void menuCambiarMiEquipo_Click(object sender, RoutedEventArgs e)
         {
             var mensajeTemporal = AutoClosingMessageBox.Show(
             text: "ESTA FUNCIONALIDAD SE AÑADIRÁ PROXIMAMENTE",
             caption: "EQUIPO DE 11FREAKS",
             timeout: 3000,
             buttons: MessageBoxButtons.OK);
+
+            miListBox.Items.Clear();                        //RESETEAMOS LISTBOX
+            miListBox.Visibility = Visibility.Visible;      //HACEMOS LISTBOX VISIBLE
+
+
+            string respuesta;
+            JsonDocument jsonBingMaps;
+
+            try
+            {
+
+                var client = new HttpClient();
+                var request = new HttpRequestMessage
+                {
+                    Method = HttpMethod.Get,
+                    RequestUri = new Uri("https://api-football-v1.p.rapidapi.com/v3/teams?league=140&season=2022"),
+                    Headers =
+                    {
+                        { "X-RapidAPI-Key", "13407a5035mshae17fa61f3ee711p161488jsnc097d19e6099" },
+                        { "X-RapidAPI-Host", "api-football-v1.p.rapidapi.com" },
+                    },
+                };
+
+                using (var response = await client.SendAsync(request))
+                {
+                    response.EnsureSuccessStatusCode();
+                    var body = await response.Content.ReadAsStringAsync();
+                    jsonBingMaps = JsonDocument.Parse(body);
+                }
+
+                for (int i = 0; i < 20; i++)
+                {
+                    miListBox.Items.Add(jsonBingMaps.RootElement.GetProperty("response")[i].GetProperty("team").GetProperty("name"));  //Añadimos a la lista
+                }
+
+                var mensajeEquipos = AutoClosingMessageBox.Show(
+                text: "EQUIPOS CARGADOS",
+                caption: "EQUIPO DE 11FREAKS",
+                timeout: 2500,
+                buttons: MessageBoxButtons.OK);
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+
+            //miBaseDatos.CambiarEquipo(usuario, 541.ToString());
         }
+
+
+        public void CtrShortcut1(Object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            var mensajeTemporal = AutoClosingMessageBox.Show(
+            text: "SHORTCUT LANZADO",
+            caption: "EQUIPO DE 11FREAKS",
+            timeout: 3000,
+            buttons: MessageBoxButtons.OK);
+        }
+
+
+
+        public void F1Shortcut(Object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+        }
+
+        private void menuCambiarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            Confirmacion confirmacion = new Confirmacion(this);
+            confirmacion.ShowDialog();
+            confirmacion.DevuelveRespuesta();           //OBTENEMOS RESPUESTA DE CONFIRMACIÓN
+        }
+
+        private void menuCambiarContraseña_Click(object sender, RoutedEventArgs e)
+        {
+            Confirmacion confirmacion = new Confirmacion(this);
+            confirmacion.ShowDialog();
+            confirmacion.DevuelveRespuesta();           //OBTENEMOS RESPUESTA DE CONFIRMACIÓN
+        }
+
+        private void menuBorrarCuenta_Click(object sender, RoutedEventArgs e)
+        {
+            Confirmacion confirmacion = new Confirmacion(this);
+            confirmacion.ShowDialog();
+            if (confirmacion.DevuelveRespuesta() == true)
+            {
+                miBaseDatos.BorrarUsuario(usuario);     //BORRAMOS CUENTA TRAS LA CONFIRMACIÓN
+                var mensajeTemporal = AutoClosingMessageBox.Show(
+                text: "SU CUENTA HA SIDO ELIMINADA CON ÉXITO",
+                caption: "EQUIPO DE 11FREAKS",
+                timeout: 3000,
+                buttons: MessageBoxButtons.OK);
+
+
+                Correo correo = new Correo();
+                correo.CorreoCuentaEliminada(miBaseDatos.DevuelveCorreo());     //ENVIAMOS CORREO INFORMATIVO AL USUARIO
+
+                inicio.Visibility = Visibility.Visible;                         //CERRAMOS SESIÓN
+                inicio.Activate();
+                inicio.txtUsuario.Text = string.Empty;
+                inicio.txtPassword.Password = string.Empty;
+                this.Hide();
+
+
+            }
+             
+
+
+        }
+
     }
 }

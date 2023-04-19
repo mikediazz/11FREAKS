@@ -8,6 +8,25 @@
         mc:Ignorable="d"
         Title="Principal" Height="700" Width="1200" Closed="Window_Closed" WindowState="Maximized" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Resources/Logo11Freaks.png">
 
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <RoutedUICommand x:Key="Ctr1" Text="Texto Ayuda" />
+            <RoutedUICommand x:Key="F1" Text="Another Text" />
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.InputBindings>
+        <KeyBinding Key="F1" Modifiers="Ctrl" Command="{StaticResource Ctr1}" />
+        <KeyBinding Key="F2"  />
+    </Window.InputBindings>
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource Ctr1}" Executed="CtrShortcut1" />
+        <CommandBinding Command="{StaticResource F1}" Executed="F1Shortcut" />
+    </Window.CommandBindings>
+
+
     <Grid>
 
         <Grid.Background>
@@ -80,6 +99,25 @@
             </MenuItem>
 
 
+            <MenuItem x:Name="menuMiCuenta" Header="MI CUENTA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White">
+                <MenuItem x:Name="menuCambiarUsuario" Header="CAMBIAR NOMBRE USUARIO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCambiarUsuario_Click" >
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="CAMBIAR NOMBRE DE USUARIO DE LA CUENTA"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuCambiarContraseña" Header="CAMBIAR CONTRASEÑA" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCambiarContraseña_Click" >
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="CAMBIAR CONTRASEÑA DE LA CUENTA"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuBorrarCuenta" Header="BORRAR CUENTA" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuBorrarCuenta_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="BORRAR CUENTA DE FORMA DEFINITIVA"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+            
+
             <MenuItem x:Name="menuAjustes" Header="AJUSTES" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White">
                 <MenuItem.ToolTip>
                     <ToolTip Content="ACCEDE A LA CONFIGURACIÓN DE 11FREAKS"/>
@@ -111,7 +149,7 @@
                 </MenuItem>
                 <MenuItem x:Name="menuConsultarUsuarios" Header="CONSULTAR USUARIOS" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuConsultarUsuarios_Click">
                     <MenuItem.ToolTip>
-                        <ToolTip Content="HAGA CONSULTA GENÉRICO O INDIVIDUALIZADA DE LOS USUARIOS"/>
+                        <ToolTip Content="HAGA CONSULTA GENÉRICA O INDIVIDUALIZADA DE LOS USUARIOS"/>
                     </MenuItem.ToolTip>
                 </MenuItem>
             </MenuItem>
@@ -153,9 +191,11 @@
                 <ToolTip Content="PUEDE OCULTAR ESTA VISTA PULSANDO CLICK DERECHO, O BUSCAR INFORMACIÓN DESDE CLASIFICACIÓN"/>
             </ListBox.ToolTip>
         </ListBox>
-        
-        
+
+
+
 
 
     </Grid>
 </Window>
+

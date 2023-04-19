@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Markup;
 using System.Collections;
 using System.Security.Cryptography;
+using System.Security.Policy;
 
 namespace _11FREAKS.Datos
 {
@@ -20,11 +21,11 @@ namespace _11FREAKS.Datos
         private SQLiteCommand comando2;
         private SQLiteDataReader lector;
 
-        
         private string nomusuario;
         private string password;
         private bool permisos;
         private string idEquipoFav;
+        private string correo;
 
 
 
@@ -61,10 +62,6 @@ namespace _11FREAKS.Datos
 
 
 
-           
-
-
-
             if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
             {
                 conexion.Close();
@@ -84,6 +81,7 @@ namespace _11FREAKS.Datos
                             password = lector["Password"].ToString();
                             permisos =  Boolean.Parse(lector["Permisos"].ToString());
                             idEquipoFav= lector.GetString(3);
+                            correo = lector.GetString(4);
 
 
                             conDisponible = true;
@@ -145,6 +143,83 @@ namespace _11FREAKS.Datos
         public string DevuelveUsuario()
         {
             return nomusuario;
+        }
+
+
+
+
+        /// <summary>
+        ///     Método para obtener Email actual
+        /// </summary>
+        /// <returns>
+        ///     Devuelve Nombre Email actual
+        /// </returns>
+        public string DevuelveCorreo()
+        {
+            return correo;
+        }
+
+
+
+        /// <summary>
+        ///     Método para obtener Email de un tercero
+        /// </summary>
+        /// <returns>
+        ///     Devuelve Nombre Email de un tercero
+        /// </returns>
+        public string DevuelveCorreo(string usuario)
+        {
+            string correo=null;
+
+            if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
+                    comando = new SQLiteCommand("SELECT * FROM Usuarios WHERE Usuario='" + usuario + "'", conexion);
+
+                    conexion.Open();
+                    lector = comando.ExecuteReader();
+                    if (lector.HasRows)                                                             //BUSCAMOS USUARIO
+                    {
+                        if (lector.Read())
+                        {                                                         //COMPROBAMOS USUARIO Y SI ES ADMIN
+                            //nomusuario = lector.GetString(0);
+                            //password = lector["Password"].ToString();
+                            //permisos = Boolean.Parse(lector["Permisos"].ToString());
+                            //idEquipoFav = lector.GetString(3);
+                            correo = lector.GetString(4);
+
+                            
+                            
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTE USUARIO...s                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+            return correo;
         }
 
 
@@ -268,10 +343,10 @@ namespace _11FREAKS.Datos
         ///     Devuelve un Booleano con el Resultado de la Operación
         ///     <see cref="bool"/>
         /// </returns>
-        public bool CrearUsuario(string usuario, string contraseña, string idEquipo)
+        public bool CrearUsuario(string usuario, string contraseña, string idEquipo, string correo)
         {
             bool conDisponible = false;
-
+            
 
             //////// HASHEO PASSWORD ////////
             string hash = String.Empty;
@@ -286,25 +361,26 @@ namespace _11FREAKS.Datos
                 }
             }
 
-           // MessageBox.Show("EL HASH DE LA CONTRASEÑA ES -->"+hash);
+            // MessageBox.Show("EL HASH DE LA CONTRASEÑA ES -->"+hash);
 
 
-
+            
 
             try
             {
                 if (conexion2 == null)
                 {
                     conexion2 = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
-                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" +usuario+ "' , '" +hash+ "', 'false', '"+idEquipo+"'); ", conexion2);
+                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" +usuario+ "' , '" +hash+ "', 'false', '"+idEquipo+ "', '"+correo+"'); ", conexion2);
 
                     conexion2.Open();
-                    MessageBox.Show(comando2.ExecuteNonQuery().ToString());
+                    comando2.ExecuteNonQuery().ToString();
                     conexion2.Close();
 
                     
                     MessageBox.Show("BIENVENIDO " + usuario + ", AHORA FORMAS PARTE DE 11FREAKS!");
                     conDisponible= true;
+
 
                 }else{
                     MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
@@ -344,7 +420,7 @@ namespace _11FREAKS.Datos
         ///     Devuelve un Booleano con el Resultado de la Operación
         ///     <see cref="bool"/>
         /// </returns>
-        public bool CrearUsuario(string usuario, string contraseña, bool admin, string idEquipo)     //MÉTODO PARA CREAR ADMIN
+        public bool CrearUsuario(string usuario, string contraseña, bool admin, string idEquipo, string correo)     //MÉTODO PARA CREAR ADMIN
         {
             bool conDisponible = false;
 
@@ -364,16 +440,12 @@ namespace _11FREAKS.Datos
 
 
 
-
-
-
-
             try
             {
                 if (conexion2 == null)
                 {
                     conexion2 = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
-                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" + usuario + "' , '" + hash + "', '"+admin+"', '"+idEquipo+"'); ", conexion2);
+                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" + usuario + "' , '" + hash + "', '"+admin+"', '"+idEquipo+ "', '"+correo+"'); ", conexion2);
 
                     conexion2.Open();
                     MessageBox.Show(comando2.ExecuteNonQuery().ToString());
@@ -766,7 +838,7 @@ namespace _11FREAKS.Datos
         ///     Devuelve Objeto Equipo, o Nulo en su defecto
         /// </returns>
 
-        public void CambiarEquipo(string usuario,string id)                             //MÉTODO PARA MODIFICAR EQUIPO FAVORITO
+        public void CambiarEquipo(string usuario,string idNuevoEquipo)                             //MÉTODO PARA MODIFICAR EQUIPO FAVORITO
         {
 
 
@@ -780,7 +852,7 @@ namespace _11FREAKS.Datos
                 if (conexion == null)
                 {
                     conexion = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
-                    comando = new SQLiteCommand("UPDATE Usuarios SET EquipoFav="+id+" WHERE Usuario='" + usuario + "'", conexion);
+                    comando = new SQLiteCommand("UPDATE Usuarios SET EquipoFav="+idNuevoEquipo+" WHERE Usuario='" + usuario + "'", conexion);
 
                     conexion.Open();                                                                         //CARGAMOS TODOS LOS DATOS ACTUALIZADOSs
                     comando.ExecuteNonQuery();

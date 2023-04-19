@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _11FREAKS.Datos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -97,10 +98,16 @@ namespace _11FREAKS.Presentacion
             }
             else
             {
-                MessageBox.Show("USUARIO SELECCIONADO -->"+ auxNom);
-                
+                MessageBox.Show("USUARIO SELECCIONADO -->" + auxNom);
+
+                string correoBaneado= miBaseDatos.DevuelveCorreo(auxNom);           //ERROR AL REALIZAR CONEXIÓN 
+                MessageBox.Show("EMAIL DE USUARIO A BANEAR "+correoBaneado);
+
                 miBaseDatos.BorrarUsuario(auxNom);
                 listBoxUsuarios.Items.RemoveAt(listBoxUsuarios.SelectedIndex);
+
+                Correo correo = new Correo();
+                correo.CorreoBaneo(correoBaneado);
             }
 
 

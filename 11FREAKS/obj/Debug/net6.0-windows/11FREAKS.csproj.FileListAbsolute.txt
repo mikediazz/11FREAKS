@@ -72,3 +72,5 @@ C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\bin\Debug\net6.0-windows
 C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows\Presentacion\MiEquipo.g.cs
 C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows\Presentacion\MiEquipo.baml
 C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows\App.baml
+C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows\Presentacion\Confirmacion.g.cs
+C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows\Presentacion\Confirmacion.baml
