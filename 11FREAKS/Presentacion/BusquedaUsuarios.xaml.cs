@@ -112,5 +112,29 @@ namespace _11FREAKS.Presentacion
 
 
         }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            string auxNom = listBoxUsuarios.Items[listBoxUsuarios.SelectedIndex].ToString();
+            char esAdmin = auxNom[0];
+
+            if (listBoxUsuarios.SelectedIndex == -1)
+            {
+                return;
+            }
+            else
+            {
+                miBaseDatos.DarPermisos(auxNom);
+            }
+
+
+            if (esAdmin == '#')
+            {
+                MessageBox.Show("ESTE USUARIO ES ADMINISTRADOR");
+            }
+
+
+            
+        }
     }
 }

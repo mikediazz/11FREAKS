@@ -49,7 +49,7 @@ namespace _11FREAKS.Datos
 
             string hash = String.Empty;
 
-            
+
             using (SHA256 sha256 = SHA256.Create())         // Inicializamos a SHA256 la Contraseña de Login
             {
                 byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(contraseña));      //Hasheo
@@ -67,33 +67,33 @@ namespace _11FREAKS.Datos
                 conexion.Close();
             }
             try
-            {     
-                if (conexion == null){
+            {
+                if (conexion == null) {
                     conexion = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
                     comando = new SQLiteCommand("SELECT * FROM Usuarios WHERE Usuario='" + usuario + "' and Password='" + hash + "'", conexion);
-                    
+
                     conexion.Open();
                     lector = comando.ExecuteReader();
-                    if(lector.HasRows)                                                             //BUSCAMOS USUARIO
+                    if (lector.HasRows)                                                             //BUSCAMOS USUARIO
                     {
-                        if(lector.Read()){                                                         //COMPROBAMOS USUARIO Y SI ES ADMIN
+                        if (lector.Read()) {                                                         //COMPROBAMOS USUARIO Y SI ES ADMIN
                             nomusuario = lector.GetString(0);
                             password = lector["Password"].ToString();
-                            permisos =  Boolean.Parse(lector["Permisos"].ToString());
-                            idEquipoFav= lector.GetString(3);
+                            permisos = Boolean.Parse(lector["Permisos"].ToString());
+                            idEquipoFav = lector.GetString(3);
                             correo = lector.GetString(4);
 
 
                             conDisponible = true;
                         }
-                    }else{                                                                          //SI NO EXISTE USUARIO...s                                                                     
+                    } else {                                                                          //SI NO EXISTE USUARIO...s                                                                     
                         MessageBox.Show("NO SE ENCONTRARON REGISTROS");
                     }
 
                     lector.Close();
                     conexion.Close();
 
-                }else{
+                } else {
                     MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
                     conDisponible = false;
                 }
@@ -104,7 +104,7 @@ namespace _11FREAKS.Datos
             {
                 MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
             }
-         
+
             return conDisponible;
 
         }
@@ -169,7 +169,7 @@ namespace _11FREAKS.Datos
         /// </returns>
         public string DevuelveCorreo(string usuario)
         {
-            string correo=null;
+            string correo = null;
 
             if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
             {
@@ -195,8 +195,8 @@ namespace _11FREAKS.Datos
                             //idEquipoFav = lector.GetString(3);
                             correo = lector.GetString(4);
 
-                            
-                            
+
+
                         }
                     }
                     else
@@ -246,11 +246,11 @@ namespace _11FREAKS.Datos
         /// <returns>
         ///     Devuelve si cumple los requisitos mínimos de seguridad
         /// </returns>
-        public bool CompruebaPassword(String usuario,String password)
+        public bool CompruebaPassword(String usuario, String password)
         {
             bool validador = false;
 
-            bool validezPass=false;                             //VALIDADOR CONTRASEÑA
+            bool validezPass = false;                             //VALIDADOR CONTRASEÑA
             bool simbolosPass = false;                          //VALIDADOR SQL INJECTION
             int contMayusPass = 0;
             int contNumPass = 0;
@@ -293,32 +293,32 @@ namespace _11FREAKS.Datos
 
             ///////////////////COMPROBACIÓN USUARIO///////////////////
             if (usuario.Length > 7)
-                {                       //COMPRUEBA LONGITUD MÍNIMA
-                    for (int i = 0; i < usuario.Length; i++)
-                    {
-
-                        if (char.IsSymbol(usuario[i]))         //COMPROBACIÓN DE CARACTERES EXTRAÑOS (SQL INJECTION)
-                        {
-                            simbolosUser = true;
-                        }
-                        if (char.IsPunctuation(usuario[i]))    //COMPROBACIÓN DE CARACTERES EXTRAÑOS (SQL INJECTION)
-                        {
-                            simbolosUser = true;
-                        }
-                    }
-                    if (simbolosUser == false)
-                    {
-                        validezUser = true;
-                    }
-
-
-                }
-                   // MessageBox.Show("VALIDEZ USUARIO-> "+validezUser+ "\tPASSWORD-> "+validezPass);
-
-                if(validezUser && validezPass)      //COMPROBAMOS QUE HAYAN PASADO LA PRUEBA USUARIO Y CONTRASEÑA
+            {                       //COMPRUEBA LONGITUD MÍNIMA
+                for (int i = 0; i < usuario.Length; i++)
                 {
-                    validador = true;
+
+                    if (char.IsSymbol(usuario[i]))         //COMPROBACIÓN DE CARACTERES EXTRAÑOS (SQL INJECTION)
+                    {
+                        simbolosUser = true;
+                    }
+                    if (char.IsPunctuation(usuario[i]))    //COMPROBACIÓN DE CARACTERES EXTRAÑOS (SQL INJECTION)
+                    {
+                        simbolosUser = true;
+                    }
                 }
+                if (simbolosUser == false)
+                {
+                    validezUser = true;
+                }
+
+
+            }
+            // MessageBox.Show("VALIDEZ USUARIO-> "+validezUser+ "\tPASSWORD-> "+validezPass);
+
+            if (validezUser && validezPass)      //COMPROBAMOS QUE HAYAN PASADO LA PRUEBA USUARIO Y CONTRASEÑA
+            {
+                validador = true;
+            }
 
             return validador;
         }
@@ -346,7 +346,7 @@ namespace _11FREAKS.Datos
         public bool CrearUsuario(string usuario, string contraseña, string idEquipo, string correo)
         {
             bool conDisponible = false;
-            
+
 
             //////// HASHEO PASSWORD ////////
             string hash = String.Empty;
@@ -364,25 +364,25 @@ namespace _11FREAKS.Datos
             // MessageBox.Show("EL HASH DE LA CONTRASEÑA ES -->"+hash);
 
 
-            
+
 
             try
             {
                 if (conexion2 == null)
                 {
                     conexion2 = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
-                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" +usuario+ "' , '" +hash+ "', 'false', '"+idEquipo+ "', '"+correo+"'); ", conexion2);
+                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" + usuario + "' , '" + hash + "', 'false', '" + idEquipo + "', '" + correo + "'); ", conexion2);
 
                     conexion2.Open();
                     comando2.ExecuteNonQuery().ToString();
                     conexion2.Close();
 
-                    
+
                     MessageBox.Show("BIENVENIDO " + usuario + ", AHORA FORMAS PARTE DE 11FREAKS!");
-                    conDisponible= true;
+                    conDisponible = true;
 
 
-                }else{
+                } else {
                     MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
                     conDisponible = false;
                 }
@@ -445,7 +445,7 @@ namespace _11FREAKS.Datos
                 if (conexion2 == null)
                 {
                     conexion2 = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
-                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" + usuario + "' , '" + hash + "', '"+admin+"', '"+idEquipo+ "', '"+correo+"'); ", conexion2);
+                    comando2 = new SQLiteCommand("INSERT INTO Usuarios VALUES ( '" + usuario + "' , '" + hash + "', '" + admin + "', '" + idEquipo + "', '" + correo + "'); ", conexion2);
 
                     conexion2.Open();
                     MessageBox.Show(comando2.ExecuteNonQuery().ToString());
@@ -531,7 +531,7 @@ namespace _11FREAKS.Datos
 
         public ArrayList ConsultaUsuarios()                             //MÉTODO CONEXIÓN BBDD SQLITE
         {
-            ArrayList listaUsuarios=new ArrayList();                    //INICIALIZAMOS LISTA CADA VEZ QUE LLAMEMOS AL MÉTODO
+            ArrayList listaUsuarios = new ArrayList();                    //INICIALIZAMOS LISTA CADA VEZ QUE LLAMEMOS AL MÉTODO
             string userName = string.Empty;
             bool permisosUser;
 
@@ -557,18 +557,18 @@ namespace _11FREAKS.Datos
                         {                                                         //COMPROBAMOS USUARIO Y SI ES ADMIN
                             userName = lector.GetString(0);
                             permisosUser = Boolean.Parse(lector["Permisos"].ToString());
-                            
+
                             if (permisosUser == true)
                             {
-                                listaUsuarios.Add("#"+ userName);              //PONEMOS HASHTAG PARA INDICAR QUE ES ADMIN
+                                listaUsuarios.Add("#" + userName);              //PONEMOS HASHTAG PARA INDICAR QUE ES ADMIN
                             }
                             else
                             {
                                 listaUsuarios.Add(userName);
                             }
-                            
 
-        
+
+
                         }
                     }
                     else
@@ -643,30 +643,30 @@ namespace _11FREAKS.Datos
         /// <param name="logo">Recibimos la ruta del Logo del Equipo</param>
         /// <param name="estadio">Recibimos el Estadio del Equipo</param>  
         /// <param name="ciudad">Recibimos la Ciudad del Equipo</param>
-     
-        public void CargarDatosEquipos(string id, string nombre, string año, string logo, string estadio, string ciudad)  {
-            
-                try
+
+        public void CargarDatosEquipos(string id, string nombre, string año, string logo, string estadio, string ciudad) {
+
+            try
+            {
+                conexion2 = null;
+                if (conexion2 == null)
                 {
-                    conexion2 = null;
-                    if (conexion2 == null)
-                    {
-                        conexion2 = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
-                        comando2 = new SQLiteCommand("INSERT INTO Equipo VALUES ( '"+id+"' , '"+nombre+"', '" +año+"', '"+logo+"' , '"+estadio+"' , '"+ciudad+"' ) ", conexion2);
-                        conexion2.Open();                                                                           //CARGAMOS TODOS LOS DATOS ACTUALIZADOSs
-                        comando2.ExecuteNonQuery();
-                        conexion2.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
-                    }
+                    conexion2 = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
+                    comando2 = new SQLiteCommand("INSERT INTO Equipo VALUES ( '" + id + "' , '" + nombre + "', '" + año + "', '" + logo + "' , '" + estadio + "' , '" + ciudad + "' ) ", conexion2);
+                    conexion2.Open();                                                                           //CARGAMOS TODOS LOS DATOS ACTUALIZADOSs
+                    comando2.ExecuteNonQuery();
+                    conexion2.Close();
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+            }
+        }
 
 
 
@@ -687,7 +687,7 @@ namespace _11FREAKS.Datos
         public string BuscarEquipo(string nombre)                             //MÉTODO CONSULTAR EQUIPO
         {
             bool conDisponible = false;
-            string idEquipo=null;
+            string idEquipo = null;
             string nomEquipo;
             string añoFund;
             string logo;
@@ -717,7 +717,7 @@ namespace _11FREAKS.Datos
                             idEquipo = lector.GetString(0);
                             nomEquipo = lector.GetString(1);
                             añoFund = lector.GetString(2);
-                            logo = lector.GetString(3); 
+                            logo = lector.GetString(3);
                             estadio = lector.GetString(4);
                             ciudad = lector.GetString(5);
 
@@ -764,13 +764,13 @@ namespace _11FREAKS.Datos
 
         public Equipo MiInfoEquipo(string id)                             //MÉTODO CONEXIÓN BBDD SQLITE
         {
-            Equipo equipo=null;
+            Equipo equipo = null;
 
 
             if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
             {
                 conexion.Close();
-                conexion=null;
+                conexion = null;
             }
             try
             {
@@ -796,7 +796,7 @@ namespace _11FREAKS.Datos
                     }
                     else
                     {                                                                          //SI NO EXISTE EQUIPO...s                                                                     
-                        MessageBox.Show("NO SE ENCONTRÓ NINGÚN EQUIPO CON ESAS CARACTERÍSTICAS |ID EQUIPO->"+id);
+                        MessageBox.Show("NO SE ENCONTRÓ NINGÚN EQUIPO CON ESAS CARACTERÍSTICAS |ID EQUIPO->" + id);
                     }
 
                     lector.Close();
@@ -838,7 +838,7 @@ namespace _11FREAKS.Datos
         ///     Devuelve Objeto Equipo, o Nulo en su defecto
         /// </returns>
 
-        public void CambiarEquipo(string usuario,string idNuevoEquipo)                             //MÉTODO PARA MODIFICAR EQUIPO FAVORITO
+        public void CambiarEquipo(string usuario, string idNuevoEquipo)                             //MÉTODO PARA MODIFICAR EQUIPO FAVORITO
         {
 
 
@@ -852,7 +852,7 @@ namespace _11FREAKS.Datos
                 if (conexion == null)
                 {
                     conexion = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
-                    comando = new SQLiteCommand("UPDATE Usuarios SET EquipoFav="+idNuevoEquipo+" WHERE Usuario='" + usuario + "'", conexion);
+                    comando = new SQLiteCommand("UPDATE Usuarios SET EquipoFav=" + idNuevoEquipo + " WHERE Usuario='" + usuario + "'", conexion);
 
                     conexion.Open();                                                                         //CARGAMOS TODOS LOS DATOS ACTUALIZADOSs
                     comando.ExecuteNonQuery();
@@ -934,6 +934,48 @@ namespace _11FREAKS.Datos
 
 
 
+        public void DarPermisos(string usuario)
+        {
+            if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
+                    comando = new SQLiteCommand("UPDATE Usuarios SET Permisos= 'True' WHERE Usuario='" + usuario + "'", conexion);
+
+                    conexion.Open();                                                                         //CARGAMOS TODOS LOS DATOS ACTUALIZADOS
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show("SE HAN OTORGADO PERMISOS DE ADMIN A " + usuario);
+
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+
+        }
+    
+        
+
+
+
+
+
+        
         /// <summary>
         ///     Función Para Mostrar Todos los Equipos
         /// </summary>

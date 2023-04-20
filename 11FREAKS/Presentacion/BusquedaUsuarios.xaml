@@ -19,7 +19,11 @@
             <ListBox.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Borrar Usuario" Click="MenuItem_Click"/>
+                    <MenuItem Header="Dar Permisos" Click="MenuItem_Click_1" />
                 </ContextMenu>
+
+                    
+
             </ListBox.ContextMenu>
 
         </ListBox>

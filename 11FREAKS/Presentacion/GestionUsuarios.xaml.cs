@@ -179,6 +179,10 @@ namespace _11FREAKS.Presentacion
 
 
             }
+            else
+            {
+                this.Close();               //SI NO QUIERE CONTINUAR CON LOS CAMBIOS, SE CIERRA VENTANA
+            }
 
 
 
