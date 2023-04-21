@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2022.12.30.0" projectFile="C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Documentacion.shfbproj" started="10/03/2023 14:50:07">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2022.12.30.0" projectFile="C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Documentacion.shfbproj" started="21/04/2023 13:00:53">
 <buildStep step="Initializing">
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder&#39;
 Locating components in the following folder(s):
@@ -262,56 +262,59 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (es-ES, Espa&#241;ol (Espa&#241;a))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0109
+</plugIn>    Last step completed in 00:00:00,0099
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0060
+    Last step completed in 00:00:00,0050
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
-[C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateRefInfo-51286493-b5fa-4a0b-8002-8d1169216317.proj]
-Compilaci&#243;n iniciada a las 10/03/2023 14:50:09.
-Proyecto &quot;C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-51286493-b5fa-4a0b-8002-8d1169216317.proj&quot; en nodo 1 (destinos predeterminados).
+[C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateRefInfo-02b8b9ed-fbe4-413d-bb53-2898334d0ae5.proj]
+Compilaci&#243;n iniciada a las 21/04/2023 13:00:54.
+Included response file: C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\MSBuild.rsp
+
+Proyecto &quot;C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-02b8b9ed-fbe4-413d-bb53-2898334d0ae5.proj&quot; en nodo 1 (destinos predeterminados).
 PrepareForBuild:
   Creando directorio &quot;obj\Debug\&quot;.
 GenerateBindingRedirects:
   No hay redirecciones de enlace sugeridas procedentes de ResolveAssemblyReferences.
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2977,5): warning MSB3305: Procesando la referencia COM &quot;Microsoft.Office.Interop.Word&quot; desde la ruta de acceso &quot;C:\Program Files\Microsoft Office\Root\Office16\MSWORD.OLB&quot;. El importador de la biblioteca de tipos detect&#243; una funci&#243;n getter de propiedad &#39;Dummy1&#39; en el tipo &#39;Microsoft.Office.Interop.Word._Document&#39; sin un tipo de valor devuelto v&#225;lido. El importador intentar&#225; importar esta propiedad como un m&#233;todo. [C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-51286493-b5fa-4a0b-8002-8d1169216317.proj]
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2977,5): warning MSB3305: Procesando la referencia COM &quot;Microsoft.Office.Interop.Word&quot; desde la ruta de acceso &quot;C:\Program Files\Microsoft Office\Root\Office16\MSWORD.OLB&quot;. El importador de la biblioteca de tipos detect&#243; una funci&#243;n getter de propiedad &#39;Dummy3&#39; en el tipo &#39;Microsoft.Office.Interop.Word._Document&#39; sin un tipo de valor devuelto v&#225;lido. El importador intentar&#225; importar esta propiedad como un m&#233;todo. [C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-51286493-b5fa-4a0b-8002-8d1169216317.proj]
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2977,5): warning MSB3305: Procesando la referencia COM &quot;Microsoft.Office.Interop.Word&quot; desde la ruta de acceso &quot;C:\Program Files\Microsoft Office\Root\Office16\MSWORD.OLB&quot;. El importador de la biblioteca de tipos detect&#243; una funci&#243;n getter de propiedad &#39;Dummy1&#39; en el tipo &#39;Microsoft.Office.Interop.Word.DocumentClass&#39; sin un tipo de valor devuelto v&#225;lido. El importador intentar&#225; importar esta propiedad como un m&#233;todo. [C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-51286493-b5fa-4a0b-8002-8d1169216317.proj]
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2977,5): warning MSB3305: Procesando la referencia COM &quot;Microsoft.Office.Interop.Word&quot; desde la ruta de acceso &quot;C:\Program Files\Microsoft Office\Root\Office16\MSWORD.OLB&quot;. El importador de la biblioteca de tipos detect&#243; una funci&#243;n getter de propiedad &#39;Dummy3&#39; en el tipo &#39;Microsoft.Office.Interop.Word.DocumentClass&#39; sin un tipo de valor devuelto v&#225;lido. El importador intentar&#225; importar esta propiedad como un m&#233;todo. [C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-51286493-b5fa-4a0b-8002-8d1169216317.proj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2977,5): warning MSB3305: Procesando la referencia COM &quot;Microsoft.Office.Interop.Word&quot; desde la ruta de acceso &quot;C:\Program Files\Microsoft Office\Root\Office16\MSWORD.OLB&quot;. El importador de la biblioteca de tipos detect&#243; una funci&#243;n getter de propiedad &#39;Dummy1&#39; en el tipo &#39;Microsoft.Office.Interop.Word._Document&#39; sin un tipo de valor devuelto v&#225;lido. El importador intentar&#225; importar esta propiedad como un m&#233;todo. [C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-02b8b9ed-fbe4-413d-bb53-2898334d0ae5.proj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2977,5): warning MSB3305: Procesando la referencia COM &quot;Microsoft.Office.Interop.Word&quot; desde la ruta de acceso &quot;C:\Program Files\Microsoft Office\Root\Office16\MSWORD.OLB&quot;. El importador de la biblioteca de tipos detect&#243; una funci&#243;n getter de propiedad &#39;Dummy3&#39; en el tipo &#39;Microsoft.Office.Interop.Word._Document&#39; sin un tipo de valor devuelto v&#225;lido. El importador intentar&#225; importar esta propiedad como un m&#233;todo. [C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-02b8b9ed-fbe4-413d-bb53-2898334d0ae5.proj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2977,5): warning MSB3305: Procesando la referencia COM &quot;Microsoft.Office.Interop.Word&quot; desde la ruta de acceso &quot;C:\Program Files\Microsoft Office\Root\Office16\MSWORD.OLB&quot;. El importador de la biblioteca de tipos detect&#243; una funci&#243;n getter de propiedad &#39;Dummy1&#39; en el tipo &#39;Microsoft.Office.Interop.Word.DocumentClass&#39; sin un tipo de valor devuelto v&#225;lido. El importador intentar&#225; importar esta propiedad como un m&#233;todo. [C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-02b8b9ed-fbe4-413d-bb53-2898334d0ae5.proj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2977,5): warning MSB3305: Procesando la referencia COM &quot;Microsoft.Office.Interop.Word&quot; desde la ruta de acceso &quot;C:\Program Files\Microsoft Office\Root\Office16\MSWORD.OLB&quot;. El importador de la biblioteca de tipos detect&#243; una funci&#243;n getter de propiedad &#39;Dummy3&#39; en el tipo &#39;Microsoft.Office.Interop.Word.DocumentClass&#39; sin un tipo de valor devuelto v&#225;lido. El importador intentar&#225; importar esta propiedad como un m&#233;todo. [C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-02b8b9ed-fbe4-413d-bb53-2898334d0ae5.proj]
 GenerateRefInfo:
-  Microsoft.Build (v17.4.1+9a89d02ff5de19d84190ebed4a6017df4dc19dc4)
+  Microsoft.Build (v17.5.1+f6fdcf537aded4f49ebedfcb800e2a3c1483fddc)
   &#169; Microsoft Corporation. All rights reserved.
   No source code context base path specified.  Source context information is unavailable.
   Loaded 1 assemblies for reflection and 233 dependency assemblies.
-  Wrote information on 5 namespaces, 12 types, and 207 members
+  Wrote information on 5 namespaces, 16 types, and 278 members
   Merging duplicate type and member information
   Merged 0 duplicate type(s) and 0 duplicate member(s)
-Compilaci&#243;n del proyecto terminada &quot;C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-51286493-b5fa-4a0b-8002-8d1169216317.proj&quot; (destinos predeterminados).
-    Last step completed in 00:00:03,1814
+Compilaci&#243;n del proyecto terminada &quot;C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\GenerateRefInfo-02b8b9ed-fbe4-413d-bb53-2898334d0ae5.proj&quot; (destinos predeterminados).
+    Last step completed in 00:00:02,9131
 </buildStep>
 <buildStep step="ApplyDocumentModel">
 Applying document model to reflection output...
-    Last step completed in 00:00:00,1725
+    Last step completed in 00:00:00,1805
 </buildStep>
 <buildStep step="AddApiTopicFilenames">
 Adding topic filenames to API members...
-    Last step completed in 00:00:00,1095
+    Last step completed in 00:00:00,0720
 </buildStep>
 <buildStep step="GenerateApiTopicManifest">
 Generating API topic manifest...
-    Last step completed in 00:00:00,0490
+    Last step completed in 00:00:00,0810
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,8083
+    Last step completed in 00:00:00,7284
 </buildStep>
 <buildStep step="GenerateInheritedDocumentation">
 Generating inherited documentation...
 [C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateInheritedDocs.proj]
-    Last step completed in 00:00:02,1244
+
+    Last step completed in 00:00:01,8195
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -325,37 +328,37 @@ Generating conceptual topic files
     C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Content\VersionHistory\VersionHistory.aml -&gt; C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\ddueXml\3e80dde4-6af5-4fbf-9742-c668bd64342c.xml
     Parsing topic file &#39;C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Content\VersionHistory\v1.0.0.0.aml&#39;
     C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Content\VersionHistory\v1.0.0.0.aml -&gt; C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\ddueXml\2c7a9974-2f19-4989-bc41-7e17752f7d83.xml
-    Last step completed in 00:00:00,0308
+    Last step completed in 00:00:00,0290
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     Merging topic IDs into reference topic manifest file
-    Last step completed in 00:00:00,0955
+    Last step completed in 00:00:00,0085
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\icons\Help.png -&gt; C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\Output\HtmlHelp1\icons\Help.png
 C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\icons\Help.png -&gt; C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\Output\Website\icons\Help.png
-    Last step completed in 00:00:00,0070
+    Last step completed in 00:00:00,0055
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00,0040
+    Last step completed in 00:00:00,0030
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file for API content...
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,0725
+    Last step completed in 00:00:00,0940
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
-    Last step completed in 00:00:00,7207
+    Last step completed in 00:00:00,8440
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0156
+    Last step completed in 00:00:00,0195
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
@@ -363,17 +366,25 @@ C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\BuildA
   Updating reference topic configurations.
   Updating conceptual topic configurations.
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00,0205
+    Last step completed in 00:00:00,0190
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 Loading configuration...
 Processing topics...
 SHFB: Warning BE0066: ShowMissingComponent: [N:_11FREAKS] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.App._contentLoaded] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [N:_11FREAKS.Datos] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [T:_11FREAKS.Datos.API_FOOTBALL] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [T:_11FREAKS.Datos.BaseDatos] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.BuscarEquipo(System.String)] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.CambiarContrase&#241;a(System.String)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.CambiarContrase&#241;a(System.String)] Missing &lt;param name=&quot;nuevaPass&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.CambiarCorreo(System.String,System.String)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.CambiarCorreo(System.String,System.String)] Missing &lt;param name=&quot;usuario&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.CambiarCorreo(System.String,System.String)] Missing &lt;param name=&quot;nuevoCorreo&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.CambiarEquipo(System.String,System.String)] Missing &lt;param name=&quot;usuario&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.CambiarEquipo(System.String,System.String)] Missing &lt;param name=&quot;idNuevoEquipo&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Datos.BaseDatos.comando] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:_11FREAKS.Datos.BaseDatos.comando] Member ID URL not found for target &#39;T:System.Data.SQLite.SQLiteCommand&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:_11FREAKS.Datos.BaseDatos.comando] Member ID URL not found for target &#39;T:System.Data.SQLite.SQLiteCommand&#39;.
@@ -388,6 +399,12 @@ SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:_11FREAKS.Datos.BaseDat
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Datos.BaseDatos.conexion2] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:_11FREAKS.Datos.BaseDatos.conexion2] Member ID URL not found for target &#39;T:System.Data.SQLite.SQLiteConnection&#39;.
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:_11FREAKS.Datos.BaseDatos.conexion2] Member ID URL not found for target &#39;T:System.Data.SQLite.SQLiteConnection&#39;.
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Datos.BaseDatos.correo] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.CrearUsuario(System.String,System.String,System.Boolean,System.String,System.String)] Missing &lt;param name=&quot;correo&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.CrearUsuario(System.String,System.String,System.String,System.String)] Missing &lt;param name=&quot;correo&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.DarPermisos(System.String)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.DarPermisos(System.String)] Missing &lt;param name=&quot;usuario&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.BaseDatos.DevuelveCorreo(System.String)] Missing &lt;param name=&quot;usuario&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Datos.BaseDatos.idEquipoFav] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Datos.BaseDatos.lector] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:_11FREAKS.Datos.BaseDatos.lector] Member ID URL not found for target &#39;T:System.Data.SQLite.SQLiteDataReader&#39;.
@@ -395,6 +412,17 @@ SHFB: Warning BE0066: ResolveReferenceLinksComponent: [F:_11FREAKS.Datos.BaseDat
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Datos.BaseDatos.nomusuario] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Datos.BaseDatos.password] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Datos.BaseDatos.permisos] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [T:_11FREAKS.Datos.Correo] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Correo.CorreoBaneo(System.String)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Correo.CorreoBaneo(System.String)] Missing &lt;param name=&quot;email&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Correo.CorreoBienvenida(System.String)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Correo.CorreoBienvenida(System.String)] Missing &lt;param name=&quot;email&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Correo.CorreoCambioEmail(System.String)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Correo.CorreoCambioEmail(System.String)] Missing &lt;param name=&quot;email&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Correo.CorreoContrase&#241;a(System.String)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Correo.CorreoContrase&#241;a(System.String)] Missing &lt;param name=&quot;email&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Correo.CorreoCuentaEliminada(System.String)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Correo.CorreoCuentaEliminada(System.String)] Missing &lt;param name=&quot;email&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [T:_11FREAKS.Datos.Equipo] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Equipo.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)] Missing &lt;param name=&quot;id&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Datos.Equipo.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)] Missing &lt;param name=&quot;nombre&quot;/&gt; documentation
@@ -408,6 +436,7 @@ SHFB: Warning BE0066: ShowMissingComponent: [P:_11FREAKS.Datos.Equipo.Estadio] M
 SHFB: Warning BE0066: ShowMissingComponent: [P:_11FREAKS.Datos.Equipo.Id] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [P:_11FREAKS.Datos.Equipo.Logo] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [P:_11FREAKS.Datos.Equipo.Nombre] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [T:_11FREAKS.Datos.Partidos] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [N:_11FREAKS.Presentacion] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.BusquedaUsuarios._contentLoaded] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.BusquedaUsuarios.btnBuscar] Missing &lt;summary&gt; documentation
@@ -419,18 +448,58 @@ SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.BusquedaUs
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.BusquedaUsuarios.listBoxUsuarios_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.BusquedaUsuarios.MenuItem_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.BusquedaUsuarios.MenuItem_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.BusquedaUsuarios.MenuItem_Click_1(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.BusquedaUsuarios.MenuItem_Click_1(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.BusquedaUsuarios.MenuItem_Click_1(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.BusquedaUsuarios.miBaseDatos] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [E:_11FREAKS.Presentacion.BusquedaUsuarios.miEvento] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.BusquedaUsuarios.txtUsuario] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [T:_11FREAKS.Presentacion.BusquedaUsuarios.MiEvento] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.#ctor(_11FREAKS.Presentacion.Principal)] Missing &lt;param name=&quot;fprincipal&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.#ctor(_11FREAKS.Presentacion.GestionUsuarios)] Missing &lt;param name=&quot;gest&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.#ctor(_11FREAKS.Presentacion.Principal)] Missing &lt;param name=&quot;prin&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Confirmacion._contentLoaded] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Confirmacion.btnNo] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.btnNo_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.btnNo_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.btnNo_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Confirmacion.btnSi] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.btnSi_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.btnSi_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.btnSi_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.DevuelveRespuesta] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.DevuelveRespuesta] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Confirmacion.gestion] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Confirmacion.lblMensaje] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Confirmacion.principal] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Confirmacion.respuesta] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Confirmacion.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.#ctor(_11FREAKS.Presentacion.Principal,_11FREAKS.Datos.BaseDatos,System.Int32)] Missing &lt;param name=&quot;fprincipal&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.#ctor(_11FREAKS.Presentacion.Principal,_11FREAKS.Datos.BaseDatos,System.Int32)] Missing &lt;param name=&quot;bbdd&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.#ctor(_11FREAKS.Presentacion.Principal,_11FREAKS.Datos.BaseDatos,System.Int32)] Missing &lt;param name=&quot;tipoCaso&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios._contentLoaded] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.btnRegistrarAdmin] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.btnRegistrarse_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.btnRegistrarse_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.caso] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.CompruebaCamposCaso1] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.CompruebaCamposCaso1] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.CompruebaCamposCaso2] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.CompruebaCamposCaso2] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.CompruebaCamposCaso3] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.CompruebaCamposCaso3] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.CompruebaCamposCaso4] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.GestionUsuarios.CompruebaCamposCaso4] Missing &lt;returns&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.lbl1] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.lbl2] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.lbl3] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.miBaseDatos] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.principal] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.txtEmail] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.txtMedio] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.txtPassword] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.txtPassword1] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.GestionUsuarios.txtUsuario] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio._contentLoaded] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.btnInicioSesion] Missing &lt;summary&gt; documentation
@@ -439,12 +508,30 @@ SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.btn
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.btnRegistrarse] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.btnRegistrarse_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.btnRegistrarse_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.btnSkip] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.btnSkip_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.btnSkip_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.btnSkip_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.btnSkip_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.btnSkip_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.btnSkip_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.foto] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.iconoUsuario] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.imgSkip] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.imgSkip_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.imgSkip_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.imgSkip_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.imgVolumen] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.imgVolumen_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.imgVolumen_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.imgVolumen_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.lblMarcador] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.logo] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.miBaseDatos] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.OcultarIntro] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.txtPassword] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.txtUsuario] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Inicio.video] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Inicio.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.MiEquipo.#ctor(_11FREAKS.Presentacion.Principal,_11FREAKS.Datos.BaseDatos)] Missing &lt;param name=&quot;p&quot;/&gt; documentation
@@ -516,15 +603,22 @@ SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.MiEquipo.m
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.MiEquipo.miListBox_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.MiEquipo.principal] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.MiEquipo.racha] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.#ctor(_11FREAKS.Presentacion.Inicio,_11FREAKS.Datos.BaseDatos)] Missing &lt;param name=&quot;winInicio&quot;/&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.#ctor(_11FREAKS.Presentacion.Inicio,_11FREAKS.Datos.BaseDatos)] Missing &lt;param name=&quot;bd&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.#ctor(_11FREAKS.Presentacion.Inicio,_11FREAKS.Datos.BaseDatos,System.String)] Missing &lt;param name=&quot;winInicio&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.#ctor(_11FREAKS.Presentacion.Inicio,_11FREAKS.Datos.BaseDatos,System.String)] Missing &lt;param name=&quot;bd&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.#ctor(_11FREAKS.Presentacion.Inicio,_11FREAKS.Datos.BaseDatos,System.String)] Missing &lt;param name=&quot;user&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal._contentLoaded] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.btnPartido_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.btnPartido_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.btnPartido_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.control] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.CtrShortcut1(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.CtrShortcut1(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.CtrShortcut1(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.DevuelveIncio] Missing &lt;returns&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.expanderUsers] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.F1Shortcut(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.F1Shortcut(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.F1Shortcut(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.indicadorLbox] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.inicio] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.logo] Missing &lt;summary&gt; documentation
@@ -536,10 +630,26 @@ SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuAyuda_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuAyuda_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuAyuda_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.menuBorrarCuenta] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuBorrarCuenta_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuBorrarCuenta_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuBorrarCuenta_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.menuCambiarContrase&#241;a] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarContrase&#241;a_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarContrase&#241;a_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarContrase&#241;a_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.menuCambiarCorreo] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarCorreo_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarCorreo_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarCorreo_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.menuCambiarMiEquipo] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarMiEquipo_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarMiEquipo_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarMiEquipo_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.menuCambiarUsuario] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarUsuario_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarUsuario_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCambiarUsuario_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.menuCerrarSesion] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCerrarSesion_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuCerrarSesion_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
@@ -563,6 +673,7 @@ SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.menuMaximosRojas] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuMaximosRojas_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuMaximosRojas_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.menuMiCuenta] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.menuMiEquipo] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuMiEquipo_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.menuMiEquipo_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
@@ -586,6 +697,8 @@ SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.miListBox_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.miListBox_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.miListBox_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [P:_11FREAKS.Presentacion.Principal.Respuesta] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.Principal.usuario] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.Window_Closed(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.Window_Closed(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.Principal.Window_Closed(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
@@ -598,6 +711,8 @@ SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.RegistroUs
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.RegistroUsuario.btnRegistrarse_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.RegistroUsuario.btnRegistrarse_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.RegistroUsuario.btnRegistrarse_Click(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.RegistroUsuario.CompruebaCampos] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.RegistroUsuario.CompruebaCampos] Missing &lt;returns&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.RegistroUsuario.idEquipo] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.RegistroUsuario.inicio] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.RegistroUsuario.ListBox_Loaded(System.Object,System.Windows.RoutedEventArgs)] Missing &lt;summary&gt; documentation
@@ -608,8 +723,8 @@ SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.RegistroUs
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.RegistroUsuario.listBoxEquipos_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.RegistroUsuario.listBoxEquipos_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.RegistroUsuario.miBaseDatos] Missing &lt;summary&gt; documentation
+SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.RegistroUsuario.txtEmail] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.RegistroUsuario.txtPassword] Missing &lt;summary&gt; documentation
-SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.RegistroUsuario.txtRespuesta] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [F:_11FREAKS.Presentacion.RegistroUsuario.txtUsuario] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.RegistroUsuario.txtUsuario_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)] Missing &lt;summary&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:_11FREAKS.Presentacion.RegistroUsuario.txtUsuario_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation
@@ -639,26 +754,27 @@ SHFB: Warning BE0066: ShowMissingComponent: [M:XamlGeneratedNamespace.GeneratedI
 SHFB: Warning BE0066: ShowMissingComponent: [M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;target&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;value&quot;/&gt; documentation
 SHFB: Warning BE0066: ShowMissingComponent: [M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)] Missing &lt;param name=&quot;culture&quot;/&gt; documentation
-Processed 264 topic(s)
-270 warning(s)
+Processed 349 topic(s)
+382 warning(s)
 CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
 ResolveArtLinksComponent: Copying media files...
+ResolveReferenceLinksComponent: 3 entries added to the member ID URL cache.  New cache size: 688 entries
 ResolveArtLinksComponent: Copying media files...
-CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 10 of 15.
+CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 11 of 15.
 CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 5 of 30.
-    Last step completed in 00:00:09,0582
+    Last step completed in 00:00:10,5745
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
 Using LCID &#39;3082&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 Processing Help 1 files in C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\Output\HtmlHelp1
-Processed 264 HTML files.  Sorting keywords and generating See Also indices.
+Processed 349 HTML files.  Sorting keywords and generating See Also indices.
 Saving HTML Help 1 keyword index to C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\Output\HtmlHelp1\Documentacion.hhk
 Saving HTML Help 1 table of contents to C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\Output\HtmlHelp1\Documentacion.hhc
 Processing website files in C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\Output\Website
-Processed 264 HTML files.  Sorting keywords and generating See Also indices.
+Processed 349 HTML files.  Sorting keywords and generating See Also indices.
 Saving website table of contents to C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\\WebTOC.xml
-    Last step completed in 00:00:00,1439
+    Last step completed in 00:00:00,1589
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -796,7 +912,7 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\Web\scripts\branding-Website.js -&gt; C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\Output\Website\scripts\branding-Website.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\Web\scripts\clipboard.min.js -&gt; C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\Output\Website\scripts\clipboard.min.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Components\VS2013\Web\scripts\jquery-3.5.1.min.js -&gt; C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\Output\Website\scripts\jquery-3.5.1.min.js
-    Last step completed in 00:00:00,3017
+    Last step completed in 00:00:00,2774
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
@@ -805,6 +921,7 @@ Generating HTML Help 1 project file...
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1 file...
 [C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\MSBuild.exe - Build1xHelpFile.proj]
+
   Microsoft HTML Help Compiler 4.74.8702
   
   
@@ -817,9 +934,9 @@ Compiling HTML Help 1 file...
   
   Compile time: 0 minutes, 4 seconds
   
-  266	Topics
+  351	Topics
   
-  2,697	Local links
+  3,585	Local links
   
   0	Internet links
   
@@ -829,32 +946,33 @@ Compiling HTML Help 1 file...
   
   
   
-  Created c:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\Output\HtmlHelp1\Documentacion.chm, 761,095 bytes
+  Created c:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\Documentacion\Help\Working\Output\HtmlHelp1\Documentacion.chm, 919,797 bytes
   
-  Compression decreased file by 5,206,154 bytes.
+  Compression decreased file by 6,340,063 bytes.
   
-    Last step completed in 00:00:04,6215
+    Last step completed in 00:00:05,3272
 </buildStep>
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:00,3518
+</plugIn>    Last step completed in 00:00:00,4574
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
 
-Copied 406 files for the website content
-    Last step completed in 00:00:00,1796
+Copied 500 files
+Copied 502 files for the website content
+    Last step completed in 00:00:00,2275
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,0960
+    Last step completed in 00:00:00,0995
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 10/03/2023 14:50:31.  Total time: 00:00:23,4022
+Build completed successfully at 21/04/2023 13:01:18.  Total time: 00:00:25,0773
 
 </buildStep>
 </shfbBuild>
