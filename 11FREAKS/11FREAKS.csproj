@@ -12,13 +12,17 @@
   <ItemGroup>
     <None Remove="Resources\60s Scoreboard.ttf" />
     <None Remove="Resources\adminLogo.png" />
+    <None Remove="Resources\avatar.png" />
     <None Remove="Resources\Ayuda11Freaks.pdf" />
     <None Remove="Resources\bgStadium.jpg" />
     <None Remove="Resources\campoFutbol.avif" />
     <None Remove="Resources\fondoLogin.jpg" />
     <None Remove="Resources\fondoMain.jpg" />
     <None Remove="Resources\iconoUsuario.png" />
+    <None Remove="Resources\Intro11Freaks.mp4" />
     <None Remove="Resources\Logo11Freaks.png" />
+    <None Remove="Resources\skip.png" />
+    <None Remove="Resources\volumenAct.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,6 +53,9 @@
     <Resource Include="Resources\adminLogo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\avatar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Ayuda11Freaks.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -65,8 +72,17 @@
     <Resource Include="Resources\iconoUsuario.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Content Include="Resources\Intro11Freaks.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\Logo11Freaks.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\skip.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\volumenAct.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
 

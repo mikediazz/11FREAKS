@@ -99,8 +99,8 @@
             </MenuItem>
 
 
-            <MenuItem x:Name="menuMiCuenta" Header="MI CUENTA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White">
-                <MenuItem x:Name="menuCambiarUsuario" Header="CAMBIAR NOMBRE USUARIO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCambiarUsuario_Click" >
+            <MenuItem x:Name="menuMiCuenta" Header="MI CUENTA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" >
+                <MenuItem x:Name="menuCambiarUsuario" Header="CAMBIAR NOMBRE USUARIO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black"  Click="menuCambiarUsuario_Click" >
                     <MenuItem.ToolTip>
                         <ToolTip Content="CAMBIAR NOMBRE DE USUARIO DE LA CUENTA"/>
                     </MenuItem.ToolTip>
@@ -134,7 +134,7 @@
                 </MenuItem>
             </MenuItem>
 
-            <MenuItem x:Name="menuAyuda" Header="AYUDA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuAyuda_Click">
+            <MenuItem x:Name="menuAyuda" Header="AYUDA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuAyuda_Click" >
                 <MenuItem.ToolTip>
                     <ToolTip Content="AQUÍ PODRÁS ENCONTRAR LA AYUDA QUE NECESITAS"/>
                 </MenuItem.ToolTip>

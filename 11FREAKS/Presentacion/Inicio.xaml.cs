@@ -61,15 +61,46 @@ namespace _11FREAKS.Presentacion
         /// </summary>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var mensajeTemporal = AutoClosingMessageBox.Show(
+            /*var mensajeTemporal = AutoClosingMessageBox.Show(
             text: "BIENVENIDO A 11FREAKS",
             caption: "EQUIPO DE 11FREAKS",
             timeout: 3000,
-            buttons: MessageBoxButtons.OK);//showCountDown:true
+            buttons: MessageBoxButtons.OK);//showCountDown:true*/
+
+            video.Play();
             
+        }
+
+        private void btnSkip_Click(object sender, RoutedEventArgs e)
+        {
+            OcultarIntro();
         }
 
 
 
+        private void imgVolumen_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            video.Volume = 0;
+        }
+
+        private void btnSkip_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void imgSkip_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            OcultarIntro();
+        }
+
+        private void OcultarIntro()
+        {
+            video.Stop();                               //DETENEMOS VIDEO
+            video.Volume = 0;
+            video.Visibility = Visibility.Collapsed;      //OCULTAMOS REPRODUCTOR
+            btnSkip.Visibility = Visibility.Collapsed;    //OCULTAMOS BOTÓN SALTAR
+            imgSkip.Visibility=Visibility.Collapsed;        //OCULTAMOS ICONOS
+            imgVolumen.Visibility=Visibility.Collapsed;
+        }
     }
 }

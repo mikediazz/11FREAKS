@@ -74,3 +74,5 @@ C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows
 C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows\App.baml
 C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows\Presentacion\Confirmacion.g.cs
 C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows\Presentacion\Confirmacion.baml
+C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\bin\Debug\net6.0-windows\Resources\Intro11Freaks.mp4
+C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows\11FREAKS_Content.g.cs

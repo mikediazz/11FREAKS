@@ -238,7 +238,7 @@
         </member>
         <member name="T:_11FREAKS.Presentacion.GestionUsuarios">
             <summary>
-            Clase GestionUsuarios.xaml || Tiene la función de administrar usuarios (SOLO ACCESIBLE POR ADMINISTRADORES) 
+            Clase GestionUsuarios.xaml || Tiene la función de administrar usuarios y otorgar funcionalidad
             </summary>
             <summary>
             GestionUsuarios
@@ -452,6 +452,11 @@
               Busca un recurso adaptado de tipo System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:_11FREAKS.Resources.Resource1.avatar">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:_11FREAKS.Resources.Resource1.Ayuda11Freaks">
             <summary>
               Busca un recurso adaptado de tipo System.Byte[].
@@ -487,7 +492,22 @@
               Busca un recurso adaptado de tipo System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:_11FREAKS.Resources.Resource1.Intro11Freaks">
+            <summary>
+              Busca un recurso adaptado de tipo System.Byte[].
+            </summary>
+        </member>
         <member name="P:_11FREAKS.Resources.Resource1.Logo11Freaks">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.skip">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.volumenAct">
             <summary>
               Busca un recurso adaptado de tipo System.Drawing.Bitmap.
             </summary>

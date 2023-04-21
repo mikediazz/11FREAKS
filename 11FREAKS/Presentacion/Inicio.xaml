@@ -32,7 +32,7 @@
                 <ToolTip Content="Desarrollado Por Miguel Díaz Osa sin fines lucrativos"/>
             </Image.ToolTip>
         </Image>
-        
+
         <Image x:Name="iconoUsuario" Source="/Resources/iconoUsuario.png" Margin="410,58,420,362"/>
 
         <TextBox x:Name="txtUsuario" HorizontalAlignment="Center" Margin="0,257,0,0" TextWrapping="Wrap" Text="RetroSlasher" VerticalAlignment="Top" Width="230" Height="40" FontSize="25" >
@@ -74,6 +74,16 @@
         <Label Content="*NOTA* ADMINISTRADOR CONTRASEÑA--> 1234" Visibility="Collapsed" HorizontalAlignment="Left" Margin="25,168,0,0" VerticalAlignment="Top" Height="45" Width="350" Foreground="White" FontSize="15"/>
         <Label x:Name="lblMarcador" Content="RMA 2-1 ATM" Margin="40,28,355,395" Style="{StaticResource estiloMarcador}" Visibility="Hidden" />
 
+        <MediaElement x:Name="video" HorizontalAlignment="Center" Height="602" UnloadedBehavior="Manual" LoadedBehavior="Play" Width="980" VerticalAlignment="Top" Volume="1"  Source="https://i.imgur.com/g6u54yV.mp4" Margin="0,10,0,0"/>
+
+        <Image x:Name="imgVolumen" HorizontalAlignment="Left"  Height="75" Width="60" VerticalAlignment="Top" Margin="870,462,0,0" Source="/Resources/volumenAct.png" MouseLeftButtonDown="imgVolumen_MouseLeftButtonDown" />
+
+        <Button x:Name="btnSkip" Content="       SALTAR" HorizontalAlignment="Left" Margin="55,462,0,0" VerticalAlignment="Top"  Height="60" Width="200" FontWeight="Bold" Click="btnSkip_Click" Background="Silver" BorderBrush="Black" FontSize="18" FontStretch="Medium" HorizontalContentAlignment="Left" MouseLeftButtonDown="btnSkip_MouseLeftButtonDown" >
+            <Button.ToolTip>
+                <ToolTip Content="Omitir Intro"/>
+            </Button.ToolTip>
+        </Button>
+        <Image x:Name="imgSkip" HorizontalAlignment="Left" Height="34" Margin="196,475,0,0" VerticalAlignment="Top" Width="35" Source="/Resources/skip.png" MouseLeftButtonDown="imgSkip_MouseLeftButtonDown"/>
 
     </Grid>
 </Window>

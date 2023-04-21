@@ -121,6 +121,9 @@
   <data name="adminLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>adminLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ayuda11Freaks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Ayuda11Freaks.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -142,8 +145,17 @@
   <data name="iconoUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>iconoUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Intro11Freaks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Intro11Freaks.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Logo11Freaks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Logo11Freaks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>skip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="volumenAct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>volumenAct.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_60s_Scoreboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>60s Scoreboard.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
