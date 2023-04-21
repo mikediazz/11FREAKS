@@ -79,6 +79,38 @@ namespace _11FREAKS.Datos
 
 
 
+        public void CorreoCambioEmail(string email)
+        {
+            using (MailMessage correo = new MailMessage())
+            {
+                correo.To.Add(email);      //Correo Destino
+
+                correo.Subject = "EMAIL CAMBIADO";                    //Asunto
+
+                correo.Body = "<html>\r\n  <head>\r\n    <title>11FREAKS</title>\r\n    <style>\r\n   h1 {text-align: center;}    h2 {text-align: center;}      h4 {  max-width: 500px;   margin: 0 auto;   text-align: center;  text-align: justify;  }         img { display: block;   margin: 0 auto;   width: 300px;     height: 300px;    }     </style>  </head> <body>   <h1>CONTRASEÑA 11FREAKS</h1>\r\n  <h2>SU CORREO HA SIDO RESTABLECIDA CON ÉXITO</h2>    <h4>Si tienes alguna pregunta, problema o crees han accedido a tu cuenta, no dudes en ponerte en contacto con nuestro equipo de soporte al cliente. Estamos aquí para ayudarte en cualquier momento.\r\n\r\n¡Gracias por elegir 11FREAKS!\r\n\r\n   </h4> <h4><br/>Atentamente,\r\nEl Equipo de 11FREAKS <br/><br/><br/> </h4>     <img src=\"https://i.imgur.com/n6RlabH.jpg\" alt=\"Imagen de ejemplo\">        </body>   </html>"; //Mensaje del correo
+                correo.IsBodyHtml = true;           //CUERPO CORREO EN FORMATO HTML
+
+                correo.From = new MailAddress("11freaks.retrodevs@gmail.com", "11FREAKS", System.Text.Encoding.UTF8);   //Correo Salida
+
+                using (SmtpClient cliente = new SmtpClient())
+                {
+                    cliente.UseDefaultCredentials = false;
+                    cliente.Credentials = new System.Net.NetworkCredential("11freaks.retrodevs@gmail.com", "axboqzfzjqdvfnpy"); //Cuenta de Correo
+                    cliente.Port = 587;
+                    cliente.EnableSsl = true;
+
+                    cliente.Host = "smtp.gmail.com";
+                    cliente.Send(correo);
+                }
+
+            }
+        }
+
+
+
+
+
+
 
         public void CorreoCuentaEliminada(string email)
         {

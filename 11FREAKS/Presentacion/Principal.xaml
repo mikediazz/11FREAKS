@@ -115,6 +115,11 @@
                         <ToolTip Content="BORRAR CUENTA DE FORMA DEFINITIVA"/>
                     </MenuItem.ToolTip>
                 </MenuItem>
+                <MenuItem x:Name="menuCambiarCorreo" Header="RESTABLECER CORREO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCambiarCorreo_Click"  >
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="CAMBIAR DIRECCIÓN CORREO DE SU CUENTA"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
             </MenuItem>
             
 

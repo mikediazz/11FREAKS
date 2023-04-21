@@ -622,5 +622,10 @@ namespace _11FREAKS.Presentacion
              
         }
 
+        private void menuCambiarCorreo_Click(object sender, RoutedEventArgs e)
+        {
+            GestionUsuarios gest = new GestionUsuarios(this, miBaseDatos, 4);
+            gest.ShowDialog();
+        }
     }
 }

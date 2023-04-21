@@ -968,14 +968,58 @@ namespace _11FREAKS.Datos
             }
 
         }
-    
-        
 
 
 
 
 
-        
+
+
+
+
+
+        public void CambiarCorreo(string usuario, string nuevoCorreo)
+        {
+            if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new SQLiteConnection("Data Source= ../../../Resources/freaksBBDD.db; Version = 3; New = False; Compress=True;");
+                    comando = new SQLiteCommand("UPDATE Usuarios SET Correo= '"+nuevoCorreo+"' WHERE Usuario='" + usuario + "'", conexion);
+
+                    conexion.Open();                                                                         //REALIZAMOS OPERACIÓN
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show("SE HA ACTUALIZADO EL CORREO DE SU CUENTA " + usuario);
+
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+
+        }
+
+
+
+
+
+
+
+
         /// <summary>
         ///     Función Para Mostrar Todos los Equipos
         /// </summary>

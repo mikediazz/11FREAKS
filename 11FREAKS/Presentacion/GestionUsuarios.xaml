@@ -19,6 +19,11 @@
                 <ToolTip Content="Introduzca Nombre Usuario Que Desee Tener"/>
             </TextBox.ToolTip>
         </TextBox>
+        <PasswordBox x:Name="txtPassword1" Visibility="Collapsed" HorizontalAlignment="Center" Margin="0,149,0,0"  VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.542,-2.225" Height="22">
+            <PasswordBox.ToolTip>
+                <ToolTip Content="Introduzca Contraseña Que Desee Tener"/>
+            </PasswordBox.ToolTip>
+        </PasswordBox>
         <PasswordBox x:Name="txtPassword" HorizontalAlignment="Center" Margin="0,214,0,0"  VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.542,-2.225" Height="22">
             <PasswordBox.ToolTip>
                 <ToolTip Content="Introduzca Contraseña Que Desee Tener"/>
@@ -50,6 +55,11 @@
                 <ToolTip Content="Email de Contacto"/>
             </Label.ToolTip>
         </Label>
+        <TextBox x:Name="txtMedio" Visibility="Hidden" HorizontalAlignment="Center" Margin="0,210,0,0"  VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.542,-2.225" Height="22">
+            <TextBox.ToolTip>
+                <ToolTip Content="Introduzca Dirección de Correo Válida"/>
+            </TextBox.ToolTip>
+        </TextBox>
 
     </Grid>
 </Window>

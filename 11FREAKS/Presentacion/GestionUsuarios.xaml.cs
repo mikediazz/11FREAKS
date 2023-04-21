@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace _11FREAKS.Presentacion
 {
     /// <summary>
-    /// Clase GestionUsuarios.xaml || Tiene la función de administrar usuarios (SOLO ACCESIBLE POR ADMINISTRADORES) 
+    /// Clase GestionUsuarios.xaml || Tiene la función de administrar usuarios y otorgar funcionalidad
     /// </summary>
     public partial class GestionUsuarios : Window
     {
@@ -49,7 +49,9 @@ namespace _11FREAKS.Presentacion
                 case 2:                         //CAMBIO NOMBRE USUARIO
                     lbl1.Visibility = Visibility.Collapsed;
                     txtUsuario.Visibility = Visibility.Collapsed;
+                    txtPassword.Visibility = Visibility.Collapsed;
                     lbl2.Content = "NUEVO NOMBRE USUARIO";
+                    txtMedio.Visibility = Visibility.Visible;
                     lbl3.Visibility = Visibility.Collapsed;
                     txtEmail.Visibility = Visibility.Collapsed;
                     btnRegistrarAdmin.Content = "Confirmar";
@@ -57,6 +59,7 @@ namespace _11FREAKS.Presentacion
 
                 case 3:                        //CAMBIO CONTRASEÑA
                     lbl1.Content = "NUEVA CONTRASEÑA";
+                    txtPassword1.Visibility = Visibility.Visible;
                     lbl2.Content = "REPITA NUEVA CONTRASEÑA";
                     lbl3.Visibility = Visibility.Collapsed;
                     txtEmail.Visibility= Visibility.Collapsed;
@@ -67,13 +70,15 @@ namespace _11FREAKS.Presentacion
                 case 4:                        //CAMBIO CORREO ELECTRÓNICO
                     lbl1.Content = "NUEVO EMAIL";
                     lbl2.Content = "REPITA NUEVO EMAIL";
+                    txtMedio.Visibility = Visibility.Visible;
                     lbl3.Visibility = Visibility.Collapsed;
                     txtEmail.Visibility = Visibility.Collapsed;
+                    txtPassword.Visibility = Visibility.Collapsed; 
                     btnRegistrarAdmin.Content = "Confirmar";
-
                     break;
             }
         }
+
 
         /// <summary>
         ///     Función Asociada al Botón "CREAR USUARIO" de la ventana de Registro
@@ -121,6 +126,8 @@ namespace _11FREAKS.Presentacion
                             timeout: 3000,
                             buttons: MessageBoxButtons.OK);
                         }
+                        this.Close();
+
                         break;
 
                     case 2:                 //CAMBIO NOMBRE USUARIO
@@ -132,41 +139,46 @@ namespace _11FREAKS.Presentacion
 
                         //DEBERÍAMOS COMPROBAR QUE AMBAS CONTRASEÑAS COINCIDEN
 
-                        var mensajeTemporal3 = AutoClosingMessageBox.Show(
-                        text: "SU CONTRASEÑA NUEVA VA A SER "+txtPassword.Password,
-                        caption: "EQUIPO DE 11FREAKS",
-                        timeout: 3000,
-                        buttons: MessageBoxButtons.OK);
-
-                        miBaseDatos.CambiarContraseña(txtPassword.Password);    
                         
-                            var mensajeTemporal = AutoClosingMessageBox.Show(
+                        if (CompruebaCamposCaso3() > 0)
+                        {
+                            var mensajeDifPass = AutoClosingMessageBox.Show(           //ALERTA ERROR
+                            text: "COMPRUEBE QUE AMBAS CONTRASEÑAS COINCIDEN",
+                            caption: "EQUIPO DE 11FREAKS",
+                            timeout: 2500,
+                            buttons: MessageBoxButtons.OK);
+                            txtPassword.Clear();                                        //Reseteamos Campos
+                            txtPassword1.Clear();
+                        }
+                        else
+                        {
+                            miBaseDatos.CambiarContraseña(txtPassword.Password);
+
+                            var mensajeTemporal = AutoClosingMessageBox.Show(           //ALERTA INFORMATIVA
                             text: "SU CONTRASEÑA HA SIDO RESTABLECIDA",
                             caption: "EQUIPO DE 11FREAKS",
-                            timeout: 3000,
+                            timeout: 2500,
                             buttons: MessageBoxButtons.OK);
 
+                            Correo correoPass = new Correo();
+                            correoPass.CorreoContraseña(miBaseDatos.DevuelveCorreo());     //ENVIAMOS CORREO INFORMATIVO AL USUARIO
+                            this.Close();
+                        }
 
-                            Correo correo = new Correo();
 
-                        var mensajePrueba2 = AutoClosingMessageBox.Show(
-                        text: "NOMBRE DEL USUARIO ->" + miBaseDatos.DevuelveUsuario(),
-                        caption: "EQUIPO DE 11FREAKS",
-                        timeout: 3000,
-                        buttons: MessageBoxButtons.OK);
+
                         
-
-                        var mensajePrueba3 = AutoClosingMessageBox.Show(
-                        text: "EMAIL DEL USUARIO ->"+ miBaseDatos.DevuelveCorreo().ToString(),
-                        caption: "EQUIPO DE 11FREAKS",
-                        timeout: 3000,
-                        buttons: MessageBoxButtons.OK);
-
-                        correo.CorreoContraseña(miBaseDatos.DevuelveCorreo());     //ENVIAMOS CORREO INFORMATIVO AL USUARIO
-
-                            this.Hide();
                         
                         break;
+
+
+                    case 4:
+                        miBaseDatos.CambiarCorreo(miBaseDatos.DevuelveUsuario(),miBaseDatos.DevuelveCorreo());
+                        Correo correo = new Correo();
+                        correo.CorreoCambioEmail(miBaseDatos.DevuelveCorreo());     //ENVIAMOS CORREO INFORMATIVO AL USUARIO
+                        this.Close();
+                        break;
+
 
                     default:
                         var mensajePrueba = AutoClosingMessageBox.Show(
@@ -174,6 +186,7 @@ namespace _11FREAKS.Presentacion
                         caption: "EQUIPO DE 11FREAKS",
                         timeout: 3000,
                         buttons: MessageBoxButtons.OK);
+                        this.Close();
                         break;
                 }
 
@@ -187,6 +200,86 @@ namespace _11FREAKS.Presentacion
 
 
 
+        }
+
+
+
+        public int CompruebaCamposCaso1()
+        {
+            int comprobador = 0;          //VARIABLE COMPROBACIÓN REQUISITOS
+
+            if (txtUsuario == null || txtUsuario.Text == string.Empty)
+            {
+                comprobador += 1;
+            }
+            if (txtPassword == null || txtPassword.Password == string.Empty)
+            {
+                comprobador += 1;
+            }
+            if (txtEmail == null || txtEmail.Text == string.Empty)
+            {
+                comprobador += 1;
+            }
+            return comprobador;
+        }
+
+
+        public int CompruebaCamposCaso2()                                       //////////////////////////////////////////////////COMPLETAR
+        {
+            int comprobador = 0;          //VARIABLE COMPROBACIÓN REQUISITOS
+
+            if (txtUsuario == null || txtUsuario.Text == string.Empty)
+            {
+                comprobador += 1;
+            }
+            if (txtPassword == null || txtPassword.Password == string.Empty)
+            {
+                comprobador += 1;
+            }
+            if (txtEmail == null || txtEmail.Text == string.Empty)
+            {
+                comprobador += 1;
+            }
+            return comprobador;
+        }
+
+        public int CompruebaCamposCaso3()
+        {
+            int comprobador = 0;          //VARIABLE COMPROBACIÓN REQUISITOS
+
+            if (txtPassword1 == null || txtPassword1.Password == string.Empty)
+            {
+                comprobador += 1;
+            }
+            if (txtPassword == null || txtPassword.Password == string.Empty)
+            {
+                comprobador += 1;
+            }
+            if (txtPassword1.Password != txtPassword.Password)
+            {
+                comprobador += 1;
+            }
+            return comprobador;
+        }
+
+
+        public int CompruebaCamposCaso4()
+        {
+            int comprobador = 0;          //VARIABLE COMPROBACIÓN REQUISITOS
+
+            if (txtUsuario == null || txtUsuario.Text == string.Empty)
+            {
+                comprobador += 1;
+            }
+            if (txtMedio == null || txtMedio.Text == string.Empty)
+            {
+                comprobador += 1;
+            }
+            if (txtUsuario.Text != txtMedio.Text)
+            {
+                comprobador += 1;
+            }
+            return comprobador;
         }
     }
 }
