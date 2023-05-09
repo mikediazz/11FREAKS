@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -71,9 +72,17 @@ namespace _11FREAKS.Presentacion
                         buttons: MessageBoxButtons.OK);
 
                         Correo mailBienvenida=new Correo();                                                 //ENVIAMOS CORREO DE BIENVENIDA AL USUARIO
-                        mailBienvenida.CorreoBienvenida(txtEmail.Text);
-                        
-                        
+                       // mailBienvenida.CorreoBienvenida(txtEmail.Text);
+
+                        /*Thread volumenThread = new Thread(new ThreadStart(mailBienvenida.CorreoBienvenida(txtEmail.)));          //CREAMOS HILO AL QUE LE PASAMOS EL MÉTODO PARA INICIAR INTRO                                                                        
+                        volumenThread.Start();*/
+
+                        /*  Thread hilo = new Thread(new ParameterizedThreadStart(mailBienvenida.CorreoBienvenida);
+                          hilo.Start(txtEmail.Text);*/
+
+                        Thread thMailBienvenida = new Thread(() => mailBienvenida.CorreoBienvenida(txtEmail.Text));
+                        thMailBienvenida.Start();
+
                         Principal principal = new Principal(inicio, miBaseDatos, txtUsuario.Text);
                         this.Hide();
                         principal.ShowDialog();

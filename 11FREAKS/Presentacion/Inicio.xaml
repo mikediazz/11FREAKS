@@ -21,7 +21,7 @@
     </Window.Resources>
 
 
-    <Grid>
+    <Grid x:Name="miGrid">
 
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/bgStadium.jpg" Stretch="UniformToFill"/>
@@ -73,17 +73,29 @@
         <Image x:Name="foto"  HorizontalAlignment="Left"  Height="200" Width="200" VerticalAlignment="Center" Margin="75,0,0,0" />
         <Label Content="*NOTA* ADMINISTRADOR CONTRASEÑA--> 1234" Visibility="Collapsed" HorizontalAlignment="Left" Margin="25,168,0,0" VerticalAlignment="Top" Height="45" Width="350" Foreground="White" FontSize="15"/>
         <Label x:Name="lblMarcador" Content="RMA 2-1 ATM" Margin="40,28,355,395" Style="{StaticResource estiloMarcador}" Visibility="Hidden" />
-
+        <Image x:Name="bgSolid" Visibility="Collapsed" Source="/Resources/bgSolid.jpg" HorizontalAlignment="Left" Height="603" Margin="-18,-6,0,0" VerticalAlignment="Top" Width="1063"/>
         <MediaElement x:Name="video" HorizontalAlignment="Center" Height="602" UnloadedBehavior="Manual" LoadedBehavior="Play" Width="980" VerticalAlignment="Top" Volume="1"  Source="https://i.imgur.com/g6u54yV.mp4" Margin="0,10,0,0"/>
 
-        <Image x:Name="imgVolumen" HorizontalAlignment="Left"  Height="75" Width="60" VerticalAlignment="Top" Margin="870,462,0,0" Source="/Resources/volumenAct.png" MouseLeftButtonDown="imgVolumen_MouseLeftButtonDown" />
+        <Image x:Name="imgVolumen" Visibility="Collapsed" HorizontalAlignment="Left"  Height="75" Width="60" VerticalAlignment="Top" Margin="870,462,0,0" Source="/Resources/volumenAct.png" MouseLeftButtonDown="imgVolumen_MouseLeftButtonDown" />
 
-        <Button x:Name="btnSkip" Content="       SALTAR" HorizontalAlignment="Left" Margin="55,462,0,0" VerticalAlignment="Top"  Height="60" Width="200" FontWeight="Bold" Click="btnSkip_Click" Background="Silver" BorderBrush="Black" FontSize="18" FontStretch="Medium" HorizontalContentAlignment="Left" MouseLeftButtonDown="btnSkip_MouseLeftButtonDown" >
+        <Button x:Name="btnSkip" Content="       SALTAR"  Visibility="Collapsed" HorizontalAlignment="Left" Margin="55,462,0,0" VerticalAlignment="Top"  Height="60" Width="200" FontWeight="Bold" Click="btnSkip_Click" Background="Silver" BorderBrush="Black" FontSize="18" FontStretch="Medium" HorizontalContentAlignment="Left" MouseLeftButtonDown="btnSkip_MouseLeftButtonDown" >
             <Button.ToolTip>
                 <ToolTip Content="Omitir Intro"/>
             </Button.ToolTip>
         </Button>
-        <Image x:Name="imgSkip" HorizontalAlignment="Left" Height="34" Margin="196,475,0,0" VerticalAlignment="Top" Width="35" Source="/Resources/skip.png" MouseLeftButtonDown="imgSkip_MouseLeftButtonDown"/>
+
+        <Image x:Name="imgSkip" Visibility="Collapsed" HorizontalAlignment="Left" Height="34" Margin="196,475,0,0" VerticalAlignment="Top" Width="35" Source="/Resources/skip.png" MouseLeftButtonDown="imgSkip_MouseLeftButtonDown"/>
+        <Label x:Name="lblMute" Content="I" Visibility="Collapsed" FontSize="100" Margin="886,417,74,13" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="lblMute_MouseLeftButtonDown">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="41.641"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        
 
     </Grid>
 </Window>

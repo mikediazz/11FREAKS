@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.DirectoryServices;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
@@ -16,6 +18,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
+
+
+
+
+
 namespace _11FREAKS.Presentacion
 {
     /// <summary>
@@ -24,6 +33,7 @@ namespace _11FREAKS.Presentacion
     public partial class Inicio : Window
     {
         private Datos.BaseDatos miBaseDatos;
+        
 
         public Inicio()
         {
@@ -61,26 +71,23 @@ namespace _11FREAKS.Presentacion
         /// </summary>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            /*var mensajeTemporal = AutoClosingMessageBox.Show(
-            text: "BIENVENIDO A 11FREAKS",
-            caption: "EQUIPO DE 11FREAKS",
-            timeout: 3000,
-            buttons: MessageBoxButtons.OK);//showCountDown:true*/
-
-            video.Play();
-            
+            Thread videoThread = new Thread(new ThreadStart(ReproducirIntro));          //CREAMOS HILO AL QUE LE PASAMOS EL MÉTODO PARA INICIAR INTRO                                                                        
+            videoThread.Start();                                                        //LANZAMOS HILO
         }
+
 
         private void btnSkip_Click(object sender, RoutedEventArgs e)
         {
-            OcultarIntro();
+            Thread ocultarThread = new Thread(new ThreadStart(OcultarIntro));          //CREAMOS HILO AL QUE LE PASAMOS EL MÉTODO PARA INICIAR INTRO                                                                        
+            ocultarThread.Start();
         }
 
 
 
         private void imgVolumen_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            video.Volume = 0;
+            Thread volumenThread = new Thread(new ThreadStart(GestionarVolumen));          //CREAMOS HILO AL QUE LE PASAMOS EL MÉTODO PARA INICIAR INTRO                                                                        
+            volumenThread.Start();                                                           
         }
 
         private void btnSkip_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -93,14 +100,69 @@ namespace _11FREAKS.Presentacion
             OcultarIntro();
         }
 
+
+
+        private void ReproducirIntro()
+        {
+            System.Windows.Application.Current.Dispatcher.Invoke(new Action(() =>
+            {
+                video.Play();
+                video.Volume = 0.5;
+                imgSkip.Visibility = Visibility.Visible;
+                imgVolumen.Visibility = Visibility.Visible;
+                btnSkip.Visibility = Visibility.Visible;
+                bgSolid.Visibility = Visibility.Visible;
+            }));
+
+        }
+
+
+
         private void OcultarIntro()
         {
-            video.Stop();                               //DETENEMOS VIDEO
-            video.Volume = 0;
-            video.Visibility = Visibility.Collapsed;      //OCULTAMOS REPRODUCTOR
-            btnSkip.Visibility = Visibility.Collapsed;    //OCULTAMOS BOTÓN SALTAR
-            imgSkip.Visibility=Visibility.Collapsed;        //OCULTAMOS ICONOS
-            imgVolumen.Visibility=Visibility.Collapsed;
+
+            System.Windows.Application.Current.Dispatcher.Invoke(new Action(() =>
+            {
+                video.Stop();                               //DETENEMOS VIDEO
+                video.Volume = 0;
+                video.Visibility = Visibility.Collapsed;      //OCULTAMOS REPRODUCTOR
+                btnSkip.Visibility = Visibility.Collapsed;    //OCULTAMOS BOTÓN SALTAR
+                imgSkip.Visibility=Visibility.Collapsed;        //OCULTAMOS ICONOS
+                imgVolumen.Visibility=Visibility.Collapsed;
+                lblMute.Visibility=Visibility.Collapsed;
+                bgSolid.Visibility = Visibility.Collapsed;
+            }));
+
         }
+
+
+        private void GestionarVolumen()
+        {
+            System.Windows.Application.Current.Dispatcher.Invoke(new Action(() =>
+            {
+                if (video.Volume == 0)
+                {
+                    video.Volume = 1;
+                    lblMute.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    video.Volume = 0;
+                    lblMute.Visibility = Visibility.Visible;
+                }
+            }));
+        }
+
+        private void lblMute_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Thread volumenThread = new Thread(new ThreadStart(GestionarVolumen));          //CREAMOS HILO AL QUE LE PASAMOS EL MÉTODO PARA INICIAR INTRO                                                                        
+            volumenThread.Start();
+
+
+
+        }
+
+
+
     }
 }

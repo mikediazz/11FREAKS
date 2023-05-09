@@ -627,5 +627,10 @@ namespace _11FREAKS.Presentacion
             GestionUsuarios gest = new GestionUsuarios(this, miBaseDatos, 4);
             gest.ShowDialog();
         }
+
+        private void menuAjustarVolumen_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

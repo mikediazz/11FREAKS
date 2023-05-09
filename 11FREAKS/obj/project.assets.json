@@ -345,6 +345,12 @@
           }
         }
       },
+      "Obfuscar/2.2.37": {
+        "type": "package",
+        "build": {
+          "build/obfuscar.props": {}
+        }
+      },
       "PDFsharp/1.50.5147": {
         "type": "package",
         "compile": {
@@ -1916,6 +1922,21 @@
         "newtonsoft.json.13.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "Obfuscar/2.2.37": {
+      "sha512": "vK0+/SYvEKvLD2ZdxDwZskOXkidRg0fkG1/clOB+albDLGAj/WShgkFhYh+4w1GaWCDTTiL7Q4306aaPzUAoVw==",
+      "type": "package",
+      "path": "obfuscar/2.2.37",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Potion-icon.png",
+        "build/obfuscar.props",
+        "obfuscar.2.2.37.nupkg.sha512",
+        "obfuscar.nuspec",
+        "tools/Obfuscar.Console.exe"
       ]
     },
     "PDFsharp/1.50.5147": {
@@ -4924,6 +4945,7 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "AutoClosingMessageBox >= 1.0.0.5",
+      "Obfuscar >= 2.2.37",
       "PdfSharp >= 1.50.5147",
       "Prism.Wpf >= 8.1.97",
       "System.Data.SQLite.Core >= 1.0.117",
@@ -4979,6 +5001,12 @@
           "AutoClosingMessageBox": {
             "target": "Package",
             "version": "[1.0.0.5, )"
+          },
+          "Obfuscar": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.2.37, )"
           },
           "PdfSharp": {
             "target": "Package",

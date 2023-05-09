@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s9geteVIPRmL3fCp+E5xM83DjPYS65kPg/qAgCYNlnnlGds7wL7HrR6R/6o7s65lWencerRXhinOsIltuTxr+A==",
+  "dgSpecHash": "Xitnq6dsFiIXZu67acYOWOuD1th6FfdxNeA6t75oR6E5j3P/rQW3QoyGwmYLpcZKZzWoJATwMM01hnkN7fxloA==",
   "success": true,
   "projectFilePath": "C:\\Users\\mdnon\\Desktop\\2DAM\\DI\\EjerDI\\11FREAKS\\11FREAKS\\11FREAKS.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\mdnon\\.nuget\\packages\\microsoft.win32.registry\\4.3.0\\microsoft.win32.registry.4.3.0.nupkg.sha512",
     "C:\\Users\\mdnon\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
     "C:\\Users\\mdnon\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\mdnon\\.nuget\\packages\\obfuscar\\2.2.37\\obfuscar.2.2.37.nupkg.sha512",
     "C:\\Users\\mdnon\\.nuget\\packages\\pdfsharp\\1.50.5147\\pdfsharp.1.50.5147.nupkg.sha512",
     "C:\\Users\\mdnon\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\mdnon\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",

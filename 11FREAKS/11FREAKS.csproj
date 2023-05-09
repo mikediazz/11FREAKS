@@ -7,6 +7,7 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +15,7 @@
     <None Remove="Resources\adminLogo.png" />
     <None Remove="Resources\avatar.png" />
     <None Remove="Resources\Ayuda11Freaks.pdf" />
+    <None Remove="Resources\bgSolid.jpg" />
     <None Remove="Resources\bgStadium.jpg" />
     <None Remove="Resources\campoFutbol.avif" />
     <None Remove="Resources\fondoLogin.jpg" />
@@ -41,6 +43,10 @@
     <PackageReference Include="AutoClosingMessageBox" Version="1.0.0.5" />
     <PackageReference Include="itext7" Version="7.2.5" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="Obfuscar" Version="2.2.37">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="PdfSharp" Version="1.50.5147" />
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.117" />
@@ -58,6 +64,9 @@
     </Resource>
     <Resource Include="Resources\Ayuda11Freaks.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\bgSolid.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\bgStadium.jpg" />
     <Resource Include="Resources\campoFutbol.avif">

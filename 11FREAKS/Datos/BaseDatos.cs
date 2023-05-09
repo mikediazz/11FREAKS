@@ -74,7 +74,7 @@ namespace _11FREAKS.Datos
 
                     conexion.Open();
                     lector = comando.ExecuteReader();
-                    if (lector.HasRows)                                                             //BUSCAMOS USUARIO
+                    if (lector.HasRows)                                                              //BUSCAMOS USUARIO
                     {
                         if (lector.Read()) {                                                         //COMPROBAMOS USUARIO Y SI ES ADMIN
                             nomusuario = lector.GetString(0);
@@ -1058,7 +1058,7 @@ namespace _11FREAKS.Datos
                         }
                     }
                     else
-                    {                                                                          //SI NO EXISTE USUARIO...s                                                                     
+                    {                                                                               //SI NO EXISTE USUARIO...s                                                                     
                         MessageBox.Show("NO SE ENCONTRARON REGISTROS");
                     }
 

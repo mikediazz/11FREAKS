@@ -13,7 +13,11 @@
     <SourceRoot Include="C:\Users\mdnon\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)obfuscar\2.2.37\build\obfuscar.props" Condition="Exists('$(NuGetPackageRoot)obfuscar\2.2.37\build\obfuscar.props')" />
+  </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Xaml_Behaviors_Wpf Condition=" '$(PkgMicrosoft_Xaml_Behaviors_Wpf)' == '' ">C:\Users\mdnon\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.31</PkgMicrosoft_Xaml_Behaviors_Wpf>
+    <PkgObfuscar Condition=" '$(PkgObfuscar)' == '' ">C:\Users\mdnon\.nuget\packages\obfuscar\2.2.37</PkgObfuscar>
   </PropertyGroup>
 </Project>

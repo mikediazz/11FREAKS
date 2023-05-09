@@ -103,6 +103,16 @@ namespace _11FREAKS.Resources {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap bgSolid {
+            get {
+                object obj = ResourceManager.GetObject("bgSolid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap bgStadium {
             get {
                 object obj = ResourceManager.GetObject("bgStadium", resourceCulture);

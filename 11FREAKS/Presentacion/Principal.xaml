@@ -33,7 +33,7 @@
             <ImageBrush ImageSource="/Resources/fondoMain.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <Image x:Name="logo" Source="/Resources/Logo11Freaks.png" Margin="606,50,-6,184" Width="200" Height="200" VerticalAlignment="Top" HorizontalAlignment="Right">
+        <Image x:Name="logo" Source="/Resources/Logo11Freaks.png" Opacity="0.85" Margin="606,50,-6,184" Width="200" Height="200" VerticalAlignment="Top" HorizontalAlignment="Right">
             <Image.ToolTip>
                 <ToolTip Content="Desarrollado Por Miguel Díaz Osa sin fines lucrativos"/>
             </Image.ToolTip>
@@ -100,19 +100,9 @@
 
 
             <MenuItem x:Name="menuMiCuenta" Header="MI CUENTA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" >
-                <MenuItem x:Name="menuCambiarUsuario" Header="CAMBIAR NOMBRE USUARIO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black"  Click="menuCambiarUsuario_Click" >
-                    <MenuItem.ToolTip>
-                        <ToolTip Content="CAMBIAR NOMBRE DE USUARIO DE LA CUENTA"/>
-                    </MenuItem.ToolTip>
-                </MenuItem>
                 <MenuItem x:Name="menuCambiarContraseña" Header="CAMBIAR CONTRASEÑA" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCambiarContraseña_Click" >
                     <MenuItem.ToolTip>
                         <ToolTip Content="CAMBIAR CONTRASEÑA DE LA CUENTA"/>
-                    </MenuItem.ToolTip>
-                </MenuItem>
-                <MenuItem x:Name="menuBorrarCuenta" Header="BORRAR CUENTA" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuBorrarCuenta_Click">
-                    <MenuItem.ToolTip>
-                        <ToolTip Content="BORRAR CUENTA DE FORMA DEFINITIVA"/>
                     </MenuItem.ToolTip>
                 </MenuItem>
                 <MenuItem x:Name="menuCambiarCorreo" Header="RESTABLECER CORREO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCambiarCorreo_Click"  >
@@ -120,8 +110,13 @@
                         <ToolTip Content="CAMBIAR DIRECCIÓN CORREO DE SU CUENTA"/>
                     </MenuItem.ToolTip>
                 </MenuItem>
+                <MenuItem x:Name="menuBorrarCuenta" Header="BORRAR CUENTA" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuBorrarCuenta_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="BORRAR CUENTA DE FORMA DEFINITIVA"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
             </MenuItem>
-            
+
 
             <MenuItem x:Name="menuAjustes" Header="AJUSTES" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White">
                 <MenuItem.ToolTip>
@@ -132,9 +127,14 @@
                         <ToolTip Content="OCULTE EL LOGO DE 11FREAKS"/>
                     </MenuItem.ToolTip>
                 </MenuItem>
+                <MenuItem x:Name="menuAjustarVolumen" Header="AJUSTAR VOLUMEN" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuAjustarVolumen_Click"  >
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="OCULTE EL LOGO DE 11FREAKS"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
             </MenuItem>
 
-            <MenuItem x:Name="menuAyuda" Header="AYUDA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuAyuda_Click" >
+            <MenuItem x:Name="menuAyuda" Header="AYUDA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuAyuda_Click">
                 <MenuItem.ToolTip>
                     <ToolTip Content="AQUÍ PODRÁS ENCONTRAR LA AYUDA QUE NECESITAS"/>
                 </MenuItem.ToolTip>
@@ -160,10 +160,6 @@
             </MenuItem>
 
         </Menu>
-
-
-
-
 
 
 
