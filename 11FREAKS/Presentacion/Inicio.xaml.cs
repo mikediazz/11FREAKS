@@ -33,23 +33,34 @@ namespace _11FREAKS.Presentacion
     public partial class Inicio : Window
     {
         private Datos.BaseDatos miBaseDatos;
-        
+        private Datos.BDOnline bdServer;
+
 
         public Inicio()
         {
             InitializeComponent();
-            miBaseDatos = new Datos.BaseDatos();
+            miBaseDatos = new Datos.BaseDatos();        //INSTANCIAMOS BASE DATOS LOCAL
+            bdServer = new Datos.BDOnline();            //INSTANCIAMOS BASE DATOS SERVER
         }
+
 
         /// <summary>
         ///     Función  Vinculada al Botón Iniciar Sesión --> Nos Envía a la Ventana "PRINCIPAL"
         /// </summary>
         private void btnInicioSesion_Click(object sender, RoutedEventArgs e)
         {
-            miBaseDatos = new Datos.BaseDatos();
+            /*
             if (miBaseDatos.Conectar(txtUsuario.Text, txtPassword.Password) == true)
             {
                 Principal principal = new Principal(this, miBaseDatos, txtUsuario.Text);
+                this.Hide();
+                principal.ShowDialog();
+            }
+            */
+
+            if (bdServer.ConectarServer(txtUsuario.Text, txtPassword.Password) == true)
+            {
+                Principal principal = new Principal(this, bdServer, txtUsuario.Text);
                 this.Hide();
                 principal.ShowDialog();
             }
@@ -61,7 +72,8 @@ namespace _11FREAKS.Presentacion
 
         private void btnRegistrarse_Click(object sender, RoutedEventArgs e)
         {
-            RegistroUsuario registro = new RegistroUsuario(this);
+            //RegistroUsuario registro = new RegistroUsuario(this);
+            RegistroUserServer registro = new RegistroUserServer(this);
             this.Hide();
             registro.ShowDialog();
         }

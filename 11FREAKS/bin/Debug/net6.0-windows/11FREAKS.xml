@@ -200,6 +200,43 @@
                  <see cref="T:System.Collections.ArrayList"/>
              </returns>
         </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.CrearUsuario(System.String,System.String,System.String,System.String)">
+            <summary>
+                Método para crer Usuario (SIGN UP) --> Encriptamos Contraseña
+            </summary>
+            <param name="usuario">
+                Recibimos Usuario del Login o Para Hacer Consulta
+            </param>
+            <param name="contraseña">
+                Recibimos Contraseña del Usuario
+            </param>
+            <param name="idEquipo">
+                Recibimos id Equipo Favorito (PUEDE SER NULO)
+            </param>
+            <returns>
+                Devuelve un Booleano con el Resultado de la Operación
+                <see cref="T:System.Boolean"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.CompruebaPassword(System.String,System.String)">
+            <summary>
+                Método para Comprobar que la Contraseña es Segura 
+            </summary>
+            <param name="password">
+                Recibimos la Contraseña del Usuario
+            </param>
+            <returns>
+                Devuelve si cumple los requisitos mínimos de seguridad
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.CompruebaPermisos">
+            <summary>
+                Método para Comprobar los Permisos de un Usuario
+            </summary>
+            <returns>
+                Devuelve Si Un Usuario es Admin
+            </returns>
+        </member>
         <member name="T:_11FREAKS.Presentacion.BusquedaUsuarios">
             <summary>
             Clase Interacción con BusquedaUsuarios.xaml || Control Personalizado para la Busqueda de Usuarios Registrados
@@ -413,6 +450,19 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:_11FREAKS.Presentacion.RegistroUserServer">
+            <summary>
+            Lógica de interacción para RegistroUserServer.xaml
+            </summary>
+            <summary>
+            RegistroUserServer
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.RegistroUserServer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:_11FREAKS.Presentacion.RegistroUsuario">
             <summary>
             Lógica de interacción para RegistroUsuario.xaml
@@ -515,6 +565,36 @@
         <member name="P:_11FREAKS.Resources.Resource1.volumenAct">
             <summary>
               Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
             </summary>
         </member>
     </members>

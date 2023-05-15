@@ -22,6 +22,9 @@
     <Compile Update="Presentacion\Principal.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Presentacion\RegistroUserServer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Resources\Resource1.resx">
@@ -45,6 +48,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Presentacion\Principal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Presentacion\RegistroUserServer.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

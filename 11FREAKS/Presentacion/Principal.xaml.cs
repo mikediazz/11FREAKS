@@ -24,19 +24,20 @@ namespace _11FREAKS.Presentacion
     public partial class Principal : Window
     {
         private Datos.BaseDatos miBaseDatos;
+        private Datos.BDOnline bdServer;
         Inicio inicio;
         string usuario;
         public bool Respuesta {get;set;}
 
 
-        public Principal(Inicio winInicio, BaseDatos bd, string user)                            //CONSTRUCTOR
+        public Principal(Inicio winInicio, BDOnline bd, string user)                            //CONSTRUCTOR
         {
             InitializeComponent();
             inicio= winInicio;
-            miBaseDatos= bd;
+            bdServer= bd;
             usuario = user;
 
-            if (miBaseDatos.CompruebaPermisos())                        //EN CASO QUE SEA ADMIN, SE HABILITAN OPCIONES EXCLUSIVAS
+            if (bdServer.CompruebaPermisos())                        //EN CASO QUE SEA ADMIN, SE HABILITAN OPCIONES EXCLUSIVAS
             {
                 menuOpcAdmin.IsEnabled= true;
                 menuOpcAdmin.Visibility = Visibility.Visible;

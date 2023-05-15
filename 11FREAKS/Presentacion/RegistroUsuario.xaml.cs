@@ -27,6 +27,7 @@ namespace _11FREAKS.Presentacion
     public partial class RegistroUsuario : Window
     {
         private Datos.BaseDatos miBaseDatos;
+        private Datos.BDOnline bdServer;
         Inicio inicio;
 
         string idEquipo;
@@ -83,7 +84,7 @@ namespace _11FREAKS.Presentacion
                         Thread thMailBienvenida = new Thread(() => mailBienvenida.CorreoBienvenida(txtEmail.Text));
                         thMailBienvenida.Start();
 
-                        Principal principal = new Principal(inicio, miBaseDatos, txtUsuario.Text);
+                        Principal principal = new Principal(inicio, bdServer, txtUsuario.Text);
                         this.Hide();
                         principal.ShowDialog();
                     }
