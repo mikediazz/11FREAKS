@@ -1,0 +1,1991 @@
+{
+    get: "players"
+    parameters: {
+    league: "140"
+    season: "2022"
+    page: "15"
+    }
+    errors: [
+    ]
+    results: 20
+    paging: {
+    current: 15
+    total: 39
+    }
+    response: [
+    {
+    player: {
+    id: 1700
+    name: "Iván Martín"
+    firstname: "Iván"
+    lastname: "Martín Núñez"
+    age: 24
+    birth: {
+    date: "1999-02-14"
+    place: "Bilbao"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "178 cm"
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/1700.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-3.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 21
+    lineups: 15
+    minutes: 1377
+    number: null
+    position: "Midfielder"
+    rating: "6.652380"
+    captain: false
+    }
+    substitutes: {
+    in: 6
+    out: 12
+    bench: 13
+    }
+    shots: {
+    total: 15
+    on: 7
+    }
+    goals: {
+    total: 3
+    conceded: 0
+    assists: 3
+    saves: null
+    }
+    passes: {
+    total: 545
+    key: 16
+    accuracy: 21
+    }
+    tackles: {
+    total: 8
+    blocks: null
+    interceptions: 6
+    }
+    duels: {
+    total: 140
+    won: 50
+    }
+    dribbles: {
+    attempts: 38
+    success: 22
+    past: null
+    }
+    fouls: {
+    drawn: 10
+    committed: 17
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 2182
+    name: "V. Tsygankov"
+    firstname: "Viktor"
+    lastname: "Tsygankov"
+    age: 26
+    birth: {
+    date: "1997-11-15"
+    place: "Nahariya"
+    country: "Israel"
+    }
+    nationality: "Ukraine"
+    height: "178 cm"
+    weight: "73 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/2182.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-3.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 15
+    lineups: 13
+    minutes: 1134
+    number: null
+    position: "Attacker"
+    rating: "7.040000"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 7
+    bench: 4
+    }
+    shots: {
+    total: 11
+    on: 7
+    }
+    goals: {
+    total: 3
+    conceded: 0
+    assists: 5
+    saves: null
+    }
+    passes: {
+    total: 426
+    key: 28
+    accuracy: 20
+    }
+    tackles: {
+    total: 5
+    blocks: 2
+    interceptions: 7
+    }
+    duels: {
+    total: 85
+    won: 41
+    }
+    dribbles: {
+    attempts: 16
+    success: 11
+    past: null
+    }
+    fouls: {
+    drawn: 18
+    committed: 6
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 2449
+    name: "Y. Herrera"
+    firstname: "Yangel Clemente"
+    lastname: "Herrera Ravelo"
+    age: 25
+    birth: {
+    date: "1998-01-07"
+    place: "La Guaira"
+    country: "Venezuela"
+    }
+    nationality: "Venezuela"
+    height: "184 cm"
+    weight: "78 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/2449.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-1.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 16
+    lineups: 10
+    minutes: 779
+    number: null
+    position: "Midfielder"
+    rating: "6.750000"
+    captain: false
+    }
+    substitutes: {
+    in: 6
+    out: 8
+    bench: 7
+    }
+    shots: {
+    total: 17
+    on: 8
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: 2
+    saves: null
+    }
+    passes: {
+    total: 307
+    key: 9
+    accuracy: 15
+    }
+    tackles: {
+    total: 22
+    blocks: 1
+    interceptions: 2
+    }
+    duels: {
+    total: 142
+    won: 61
+    }
+    dribbles: {
+    attempts: 11
+    success: 5
+    past: null
+    }
+    fouls: {
+    drawn: 18
+    committed: 29
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 2617
+    name: "C. Stuani"
+    firstname: "Cristhian Ricardo"
+    lastname: "Stuani Curbelo"
+    age: 37
+    birth: {
+    date: "1986-10-12"
+    place: "Tala"
+    country: "Uruguay"
+    }
+    nationality: "Uruguay"
+    height: "186 cm"
+    weight: "76 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/2617.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-1.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 28
+    lineups: 7
+    minutes: 927
+    number: null
+    position: "Attacker"
+    rating: "6.711111"
+    captain: false
+    }
+    substitutes: {
+    in: 21
+    out: 4
+    bench: 22
+    }
+    shots: {
+    total: 29
+    on: 20
+    }
+    goals: {
+    total: 8
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 144
+    key: 8
+    accuracy: 4
+    }
+    tackles: {
+    total: 11
+    blocks: null
+    interceptions: 2
+    }
+    duels: {
+    total: 116
+    won: 48
+    }
+    dribbles: {
+    attempts: 3
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 22
+    committed: 33
+    }
+    cards: {
+    yellow: 7
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 4
+    missed: 1
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 10166
+    name: "Reinier"
+    firstname: "Reinier Jesus"
+    lastname: "Carvalho"
+    age: 21
+    birth: {
+    date: "2002-01-19"
+    place: "Brasilia"
+    country: "Brazil"
+    }
+    nationality: "Brazil"
+    height: "185 cm"
+    weight: "78 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/10166.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-3.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 15
+    lineups: 4
+    minutes: 518
+    number: null
+    position: "Midfielder"
+    rating: "6.535714"
+    captain: false
+    }
+    substitutes: {
+    in: 11
+    out: 3
+    bench: 14
+    }
+    shots: {
+    total: 7
+    on: 3
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 200
+    key: 5
+    accuracy: 10
+    }
+    tackles: {
+    total: 11
+    blocks: null
+    interceptions: 4
+    }
+    duels: {
+    total: 79
+    won: 35
+    }
+    dribbles: {
+    attempts: 16
+    success: 8
+    past: null
+    }
+    fouls: {
+    drawn: 13
+    committed: 3
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 18949
+    name: "Oriol Romeu"
+    firstname: "Oriol"
+    lastname: "Romeu Vidal"
+    age: 32
+    birth: {
+    date: "1991-09-24"
+    place: "Ulldecona"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "183 cm"
+    weight: "83 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/18949.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-1.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 30
+    lineups: 30
+    minutes: 2682
+    number: null
+    position: "Midfielder"
+    rating: "6.890000"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 1
+    bench: 0
+    }
+    shots: {
+    total: 16
+    on: 5
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 1427
+    key: 18
+    accuracy: 41
+    }
+    tackles: {
+    total: 66
+    blocks: 10
+    interceptions: 32
+    }
+    duels: {
+    total: 286
+    won: 148
+    }
+    dribbles: {
+    attempts: 18
+    success: 17
+    past: null
+    }
+    fouls: {
+    drawn: 29
+    committed: 53
+    }
+    cards: {
+    yellow: 9
+    yellowred: 1
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47270
+    name: "Unai Simón"
+    firstname: "Unai"
+    lastname: "Simón Mendibil"
+    age: 26
+    birth: {
+    date: "1997-06-11"
+    place: "Vitoria-Gasteiz"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "190 cm"
+    weight: "88 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/47270.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 531
+    name: "Athletic Club"
+    logo: "https://media-2.api-sports.io/football/teams/531.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 28
+    lineups: 28
+    minutes: 2476
+    number: null
+    position: "Goalkeeper"
+    rating: "6.792857"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 1
+    bench: 3
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 34
+    assists: null
+    saves: 66
+    }
+    passes: {
+    total: 725
+    key: null
+    accuracy: 17
+    }
+    tackles: {
+    total: 1
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 2
+    won: 2
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 1
+    committed: null
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 1
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47492
+    name: "Toni Villa"
+    firstname: "Laureano Antonio"
+    lastname: "Villa Suárez"
+    age: 28
+    birth: {
+    date: "1995-01-07"
+    place: "Lorquí"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "172 cm"
+    weight: "63 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47492.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-2.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 24
+    lineups: 12
+    minutes: 895
+    number: null
+    position: "Midfielder"
+    rating: "6.500000"
+    captain: false
+    }
+    substitutes: {
+    in: 12
+    out: 12
+    bench: 14
+    }
+    shots: {
+    total: 14
+    on: 3
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: 3
+    saves: null
+    }
+    passes: {
+    total: 296
+    key: 15
+    accuracy: 10
+    }
+    tackles: {
+    total: 26
+    blocks: null
+    interceptions: 9
+    }
+    duels: {
+    total: 163
+    won: 68
+    }
+    dribbles: {
+    attempts: 67
+    success: 23
+    past: null
+    }
+    fouls: {
+    drawn: 18
+    committed: 12
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    {
+    team: {
+    id: 720
+    name: "Valladolid"
+    logo: "https://media-1.api-sports.io/football/teams/720.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 2
+    lineups: 1
+    minutes: 91
+    number: null
+    position: "Midfielder"
+    rating: "6.500000"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 1
+    bench: 2
+    }
+    shots: {
+    total: 14
+    on: 3
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 3
+    saves: null
+    }
+    passes: {
+    total: 296
+    key: 15
+    accuracy: 10
+    }
+    tackles: {
+    total: 26
+    blocks: null
+    interceptions: 9
+    }
+    duels: {
+    total: 163
+    won: 68
+    }
+    dribbles: {
+    attempts: 67
+    success: 23
+    past: null
+    }
+    fouls: {
+    drawn: 18
+    committed: 12
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47515
+    name: "Borja García"
+    firstname: "Borja"
+    lastname: "García Freire"
+    age: 33
+    birth: {
+    date: "1990-11-02"
+    place: "Torremocha de Jarama"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "175 cm"
+    weight: "72 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47515.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-1.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 11
+    lineups: 10
+    minutes: 685
+    number: null
+    position: "Midfielder"
+    rating: "6.690909"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 8
+    bench: 5
+    }
+    shots: {
+    total: 7
+    on: 3
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 263
+    key: 5
+    accuracy: 19
+    }
+    tackles: {
+    total: 10
+    blocks: 1
+    interceptions: 5
+    }
+    duels: {
+    total: 75
+    won: 42
+    }
+    dribbles: {
+    attempts: 11
+    success: 6
+    past: null
+    }
+    fouls: {
+    drawn: 20
+    committed: 4
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47516
+    name: "Aleix García"
+    firstname: "Aleix"
+    lastname: "García Serrano"
+    age: 26
+    birth: {
+    date: "1997-06-28"
+    place: "Ulldecona"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "173 cm"
+    weight: "68 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/47516.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-2.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 28
+    lineups: 26
+    minutes: 2280
+    number: null
+    position: "Midfielder"
+    rating: "7.482142"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 8
+    bench: 2
+    }
+    shots: {
+    total: 26
+    on: 14
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: 5
+    saves: null
+    }
+    passes: {
+    total: 1399
+    key: 67
+    accuracy: 44
+    }
+    tackles: {
+    total: 35
+    blocks: 8
+    interceptions: 30
+    }
+    duels: {
+    total: 146
+    won: 90
+    }
+    dribbles: {
+    attempts: 22
+    success: 13
+    past: null
+    }
+    fouls: {
+    drawn: 29
+    committed: 13
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 50856
+    name: "V. Castellanos"
+    firstname: "Valentín Mariano José"
+    lastname: "Castellanos Giménez"
+    age: 25
+    birth: {
+    date: "1998-10-03"
+    place: "Mendoza"
+    country: "Argentina"
+    }
+    nationality: "Argentina"
+    height: "178 cm"
+    weight: "70 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/50856.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-3.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 31
+    lineups: 30
+    minutes: 2388
+    number: null
+    position: "Attacker"
+    rating: "6.877419"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 23
+    bench: 1
+    }
+    shots: {
+    total: 63
+    on: 31
+    }
+    goals: {
+    total: 13
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 352
+    key: 13
+    accuracy: 7
+    }
+    tackles: {
+    total: 13
+    blocks: 2
+    interceptions: 6
+    }
+    duels: {
+    total: 270
+    won: 112
+    }
+    dribbles: {
+    attempts: 30
+    success: 10
+    past: null
+    }
+    fouls: {
+    drawn: 42
+    committed: 36
+    }
+    cards: {
+    yellow: 11
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 1
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 136117
+    name: "Rodrigo Riquelme"
+    firstname: "Rodrigo"
+    lastname: "Riquelme Reche"
+    age: 23
+    birth: {
+    date: "2000-04-02"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "174 cm"
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/136117.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-3.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 32
+    lineups: 23
+    minutes: 2038
+    number: null
+    position: "Midfielder"
+    rating: "6.703125"
+    captain: false
+    }
+    substitutes: {
+    in: 9
+    out: 18
+    bench: 10
+    }
+    shots: {
+    total: 45
+    on: 19
+    }
+    goals: {
+    total: 4
+    conceded: 0
+    assists: 4
+    saves: null
+    }
+    passes: {
+    total: 573
+    key: 31
+    accuracy: 14
+    }
+    tackles: {
+    total: 20
+    blocks: null
+    interceptions: 10
+    }
+    duels: {
+    total: 259
+    won: 111
+    }
+    dribbles: {
+    attempts: 114
+    success: 50
+    past: null
+    }
+    fouls: {
+    drawn: 34
+    committed: 26
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 182640
+    name: "Ander Iru"
+    firstname: "Ander"
+    lastname: "Iruarrizaga Díez"
+    age: 25
+    birth: {
+    date: "1998-08-22"
+    place: "Igorre"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "188 cm"
+    weight: "74 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/182640.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 531
+    name: "Athletic Club"
+    logo: "https://media-1.api-sports.io/football/teams/531.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Goalkeeper"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 15
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 1
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 183848
+    name: "Julen Agirrezabala"
+    firstname: "Julen"
+    lastname: "Agirrezabala Astúlez"
+    age: 23
+    birth: {
+    date: "2000-12-26"
+    place: "San Sebastián"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "187 cm"
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/183848.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 531
+    name: "Athletic Club"
+    logo: "https://media-2.api-sports.io/football/teams/531.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 7
+    lineups: 6
+    minutes: 584
+    number: null
+    position: "Goalkeeper"
+    rating: "6.942857"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 0
+    bench: 24
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 4
+    assists: null
+    saves: 12
+    }
+    passes: {
+    total: 177
+    key: null
+    accuracy: 16
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 1
+    won: 1
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 0
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 263529
+    name: "I. Kebe"
+    firstname: "Ibrahima"
+    lastname: "Kebe"
+    age: 23
+    birth: {
+    date: "2000-08-02"
+    place: null
+    country: "Mali"
+    }
+    nationality: "Mali"
+    height: "180 cm"
+    weight: null
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/263529.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-1.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 291225
+    name: "Ibon Ispizua"
+    firstname: "Ibon"
+    lastname: "Ispizua Helguera"
+    age: 20
+    birth: {
+    date: "2003-04-08"
+    place: "Mundaka"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/291225.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 531
+    name: "Athletic Club"
+    logo: "https://media-3.api-sports.io/football/teams/531.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: null
+    lineups: null
+    minutes: null
+    number: null
+    position: "Goalkeeper"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: null
+    out: null
+    bench: null
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: null
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: null
+    yellowred: null
+    red: null
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 297304
+    name: "D. Camara"
+    firstname: "Dawda"
+    lastname: "Camara Sankharé"
+    age: 21
+    birth: {
+    date: "2002-11-04"
+    place: "Banyoles"
+    country: "Spain"
+    }
+    nationality: "Mauritania"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/297304.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-3.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Attacker"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 1
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 312468
+    name: "Álex Padilla"
+    firstname: "Alejandro"
+    lastname: "Padilla Pérez"
+    age: 20
+    birth: {
+    date: "2003-09-01"
+    place: "Zarautz"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/312468.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 531
+    name: "Athletic Club"
+    logo: "https://media-2.api-sports.io/football/teams/531.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Goalkeeper"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 327628
+    name: "Ricard Artero"
+    firstname: "Ricard"
+    lastname: "Artero Ruiz"
+    age: 20
+    birth: {
+    date: "2003-02-05"
+    place: null
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/327628.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-2.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 6
+    lineups: 0
+    minutes: 69
+    number: null
+    position: "Midfielder"
+    rating: "6.575000"
+    captain: false
+    }
+    substitutes: {
+    in: 6
+    out: 0
+    bench: 24
+    }
+    shots: {
+    total: 2
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 27
+    key: null
+    accuracy: 5
+    }
+    tackles: {
+    total: 2
+    blocks: null
+    interceptions: 1
+    }
+    duels: {
+    total: 12
+    won: 8
+    }
+    dribbles: {
+    attempts: 3
+    success: 3
+    past: null
+    }
+    fouls: {
+    drawn: 1
+    committed: 2
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 339105
+    name: "Joel Roca"
+    firstname: "Joel"
+    lastname: "Roca Casals"
+    age: 18
+    birth: {
+    date: "2005-06-07"
+    place: "Camprodon"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/339105.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-2.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 4
+    lineups: 0
+    minutes: 64
+    number: null
+    position: "Midfielder"
+    rating: "6.400000"
+    captain: false
+    }
+    substitutes: {
+    in: 4
+    out: 0
+    bench: 18
+    }
+    shots: {
+    total: 2
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 27
+    key: 1
+    accuracy: 4
+    }
+    tackles: {
+    total: 2
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 20
+    won: 9
+    }
+    dribbles: {
+    attempts: 9
+    success: 3
+    past: null
+    }
+    fouls: {
+    drawn: 4
+    committed: 1
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    ]
+    }

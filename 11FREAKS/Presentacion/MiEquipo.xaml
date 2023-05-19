@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_11FREAKS.Presentacion"
         mc:Ignorable="d"
+        d:DesignHeight="700" d:DesignWidth="1200"
         Title="MiEquipo" Height="700" Width="1200" Icon="/Resources/Logo11Freaks.png" WindowState="Maximized" ResizeMode="NoResize">
 
     <Window.Resources>

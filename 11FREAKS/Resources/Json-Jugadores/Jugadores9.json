@@ -1,0 +1,1991 @@
+{
+    get: "players"
+    parameters: {
+    league: "140"
+    season: "2022"
+    page: "9"
+    }
+    errors: [
+    ]
+    results: 20
+    paging: {
+    current: 9
+    total: 39
+    }
+    response: [
+    {
+    player: {
+    id: 53
+    name: "Á. Correa"
+    firstname: "Ángel Martín"
+    lastname: "Correa Martínez"
+    age: 28
+    birth: {
+    date: "1995-03-09"
+    place: "Rosario"
+    country: "Argentina"
+    }
+    nationality: "Argentina"
+    height: "171 cm"
+    weight: "68 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/53.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 530
+    name: "Atletico Madrid"
+    logo: "https://media-2.api-sports.io/football/teams/530.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 31
+    lineups: 11
+    minutes: 1219
+    number: null
+    position: "Attacker"
+    rating: "6.687096"
+    captain: false
+    }
+    substitutes: {
+    in: 20
+    out: 10
+    bench: 21
+    }
+    shots: {
+    total: 22
+    on: 14
+    }
+    goals: {
+    total: 6
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 431
+    key: 22
+    accuracy: 12
+    }
+    tackles: {
+    total: 10
+    blocks: null
+    interceptions: 10
+    }
+    duels: {
+    total: 145
+    won: 52
+    }
+    dribbles: {
+    attempts: 50
+    success: 20
+    past: null
+    }
+    fouls: {
+    drawn: 18
+    committed: 15
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 56
+    name: "A. Griezmann"
+    firstname: "Antoine"
+    lastname: "Griezmann"
+    age: 32
+    birth: {
+    date: "1991-03-21"
+    place: "Mâcon"
+    country: "France"
+    }
+    nationality: "France"
+    height: "176 cm"
+    weight: "73 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/56.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 530
+    name: "Atletico Madrid"
+    logo: "https://media-1.api-sports.io/football/teams/530.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 34
+    lineups: 27
+    minutes: 2501
+    number: null
+    position: "Attacker"
+    rating: "7.661764"
+    captain: false
+    }
+    substitutes: {
+    in: 7
+    out: 7
+    bench: 7
+    }
+    shots: {
+    total: 76
+    on: 39
+    }
+    goals: {
+    total: 13
+    conceded: 0
+    assists: 12
+    saves: null
+    }
+    passes: {
+    total: 1267
+    key: 74
+    accuracy: 30
+    }
+    tackles: {
+    total: 43
+    blocks: 3
+    interceptions: 19
+    }
+    duels: {
+    total: 299
+    won: 150
+    }
+    dribbles: {
+    attempts: 70
+    success: 44
+    past: null
+    }
+    fouls: {
+    drawn: 36
+    committed: 21
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 59
+    name: "Álvaro Morata"
+    firstname: "Álvaro Borja"
+    lastname: "Morata Martín"
+    age: 31
+    birth: {
+    date: "1992-10-23"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "190 cm"
+    weight: "84 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/59.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 530
+    name: "Atletico Madrid"
+    logo: "https://media-3.api-sports.io/football/teams/530.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 34
+    lineups: 22
+    minutes: 1854
+    number: null
+    position: "Attacker"
+    rating: "6.947058"
+    captain: false
+    }
+    substitutes: {
+    in: 12
+    out: 19
+    bench: 12
+    }
+    shots: {
+    total: 62
+    on: 33
+    }
+    goals: {
+    total: 13
+    conceded: 0
+    assists: 2
+    saves: null
+    }
+    passes: {
+    total: 397
+    key: 17
+    accuracy: 7
+    }
+    tackles: {
+    total: 17
+    blocks: 3
+    interceptions: null
+    }
+    duels: {
+    total: 259
+    won: 145
+    }
+    dribbles: {
+    attempts: 37
+    success: 20
+    past: null
+    }
+    fouls: {
+    drawn: 55
+    committed: 38
+    }
+    cards: {
+    yellow: 4
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 667
+    name: "M. Depay"
+    firstname: "Memphis"
+    lastname: "Depay"
+    age: 29
+    birth: {
+    date: "1994-02-13"
+    place: "Moordrecht"
+    country: "Netherlands"
+    }
+    nationality: "Netherlands"
+    height: "178 cm"
+    weight: "78 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/667.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 530
+    name: "Atletico Madrid"
+    logo: "https://media-2.api-sports.io/football/teams/530.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 8
+    lineups: 3
+    minutes: 268
+    number: null
+    position: "Attacker"
+    rating: "6.837500"
+    captain: false
+    }
+    substitutes: {
+    in: 5
+    out: 3
+    bench: 7
+    }
+    shots: {
+    total: 10
+    on: 5
+    }
+    goals: {
+    total: 4
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 83
+    key: 5
+    accuracy: 8
+    }
+    tackles: {
+    total: 1
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 35
+    won: 12
+    }
+    dribbles: {
+    attempts: 10
+    success: 4
+    past: null
+    }
+    fouls: {
+    drawn: 6
+    committed: 2
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    {
+    team: {
+    id: 529
+    name: "Barcelona"
+    logo: "https://media-2.api-sports.io/football/teams/529.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 2
+    lineups: 2
+    minutes: 116
+    number: null
+    position: "Attacker"
+    rating: "6.837500"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 2
+    bench: 6
+    }
+    shots: {
+    total: 10
+    on: 5
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 83
+    key: 5
+    accuracy: 8
+    }
+    tackles: {
+    total: 1
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 35
+    won: 12
+    }
+    dribbles: {
+    attempts: 10
+    success: 4
+    past: null
+    }
+    fouls: {
+    drawn: 6
+    committed: 2
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 747
+    name: "Casemiro"
+    firstname: "Carlos Henrique"
+    lastname: "Casimiro"
+    age: 31
+    birth: {
+    date: "1992-02-23"
+    place: "São José dos Campos"
+    country: "Brazil"
+    }
+    nationality: "Brazil"
+    height: "185 cm"
+    weight: "84 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/747.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 541
+    name: "Real Madrid"
+    logo: "https://media-2.api-sports.io/football/teams/541.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 1
+    lineups: 0
+    minutes: 7
+    number: null
+    position: "Midfielder"
+    rating: "6.200000"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 0
+    bench: 1
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 8
+    key: null
+    accuracy: 7
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 1
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: 1
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 2923
+    name: "Y. Carrasco"
+    firstname: "Yannick"
+    lastname: "Ferreira Carrasco"
+    age: 30
+    birth: {
+    date: "1993-09-04"
+    place: "Elsene"
+    country: "Belgium"
+    }
+    nationality: "Belgium"
+    height: "181 cm"
+    weight: "73 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/2923.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 530
+    name: "Atletico Madrid"
+    logo: "https://media-3.api-sports.io/football/teams/530.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 32
+    lineups: 23
+    minutes: 2063
+    number: null
+    position: "Midfielder"
+    rating: "6.843750"
+    captain: false
+    }
+    substitutes: {
+    in: 9
+    out: 17
+    bench: 10
+    }
+    shots: {
+    total: 38
+    on: 19
+    }
+    goals: {
+    total: 5
+    conceded: 0
+    assists: 3
+    saves: null
+    }
+    passes: {
+    total: 805
+    key: 41
+    accuracy: 21
+    }
+    tackles: {
+    total: 34
+    blocks: 1
+    interceptions: 12
+    }
+    duels: {
+    total: 238
+    won: 108
+    }
+    dribbles: {
+    attempts: 96
+    success: 51
+    past: null
+    }
+    fouls: {
+    drawn: 18
+    committed: 20
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 1
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 18867
+    name: "Diego Rico"
+    firstname: "Diego"
+    lastname: "Rico Salguero"
+    age: 30
+    birth: {
+    date: "1993-02-23"
+    place: "Burgos"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "180 cm"
+    weight: "78 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/18867.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 18
+    lineups: 16
+    minutes: 1466
+    number: null
+    position: "Defender"
+    rating: "6.866666"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 3
+    bench: 11
+    }
+    shots: {
+    total: 6
+    on: 2
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 689
+    key: 10
+    accuracy: 30
+    }
+    tackles: {
+    total: 29
+    blocks: 4
+    interceptions: 19
+    }
+    duels: {
+    total: 150
+    won: 81
+    }
+    dribbles: {
+    attempts: 20
+    success: 11
+    past: null
+    }
+    fouls: {
+    drawn: 25
+    committed: 26
+    }
+    cards: {
+    yellow: 3
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47269
+    name: "Álex Remiro"
+    firstname: "Alejandro"
+    lastname: "Remiro Gargallo"
+    age: 28
+    birth: {
+    date: "1995-03-24"
+    place: "Cascante"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "191 cm"
+    weight: "79 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47269.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-3.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 34
+    lineups: 34
+    minutes: 3060
+    number: null
+    position: "Goalkeeper"
+    rating: "6.961764"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 31
+    assists: null
+    saves: 89
+    }
+    passes: {
+    total: 1063
+    key: 1
+    accuracy: 21
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 13
+    won: 10
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 4
+    committed: null
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 1
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47297
+    name: "Andoni Zubiaurre"
+    firstname: "Andoni"
+    lastname: "Zubiaurre Dorronsoro"
+    age: 27
+    birth: {
+    date: "1996-12-04"
+    place: "Ordizia"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "190 cm"
+    weight: "80 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47297.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Goalkeeper"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 33
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 1
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47298
+    name: "Elustondo"
+    firstname: "Aritz"
+    lastname: "Elustondo Irribaria"
+    age: 29
+    birth: {
+    date: "1994-03-28"
+    place: "Beasain"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "180 cm"
+    weight: "71 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47298.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 22
+    lineups: 14
+    minutes: 1292
+    number: null
+    position: "Defender"
+    rating: "6.527272"
+    captain: false
+    }
+    substitutes: {
+    in: 8
+    out: 6
+    bench: 12
+    }
+    shots: {
+    total: 5
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 623
+    key: 4
+    accuracy: 23
+    }
+    tackles: {
+    total: 25
+    blocks: 6
+    interceptions: 18
+    }
+    duels: {
+    total: 111
+    won: 54
+    }
+    dribbles: {
+    attempts: 6
+    success: 3
+    past: null
+    }
+    fouls: {
+    drawn: 9
+    committed: 18
+    }
+    cards: {
+    yellow: 4
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47299
+    name: "Gorosabel"
+    firstname: "Andoni"
+    lastname: "Gorosabel Espinosa"
+    age: 27
+    birth: {
+    date: "1996-08-04"
+    place: "Arrasate"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "174 cm"
+    weight: "70 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47299.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 23
+    lineups: 17
+    minutes: 1476
+    number: null
+    position: "Defender"
+    rating: "6.682608"
+    captain: false
+    }
+    substitutes: {
+    in: 6
+    out: 9
+    bench: 11
+    }
+    shots: {
+    total: 2
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 703
+    key: 12
+    accuracy: 26
+    }
+    tackles: {
+    total: 38
+    blocks: 2
+    interceptions: 14
+    }
+    duels: {
+    total: 153
+    won: 79
+    }
+    dribbles: {
+    attempts: 12
+    success: 7
+    past: null
+    }
+    fouls: {
+    drawn: 16
+    committed: 21
+    }
+    cards: {
+    yellow: 3
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47303
+    name: "Aihen Muñoz"
+    firstname: "Aihen"
+    lastname: "Muñoz Capellán"
+    age: 26
+    birth: {
+    date: "1997-08-16"
+    place: "San Sebastián"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "175 cm"
+    weight: "68 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47303.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-1.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 21
+    lineups: 18
+    minutes: 1577
+    number: null
+    position: "Defender"
+    rating: "6.571428"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 3
+    bench: 11
+    }
+    shots: {
+    total: 4
+    on: 2
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 699
+    key: 12
+    accuracy: 26
+    }
+    tackles: {
+    total: 36
+    blocks: 3
+    interceptions: 7
+    }
+    duels: {
+    total: 198
+    won: 88
+    }
+    dribbles: {
+    attempts: 35
+    success: 17
+    past: null
+    }
+    fouls: {
+    drawn: 13
+    committed: 27
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47306
+    name: "Álex Sola"
+    firstname: "Alejandro"
+    lastname: "Sola López-Ocaña"
+    age: 24
+    birth: {
+    date: "1999-06-09"
+    place: "San Sebastián"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "178 cm"
+    weight: "75 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47306.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-1.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 10
+    lineups: 3
+    minutes: 345
+    number: null
+    position: "Defender"
+    rating: "6.744444"
+    captain: false
+    }
+    substitutes: {
+    in: 7
+    out: 2
+    bench: 19
+    }
+    shots: {
+    total: 4
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 142
+    key: 2
+    accuracy: 11
+    }
+    tackles: {
+    total: 18
+    blocks: 2
+    interceptions: 7
+    }
+    duels: {
+    total: 60
+    won: 40
+    }
+    dribbles: {
+    attempts: 12
+    success: 7
+    past: null
+    }
+    fouls: {
+    drawn: 8
+    committed: 3
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 189831
+    name: "Arana"
+    firstname: "Egoitz"
+    lastname: "Arana Aizpurua"
+    age: 21
+    birth: {
+    date: "2002-02-19"
+    place: "Zarautz"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/189831.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-1.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Goalkeeper"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 5
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 0
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 189832
+    name: "Unai Marrero"
+    firstname: "Unai"
+    lastname: "Marrero Larrañaga"
+    age: 22
+    birth: {
+    date: "2001-10-09"
+    place: "San Sebastián"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "189 cm"
+    weight: null
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/189832.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-3.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Goalkeeper"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 10
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 1
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 208670
+    name: "Diego Bri"
+    firstname: "Diego Vicente"
+    lastname: "Bri Carrazoni"
+    age: 21
+    birth: {
+    date: "2002-09-12"
+    place: null
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/208670.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 530
+    name: "Atletico Madrid"
+    logo: "https://media-2.api-sports.io/football/teams/530.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: null
+    lineups: null
+    minutes: null
+    number: null
+    position: "Attacker"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: null
+    out: null
+    bench: null
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: null
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: null
+    yellowred: null
+    red: null
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 313548
+    name: "Alberto Moreno"
+    firstname: "Alberto"
+    lastname: "Moreno Rebanal"
+    age: 21
+    birth: {
+    date: "2002-04-19"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "175 cm"
+    weight: null
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/313548.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 530
+    name: "Atletico Madrid"
+    logo: "https://media-1.api-sports.io/football/teams/530.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 2
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 324750
+    name: "Carlos Martín"
+    firstname: "Carlos"
+    lastname: "Martín Domínguez"
+    age: 21
+    birth: {
+    date: "2002-04-22"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/324750.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 530
+    name: "Atletico Madrid"
+    logo: "https://media-1.api-sports.io/football/teams/530.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 2
+    lineups: 0
+    minutes: 12
+    number: null
+    position: "Attacker"
+    rating: "6.550000"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 0
+    bench: 10
+    }
+    shots: {
+    total: 1
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 5
+    key: null
+    accuracy: 1
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 336590
+    name: "Aitor Gismera"
+    firstname: "Aitor"
+    lastname: "Gismera Monge"
+    age: 19
+    birth: {
+    date: "2004-02-21"
+    place: null
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/336590.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 530
+    name: "Atletico Madrid"
+    logo: "https://media-3.api-sports.io/football/teams/530.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 1
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 336594
+    name: "Pablo Barrios"
+    firstname: "Pablo"
+    lastname: "Barrios Rivas"
+    age: 20
+    birth: {
+    date: "2003-06-15"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "181 cm"
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/336594.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 530
+    name: "Atletico Madrid"
+    logo: "https://media-3.api-sports.io/football/teams/530.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 17
+    lineups: 5
+    minutes: 597
+    number: null
+    position: "Midfielder"
+    rating: "6.723529"
+    captain: false
+    }
+    substitutes: {
+    in: 12
+    out: 5
+    bench: 17
+    }
+    shots: {
+    total: 8
+    on: 2
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 379
+    key: 3
+    accuracy: 18
+    }
+    tackles: {
+    total: 16
+    blocks: 2
+    interceptions: 9
+    }
+    duels: {
+    total: 85
+    won: 46
+    }
+    dribbles: {
+    attempts: 26
+    success: 15
+    past: null
+    }
+    fouls: {
+    drawn: 10
+    committed: 7
+    }
+    cards: {
+    yellow: 3
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    ]
+    }

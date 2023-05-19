@@ -1,0 +1,1917 @@
+{
+    get: "players"
+    parameters: {
+    league: "140"
+    season: "2022"
+    page: "13"
+    }
+    errors: [
+    ]
+    results: 20
+    paging: {
+    current: 13
+    total: 39
+    }
+    response: [
+    {
+    player: {
+    id: 134
+    name: "Juan Miranda"
+    firstname: "Juan"
+    lastname: "Miranda González"
+    age: 23
+    birth: {
+    date: "2000-01-19"
+    place: "Olivares"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "185 cm"
+    weight: "76 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/134.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-1.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 18
+    lineups: 14
+    minutes: 1286
+    number: null
+    position: "Defender"
+    rating: "6.894117"
+    captain: false
+    }
+    substitutes: {
+    in: 4
+    out: 5
+    bench: 20
+    }
+    shots: {
+    total: 15
+    on: 7
+    }
+    goals: {
+    total: 3
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 521
+    key: 18
+    accuracy: 21
+    }
+    tackles: {
+    total: 21
+    blocks: 7
+    interceptions: 18
+    }
+    duels: {
+    total: 118
+    won: 65
+    }
+    dribbles: {
+    attempts: 13
+    success: 6
+    past: null
+    }
+    fouls: {
+    drawn: 18
+    committed: 10
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 1264
+    name: "Y. Sabaly"
+    firstname: "Youssouf"
+    lastname: "Sabaly"
+    age: 30
+    birth: {
+    date: "1993-03-05"
+    place: "Chesnay"
+    country: "France"
+    }
+    nationality: "Senegal"
+    height: "174 cm"
+    weight: "67 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/1264.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-3.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 20
+    lineups: 16
+    minutes: 1455
+    number: null
+    position: "Defender"
+    rating: "6.930000"
+    captain: false
+    }
+    substitutes: {
+    in: 4
+    out: 4
+    bench: 7
+    }
+    shots: {
+    total: 9
+    on: 3
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 687
+    key: 11
+    accuracy: 28
+    }
+    tackles: {
+    total: 37
+    blocks: 8
+    interceptions: 16
+    }
+    duels: {
+    total: 163
+    won: 90
+    }
+    dribbles: {
+    attempts: 30
+    success: 18
+    past: null
+    }
+    fouls: {
+    drawn: 30
+    committed: 19
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 1568
+    name: "P. Akouokou"
+    firstname: "Edgar Paul"
+    lastname: "Akouokou"
+    age: 26
+    birth: {
+    date: "1997-12-20"
+    place: null
+    country: "Côte d'Ivoire"
+    }
+    nationality: "Côte d'Ivoire"
+    height: "181 cm"
+    weight: "68 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/1568.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-3.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 10
+    lineups: 3
+    minutes: 414
+    number: null
+    position: "Midfielder"
+    rating: "6.766666"
+    captain: false
+    }
+    substitutes: {
+    in: 7
+    out: 1
+    bench: 24
+    }
+    shots: {
+    total: 3
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 151
+    key: null
+    accuracy: 14
+    }
+    tackles: {
+    total: 14
+    blocks: 2
+    interceptions: 11
+    }
+    duels: {
+    total: 40
+    won: 22
+    }
+    dribbles: {
+    attempts: 1
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 3
+    committed: 6
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 1570
+    name: "Sergio Canales"
+    firstname: "Sergio"
+    lastname: "Canales Madrazo"
+    age: 32
+    birth: {
+    date: "1991-02-16"
+    place: "Santander"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "176 cm"
+    weight: "65 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/1570.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-3.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 27
+    lineups: 24
+    minutes: 2073
+    number: null
+    position: "Midfielder"
+    rating: "6.877777"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 10
+    bench: 3
+    }
+    shots: {
+    total: 19
+    on: 10
+    }
+    goals: {
+    total: 4
+    conceded: 0
+    assists: 2
+    saves: null
+    }
+    passes: {
+    total: 1115
+    key: 44
+    accuracy: 33
+    }
+    tackles: {
+    total: 21
+    blocks: null
+    interceptions: 11
+    }
+    duels: {
+    total: 190
+    won: 86
+    }
+    dribbles: {
+    attempts: 41
+    success: 22
+    past: null
+    }
+    fouls: {
+    drawn: 31
+    committed: 9
+    }
+    cards: {
+    yellow: 3
+    yellowred: 1
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 1
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 1573
+    name: "A. Guardado"
+    firstname: "José Andrés"
+    lastname: "Guardado Hernández"
+    age: 37
+    birth: {
+    date: "1986-09-28"
+    place: "Guadalajara"
+    country: "Mexico"
+    }
+    nationality: "Mexico"
+    height: "169 cm"
+    weight: "60 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/1573.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-2.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 23
+    lineups: 15
+    minutes: 1278
+    number: null
+    position: "Midfielder"
+    rating: "6.745454"
+    captain: false
+    }
+    substitutes: {
+    in: 8
+    out: 9
+    bench: 16
+    }
+    shots: {
+    total: 6
+    on: 3
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 750
+    key: 12
+    accuracy: 27
+    }
+    tackles: {
+    total: 38
+    blocks: 5
+    interceptions: 20
+    }
+    duels: {
+    total: 141
+    won: 66
+    }
+    dribbles: {
+    attempts: 8
+    success: 4
+    past: null
+    }
+    fouls: {
+    drawn: 9
+    committed: 14
+    }
+    cards: {
+    yellow: 6
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 1579
+    name: "Joaquín"
+    firstname: "Joaquín"
+    lastname: "Sánchez Rodríguez"
+    age: 42
+    birth: {
+    date: "1981-07-21"
+    place: "El Puerto de Santa María"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "179 cm"
+    weight: "75 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/1579.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-1.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 18
+    lineups: 1
+    minutes: 382
+    number: null
+    position: "Midfielder"
+    rating: "6.722222"
+    captain: false
+    }
+    substitutes: {
+    in: 17
+    out: 1
+    bench: 28
+    }
+    shots: {
+    total: 3
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 2
+    saves: null
+    }
+    passes: {
+    total: 238
+    key: 21
+    accuracy: 11
+    }
+    tackles: {
+    total: 2
+    blocks: 1
+    interceptions: 2
+    }
+    duels: {
+    total: 29
+    won: 13
+    }
+    dribbles: {
+    attempts: 9
+    success: 4
+    past: null
+    }
+    fouls: {
+    drawn: 7
+    committed: 1
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 1580
+    name: "William Carvalho"
+    firstname: "William"
+    lastname: "Silva de Carvalho"
+    age: 31
+    birth: {
+    date: "1992-04-07"
+    place: "Luanda"
+    country: "Angola"
+    }
+    nationality: "Portugal"
+    height: "187 cm"
+    weight: "83 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/1580.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-3.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 30
+    lineups: 28
+    minutes: 2316
+    number: null
+    position: "Midfielder"
+    rating: "6.903333"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 14
+    bench: 2
+    }
+    shots: {
+    total: 20
+    on: 9
+    }
+    goals: {
+    total: 3
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 1572
+    key: 20
+    accuracy: 45
+    }
+    tackles: {
+    total: 40
+    blocks: 6
+    interceptions: 11
+    }
+    duels: {
+    total: 248
+    won: 132
+    }
+    dribbles: {
+    attempts: 41
+    success: 26
+    past: null
+    }
+    fouls: {
+    drawn: 35
+    committed: 29
+    }
+    cards: {
+    yellow: 6
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 1847
+    name: "Luiz Felipe"
+    firstname: "Luiz Felipe"
+    lastname: "Ramos Marchi"
+    age: 26
+    birth: {
+    date: "1997-03-22"
+    place: "Colina"
+    country: "Brazil"
+    }
+    nationality: "Italy"
+    height: "187 cm"
+    weight: "80 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/1847.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-3.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 20
+    lineups: 19
+    minutes: 1498
+    number: null
+    position: "Defender"
+    rating: "6.720000"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 3
+    bench: 3
+    }
+    shots: {
+    total: 3
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 732
+    key: 2
+    accuracy: 33
+    }
+    tackles: {
+    total: 30
+    blocks: 22
+    interceptions: 21
+    }
+    duels: {
+    total: 118
+    won: 66
+    }
+    dribbles: {
+    attempts: 6
+    success: 3
+    past: null
+    }
+    fouls: {
+    drawn: 9
+    committed: 10
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 3
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 2476
+    name: "G. Rodríguez"
+    firstname: "Guido"
+    lastname: "Rodríguez"
+    age: 29
+    birth: {
+    date: "1994-04-12"
+    place: "Caseros"
+    country: "Argentina"
+    }
+    nationality: "Argentina"
+    height: "185 cm"
+    weight: "80 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/2476.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-1.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 30
+    lineups: 29
+    minutes: 2517
+    number: null
+    position: "Midfielder"
+    rating: "7.063333"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 6
+    bench: 2
+    }
+    shots: {
+    total: 14
+    on: 6
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 1426
+    key: 10
+    accuracy: 41
+    }
+    tackles: {
+    total: 94
+    blocks: 12
+    interceptions: 37
+    }
+    duels: {
+    total: 346
+    won: 211
+    }
+    dribbles: {
+    attempts: 25
+    success: 19
+    past: null
+    }
+    fouls: {
+    drawn: 58
+    committed: 37
+    }
+    cards: {
+    yellow: 7
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 9700
+    name: "Abner"
+    firstname: "Abner Vinícius"
+    lastname: "da Silva Santos"
+    age: 23
+    birth: {
+    date: "2000-05-27"
+    place: "Presidente Prudente"
+    country: "Brazil"
+    }
+    nationality: "Brazil"
+    height: "182 cm"
+    weight: "75 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/9700.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-3.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 11
+    lineups: 5
+    minutes: 436
+    number: null
+    position: "Defender"
+    rating: "6.381818"
+    captain: false
+    }
+    substitutes: {
+    in: 6
+    out: 3
+    bench: 12
+    }
+    shots: {
+    total: 3
+    on: 2
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 179
+    key: 2
+    accuracy: 12
+    }
+    tackles: {
+    total: 11
+    blocks: 2
+    interceptions: 7
+    }
+    duels: {
+    total: 53
+    won: 19
+    }
+    dribbles: {
+    attempts: 7
+    success: 1
+    past: null
+    }
+    fouls: {
+    drawn: 2
+    committed: 8
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47119
+    name: "Aitor Ruibal"
+    firstname: "Aitor"
+    lastname: "Ruibal García"
+    age: 27
+    birth: {
+    date: "1996-03-22"
+    place: "Sallent de Llobregat"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "176 cm"
+    weight: "74 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47119.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-3.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 23
+    lineups: 14
+    minutes: 1321
+    number: null
+    position: "Defender"
+    rating: "6.604347"
+    captain: false
+    }
+    substitutes: {
+    in: 9
+    out: 5
+    bench: 18
+    }
+    shots: {
+    total: 9
+    on: 5
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 617
+    key: 12
+    accuracy: 20
+    }
+    tackles: {
+    total: 43
+    blocks: 2
+    interceptions: 22
+    }
+    duels: {
+    total: 205
+    won: 104
+    }
+    dribbles: {
+    attempts: 58
+    success: 30
+    past: null
+    }
+    fouls: {
+    drawn: 17
+    committed: 21
+    }
+    cards: {
+    yellow: 3
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47320
+    name: "Juanmi"
+    firstname: "Juan Miguel"
+    lastname: "Jiménez López"
+    age: 30
+    birth: {
+    date: "1993-05-20"
+    place: "Coín"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "172 cm"
+    weight: "69 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47320.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-1.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 18
+    lineups: 8
+    minutes: 784
+    number: null
+    position: "Attacker"
+    rating: "6.658823"
+    captain: false
+    }
+    substitutes: {
+    in: 10
+    out: 5
+    bench: 13
+    }
+    shots: {
+    total: 13
+    on: 7
+    }
+    goals: {
+    total: 4
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 213
+    key: 4
+    accuracy: 10
+    }
+    tackles: {
+    total: 13
+    blocks: null
+    interceptions: 3
+    }
+    duels: {
+    total: 113
+    won: 49
+    }
+    dribbles: {
+    attempts: 24
+    success: 12
+    past: null
+    }
+    fouls: {
+    drawn: 17
+    committed: 12
+    }
+    cards: {
+    yellow: 3
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 163447
+    name: "José Lara"
+    firstname: "José"
+    lastname: "Alonso Lara"
+    age: 23
+    birth: {
+    date: "2000-03-07"
+    place: "Sevilla"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "161 cm"
+    weight: "60 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/163447.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-1.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 1
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 185202
+    name: "Juan Cruz"
+    firstname: "Juan Cruz"
+    lastname: "Díaz Espósito"
+    age: 23
+    birth: {
+    date: "2000-04-25"
+    place: "Quilmes"
+    country: "Argentina"
+    }
+    nationality: "Spain"
+    height: "177 cm"
+    weight: "72 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/185202.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-1.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 5
+    lineups: 1
+    minutes: 171
+    number: null
+    position: "Midfielder"
+    rating: "6.500000"
+    captain: false
+    }
+    substitutes: {
+    in: 4
+    out: 1
+    bench: 13
+    }
+    shots: {
+    total: 4
+    on: 2
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 30
+    key: 2
+    accuracy: 4
+    }
+    tackles: {
+    total: 1
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 18
+    won: 6
+    }
+    dribbles: {
+    attempts: 5
+    success: 2
+    past: null
+    }
+    fouls: {
+    drawn: 2
+    committed: 3
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 185477
+    name: "Rodri"
+    firstname: "Rodrigo"
+    lastname: "Sánchez Rodríguez"
+    age: 23
+    birth: {
+    date: "2000-02-16"
+    place: "Talayuela"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "168 cm"
+    weight: "62 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/185477.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-2.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 26
+    lineups: 18
+    minutes: 1432
+    number: null
+    position: "Midfielder"
+    rating: "6.811538"
+    captain: false
+    }
+    substitutes: {
+    in: 8
+    out: 15
+    bench: 15
+    }
+    shots: {
+    total: 9
+    on: 5
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: 3
+    saves: null
+    }
+    passes: {
+    total: 686
+    key: 18
+    accuracy: 24
+    }
+    tackles: {
+    total: 14
+    blocks: null
+    interceptions: 10
+    }
+    duels: {
+    total: 147
+    won: 77
+    }
+    dribbles: {
+    attempts: 55
+    success: 26
+    past: null
+    }
+    fouls: {
+    drawn: 36
+    committed: 6
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 188409
+    name: "Fran Delgado"
+    firstname: "Francisco Javier"
+    lastname: "Delgado Rojano"
+    age: 22
+    birth: {
+    date: "2001-07-11"
+    place: null
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "177 cm"
+    weight: "62 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/188409.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-2.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 1
+    lineups: 0
+    minutes: 11
+    number: null
+    position: "Defender"
+    rating: "6.200000"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 0
+    bench: 4
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 6
+    key: null
+    accuracy: 6
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 188413
+    name: "Visus"
+    firstname: "Ricardo"
+    lastname: "Visus Contreras"
+    age: 22
+    birth: {
+    date: "2001-04-24"
+    place: null
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "192 cm"
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/188413.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-3.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Defender"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 2
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 305797
+    name: "Enrique Fernández"
+    firstname: "Enrique"
+    lastname: "Fernández López"
+    age: 20
+    birth: {
+    date: "2003-09-16"
+    place: "Trebujena"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "177 cm"
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/305797.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-1.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: null
+    lineups: null
+    minutes: null
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: null
+    out: null
+    bench: null
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: null
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: null
+    yellowred: null
+    red: null
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 347886
+    name: "Félix Garreta"
+    firstname: "Félix"
+    lastname: "Martí Garreta"
+    age: 19
+    birth: {
+    date: "2004-04-21"
+    place: "Palau-solità i Plegamans"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/347886.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-3.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 1
+    lineups: 1
+    minutes: 90
+    number: null
+    position: "Defender"
+    rating: "7.200000"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 3
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 39
+    key: null
+    accuracy: 34
+    }
+    tackles: {
+    total: 1
+    blocks: 1
+    interceptions: 1
+    }
+    duels: {
+    total: 6
+    won: 3
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 1
+    committed: 2
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 351131
+    name: "Dani Pérez"
+    firstname: "Daniel"
+    lastname: "Pérez Guerrero"
+    age: 18
+    birth: {
+    date: "2005-07-26"
+    place: "Sevilla"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "173 cm"
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/351131.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 543
+    name: "Real Betis"
+    logo: "https://media-2.api-sports.io/football/teams/543.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: null
+    lineups: null
+    minutes: null
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: null
+    out: null
+    bench: null
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: null
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: null
+    yellowred: null
+    red: null
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    ]
+    }

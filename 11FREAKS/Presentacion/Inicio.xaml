@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_11FREAKS.Presentacion"
         mc:Ignorable="d"
+        d:DesignHeight="600" d:DesignWidth="1000"
         Title="11 FREAKS" Height="600" Width="1000" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Icon="/Resources/Logo11Freaks.png" ResizeMode="NoResize">
 
 

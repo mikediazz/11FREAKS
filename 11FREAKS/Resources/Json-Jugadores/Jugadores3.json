@@ -1,0 +1,1917 @@
+{
+    get: "players"
+    parameters: {
+    league: "140"
+    season: "2022"
+    page: "3"
+    }
+    errors: [
+    ]
+    results: 20
+    paging: {
+    current: 3
+    total: 39
+    }
+    response: [
+    {
+    player: {
+    id: 15
+    name: "T. Delaney"
+    firstname: "Thomas Joseph"
+    lastname: "Delaney"
+    age: 32
+    birth: {
+    date: "1991-09-03"
+    place: "Frederiksberg"
+    country: "Denmark"
+    }
+    nationality: "Denmark"
+    height: "182 cm"
+    weight: "79 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/15.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 536
+    name: "Sevilla"
+    logo: "https://media-2.api-sports.io/football/teams/536.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 8
+    lineups: 2
+    minutes: 305
+    number: null
+    position: "Midfielder"
+    rating: "6.637500"
+    captain: false
+    }
+    substitutes: {
+    in: 6
+    out: 2
+    bench: 12
+    }
+    shots: {
+    total: 3
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 158
+    key: 2
+    accuracy: 17
+    }
+    tackles: {
+    total: 4
+    blocks: 2
+    interceptions: 4
+    }
+    duels: {
+    total: 29
+    won: 18
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 5
+    committed: 4
+    }
+    cards: {
+    yellow: 3
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 21
+    name: "Paco Alcácer"
+    firstname: "Francisco"
+    lastname: "Alcácer García"
+    age: 30
+    birth: {
+    date: "1993-08-30"
+    place: "Torrent"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "175 cm"
+    weight: "72 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/21.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 533
+    name: "Villarreal"
+    logo: "https://media-3.api-sports.io/football/teams/533.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Attacker"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 83
+    name: "A. Danjuma"
+    firstname: "Arnaut"
+    lastname: "Danjuma Adam Groeneveld"
+    age: 26
+    birth: {
+    date: "1997-01-31"
+    place: "Lagos"
+    country: "Nigeria"
+    }
+    nationality: "Netherlands"
+    height: "178 cm"
+    weight: "74 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/83.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 533
+    name: "Villarreal"
+    logo: "https://media-2.api-sports.io/football/teams/533.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 10
+    lineups: 6
+    minutes: 480
+    number: null
+    position: "Midfielder"
+    rating: "6.600000"
+    captain: false
+    }
+    substitutes: {
+    in: 4
+    out: 4
+    bench: 6
+    }
+    shots: {
+    total: 10
+    on: 5
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 87
+    key: 5
+    accuracy: 6
+    }
+    tackles: {
+    total: 3
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 28
+    won: 12
+    }
+    dribbles: {
+    attempts: 6
+    success: 2
+    past: null
+    }
+    fouls: {
+    drawn: 7
+    committed: 2
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 1
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 133
+    name: "C. Lenglet"
+    firstname: "Clément Nicolas Laurent"
+    lastname: "Lenglet"
+    age: 28
+    birth: {
+    date: "1995-06-17"
+    place: "Beauvais"
+    country: "France"
+    }
+    nationality: "France"
+    height: "186 cm"
+    weight: "81 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/133.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 529
+    name: "Barcelona"
+    logo: "https://media-1.api-sports.io/football/teams/529.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Defender"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 550
+    name: "K. Dolberg"
+    firstname: "Kasper"
+    lastname: "Dolberg Rasmussen"
+    age: 26
+    birth: {
+    date: "1997-10-06"
+    place: "Silkeborg"
+    country: "Denmark"
+    }
+    nationality: "Denmark"
+    height: "186 cm"
+    weight: "82 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/550.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 536
+    name: "Sevilla"
+    logo: "https://media-2.api-sports.io/football/teams/536.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 4
+    lineups: 2
+    minutes: 198
+    number: null
+    position: "Attacker"
+    rating: "6.550000"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 1
+    bench: 9
+    }
+    shots: {
+    total: 1
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 27
+    key: 1
+    accuracy: 6
+    }
+    tackles: {
+    total: 1
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 19
+    won: 9
+    }
+    dribbles: {
+    attempts: 1
+    success: 1
+    past: null
+    }
+    fouls: {
+    drawn: 4
+    committed: 2
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 583
+    name: "João Félix"
+    firstname: "João"
+    lastname: "Félix Sequeira"
+    age: 24
+    birth: {
+    date: "1999-11-10"
+    place: "Viseu"
+    country: "Portugal"
+    }
+    nationality: "Portugal"
+    height: "181 cm"
+    weight: "70 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/583.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 530
+    name: "Atletico Madrid"
+    logo: "https://media-3.api-sports.io/football/teams/530.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 14
+    lineups: 7
+    minutes: 650
+    number: null
+    position: "Attacker"
+    rating: "6.923076"
+    captain: false
+    }
+    substitutes: {
+    in: 7
+    out: 6
+    bench: 8
+    }
+    shots: {
+    total: 19
+    on: 12
+    }
+    goals: {
+    total: 4
+    conceded: 0
+    assists: 3
+    saves: null
+    }
+    passes: {
+    total: 216
+    key: 10
+    accuracy: 12
+    }
+    tackles: {
+    total: 10
+    blocks: null
+    interceptions: 3
+    }
+    duels: {
+    total: 100
+    won: 46
+    }
+    dribbles: {
+    attempts: 21
+    success: 6
+    past: null
+    }
+    fouls: {
+    drawn: 23
+    committed: 16
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 872
+    name: "M. Pjanić"
+    firstname: "Miralem"
+    lastname: "Pjanić"
+    age: 33
+    birth: {
+    date: "1990-04-02"
+    place: "Tuzla"
+    country: "Bosnia and Herzegovina"
+    }
+    nationality: "Bosnia and Herzegovina"
+    height: "178 cm"
+    weight: "72 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/872.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 529
+    name: "Barcelona"
+    logo: "https://media-2.api-sports.io/football/teams/529.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 4
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 930
+    name: "Carlos Soler"
+    firstname: "Carlos"
+    lastname: "Soler Barragán"
+    age: 26
+    birth: {
+    date: "1997-01-02"
+    place: "Valencia"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "180 cm"
+    weight: "76 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/930.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 532
+    name: "Valencia"
+    logo: "https://media-3.api-sports.io/football/teams/532.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 3
+    lineups: 3
+    minutes: 243
+    number: null
+    position: "Midfielder"
+    rating: "6.966666"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 1
+    bench: 0
+    }
+    shots: {
+    total: 3
+    on: 2
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 107
+    key: 4
+    accuracy: 30
+    }
+    tackles: {
+    total: 2
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 13
+    won: 8
+    }
+    dribbles: {
+    attempts: 1
+    success: 1
+    past: null
+    }
+    fouls: {
+    drawn: 4
+    committed: 2
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 1
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 1465
+    name: "P. Aubameyang"
+    firstname: "Pierre-Emerick Emiliano Franço"
+    lastname: "Aubameyang"
+    age: 34
+    birth: {
+    date: "1989-06-18"
+    place: "Laval"
+    country: "France"
+    }
+    nationality: "Gabon"
+    height: "187 cm"
+    weight: "80 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/1465.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 529
+    name: "Barcelona"
+    logo: "https://media-1.api-sports.io/football/teams/529.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 1
+    lineups: 0
+    minutes: 8
+    number: null
+    position: "Attacker"
+    rating: "6.700000"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 0
+    bench: 3
+    }
+    shots: {
+    total: 1
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 3
+    key: null
+    accuracy: 3
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 2615
+    name: "M. Gómez"
+    firstname: "Maximiliano"
+    lastname: "Gómez González"
+    age: 27
+    birth: {
+    date: "1996-08-14"
+    place: "Paysandú"
+    country: "Uruguay"
+    }
+    nationality: "Uruguay"
+    height: "186 cm"
+    weight: "91 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/2615.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 532
+    name: "Valencia"
+    logo: "https://media-3.api-sports.io/football/teams/532.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 3
+    lineups: 0
+    minutes: 106
+    number: null
+    position: "Attacker"
+    rating: "6.233333"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 0
+    bench: 3
+    }
+    shots: {
+    total: 1
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 14
+    key: 2
+    accuracy: 3
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 18
+    won: 5
+    }
+    dribbles: {
+    attempts: 2
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 3
+    committed: 4
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 2924
+    name: "A. Januzaj"
+    firstname: "Adnan"
+    lastname: "Januzaj"
+    age: 28
+    birth: {
+    date: "1995-02-05"
+    place: "Brussel"
+    country: "Belgium"
+    }
+    nationality: "Belgium"
+    height: "186 cm"
+    weight: "76 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/2924.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 536
+    name: "Sevilla"
+    logo: "https://media-2.api-sports.io/football/teams/536.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 2
+    lineups: 1
+    minutes: 47
+    number: null
+    position: "Midfielder"
+    rating: "6.700000"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 1
+    bench: 13
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 22
+    key: null
+    accuracy: 7
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: 1
+    }
+    duels: {
+    total: 12
+    won: 6
+    }
+    dribbles: {
+    attempts: 7
+    success: 4
+    past: null
+    }
+    fouls: {
+    drawn: 2
+    committed: 1
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 21566
+    name: "B. Lecomte"
+    firstname: "Benjamin Pascal"
+    lastname: "Lecomte"
+    age: 32
+    birth: {
+    date: "1991-04-26"
+    place: "Paris"
+    country: "France"
+    }
+    nationality: "France"
+    height: "186 cm"
+    weight: "78 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/21566.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 540
+    name: "Espanyol"
+    logo: "https://media-3.api-sports.io/football/teams/540.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 10
+    lineups: 10
+    minutes: 900
+    number: null
+    position: "Goalkeeper"
+    rating: "6.730000"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 4
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 15
+    assists: null
+    saves: 29
+    }
+    passes: {
+    total: 247
+    key: 1
+    accuracy: 15
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 1
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: 1
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 0
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 35576
+    name: "O. Pineda"
+    firstname: "Orbelín"
+    lastname: "Pineda Alvarado"
+    age: 27
+    birth: {
+    date: "1996-03-24"
+    place: "Ciudad de México"
+    country: "Mexico"
+    }
+    nationality: "Mexico"
+    height: "169 cm"
+    weight: "63 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/35576.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-3.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 46666
+    name: "Roberto Torres"
+    firstname: "Roberto"
+    lastname: "Torres Morales"
+    age: 34
+    birth: {
+    date: "1989-03-07"
+    place: "Pamplona"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "178 cm"
+    weight: "72 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/46666.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 727
+    name: "Osasuna"
+    logo: "https://media-1.api-sports.io/football/teams/727.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 2
+    lineups: 0
+    minutes: 9
+    number: null
+    position: "Midfielder"
+    rating: "6.700000"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 0
+    bench: 15
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 11
+    key: 2
+    accuracy: 5
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 3
+    won: 1
+    }
+    dribbles: {
+    attempts: 2
+    success: 1
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47087
+    name: "U. Račić"
+    firstname: "Uroš"
+    lastname: "Račić"
+    age: 25
+    birth: {
+    date: "1998-03-17"
+    place: "Kraljevo"
+    country: "Serbia"
+    }
+    nationality: "Serbia"
+    height: "193 cm"
+    weight: "81 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47087.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 532
+    name: "Valencia"
+    logo: "https://media-2.api-sports.io/football/teams/532.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 3
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47263
+    name: "Samuel Sáiz"
+    firstname: "Samuel"
+    lastname: "Sáiz Alonso"
+    age: 32
+    birth: {
+    date: "1991-01-22"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "174 cm"
+    weight: "68 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/47263.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 547
+    name: "Girona"
+    logo: "https://media-1.api-sports.io/football/teams/547.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 8
+    lineups: 1
+    minutes: 236
+    number: null
+    position: "Midfielder"
+    rating: "6.587500"
+    captain: false
+    }
+    substitutes: {
+    in: 7
+    out: 1
+    bench: 11
+    }
+    shots: {
+    total: 4
+    on: 3
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 150
+    key: 3
+    accuracy: 14
+    }
+    tackles: {
+    total: 2
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 28
+    won: 11
+    }
+    dribbles: {
+    attempts: 9
+    success: 3
+    past: null
+    }
+    fouls: {
+    drawn: 4
+    committed: 3
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 2
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47426
+    name: "Rubén Blanco"
+    firstname: "Rubén"
+    lastname: "Blanco Veiga"
+    age: 28
+    birth: {
+    date: "1995-07-25"
+    place: "Mos"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "188 cm"
+    weight: "70 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47426.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-1.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Goalkeeper"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 66761
+    name: "M. Osmajić"
+    firstname: "Milutin"
+    lastname: "Osmajić"
+    age: 24
+    birth: {
+    date: "1999-07-25"
+    place: null
+    country: "Montenegro"
+    }
+    nationality: "Montenegro"
+    height: "186 cm"
+    weight: null
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/66761.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 724
+    name: "Cadiz"
+    logo: "https://media-1.api-sports.io/football/teams/724.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Attacker"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 182664
+    name: "Gaizka Ayesa"
+    firstname: "Gaizka"
+    lastname: "Ayesa Burgui"
+    age: 22
+    birth: {
+    date: "2001-04-02"
+    place: "Ansoáin"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "182 cm"
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/182664.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-3.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Goalkeeper"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 253699
+    name: "Antonio Zarzana"
+    firstname: "Antonio"
+    lastname: "Zarzana Pérez"
+    age: 21
+    birth: {
+    date: "2002-03-21"
+    place: "Jerez de la Frontera"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "177 cm"
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/253699.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 536
+    name: "Sevilla"
+    logo: "https://media-2.api-sports.io/football/teams/536.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    ]
+    }

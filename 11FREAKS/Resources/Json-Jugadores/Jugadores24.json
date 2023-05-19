@@ -1,0 +1,1991 @@
+{
+    get: "players"
+    parameters: {
+    league: "140"
+    season: "2022"
+    page: "24"
+    }
+    errors: [
+    ]
+    results: 20
+    paging: {
+    current: 24
+    total: 39
+    }
+    response: [
+    {
+    player: {
+    id: 570
+    name: "F. Cervi"
+    firstname: "Franco Emanuel"
+    lastname: "Cervi"
+    age: 29
+    birth: {
+    date: "1994-05-26"
+    place: "San Lorenzo"
+    country: "Argentina"
+    }
+    nationality: "Argentina"
+    height: "165 cm"
+    weight: "67 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/570.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-1.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 33
+    lineups: 20
+    minutes: 1812
+    number: null
+    position: "Midfielder"
+    rating: "6.850000"
+    captain: false
+    }
+    substitutes: {
+    in: 13
+    out: 13
+    bench: 13
+    }
+    shots: {
+    total: 13
+    on: 5
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 4
+    saves: null
+    }
+    passes: {
+    total: 679
+    key: 25
+    accuracy: 16
+    }
+    tackles: {
+    total: 69
+    blocks: 1
+    interceptions: 34
+    }
+    duels: {
+    total: 251
+    won: 139
+    }
+    dribbles: {
+    attempts: 44
+    success: 20
+    past: null
+    }
+    fouls: {
+    drawn: 38
+    committed: 23
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 1830
+    name: "Gonçalo Paciência"
+    firstname: "Gonçalo"
+    lastname: "Mendes Paciência"
+    age: 29
+    birth: {
+    date: "1994-08-01"
+    place: "Porto"
+    country: "Portugal"
+    }
+    nationality: "Portugal"
+    height: "184 cm"
+    weight: "81 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/1830.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-2.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 23
+    lineups: 5
+    minutes: 607
+    number: null
+    position: "Attacker"
+    rating: "6.585000"
+    captain: false
+    }
+    substitutes: {
+    in: 18
+    out: 5
+    bench: 25
+    }
+    shots: {
+    total: 15
+    on: 6
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 139
+    key: 6
+    accuracy: 4
+    }
+    tackles: {
+    total: 7
+    blocks: 1
+    interceptions: null
+    }
+    duels: {
+    total: 122
+    won: 55
+    }
+    dribbles: {
+    attempts: 16
+    success: 4
+    past: null
+    }
+    fouls: {
+    drawn: 17
+    committed: 18
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 2433
+    name: "R. Tapia"
+    firstname: "Renato Fabrizio"
+    lastname: "Tapia Cortijo"
+    age: 28
+    birth: {
+    date: "1995-07-28"
+    place: "Lima"
+    country: "Peru"
+    }
+    nationality: "Peru"
+    height: "185 cm"
+    weight: "78 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/2433.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-2.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 25
+    lineups: 14
+    minutes: 1252
+    number: null
+    position: "Midfielder"
+    rating: "6.620833"
+    captain: false
+    }
+    substitutes: {
+    in: 11
+    out: 9
+    bench: 16
+    }
+    shots: {
+    total: 8
+    on: 3
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 681
+    key: 9
+    accuracy: 24
+    }
+    tackles: {
+    total: 36
+    blocks: 10
+    interceptions: 17
+    }
+    duels: {
+    total: 141
+    won: 79
+    }
+    dribbles: {
+    attempts: 13
+    success: 8
+    past: null
+    }
+    fouls: {
+    drawn: 13
+    committed: 22
+    }
+    cards: {
+    yellow: 6
+    yellowred: 1
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 5921
+    name: "A. Solari"
+    firstname: "Augusto Jorge Mateo"
+    lastname: "Solari"
+    age: 31
+    birth: {
+    date: "1992-01-03"
+    place: "Rosario"
+    country: "Argentina"
+    }
+    nationality: "Argentina"
+    height: "180 cm"
+    weight: "80 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/5921.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-2.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 12
+    lineups: 3
+    minutes: 257
+    number: null
+    position: "Midfielder"
+    rating: "6.480000"
+    captain: false
+    }
+    substitutes: {
+    in: 9
+    out: 3
+    bench: 24
+    }
+    shots: {
+    total: 2
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 119
+    key: 4
+    accuracy: 9
+    }
+    tackles: {
+    total: 10
+    blocks: null
+    interceptions: 5
+    }
+    duels: {
+    total: 46
+    won: 19
+    }
+    dribbles: {
+    attempts: 4
+    success: 1
+    past: null
+    }
+    fouls: {
+    drawn: 4
+    committed: 9
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 19026
+    name: "L. de la Torre"
+    firstname: "Lucas Daniel"
+    lastname: "de la Torre"
+    age: 25
+    birth: {
+    date: "1998-05-23"
+    place: "San Diego"
+    country: "USA"
+    }
+    nationality: "USA"
+    height: "178 cm"
+    weight: "63 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/19026.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-3.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 25
+    lineups: 15
+    minutes: 1303
+    number: null
+    position: "Midfielder"
+    rating: "6.604347"
+    captain: false
+    }
+    substitutes: {
+    in: 10
+    out: 13
+    bench: 16
+    }
+    shots: {
+    total: 7
+    on: 2
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 2
+    saves: null
+    }
+    passes: {
+    total: 485
+    key: 12
+    accuracy: 17
+    }
+    tackles: {
+    total: 24
+    blocks: 1
+    interceptions: 9
+    }
+    duels: {
+    total: 142
+    won: 50
+    }
+    dribbles: {
+    attempts: 19
+    success: 11
+    past: null
+    }
+    fouls: {
+    drawn: 11
+    committed: 31
+    }
+    cards: {
+    yellow: 4
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47416
+    name: "Óscar Rodríguez"
+    firstname: "Óscar"
+    lastname: "Rodríguez Arnaiz"
+    age: 25
+    birth: {
+    date: "1998-06-28"
+    place: "Talavera de la Reina"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "174 cm"
+    weight: "67 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47416.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-3.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 29
+    lineups: 15
+    minutes: 1440
+    number: null
+    position: "Midfielder"
+    rating: "6.885714"
+    captain: false
+    }
+    substitutes: {
+    in: 14
+    out: 8
+    bench: 17
+    }
+    shots: {
+    total: 31
+    on: 16
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 808
+    key: 21
+    accuracy: 24
+    }
+    tackles: {
+    total: 27
+    blocks: 2
+    interceptions: 18
+    }
+    duels: {
+    total: 134
+    won: 67
+    }
+    dribbles: {
+    attempts: 17
+    success: 7
+    past: null
+    }
+    fouls: {
+    drawn: 22
+    committed: 21
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47434
+    name: "Kevin Vázquez"
+    firstname: "Kevin"
+    lastname: "Vázquez Comesaña"
+    age: 30
+    birth: {
+    date: "1993-03-23"
+    place: "Nigrán"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "173 cm"
+    weight: "72 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47434.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-3.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 8
+    lineups: 5
+    minutes: 372
+    number: null
+    position: "Defender"
+    rating: "6.500000"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 3
+    bench: 29
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 152
+    key: 2
+    accuracy: 14
+    }
+    tackles: {
+    total: 9
+    blocks: 1
+    interceptions: 2
+    }
+    duels: {
+    total: 37
+    won: 18
+    }
+    dribbles: {
+    attempts: 2
+    success: 2
+    past: null
+    }
+    fouls: {
+    drawn: 5
+    committed: 7
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47435
+    name: "Fran Beltrán"
+    firstname: "Francisco José"
+    lastname: "Beltrán Peinado"
+    age: 24
+    birth: {
+    date: "1999-02-03"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "170 cm"
+    weight: "66 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47435.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-1.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 34
+    lineups: 31
+    minutes: 2749
+    number: null
+    position: "Midfielder"
+    rating: "6.818181"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 10
+    bench: 3
+    }
+    shots: {
+    total: 12
+    on: 2
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 2
+    saves: null
+    }
+    passes: {
+    total: 1644
+    key: 23
+    accuracy: 44
+    }
+    tackles: {
+    total: 32
+    blocks: 5
+    interceptions: 52
+    }
+    duels: {
+    total: 212
+    won: 80
+    }
+    dribbles: {
+    attempts: 21
+    success: 14
+    past: null
+    }
+    fouls: {
+    drawn: 16
+    committed: 25
+    }
+    cards: {
+    yellow: 4
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 67955
+    name: "Carles Pérez"
+    firstname: "Carles"
+    lastname: "Pérez Sayol"
+    age: 25
+    birth: {
+    date: "1998-02-16"
+    place: "Granollers"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "173 cm"
+    weight: "75 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/67955.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-3.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 31
+    lineups: 19
+    minutes: 1788
+    number: null
+    position: "Attacker"
+    rating: "6.666666"
+    captain: false
+    }
+    substitutes: {
+    in: 12
+    out: 15
+    bench: 13
+    }
+    shots: {
+    total: 21
+    on: 14
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: 4
+    saves: null
+    }
+    passes: {
+    total: 506
+    key: 19
+    accuracy: 14
+    }
+    tackles: {
+    total: 26
+    blocks: 3
+    interceptions: 6
+    }
+    duels: {
+    total: 257
+    won: 102
+    }
+    dribbles: {
+    attempts: 81
+    success: 39
+    past: null
+    }
+    fouls: {
+    drawn: 31
+    committed: 28
+    }
+    cards: {
+    yellow: 4
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 104853
+    name: "Asier Villalibre"
+    firstname: "Asier"
+    lastname: "Villalibre Molina"
+    age: 26
+    birth: {
+    date: "1997-09-30"
+    place: "Gernika"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "184 cm"
+    weight: "86 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/104853.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 531
+    name: "Athletic Club"
+    logo: "https://media-3.api-sports.io/football/teams/531.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 5
+    lineups: 1
+    minutes: 96
+    number: null
+    position: "Attacker"
+    rating: "6.440000"
+    captain: false
+    }
+    substitutes: {
+    in: 4
+    out: 1
+    bench: 17
+    }
+    shots: {
+    total: 4
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 18
+    key: 2
+    accuracy: 2
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 9
+    won: 3
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 1
+    committed: 3
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 162495
+    name: "Fernando Medrano"
+    firstname: "Fernando"
+    lastname: "Medrano Gastañaga"
+    age: 23
+    birth: {
+    date: "2000-03-26"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/162495.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-3.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 1
+    lineups: 0
+    minutes: 12
+    number: null
+    position: "Defender"
+    rating: "6.900000"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 0
+    bench: 9
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 3
+    key: null
+    accuracy: 3
+    }
+    tackles: {
+    total: 2
+    blocks: null
+    interceptions: 1
+    }
+    duels: {
+    total: 3
+    won: 2
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: 1
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 162605
+    name: "Javi Domínguez"
+    firstname: "Javier"
+    lastname: "Domínguez Arribas"
+    age: 22
+    birth: {
+    date: "2001-03-26"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "195 cm"
+    weight: "83 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/162605.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-2.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Defender"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 4
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 162686
+    name: "Antonio Blanco"
+    firstname: "Antonio"
+    lastname: "Blanco Conde"
+    age: 23
+    birth: {
+    date: "2000-07-23"
+    place: "Montalbán"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "176 cm"
+    weight: "70 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/162686.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 724
+    name: "Cadiz"
+    logo: "https://media-2.api-sports.io/football/teams/724.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 3
+    lineups: 2
+    minutes: 159
+    number: null
+    position: "Midfielder"
+    rating: "6.466666"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 2
+    bench: 10
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 61
+    key: 1
+    accuracy: 19
+    }
+    tackles: {
+    total: 6
+    blocks: null
+    interceptions: 1
+    }
+    duels: {
+    total: 18
+    won: 10
+    }
+    dribbles: {
+    attempts: 1
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 1
+    committed: 2
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    {
+    team: {
+    id: 541
+    name: "Real Madrid"
+    logo: "https://media-3.api-sports.io/football/teams/541.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: "6.466666"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 61
+    key: 1
+    accuracy: 19
+    }
+    tackles: {
+    total: 6
+    blocks: null
+    interceptions: 1
+    }
+    duels: {
+    total: 18
+    won: 10
+    }
+    dribbles: {
+    attempts: 1
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 1
+    committed: 2
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 182504
+    name: "Gabri Veiga"
+    firstname: "Gabriel"
+    lastname: "Veiga Novas"
+    age: 21
+    birth: {
+    date: "2002-05-27"
+    place: "O Porriño"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "184 cm"
+    weight: "76 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/182504.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-2.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 32
+    lineups: 24
+    minutes: 1988
+    number: null
+    position: "Midfielder"
+    rating: "6.900000"
+    captain: false
+    }
+    substitutes: {
+    in: 8
+    out: 21
+    bench: 8
+    }
+    shots: {
+    total: 41
+    on: 22
+    }
+    goals: {
+    total: 9
+    conceded: 0
+    assists: 4
+    saves: null
+    }
+    passes: {
+    total: 626
+    key: 23
+    accuracy: 15
+    }
+    tackles: {
+    total: 44
+    blocks: 2
+    interceptions: 18
+    }
+    duels: {
+    total: 252
+    won: 125
+    }
+    dribbles: {
+    attempts: 62
+    success: 31
+    past: null
+    }
+    fouls: {
+    drawn: 33
+    committed: 36
+    }
+    cards: {
+    yellow: 6
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 182857
+    name: "Sergio Barcia"
+    firstname: "Sergio"
+    lastname: "Barcia Laranxeira"
+    age: 23
+    birth: {
+    date: "2000-12-31"
+    place: "Vigo"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "186 cm"
+    weight: "82 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/182857.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-2.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Defender"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 1
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 269163
+    name: "W. Swedberg"
+    firstname: "Williot Theo"
+    lastname: "Swedberg"
+    age: 19
+    birth: {
+    date: "2004-02-01"
+    place: "Stockholm"
+    country: "Sweden"
+    }
+    nationality: "Sweden"
+    height: "185 cm"
+    weight: "78 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/269163.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-2.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 4
+    lineups: 0
+    minutes: 51
+    number: null
+    position: "Midfielder"
+    rating: "6.600000"
+    captain: false
+    }
+    substitutes: {
+    in: 4
+    out: 0
+    bench: 34
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 17
+    key: null
+    accuracy: 4
+    }
+    tackles: {
+    total: 3
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 7
+    won: 5
+    }
+    dribbles: {
+    attempts: 2
+    success: 1
+    past: null
+    }
+    fouls: {
+    drawn: 1
+    committed: 1
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 286559
+    name: "Carlos Domínguez"
+    firstname: "Carlos"
+    lastname: "Domínguez Cáceres"
+    age: 22
+    birth: {
+    date: "2001-02-11"
+    place: null
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "187 cm"
+    weight: "81 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/286559.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-2.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 2
+    lineups: 0
+    minutes: 16
+    number: null
+    position: "Defender"
+    rating: "6.700000"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 0
+    bench: 34
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 12
+    key: null
+    accuracy: 5
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 1
+    won: 1
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 313651
+    name: "Hugo Sotelo"
+    firstname: "Hugo"
+    lastname: "Sotelo Gómez"
+    age: 20
+    birth: {
+    date: "2003-12-19"
+    place: "Vigo"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "180 cm"
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/313651.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-3.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 1
+    lineups: 0
+    minutes: 17
+    number: null
+    position: "Midfielder"
+    rating: "6.700000"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 0
+    bench: 7
+    }
+    shots: {
+    total: 1
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 23
+    key: null
+    accuracy: 20
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 1
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 329720
+    name: "Hugo Álvarez"
+    firstname: "Hugo"
+    lastname: "Álvarez Antúnez"
+    age: 20
+    birth: {
+    date: "2003-07-02"
+    place: "Ourense"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "185 cm"
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/329720.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-2.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 2
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 334573
+    name: "Martín Conde"
+    firstname: "Martín"
+    lastname: "Conde Gómez"
+    age: 20
+    birth: {
+    date: "2003-03-25"
+    place: "Ourense"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/334573.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 538
+    name: "Celta Vigo"
+    logo: "https://media-2.api-sports.io/football/teams/538.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Defender"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 2
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    ]
+    }

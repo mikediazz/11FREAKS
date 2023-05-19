@@ -1,0 +1,1917 @@
+{
+    get: "players"
+    parameters: {
+    league: "140"
+    season: "2022"
+    page: "10"
+    }
+    errors: [
+    ]
+    results: 20
+    paging: {
+    current: 10
+    total: 39
+    }
+    response: [
+    {
+    player: {
+    id: 634
+    name: "David Silva"
+    firstname: "David Josué"
+    lastname: "Jiménez Silva"
+    age: 37
+    birth: {
+    date: "1986-01-08"
+    place: "Arguineguín"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "170 cm"
+    weight: "67 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/634.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-1.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 27
+    lineups: 24
+    minutes: 1937
+    number: null
+    position: "Midfielder"
+    rating: "7.037037"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 23
+    bench: 4
+    }
+    shots: {
+    total: 21
+    on: 13
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: 5
+    saves: null
+    }
+    passes: {
+    total: 1118
+    key: 36
+    accuracy: 35
+    }
+    tackles: {
+    total: 35
+    blocks: 2
+    interceptions: 15
+    }
+    duels: {
+    total: 188
+    won: 97
+    }
+    dribbles: {
+    attempts: 38
+    success: 19
+    past: null
+    }
+    fouls: {
+    drawn: 33
+    committed: 30
+    }
+    cards: {
+    yellow: 3
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 32862
+    name: "T. Kubo"
+    firstname: "Takefusa"
+    lastname: "Kubo"
+    age: 22
+    birth: {
+    date: "2001-06-04"
+    place: "Kawasaki"
+    country: "Japan"
+    }
+    nationality: "Japan"
+    height: "173 cm"
+    weight: "64 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/32862.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-3.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 31
+    lineups: 26
+    minutes: 2188
+    number: null
+    position: "Midfielder"
+    rating: "7.038709"
+    captain: false
+    }
+    substitutes: {
+    in: 5
+    out: 20
+    bench: 7
+    }
+    shots: {
+    total: 52
+    on: 29
+    }
+    goals: {
+    total: 8
+    conceded: 0
+    assists: 4
+    saves: null
+    }
+    passes: {
+    total: 682
+    key: 34
+    accuracy: 16
+    }
+    tackles: {
+    total: 42
+    blocks: 1
+    interceptions: 6
+    }
+    duels: {
+    total: 292
+    won: 135
+    }
+    dribbles: {
+    attempts: 86
+    success: 38
+    past: null
+    }
+    fouls: {
+    drawn: 41
+    committed: 32
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 46808
+    name: "Carlos Fernández"
+    firstname: "Carlos"
+    lastname: "Fernández Luna"
+    age: 27
+    birth: {
+    date: "1996-05-22"
+    place: "Castilleja de Guzmán"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "185 cm"
+    weight: "72 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/46808.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-3.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 20
+    lineups: 7
+    minutes: 520
+    number: null
+    position: "Attacker"
+    rating: "6.552631"
+    captain: false
+    }
+    substitutes: {
+    in: 13
+    out: 7
+    bench: 17
+    }
+    shots: {
+    total: 15
+    on: 4
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 124
+    key: 6
+    accuracy: 4
+    }
+    tackles: {
+    total: 5
+    blocks: null
+    interceptions: 1
+    }
+    duels: {
+    total: 108
+    won: 52
+    }
+    dribbles: {
+    attempts: 14
+    success: 9
+    past: null
+    }
+    fouls: {
+    drawn: 14
+    committed: 13
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47301
+    name: "R. Le Normand"
+    firstname: "Robin"
+    lastname: "Le Normand"
+    age: 27
+    birth: {
+    date: "1996-11-11"
+    place: "Pabu"
+    country: "France"
+    }
+    nationality: "France"
+    height: "187 cm"
+    weight: "80 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47301.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-3.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 30
+    lineups: 28
+    minutes: 2524
+    number: null
+    position: "Defender"
+    rating: "6.913333"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 1
+    bench: 2
+    }
+    shots: {
+    total: 8
+    on: 2
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 1530
+    key: 3
+    accuracy: 46
+    }
+    tackles: {
+    total: 33
+    blocks: 14
+    interceptions: 29
+    }
+    duels: {
+    total: 244
+    won: 152
+    }
+    dribbles: {
+    attempts: 2
+    success: 2
+    past: null
+    }
+    fouls: {
+    drawn: 26
+    committed: 37
+    }
+    cards: {
+    yellow: 6
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47309
+    name: "Guevara"
+    firstname: "Ander"
+    lastname: "Guevara Lajo"
+    age: 26
+    birth: {
+    date: "1997-07-07"
+    place: "Vitoria"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "180 cm"
+    weight: "73 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47309.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-3.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 7
+    lineups: 2
+    minutes: 189
+    number: null
+    position: "Midfielder"
+    rating: "6.885714"
+    captain: false
+    }
+    substitutes: {
+    in: 5
+    out: 2
+    bench: 25
+    }
+    shots: {
+    total: 1
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 160
+    key: 4
+    accuracy: 20
+    }
+    tackles: {
+    total: 5
+    blocks: 1
+    interceptions: 2
+    }
+    duels: {
+    total: 22
+    won: 14
+    }
+    dribbles: {
+    attempts: 3
+    success: 3
+    past: null
+    }
+    fouls: {
+    drawn: 3
+    committed: 4
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47310
+    name: "Illarramendi"
+    firstname: "Asier"
+    lastname: "Illarramendi Andonegi"
+    age: 33
+    birth: {
+    date: "1990-03-08"
+    place: "Mutriku"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "179 cm"
+    weight: "75 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47310.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-3.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 21
+    lineups: 10
+    minutes: 886
+    number: null
+    position: "Midfielder"
+    rating: "6.750000"
+    captain: false
+    }
+    substitutes: {
+    in: 11
+    out: 8
+    bench: 24
+    }
+    shots: {
+    total: 7
+    on: 3
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 516
+    key: 9
+    accuracy: 21
+    }
+    tackles: {
+    total: 29
+    blocks: 6
+    interceptions: 14
+    }
+    duels: {
+    total: 119
+    won: 58
+    }
+    dribbles: {
+    attempts: 5
+    success: 5
+    past: null
+    }
+    fouls: {
+    drawn: 12
+    committed: 21
+    }
+    cards: {
+    yellow: 4
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47311
+    name: "Mikel Merino"
+    firstname: "Mikel"
+    lastname: "Merino Zazón"
+    age: 27
+    birth: {
+    date: "1996-06-22"
+    place: "Pamplona"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "188 cm"
+    weight: "83 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47311.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 29
+    lineups: 25
+    minutes: 2231
+    number: null
+    position: "Midfielder"
+    rating: "7.144827"
+    captain: false
+    }
+    substitutes: {
+    in: 4
+    out: 8
+    bench: 4
+    }
+    shots: {
+    total: 30
+    on: 16
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: 9
+    saves: null
+    }
+    passes: {
+    total: 1303
+    key: 38
+    accuracy: 34
+    }
+    tackles: {
+    total: 72
+    blocks: 8
+    interceptions: 19
+    }
+    duels: {
+    total: 425
+    won: 238
+    }
+    dribbles: {
+    attempts: 32
+    success: 18
+    past: null
+    }
+    fouls: {
+    drawn: 45
+    committed: 67
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 1
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47314
+    name: "Zubeldia"
+    firstname: "Igor"
+    lastname: "Zubeldia Elorza"
+    age: 26
+    birth: {
+    date: "1997-03-30"
+    place: "Azkoitia"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "181 cm"
+    weight: "73 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/47314.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 28
+    lineups: 26
+    minutes: 2285
+    number: null
+    position: "Midfielder"
+    rating: "6.870370"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 4
+    bench: 6
+    }
+    shots: {
+    total: 2
+    on: 1
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 1353
+    key: 2
+    accuracy: 41
+    }
+    tackles: {
+    total: 31
+    blocks: 16
+    interceptions: 19
+    }
+    duels: {
+    total: 202
+    won: 103
+    }
+    dribbles: {
+    attempts: 6
+    success: 6
+    past: null
+    }
+    fouls: {
+    drawn: 10
+    committed: 43
+    }
+    cards: {
+    yellow: 9
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47315
+    name: "Martín Zubimendi"
+    firstname: "Martín"
+    lastname: "Zubimendi Ibáñez"
+    age: 24
+    birth: {
+    date: "1999-02-02"
+    place: "San Sebastián"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "180 cm"
+    weight: "74 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47315.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-1.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 32
+    lineups: 31
+    minutes: 2771
+    number: null
+    position: "Midfielder"
+    rating: "6.893750"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 1
+    bench: 1
+    }
+    shots: {
+    total: 9
+    on: 2
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: 2
+    saves: null
+    }
+    passes: {
+    total: 1584
+    key: 15
+    accuracy: 42
+    }
+    tackles: {
+    total: 56
+    blocks: 16
+    interceptions: 34
+    }
+    duels: {
+    total: 264
+    won: 147
+    }
+    dribbles: {
+    attempts: 16
+    success: 7
+    past: null
+    }
+    fouls: {
+    drawn: 29
+    committed: 46
+    }
+    cards: {
+    yellow: 12
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47317
+    name: "Barrenetxea"
+    firstname: "Ander"
+    lastname: "Barrenetxea Muguruza"
+    age: 22
+    birth: {
+    date: "2001-12-27"
+    place: "San Sebastián"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "178 cm"
+    weight: "75 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/47317.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-1.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 19
+    lineups: 7
+    minutes: 677
+    number: null
+    position: "Attacker"
+    rating: "6.752631"
+    captain: false
+    }
+    substitutes: {
+    in: 12
+    out: 7
+    bench: 17
+    }
+    shots: {
+    total: 9
+    on: 7
+    }
+    goals: {
+    total: 3
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 269
+    key: 4
+    accuracy: 10
+    }
+    tackles: {
+    total: 19
+    blocks: 1
+    interceptions: 5
+    }
+    duels: {
+    total: 140
+    won: 65
+    }
+    dribbles: {
+    attempts: 46
+    success: 27
+    past: null
+    }
+    fouls: {
+    drawn: 11
+    committed: 22
+    }
+    cards: {
+    yellow: 4
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47440
+    name: "Brais Méndez"
+    firstname: "Brais"
+    lastname: "Méndez Portela"
+    age: 26
+    birth: {
+    date: "1997-01-07"
+    place: "Mos"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "187 cm"
+    weight: "76 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47440.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-3.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 31
+    lineups: 27
+    minutes: 2225
+    number: null
+    position: "Midfielder"
+    rating: "6.967741"
+    captain: false
+    }
+    substitutes: {
+    in: 4
+    out: 16
+    bench: 5
+    }
+    shots: {
+    total: 38
+    on: 20
+    }
+    goals: {
+    total: 7
+    conceded: 0
+    assists: 3
+    saves: null
+    }
+    passes: {
+    total: 1065
+    key: 40
+    accuracy: 28
+    }
+    tackles: {
+    total: 50
+    blocks: 3
+    interceptions: 12
+    }
+    duels: {
+    total: 311
+    won: 134
+    }
+    dribbles: {
+    attempts: 43
+    success: 13
+    past: null
+    }
+    fouls: {
+    drawn: 47
+    committed: 57
+    }
+    cards: {
+    yellow: 6
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 84086
+    name: "Robert Navarro"
+    firstname: "Roberto"
+    lastname: "Navarro Muñoz"
+    age: 21
+    birth: {
+    date: "2002-04-12"
+    place: "Barcelona"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "178 cm"
+    weight: "69 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/84086.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 17
+    lineups: 1
+    minutes: 336
+    number: null
+    position: "Midfielder"
+    rating: "6.506250"
+    captain: false
+    }
+    substitutes: {
+    in: 16
+    out: 1
+    bench: 33
+    }
+    shots: {
+    total: 7
+    on: 5
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 120
+    key: 12
+    accuracy: 5
+    }
+    tackles: {
+    total: 5
+    blocks: null
+    interceptions: 2
+    }
+    duels: {
+    total: 64
+    won: 24
+    }
+    dribbles: {
+    attempts: 16
+    success: 7
+    past: null
+    }
+    fouls: {
+    drawn: 6
+    committed: 8
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 131492
+    name: "Aritz Arambarri"
+    firstname: "Aritz"
+    lastname: "Arambarri Murua"
+    age: 25
+    birth: {
+    date: "1998-01-31"
+    place: "Azkoitia"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "186 cm"
+    weight: "76 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/131492.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Defender"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 182546
+    name: "Jon Pacheco"
+    firstname: "Jon"
+    lastname: "Pacheco Dozagarat"
+    age: 22
+    birth: {
+    date: "2001-01-08"
+    place: "Elizondo"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "184 cm"
+    weight: "77 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/182546.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 14
+    lineups: 10
+    minutes: 999
+    number: null
+    position: "Defender"
+    rating: "6.742857"
+    captain: false
+    }
+    substitutes: {
+    in: 4
+    out: 0
+    bench: 19
+    }
+    shots: {
+    total: 2
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 751
+    key: null
+    accuracy: 48
+    }
+    tackles: {
+    total: 14
+    blocks: 5
+    interceptions: 10
+    }
+    duels: {
+    total: 89
+    won: 49
+    }
+    dribbles: {
+    attempts: 3
+    success: 2
+    past: null
+    }
+    fouls: {
+    drawn: 9
+    committed: 14
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 182603
+    name: "Jon Ander Olasagasti"
+    firstname: "Jon Ander"
+    lastname: "Olasagasti Imizcoz"
+    age: 23
+    birth: {
+    date: "2000-08-16"
+    place: "San Sebastián"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "176 cm"
+    weight: "74 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/182603.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 3
+    lineups: 0
+    minutes: 63
+    number: null
+    position: "Midfielder"
+    rating: "6.966666"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 0
+    bench: 5
+    }
+    shots: {
+    total: 3
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 48
+    key: null
+    accuracy: 13
+    }
+    tackles: {
+    total: 4
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 12
+    won: 10
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 4
+    committed: 1
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 183699
+    name: "Urko González"
+    firstname: "Urko"
+    lastname: "González de Zárate Quirós"
+    age: 22
+    birth: {
+    date: "2001-03-20"
+    place: "Vitoria-Gasteiz"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "189 cm"
+    weight: null
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/183699.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-3.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Defender"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 16
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 183744
+    name: "Beñat Turrientes"
+    firstname: "Beñat"
+    lastname: "Turrientes Imaz"
+    age: 21
+    birth: {
+    date: "2002-01-31"
+    place: "Beasain"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "181 cm"
+    weight: "70 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/183744.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 6
+    lineups: 1
+    minutes: 102
+    number: null
+    position: "Midfielder"
+    rating: "6.550000"
+    captain: false
+    }
+    substitutes: {
+    in: 5
+    out: 1
+    bench: 27
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 43
+    key: 2
+    accuracy: 6
+    }
+    tackles: {
+    total: 4
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 15
+    won: 6
+    }
+    dribbles: {
+    attempts: 2
+    success: 1
+    past: null
+    }
+    fouls: {
+    drawn: 1
+    committed: 2
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 203426
+    name: "J. Gómez"
+    firstname: "Jonathan Germán"
+    lastname: "Gómez Mendoza"
+    age: 20
+    birth: {
+    date: "2003-09-01"
+    place: "North Richland Hills"
+    country: "USA"
+    }
+    nationality: "USA"
+    height: "178 cm"
+    weight: "71 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/203426.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Defender"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 2
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 287652
+    name: "Jon Magunazelaia"
+    firstname: "Jon"
+    lastname: "Magunazelaia Argoitia"
+    age: 22
+    birth: {
+    date: "2001-07-13"
+    place: "Eibar"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/287652.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-2.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 2
+    lineups: 0
+    minutes: 63
+    number: null
+    position: "Midfielder"
+    rating: "6.600000"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 0
+    bench: 4
+    }
+    shots: {
+    total: 1
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 14
+    key: 2
+    accuracy: 3
+    }
+    tackles: {
+    total: 1
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 7
+    won: 3
+    }
+    dribbles: {
+    attempts: 1
+    success: 1
+    past: null
+    }
+    fouls: {
+    drawn: 1
+    committed: 1
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 290106
+    name: "Pablo Marín"
+    firstname: "Pablo"
+    lastname: "Marín Tejada"
+    age: 20
+    birth: {
+    date: "2003-07-03"
+    place: "Logroño"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/290106.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 548
+    name: "Real Sociedad"
+    logo: "https://media-1.api-sports.io/football/teams/548.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 9
+    lineups: 3
+    minutes: 339
+    number: null
+    position: "Midfielder"
+    rating: "6.600000"
+    captain: false
+    }
+    substitutes: {
+    in: 6
+    out: 3
+    bench: 10
+    }
+    shots: {
+    total: 8
+    on: 4
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 157
+    key: 6
+    accuracy: 13
+    }
+    tackles: {
+    total: 8
+    blocks: null
+    interceptions: 4
+    }
+    duels: {
+    total: 50
+    won: 19
+    }
+    dribbles: {
+    attempts: 8
+    success: 5
+    past: null
+    }
+    fouls: {
+    drawn: 2
+    committed: 12
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    ]
+    }

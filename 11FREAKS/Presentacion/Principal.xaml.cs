@@ -25,6 +25,7 @@ namespace _11FREAKS.Presentacion
     {
         private Datos.BaseDatos miBaseDatos;
         private Datos.BDOnline bdServer;
+        private Datos.API_FOOTBALL api;
         Inicio inicio;
         string usuario;
         public bool Respuesta {get;set;}
@@ -36,12 +37,16 @@ namespace _11FREAKS.Presentacion
             inicio= winInicio;
             bdServer= bd;
             usuario = user;
+            api=new API_FOOTBALL();
 
             if (bdServer.CompruebaPermisos())                        //EN CASO QUE SEA ADMIN, SE HABILITAN OPCIONES EXCLUSIVAS
             {
                 menuOpcAdmin.IsEnabled= true;
                 menuOpcAdmin.Visibility = Visibility.Visible;
             }
+
+            
+
         }
 
         /// <summary>

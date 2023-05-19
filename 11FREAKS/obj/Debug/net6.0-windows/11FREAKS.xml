@@ -218,6 +218,24 @@
                 <see cref="T:System.Boolean"/>
             </returns>
         </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.CrearEquipo(System.String,System.String,System.String)">
+            <summary>
+                Método para crear EQUIPO (SIGN UP)
+            </summary>
+            <param name="equipo">
+                Recibimos Usuario del Login o Para Hacer Consulta
+            </param>
+            <param name="abreviatura">
+                Recibimos Contraseña del Usuario
+            </param>
+            <param name="liga">
+                Recibimos id Equipo Favorito (PUEDE SER NULO)
+            </param>
+            <returns>
+                Devuelve un Booleano con el Resultado de la Operación
+                <see cref="T:System.Boolean"/>
+            </returns>
+        </member>
         <member name="M:_11FREAKS.Datos.BDOnline.CompruebaPassword(System.String,System.String)">
             <summary>
                 Método para Comprobar que la Contraseña es Segura 
@@ -235,6 +253,45 @@
             </summary>
             <returns>
                 Devuelve Si Un Usuario es Admin
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.InsertarJugador(System.Int32,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+                Método para insertar JUGADOR
+            </summary>
+            <param name="idJugador">
+                Recibimos idJugador
+            </param>
+            <param name="nombre">
+                Recibimos nombre jugador
+            </param>
+            <param name="idEquipoOriginal">
+                Recibimos id Equipo
+            </param>
+            <param name="escudo">
+                Recibimos escudo equipo original
+            </param>
+            <param name="edad">
+                Recibimos edad
+            </param>
+            <param name="foto">
+                Recibimos foto jugador
+            </param>
+            <param name="convocable">
+                Recibimos si el jugador es convocable al momento de la inserción
+            </param>
+            <param name="dorsal">
+                Recibimos el dorsal del jugador
+            </param>
+            <param name="nacionalidad">
+                Recibimos nacionalidad del jugador
+            </param>
+            <param name="posicion">
+                Recibimos posición del jugador
+            </param>
+            <returns>
+                Devuelve un Booleano con el Resultado de la Operación
+                <see cref="T:System.Boolean"/>
             </returns>
         </member>
         <member name="T:_11FREAKS.Presentacion.BusquedaUsuarios">

@@ -1,0 +1,2065 @@
+{
+    get: "players"
+    parameters: {
+    league: "140"
+    season: "2022"
+    page: "33"
+    }
+    errors: [
+    ]
+    results: 20
+    paging: {
+    current: 33
+    total: 39
+    }
+    response: [
+    {
+    player: {
+    id: 143
+    name: "Carles Aleñá"
+    firstname: "Carles"
+    lastname: "Aleña Castillo"
+    age: 25
+    birth: {
+    date: "1998-01-05"
+    place: "Mataró"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "180 cm"
+    weight: "73 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/143.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-2.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 32
+    lineups: 23
+    minutes: 1916
+    number: null
+    position: "Midfielder"
+    rating: "6.553125"
+    captain: false
+    }
+    substitutes: {
+    in: 9
+    out: 15
+    bench: 9
+    }
+    shots: {
+    total: 22
+    on: 10
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: 2
+    saves: null
+    }
+    passes: {
+    total: 723
+    key: 15
+    accuracy: 17
+    }
+    tackles: {
+    total: 18
+    blocks: 1
+    interceptions: 4
+    }
+    duels: {
+    total: 245
+    won: 98
+    }
+    dribbles: {
+    attempts: 30
+    success: 19
+    past: null
+    }
+    fouls: {
+    drawn: 47
+    committed: 54
+    }
+    cards: {
+    yellow: 10
+    yellowred: 1
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 755
+    name: "Jaime Seoane"
+    firstname: "Jaime"
+    lastname: "Seoane Valenciano"
+    age: 26
+    birth: {
+    date: "1997-01-22"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "175 cm"
+    weight: "73 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/755.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-1.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 16
+    lineups: 2
+    minutes: 315
+    number: null
+    position: "Midfielder"
+    rating: "6.550000"
+    captain: false
+    }
+    substitutes: {
+    in: 14
+    out: 3
+    bench: 32
+    }
+    shots: {
+    total: 1
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 103
+    key: 6
+    accuracy: 6
+    }
+    tackles: {
+    total: 10
+    blocks: 3
+    interceptions: 1
+    }
+    duels: {
+    total: 42
+    won: 18
+    }
+    dribbles: {
+    attempts: 5
+    success: 2
+    past: null
+    }
+    fouls: {
+    drawn: 4
+    committed: 6
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 2060
+    name: "M. El Haddadi"
+    firstname: "Munir"
+    lastname: "El Haddadi Mohamed"
+    age: 28
+    birth: {
+    date: "1995-09-01"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Morocco"
+    height: "175 cm"
+    weight: "69 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/2060.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-2.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 26
+    lineups: 9
+    minutes: 1075
+    number: null
+    position: "Attacker"
+    rating: "6.780000"
+    captain: false
+    }
+    substitutes: {
+    in: 17
+    out: 10
+    bench: 18
+    }
+    shots: {
+    total: 19
+    on: 7
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 308
+    key: 13
+    accuracy: 8
+    }
+    tackles: {
+    total: 12
+    blocks: 2
+    interceptions: 9
+    }
+    duels: {
+    total: 155
+    won: 78
+    }
+    dribbles: {
+    attempts: 27
+    success: 11
+    past: null
+    }
+    fouls: {
+    drawn: 32
+    committed: 14
+    }
+    cards: {
+    yellow: 4
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    {
+    team: {
+    id: 536
+    name: "Sevilla"
+    logo: "https://media-2.api-sports.io/football/teams/536.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Attacker"
+    rating: "6.780000"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 2
+    }
+    shots: {
+    total: 19
+    on: 7
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 308
+    key: 13
+    accuracy: 8
+    }
+    tackles: {
+    total: 12
+    blocks: 2
+    interceptions: 9
+    }
+    duels: {
+    total: 155
+    won: 78
+    }
+    dribbles: {
+    attempts: 27
+    success: 11
+    past: null
+    }
+    fouls: {
+    drawn: 32
+    committed: 14
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 2671
+    name: "Jaime Mata"
+    firstname: "Jaime"
+    lastname: "Mata Arnaiz"
+    age: 35
+    birth: {
+    date: "1988-10-24"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "185 cm"
+    weight: "79 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/2671.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-2.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 15
+    lineups: 2
+    minutes: 184
+    number: null
+    position: "Attacker"
+    rating: "6.566666"
+    captain: false
+    }
+    substitutes: {
+    in: 13
+    out: 2
+    bench: 29
+    }
+    shots: {
+    total: 6
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 63
+    key: 4
+    accuracy: 3
+    }
+    tackles: {
+    total: 5
+    blocks: 1
+    interceptions: 2
+    }
+    duels: {
+    total: 36
+    won: 13
+    }
+    dribbles: {
+    attempts: 1
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: 3
+    committed: 11
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 2824
+    name: "N. Maksimović"
+    firstname: "Nemanja"
+    lastname: "Maksimović"
+    age: 28
+    birth: {
+    date: "1995-01-26"
+    place: "Banja Koviljača"
+    country: "Serbia"
+    }
+    nationality: "Serbia"
+    height: "189 cm"
+    weight: "69 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/2824.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-1.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 25
+    lineups: 22
+    minutes: 1709
+    number: null
+    position: "Midfielder"
+    rating: "6.704166"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 16
+    bench: 10
+    }
+    shots: {
+    total: 12
+    on: 5
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 439
+    key: 7
+    accuracy: 14
+    }
+    tackles: {
+    total: 26
+    blocks: 13
+    interceptions: 26
+    }
+    duels: {
+    total: 135
+    won: 71
+    }
+    dribbles: {
+    attempts: 5
+    success: 2
+    past: null
+    }
+    fouls: {
+    drawn: 8
+    committed: 20
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 46982
+    name: "Gonzalo Villar"
+    firstname: "Gonzalo"
+    lastname: "Villar del Fraile"
+    age: 25
+    birth: {
+    date: "1998-03-23"
+    place: "Murcia"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "181 cm"
+    weight: "73 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/46982.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-3.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 14
+    lineups: 3
+    minutes: 414
+    number: null
+    position: "Midfielder"
+    rating: "6.553846"
+    captain: false
+    }
+    substitutes: {
+    in: 11
+    out: 3
+    bench: 14
+    }
+    shots: {
+    total: 1
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 203
+    key: 3
+    accuracy: 12
+    }
+    tackles: {
+    total: 8
+    blocks: 2
+    interceptions: 6
+    }
+    duels: {
+    total: 74
+    won: 35
+    }
+    dribbles: {
+    attempts: 15
+    success: 12
+    past: null
+    }
+    fouls: {
+    drawn: 10
+    committed: 17
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47085
+    name: "Luis Milla"
+    firstname: "Luis"
+    lastname: "Milla Manzanares"
+    age: 29
+    birth: {
+    date: "1994-10-07"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "175 cm"
+    weight: "67 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47085.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-2.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 24
+    lineups: 21
+    minutes: 1735
+    number: null
+    position: "Midfielder"
+    rating: "6.970833"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 9
+    bench: 5
+    }
+    shots: {
+    total: 4
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 858
+    key: 27
+    accuracy: 29
+    }
+    tackles: {
+    total: 45
+    blocks: 1
+    interceptions: 28
+    }
+    duels: {
+    total: 172
+    won: 94
+    }
+    dribbles: {
+    attempts: 14
+    success: 12
+    past: null
+    }
+    fouls: {
+    drawn: 22
+    committed: 28
+    }
+    cards: {
+    yellow: 5
+    yellowred: 1
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47258
+    name: "M. Arambarri"
+    firstname: "Mauro Wilney"
+    lastname: "Arambarri Rosa"
+    age: 28
+    birth: {
+    date: "1995-09-30"
+    place: "Tropezón"
+    country: "Uruguay"
+    }
+    nationality: "Uruguay"
+    height: "175 cm"
+    weight: "74 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47258.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-3.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 11
+    lineups: 11
+    minutes: 897
+    number: null
+    position: "Midfielder"
+    rating: "6.920000"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 5
+    bench: 0
+    }
+    shots: {
+    total: 4
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 331
+    key: 14
+    accuracy: 28
+    }
+    tackles: {
+    total: 12
+    blocks: 4
+    interceptions: 16
+    }
+    duels: {
+    total: 80
+    won: 36
+    }
+    dribbles: {
+    attempts: 4
+    success: 4
+    past: null
+    }
+    fouls: {
+    drawn: 10
+    committed: 18
+    }
+    cards: {
+    yellow: 4
+    yellowred: 1
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47472
+    name: "Borja Mayoral"
+    firstname: "Borja"
+    lastname: "Mayoral Moya"
+    age: 26
+    birth: {
+    date: "1997-04-05"
+    place: "Parla"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "182 cm"
+    weight: "74 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47472.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-3.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 33
+    lineups: 33
+    minutes: 2739
+    number: null
+    position: "Attacker"
+    rating: "6.671875"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 19
+    bench: 1
+    }
+    shots: {
+    total: 37
+    on: 18
+    }
+    goals: {
+    total: 8
+    conceded: 0
+    assists: 2
+    saves: null
+    }
+    passes: {
+    total: 700
+    key: 22
+    accuracy: 17
+    }
+    tackles: {
+    total: 9
+    blocks: null
+    interceptions: 3
+    }
+    duels: {
+    total: 309
+    won: 104
+    }
+    dribbles: {
+    attempts: 58
+    success: 23
+    past: null
+    }
+    fouls: {
+    drawn: 38
+    committed: 16
+    }
+    cards: {
+    yellow: 4
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 2
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47499
+    name: "E. Ünal"
+    firstname: "Enes"
+    lastname: "Ünal"
+    age: 26
+    birth: {
+    date: "1997-05-10"
+    place: "Bursa"
+    country: "Türkiye"
+    }
+    nationality: "Türkiye"
+    height: "187 cm"
+    weight: "78 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47499.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-1.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 33
+    lineups: 33
+    minutes: 2885
+    number: null
+    position: "Attacker"
+    rating: "7.143750"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 15
+    bench: 0
+    }
+    shots: {
+    total: 61
+    on: 34
+    }
+    goals: {
+    total: 14
+    conceded: 0
+    assists: 3
+    saves: null
+    }
+    passes: {
+    total: 680
+    key: 24
+    accuracy: 13
+    }
+    tackles: {
+    total: 25
+    blocks: 2
+    interceptions: 6
+    }
+    duels: {
+    total: 553
+    won: 261
+    }
+    dribbles: {
+    attempts: 39
+    success: 20
+    past: null
+    }
+    fouls: {
+    drawn: 73
+    committed: 59
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 5
+    missed: 1
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47520
+    name: "Portu"
+    firstname: "Cristian"
+    lastname: "Portugués Manzanera"
+    age: 31
+    birth: {
+    date: "1992-05-21"
+    place: "Murcia"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "167 cm"
+    weight: "66 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47520.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-1.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 31
+    lineups: 15
+    minutes: 1565
+    number: null
+    position: "Attacker"
+    rating: "6.600000"
+    captain: false
+    }
+    substitutes: {
+    in: 16
+    out: 6
+    bench: 17
+    }
+    shots: {
+    total: 8
+    on: 4
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 3
+    saves: null
+    }
+    passes: {
+    total: 466
+    key: 24
+    accuracy: 11
+    }
+    tackles: {
+    total: 25
+    blocks: 2
+    interceptions: 15
+    }
+    duels: {
+    total: 163
+    won: 72
+    }
+    dribbles: {
+    attempts: 27
+    success: 11
+    past: null
+    }
+    fouls: {
+    drawn: 22
+    committed: 22
+    }
+    cards: {
+    yellow: 4
+    yellowred: 1
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47540
+    name: "Ángel Algobia"
+    firstname: "Ángel"
+    lastname: "Algobia Esteves"
+    age: 24
+    birth: {
+    date: "1999-06-23"
+    place: "Velilla de San Antonio"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "180 cm"
+    weight: "78 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/47540.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-1.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 24
+    lineups: 11
+    minutes: 1116
+    number: null
+    position: "Midfielder"
+    rating: "6.529166"
+    captain: false
+    }
+    substitutes: {
+    in: 13
+    out: 8
+    bench: 21
+    }
+    shots: {
+    total: 3
+    on: 1
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 505
+    key: 5
+    accuracy: 17
+    }
+    tackles: {
+    total: 27
+    blocks: 5
+    interceptions: 3
+    }
+    duels: {
+    total: 128
+    won: 48
+    }
+    dribbles: {
+    attempts: 6
+    success: 4
+    past: null
+    }
+    fouls: {
+    drawn: 10
+    committed: 31
+    }
+    cards: {
+    yellow: 3
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 162028
+    name: "Juanmi Latasa"
+    firstname: "Juan Miguel"
+    lastname: "Latasa Fernández Layos"
+    age: 22
+    birth: {
+    date: "2001-03-23"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "192 cm"
+    weight: "86 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/162028.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-2.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 14
+    lineups: 0
+    minutes: 156
+    number: null
+    position: "Attacker"
+    rating: "6.600000"
+    captain: false
+    }
+    substitutes: {
+    in: 14
+    out: 0
+    bench: 31
+    }
+    shots: {
+    total: 7
+    on: 3
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 65
+    key: 3
+    accuracy: 3
+    }
+    tackles: {
+    total: 3
+    blocks: 1
+    interceptions: 1
+    }
+    duels: {
+    total: 70
+    won: 36
+    }
+    dribbles: {
+    attempts: 5
+    success: 2
+    past: null
+    }
+    fouls: {
+    drawn: 5
+    committed: 8
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    {
+    team: {
+    id: 541
+    name: "Real Madrid"
+    logo: "https://media-1.api-sports.io/football/teams/541.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Attacker"
+    rating: "6.600000"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: 7
+    on: 3
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 65
+    key: 3
+    accuracy: 3
+    }
+    tackles: {
+    total: 3
+    blocks: 1
+    interceptions: 1
+    }
+    duels: {
+    total: 70
+    won: 36
+    }
+    dribbles: {
+    attempts: 5
+    success: 2
+    past: null
+    }
+    fouls: {
+    drawn: 5
+    committed: 8
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 182718
+    name: "Joan García"
+    firstname: "Joan"
+    lastname: "García Pons"
+    age: 22
+    birth: {
+    date: "2001-05-04"
+    place: "Sallent"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "180 cm"
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/182718.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 540
+    name: "Espanyol"
+    logo: "https://media-3.api-sports.io/football/teams/540.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Goalkeeper"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 32
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 0
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 184743
+    name: "Santi García"
+    firstname: "Santiago"
+    lastname: "García González"
+    age: 22
+    birth: {
+    date: "2001-08-29"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "184 cm"
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/184743.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-2.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 1
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 185602
+    name: "Álex Revuelta"
+    firstname: "Alejandro"
+    lastname: "Revuelta Montero"
+    age: 23
+    birth: {
+    date: "2000-04-16"
+    place: "Jerez de la Frontera"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/185602.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-3.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 1
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Defender"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 0
+    bench: 6
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 287175
+    name: "Álex Rodríguez"
+    firstname: "Alejandro"
+    lastname: "Rodríguez Lorite"
+    age: 21
+    birth: {
+    date: "2002-03-21"
+    place: "Fuenlabrada"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "178 cm"
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/287175.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-2.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Defender"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 3
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 293297
+    name: "John Patrick"
+    firstname: "John Joe Patrick"
+    lastname: "Finn Benoa"
+    age: 20
+    birth: {
+    date: "2003-09-24"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Republic of Ireland"
+    height: "192 cm"
+    weight: null
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/293297.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-2.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 6
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 335239
+    name: "Moisés Parra"
+    firstname: "Moisés"
+    lastname: "Parra Gutiérrez"
+    age: 21
+    birth: {
+    date: "2002-06-24"
+    place: "Huelva"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/335239.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-3.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 1
+    lineups: 0
+    minutes: 9
+    number: null
+    position: "Midfielder"
+    rating: "6.700000"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 0
+    bench: 3
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 3
+    key: null
+    accuracy: 3
+    }
+    tackles: {
+    total: 1
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 1
+    won: 1
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 348329
+    name: "Pablo Ramírez"
+    firstname: "Pablo"
+    lastname: "Ramírez Moreno"
+    age: 20
+    birth: {
+    date: "2003-03-18"
+    place: null
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/348329.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 546
+    name: "Getafe"
+    logo: "https://media-3.api-sports.io/football/teams/546.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Defender"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 1
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    ]
+    }

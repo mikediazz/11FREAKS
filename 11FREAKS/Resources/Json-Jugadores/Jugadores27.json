@@ -1,0 +1,1917 @@
+{
+    get: "players"
+    parameters: {
+    league: "140"
+    season: "2022"
+    page: "27"
+    }
+    errors: [
+    ]
+    results: 20
+    paging: {
+    current: 27
+    total: 39
+    }
+    response: [
+    {
+    player: {
+    id: 129
+    name: "Chumi"
+    firstname: "Juan"
+    lastname: "Brandáriz Movilla"
+    age: 24
+    birth: {
+    date: "1999-03-02"
+    place: "A Laracha"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "186 cm"
+    weight: "78 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/129.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-1.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 21
+    lineups: 15
+    minutes: 1485
+    number: null
+    position: "Defender"
+    rating: "6.552380"
+    captain: false
+    }
+    substitutes: {
+    in: 6
+    out: 2
+    bench: 15
+    }
+    shots: {
+    total: 2
+    on: 1
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 721
+    key: 2
+    accuracy: 29
+    }
+    tackles: {
+    total: 29
+    blocks: 6
+    interceptions: 15
+    }
+    duels: {
+    total: 97
+    won: 50
+    }
+    dribbles: {
+    attempts: 16
+    success: 7
+    past: null
+    }
+    fouls: {
+    drawn: 3
+    committed: 10
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 340
+    name: "S. Babić"
+    firstname: "Srđan"
+    lastname: "Babić"
+    age: 27
+    birth: {
+    date: "1996-04-22"
+    place: "Banja Luka"
+    country: "Bosnia and Herzegovina"
+    }
+    nationality: "Serbia"
+    height: "195 cm"
+    weight: "89 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/340.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-1.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 30
+    lineups: 29
+    minutes: 2638
+    number: null
+    position: "Defender"
+    rating: "6.686666"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 1
+    bench: 4
+    }
+    shots: {
+    total: 8
+    on: 5
+    }
+    goals: {
+    total: 3
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 1240
+    key: 7
+    accuracy: 35
+    }
+    tackles: {
+    total: 26
+    blocks: 21
+    interceptions: 23
+    }
+    duels: {
+    total: 179
+    won: 93
+    }
+    dribbles: {
+    attempts: 7
+    success: 3
+    past: null
+    }
+    fouls: {
+    drawn: 7
+    committed: 23
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 914
+    name: "Álex Centelles"
+    firstname: "Alejandro"
+    lastname: "Centelles Plaza"
+    age: 24
+    birth: {
+    date: "1999-08-30"
+    place: "Odivelas"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "185 cm"
+    weight: "73 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/914.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-1.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 12
+    lineups: 8
+    minutes: 867
+    number: null
+    position: "Defender"
+    rating: "6.566666"
+    captain: false
+    }
+    substitutes: {
+    in: 4
+    out: 0
+    bench: 16
+    }
+    shots: {
+    total: 3
+    on: 2
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 326
+    key: 8
+    accuracy: 19
+    }
+    tackles: {
+    total: 16
+    blocks: 2
+    interceptions: 9
+    }
+    duels: {
+    total: 62
+    won: 29
+    }
+    dribbles: {
+    attempts: 11
+    success: 6
+    past: null
+    }
+    fouls: {
+    drawn: 2
+    committed: 6
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 1699
+    name: "Iborra"
+    firstname: "Vicente"
+    lastname: "Iborra de la Fuente"
+    age: 35
+    birth: {
+    date: "1988-01-16"
+    place: "Moncada"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "190 cm"
+    weight: "80 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/1699.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 533
+    name: "Villarreal"
+    logo: "https://media-1.api-sports.io/football/teams/533.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 6065
+    name: "L. Robertone"
+    firstname: "Lucas Gastón"
+    lastname: "Robertone"
+    age: 26
+    birth: {
+    date: "1997-03-18"
+    place: "Concordia"
+    country: "Argentina"
+    }
+    nationality: "Argentina"
+    height: "175 cm"
+    weight: "70 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/6065.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-1.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 33
+    lineups: 31
+    minutes: 2557
+    number: null
+    position: "Midfielder"
+    rating: "7.157575"
+    captain: false
+    }
+    substitutes: {
+    in: 2
+    out: 22
+    bench: 2
+    }
+    shots: {
+    total: 25
+    on: 7
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: 7
+    saves: null
+    }
+    passes: {
+    total: 1079
+    key: 47
+    accuracy: 27
+    }
+    tackles: {
+    total: 43
+    blocks: 6
+    interceptions: 38
+    }
+    duels: {
+    total: 301
+    won: 163
+    }
+    dribbles: {
+    attempts: 50
+    success: 22
+    past: null
+    }
+    fouls: {
+    drawn: 79
+    committed: 28
+    }
+    cards: {
+    yellow: 7
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 20627
+    name: "H. Mendes"
+    firstname: "Houboulang"
+    lastname: "Mendes"
+    age: 25
+    birth: {
+    date: "1998-05-04"
+    place: "Évry"
+    country: "France"
+    }
+    nationality: "France"
+    height: "184 cm"
+    weight: "73 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/20627.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-2.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 14
+    lineups: 11
+    minutes: 889
+    number: null
+    position: "Defender"
+    rating: "6.221428"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 7
+    bench: 20
+    }
+    shots: {
+    total: 1
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 212
+    key: 4
+    accuracy: 10
+    }
+    tackles: {
+    total: 19
+    blocks: 2
+    interceptions: 7
+    }
+    duels: {
+    total: 80
+    won: 33
+    }
+    dribbles: {
+    attempts: 18
+    success: 9
+    past: null
+    }
+    fouls: {
+    drawn: 4
+    committed: 13
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 46659
+    name: "Rober Ibáñez"
+    firstname: "Robert"
+    lastname: "Ibáñez Castro"
+    age: 30
+    birth: {
+    date: "1993-03-22"
+    place: "Valencia"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "175 cm"
+    weight: "67 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/46659.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 727
+    name: "Osasuna"
+    logo: "https://media-1.api-sports.io/football/teams/727.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Midfielder"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 0
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: null
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: null
+    missed: null
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 46870
+    name: "Diego Mariño"
+    firstname: "Diego"
+    lastname: "Mariño Villar"
+    age: 33
+    birth: {
+    date: "1990-05-09"
+    place: "Vigo"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "187 cm"
+    weight: "75 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/46870.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-2.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 1
+    lineups: 0
+    minutes: 44
+    number: null
+    position: "Goalkeeper"
+    rating: "6.200000"
+    captain: false
+    }
+    substitutes: {
+    in: 1
+    out: 0
+    bench: 14
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 2
+    assists: null
+    saves: 3
+    }
+    passes: {
+    total: 7
+    key: null
+    accuracy: 6
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 0
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 46904
+    name: "Fernando Martínez"
+    firstname: "Fernando"
+    lastname: "Martínez Rubio"
+    age: 33
+    birth: {
+    date: "1990-06-10"
+    place: "Murcia"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "185 cm"
+    weight: "85 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/46904.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-2.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 33
+    lineups: 33
+    minutes: 2926
+    number: null
+    position: "Goalkeeper"
+    rating: "6.900000"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 1
+    bench: 1
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 57
+    assists: null
+    saves: 122
+    }
+    passes: {
+    total: 1004
+    key: null
+    accuracy: 20
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: 1
+    }
+    duels: {
+    total: 11
+    won: 8
+    }
+    dribbles: {
+    attempts: 1
+    success: 1
+    past: null
+    }
+    fouls: {
+    drawn: 5
+    committed: null
+    }
+    cards: {
+    yellow: 3
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 1
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 46919
+    name: "César de la Hoz"
+    firstname: "César"
+    lastname: "de la Hoz López"
+    age: 31
+    birth: {
+    date: "1992-03-30"
+    place: "Orejo"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "179 cm"
+    weight: "74 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/46919.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-1.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 22
+    lineups: 17
+    minutes: 1537
+    number: null
+    position: "Midfielder"
+    rating: "6.700000"
+    captain: false
+    }
+    substitutes: {
+    in: 5
+    out: 5
+    bench: 12
+    }
+    shots: {
+    total: 5
+    on: 1
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 515
+    key: 5
+    accuracy: 19
+    }
+    tackles: {
+    total: 36
+    blocks: 6
+    interceptions: 13
+    }
+    duels: {
+    total: 144
+    won: 72
+    }
+    dribbles: {
+    attempts: 7
+    success: 4
+    past: null
+    }
+    fouls: {
+    drawn: 8
+    committed: 21
+    }
+    cards: {
+    yellow: 6
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47056
+    name: "Íñigo Eguaras"
+    firstname: "Íñigo"
+    lastname: "Eguaras Álvarez"
+    age: 31
+    birth: {
+    date: "1992-03-07"
+    place: "Ansoáin"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "181 cm"
+    weight: "77 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/47056.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-1.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 23
+    lineups: 10
+    minutes: 898
+    number: null
+    position: "Midfielder"
+    rating: "6.659090"
+    captain: false
+    }
+    substitutes: {
+    in: 13
+    out: 6
+    bench: 22
+    }
+    shots: {
+    total: 7
+    on: 3
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 505
+    key: 11
+    accuracy: 18
+    }
+    tackles: {
+    total: 11
+    blocks: 3
+    interceptions: 5
+    }
+    duels: {
+    total: 49
+    won: 24
+    }
+    dribbles: {
+    attempts: 4
+    success: 4
+    past: null
+    }
+    fouls: {
+    drawn: 6
+    committed: 7
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47262
+    name: "Portillo"
+    firstname: "Francisco"
+    lastname: "Portillo Soler"
+    age: 33
+    birth: {
+    date: "1990-06-13"
+    place: "Málaga"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "169 cm"
+    weight: "60 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47262.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-2.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 23
+    lineups: 3
+    minutes: 593
+    number: null
+    position: "Midfielder"
+    rating: "6.652173"
+    captain: false
+    }
+    substitutes: {
+    in: 20
+    out: 2
+    bench: 31
+    }
+    shots: {
+    total: 4
+    on: 2
+    }
+    goals: {
+    total: 2
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 388
+    key: 11
+    accuracy: 13
+    }
+    tackles: {
+    total: 13
+    blocks: 1
+    interceptions: 7
+    }
+    duels: {
+    total: 58
+    won: 28
+    }
+    dribbles: {
+    attempts: 12
+    success: 7
+    past: null
+    }
+    fouls: {
+    drawn: 3
+    committed: 2
+    }
+    cards: {
+    yellow: 1
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47356
+    name: "Rodrigo Ely"
+    firstname: "Rodrigo"
+    lastname: "Ely"
+    age: 30
+    birth: {
+    date: "1993-11-03"
+    place: "Lajeado"
+    country: "Brazil"
+    }
+    nationality: "Brazil"
+    height: "188 cm"
+    weight: "83 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/47356.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-1.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 32
+    lineups: 32
+    minutes: 2798
+    number: null
+    position: "Defender"
+    rating: "6.800000"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 2
+    bench: 0
+    }
+    shots: {
+    total: 14
+    on: 2
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 1347
+    key: 5
+    accuracy: 34
+    }
+    tackles: {
+    total: 27
+    blocks: 29
+    interceptions: 28
+    }
+    duels: {
+    total: 173
+    won: 113
+    }
+    dribbles: {
+    attempts: 5
+    success: 4
+    past: null
+    }
+    fouls: {
+    drawn: 12
+    committed: 22
+    }
+    cards: {
+    yellow: 8
+    yellowred: 1
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47530
+    name: "Sergio Akieme"
+    firstname: "Sergio"
+    lastname: "Akieme Rodríguez"
+    age: 26
+    birth: {
+    date: "1997-12-16"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "175 cm"
+    weight: "70 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47530.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-3.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 26
+    lineups: 26
+    minutes: 2193
+    number: null
+    position: "Defender"
+    rating: "6.634615"
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 4
+    bench: 3
+    }
+    shots: {
+    total: 17
+    on: 7
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 758
+    key: 21
+    accuracy: 23
+    }
+    tackles: {
+    total: 27
+    blocks: 6
+    interceptions: 13
+    }
+    duels: {
+    total: 157
+    won: 82
+    }
+    dribbles: {
+    attempts: 43
+    success: 26
+    past: null
+    }
+    fouls: {
+    drawn: 15
+    committed: 18
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 47576
+    name: "Melero"
+    firstname: "Gonzalo Julián"
+    lastname: "Melero Manzanares"
+    age: 29
+    birth: {
+    date: "1994-01-02"
+    place: "Madrid"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "183 cm"
+    weight: "77 kg"
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/47576.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-1.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 24
+    lineups: 21
+    minutes: 1668
+    number: null
+    position: "Midfielder"
+    rating: "6.745833"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 20
+    bench: 4
+    }
+    shots: {
+    total: 17
+    on: 11
+    }
+    goals: {
+    total: 4
+    conceded: 0
+    assists: 3
+    saves: null
+    }
+    passes: {
+    total: 682
+    key: 16
+    accuracy: 24
+    }
+    tackles: {
+    total: 26
+    blocks: 2
+    interceptions: 7
+    }
+    duels: {
+    total: 168
+    won: 78
+    }
+    dribbles: {
+    attempts: 34
+    success: 17
+    past: null
+    }
+    fouls: {
+    drawn: 24
+    committed: 20
+    }
+    cards: {
+    yellow: 4
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 1
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 122233
+    name: "Marcos André"
+    firstname: "Marcos André"
+    lastname: "de Sousa Mendonça"
+    age: 27
+    birth: {
+    date: "1996-10-20"
+    place: "Coroatá"
+    country: "Brazil"
+    }
+    nationality: "Brazil"
+    height: "184 cm"
+    weight: "78 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/122233.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 532
+    name: "Valencia"
+    logo: "https://media-3.api-sports.io/football/teams/532.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-1.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 17
+    lineups: 3
+    minutes: 436
+    number: null
+    position: "Attacker"
+    rating: "6.606250"
+    captain: false
+    }
+    substitutes: {
+    in: 14
+    out: 3
+    bench: 19
+    }
+    shots: {
+    total: 14
+    on: 2
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 63
+    key: 4
+    accuracy: 3
+    }
+    tackles: {
+    total: 4
+    blocks: 1
+    interceptions: null
+    }
+    duels: {
+    total: 68
+    won: 35
+    }
+    dribbles: {
+    attempts: 13
+    success: 9
+    past: null
+    }
+    fouls: {
+    drawn: 12
+    committed: 9
+    }
+    cards: {
+    yellow: 2
+    yellowred: 0
+    red: 1
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 162127
+    name: "Diego López"
+    firstname: "Diego"
+    lastname: "López Noguerol"
+    age: 21
+    birth: {
+    date: "2002-05-13"
+    place: "Turón"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "172 cm"
+    weight: null
+    injured: false
+    photo: "https://media-3.api-sports.io/football/players/162127.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 532
+    name: "Valencia"
+    logo: "https://media-1.api-sports.io/football/teams/532.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-3.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 6
+    lineups: 1
+    minutes: 164
+    number: null
+    position: "Attacker"
+    rating: "6.766666"
+    captain: false
+    }
+    substitutes: {
+    in: 5
+    out: 1
+    bench: 5
+    }
+    shots: {
+    total: 4
+    on: 3
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: 1
+    saves: null
+    }
+    passes: {
+    total: 39
+    key: 4
+    accuracy: 4
+    }
+    tackles: {
+    total: 2
+    blocks: null
+    interceptions: 1
+    }
+    duels: {
+    total: 26
+    won: 11
+    }
+    dribbles: {
+    attempts: 4
+    success: 3
+    past: null
+    }
+    fouls: {
+    drawn: 3
+    committed: 3
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 182713
+    name: "Diego Fuoli"
+    firstname: "Diego Licinio"
+    lastname: "Lázaro Fuoli"
+    age: 26
+    birth: {
+    date: "1997-10-20"
+    place: "Zaragoza"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: "188 cm"
+    weight: "74 kg"
+    injured: false
+    photo: "https://media-1.api-sports.io/football/players/182713.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-3.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 0
+    lineups: 0
+    minutes: 0
+    number: null
+    position: "Goalkeeper"
+    rating: null
+    captain: false
+    }
+    substitutes: {
+    in: 0
+    out: 0
+    bench: 11
+    }
+    shots: {
+    total: null
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: null
+    key: null
+    accuracy: null
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: null
+    won: null
+    }
+    dribbles: {
+    attempts: null
+    success: null
+    past: null
+    }
+    fouls: {
+    drawn: null
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: 0
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 288074
+    name: "Alberto Marí"
+    firstname: "Alberto"
+    lastname: "Marí Sánchez"
+    age: 22
+    birth: {
+    date: "2001-07-11"
+    place: "Alicante"
+    country: "Spain"
+    }
+    nationality: "Spain"
+    height: null
+    weight: null
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/288074.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 532
+    name: "Valencia"
+    logo: "https://media-1.api-sports.io/football/teams/532.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-2.api-sports.io/football/leagues/140.png"
+    flag: "https://media-3.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 3
+    lineups: 0
+    minutes: 33
+    number: null
+    position: "Attacker"
+    rating: "6.533333"
+    captain: false
+    }
+    substitutes: {
+    in: 3
+    out: 0
+    bench: 7
+    }
+    shots: {
+    total: 1
+    on: 1
+    }
+    goals: {
+    total: 1
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 8
+    key: null
+    accuracy: 2
+    }
+    tackles: {
+    total: null
+    blocks: null
+    interceptions: null
+    }
+    duels: {
+    total: 7
+    won: 3
+    }
+    dribbles: {
+    attempts: 2
+    success: 1
+    past: null
+    }
+    fouls: {
+    drawn: 1
+    committed: null
+    }
+    cards: {
+    yellow: 0
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    {
+    player: {
+    id: 305803
+    name: "Kaiky"
+    firstname: "Kaiky"
+    lastname: "Fernandes Melo"
+    age: 19
+    birth: {
+    date: "2004-01-12"
+    place: null
+    country: "Brazil"
+    }
+    nationality: "Brazil"
+    height: "181 cm"
+    weight: "76 kg"
+    injured: false
+    photo: "https://media-2.api-sports.io/football/players/305803.png"
+    }
+    statistics: [
+    {
+    team: {
+    id: 723
+    name: "Almeria"
+    logo: "https://media-2.api-sports.io/football/teams/723.png"
+    }
+    league: {
+    id: 140
+    name: "La Liga"
+    country: "Spain"
+    logo: "https://media-1.api-sports.io/football/leagues/140.png"
+    flag: "https://media-2.api-sports.io/flags/es.svg"
+    season: 2022
+    }
+    games: {
+    appearences: 13
+    lineups: 7
+    minutes: 579
+    number: null
+    position: "Defender"
+    rating: "6.580000"
+    captain: false
+    }
+    substitutes: {
+    in: 6
+    out: 4
+    bench: 19
+    }
+    shots: {
+    total: 1
+    on: null
+    }
+    goals: {
+    total: 0
+    conceded: 0
+    assists: null
+    saves: null
+    }
+    passes: {
+    total: 222
+    key: null
+    accuracy: 20
+    }
+    tackles: {
+    total: 5
+    blocks: 10
+    interceptions: 9
+    }
+    duels: {
+    total: 37
+    won: 16
+    }
+    dribbles: {
+    attempts: 3
+    success: 2
+    past: null
+    }
+    fouls: {
+    drawn: 3
+    committed: 7
+    }
+    cards: {
+    yellow: 5
+    yellowred: 0
+    red: 0
+    }
+    penalty: {
+    won: null
+    commited: null
+    scored: 0
+    missed: 0
+    saved: null
+    }
+    }
+    ]
+    }
+    ]
+    }

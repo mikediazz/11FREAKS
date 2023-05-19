@@ -24,11 +24,12 @@ namespace _11FREAKS.Presentacion
     public partial class RegistroUserServer : Window
     {
         private Inicio inicio;
+        private Datos.BDOnline bdServer;
         public RegistroUserServer(Inicio pInicio)
         {
             InitializeComponent();
             this.inicio = pInicio;
-            Datos.BDOnline miBaseDatos;
+            bdServer=new BDOnline();
         }
 
 
@@ -41,11 +42,10 @@ namespace _11FREAKS.Presentacion
 
         private void btnRegistrarse_Click(object sender, RoutedEventArgs e)
         {
-            Datos.BDOnline miBaseDatos = new Datos.BDOnline();
 
-            if (miBaseDatos.CompruebaPassword(txtUsuario.Text, txtPassword.Password))
+            if (bdServer.CompruebaPassword(txtUsuario.Text, txtPassword.Password))
             {
-                if (miBaseDatos.ConectarServer(txtUsuario.Text, txtPassword.Password) == true)
+                if (bdServer.ConectarServer(txtUsuario.Text, txtPassword.Password) == true)
                 {
                     var mensajeTemporal = AutoClosingMessageBox.Show(
                     text: "Whoops! YA EXISTE ESTE USUARIO",
@@ -65,7 +65,18 @@ namespace _11FREAKS.Presentacion
                     }
                     else
                     {
-                        miBaseDatos.CrearUsuario(txtUsuario.Text, txtPassword.Password, txtEquipo.Text.ToUpper(), txtEmail.Text);          //CREAMOS USUARIO
+                            var msgCreacionUser = AutoClosingMessageBox.Show(
+                            text: "CREANDO USUARIO...",
+                            caption: "EQUIPO DE 11FREAKS",
+                            timeout: 1500,
+                            buttons: MessageBoxButtons.OK);
+                        bdServer.CrearUsuario(txtUsuario.Text, txtPassword.Password, txtEquipo.Text.ToUpper(), txtEmail.Text);          //CREAMOS USUARIO
+                            var msgCreacionTeam = AutoClosingMessageBox.Show(
+                            text: "CREANDO EQUIPO...",
+                            caption: "EQUIPO DE 11FREAKS",
+                            timeout: 1500,
+                            buttons: MessageBoxButtons.OK);
+                        bdServer.CrearEquipo(txtEquipo.Text, txtAbreviatura.Text, "1");     //CREAMOS EQUIPO -> LO METEMOS EN LIGA 1
 
                         var mensajeTemporal = AutoClosingMessageBox.Show(
                         text: "**USUARIO CREADO**    ID EQUIPO",
@@ -81,7 +92,9 @@ namespace _11FREAKS.Presentacion
 
                         /*  Thread hilo = new Thread(new ParameterizedThreadStart(mailBienvenida.CorreoBienvenida);
                           hilo.Start(txtEmail.Text);*/
-                        try
+                       
+                        
+                        /*try
                         {
                             Thread thMailBienvenida = new Thread(() => mailBienvenida.CorreoBienvenida(txtEmail.Text));
                             thMailBienvenida.Start();
@@ -93,10 +106,10 @@ namespace _11FREAKS.Presentacion
                             caption: "EQUIPO DE 11FREAKS",
                             timeout: 1500,
                             buttons: MessageBoxButtons.OK);
-                        }
+                        }*/
 
 
-                        Principal principal = new Principal(inicio, miBaseDatos, txtUsuario.Text);
+                        Principal principal = new Principal(inicio, bdServer, txtUsuario.Text);
                         this.Hide();
                         principal.ShowDialog();
                     }
@@ -113,6 +126,8 @@ namespace _11FREAKS.Presentacion
                 buttons: MessageBoxButtons.OK);
             }
         }
+
+
 
         private void Window_Closed(object sender, EventArgs e)
         {

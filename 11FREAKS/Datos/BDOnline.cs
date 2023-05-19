@@ -17,7 +17,8 @@ namespace _11FREAKS.Datos
         private MySqlConnection conexion;
         private MySqlCommand comando;
         private MySqlDataReader lector;
-        private string connectionString = "server=localhost;user=root;password=CIFP1;database=11freaks";
+        //private string connectionString = "server=localhost;user=root;password=CIFP1;database=11freaks";
+        private string connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
         private string nomusuario;
         private string password;
         private bool permisos;
@@ -69,7 +70,7 @@ namespace _11FREAKS.Datos
                     }
                     else
                     {                                                                          //SI NO EXISTE USUARIO...s                                                                     
-                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS+++");
                     }
 
                     lector.Close();
@@ -107,7 +108,6 @@ namespace _11FREAKS.Datos
         {
             bool conDisponible = false;
 
-
             //////// HASHEO PASSWORD ////////
             string hash = String.Empty;
 
@@ -127,17 +127,75 @@ namespace _11FREAKS.Datos
             {
                 if (conexion == null)
                 {
-                    MySqlConnection conexion2 = new MySqlConnection(connectionString);
-                    comando = new MySqlCommand("INSERT INTO Usuarios VALUES ( '" + usuario + "' , '" + hash + "', 'false', '" + correo + "', NULL , '" + equipo + "'); ");
-
-                    conexion2.Open();
+                    connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("INSERT INTO usuarios VALUES ( '" + usuario + "' , '" + hash + "', 'false', '" + correo + "', NULL , '" + equipo + "', 'true'); ", conexion);
+                    
+                    conexion.Open();
                     comando.ExecuteNonQuery();
-                    conexion2.Close();
-
+                    conexion.Close();
 
                     MessageBox.Show("BIENVENIDO " + usuario + ", AHORA FORMAS PARTE DE 11FREAKS!");
                     conDisponible = true;
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
+                    conDisponible = false;
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+            }
+
+
+
+            return conDisponible;
+        }
+
+
+
+
+
+
+        /// <summary>
+        ///     Método para crear EQUIPO (SIGN UP)
+        /// </summary>
+        /// <param name="equipo">
+        ///     Recibimos Usuario del Login o Para Hacer Consulta
+        /// </param>
+        /// <param name="abreviatura">
+        ///     Recibimos Contraseña del Usuario
+        /// </param>
+        /// <param name="liga">
+        ///     Recibimos id Equipo Favorito (PUEDE SER NULO)
+        /// </param>
+        /// <returns>
+        ///     Devuelve un Booleano con el Resultado de la Operación
+        ///     <see cref="bool"/>
+        /// </returns>
+        public bool CrearEquipo(string equipo, string abreviatura, string liga)
+        {
+            bool conDisponible = false;
+            conexion = null;
+
+            try
+            {
+                if (conexion == null)
+                {
+                    connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("INSERT INTO equipos VALUES ( idEquipo , '"+liga+"'  , '" + equipo + "', '"+abreviatura+"', ' -1 ', 0 , '100000000', 0, 0, 0); ", conexion);  
+
+                    conexion.Open();
+                    MessageBox.Show("CONEXIÓN CREAR_EQUIPO "+conexion.State.ToString());
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show(equipo + "HA SIDO INSCRITO EN LA LIGA "+liga+"!");
+                    conDisponible = true;
 
                 }
                 else
@@ -157,6 +215,12 @@ namespace _11FREAKS.Datos
 
             return conDisponible;
         }
+
+
+
+
+
+
 
 
 
@@ -269,6 +333,87 @@ namespace _11FREAKS.Datos
             return permisos;                                        //DEVUELVE SI USUARIO ES ADMINISTRADOR
         }
 
+
+
+
+
+
+        /// <summary>
+        ///     Método para insertar JUGADOR
+        /// </summary>
+        /// <param name="idJugador">
+        ///     Recibimos idJugador
+        /// </param>
+        /// <param name="nombre">
+        ///     Recibimos nombre jugador
+        /// </param>
+        /// <param name="idEquipoOriginal">
+        ///     Recibimos id Equipo
+        /// </param>
+        /// <param name="escudo">
+        ///     Recibimos escudo equipo original
+        /// </param>
+        /// <param name="edad">
+        ///     Recibimos edad
+        /// </param>
+        /// <param name="foto">
+        ///     Recibimos foto jugador
+        /// </param>
+        /// <param name="convocable">
+        ///     Recibimos si el jugador es convocable al momento de la inserción
+        /// </param>
+        /// <param name="dorsal">
+        ///     Recibimos el dorsal del jugador
+        /// </param>
+        /// <param name="nacionalidad">
+        ///     Recibimos nacionalidad del jugador
+        /// </param>
+        /// <param name="posicion">
+        ///     Recibimos posición del jugador
+        /// </param>
+        /// <returns>
+        ///     Devuelve un Booleano con el Resultado de la Operación
+        ///     <see cref="bool"/>
+        /// </returns>
+        public bool InsertarJugador(int idJugador, string nombre, string idEquipoOriginal, string escudo, int edad, string foto, string convocable, string dorsal, string nacionalidad, string posicion)
+        {
+            bool conDisponible = false;
+            conexion = null;
+
+            try
+            {
+                if (conexion == null)
+                {
+                    connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("INSERT INTO jugadores VALUES ( "+idJugador+" , DEFAULT  , '" + nombre + "', DEFAULT , "+edad+", '"+foto+"' ,'"+convocable+ "',  DEFAULT  , '" + dorsal+"', '"+nacionalidad+"' , "+idEquipoOriginal+" , '"+posicion+"'); ", conexion);
+
+                    conexion.Open();
+                    MessageBox.Show("CONEXIÓN CREAR_EQUIPO " + conexion.State.ToString());
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show(nombre + "HA SIDO DRAFTEADO EN LA LIGA !");
+                    conDisponible = true;
+
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
+                    conDisponible = false;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+            }
+
+
+
+            return conDisponible;
+        }
 
 
 

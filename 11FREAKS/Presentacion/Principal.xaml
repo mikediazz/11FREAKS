@@ -55,6 +55,19 @@
                 </MenuItem>
             </MenuItem>
 
+            <MenuItem x:Name="menuMiLiga" Header="MI LIGA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuMiEquipo_Click">
+                <MenuItem x:Name="menuMiClasificacion" Header="CLASIFICACIÓN" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCambiarMiEquipo_Click" >
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="VER CLASIFICACIÓN"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuVerEquipos" Header="VER EQUIPOS" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuVerEquipo_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="CONSULTA LOS EQUIPOS DE LA LIGA"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+
 
             <MenuItem x:Name="menuMiEquipo" Header="MI EQUIPO" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuMiEquipo_Click">
                 <MenuItem x:Name="menuCambiarMiEquipo" Header="CAMBIAR MI EQUIPO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCambiarMiEquipo_Click" >
@@ -192,6 +205,7 @@
                 <ToolTip Content="PUEDE OCULTAR ESTA VISTA PULSANDO CLICK DERECHO, O BUSCAR INFORMACIÓN DESDE CLASIFICACIÓN"/>
             </ListBox.ToolTip>
         </ListBox>
+        <Label x:Name="lblJugadores" Content="JUGADORES" HorizontalAlignment="Left" Margin="128,78,0,0" VerticalAlignment="Top" Height="483" Width="815" Foreground="White"/>
 
 
 
