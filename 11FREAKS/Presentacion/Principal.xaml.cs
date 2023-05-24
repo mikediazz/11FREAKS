@@ -45,8 +45,6 @@ namespace _11FREAKS.Presentacion
                 menuOpcAdmin.Visibility = Visibility.Visible;
             }
 
-            
-
         }
 
         /// <summary>

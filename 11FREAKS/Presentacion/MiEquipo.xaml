@@ -44,7 +44,7 @@
 
             </MenuItem>
 
-            <MenuItem x:Name="menuMiEquipo" Header="MI EQUIPO" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White">
+            <MenuItem x:Name="menuMiEquipo" Header="MI EQUIPO" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuMiEquipo_Click">
                 <MenuItem.ToolTip>
                     <ToolTip Content="CERRAR SESIÓN Y SALIR A PANTALLA INCIO"/>
                 </MenuItem.ToolTip>

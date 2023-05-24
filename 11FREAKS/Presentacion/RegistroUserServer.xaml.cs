@@ -65,18 +65,26 @@ namespace _11FREAKS.Presentacion
                     }
                     else
                     {
+                        bdServer.CrearEquipo(txtEquipo.Text, txtAbreviatura.Text, "1");     //CREAMOS EQUIPO -> LO METEMOS EN LIGA 1
+                            var msgCreacionEquipo = AutoClosingMessageBox.Show(
+                            text: "CREANDO USUARIO...",
+                            caption: "EQUIPO DE 11FREAKS",
+                            timeout: 1500,
+                            buttons: MessageBoxButtons.OK);
+
+                        bdServer.CrearUsuario(txtUsuario.Text, txtPassword.Password, txtEquipo.Text.ToUpper(), txtEmail.Text, bdServer.DevuelveIdEquipo(txtEquipo.Text.ToUpper()));          //CREAMOS USUARIO
                             var msgCreacionUser = AutoClosingMessageBox.Show(
                             text: "CREANDO USUARIO...",
                             caption: "EQUIPO DE 11FREAKS",
                             timeout: 1500,
                             buttons: MessageBoxButtons.OK);
-                        bdServer.CrearUsuario(txtUsuario.Text, txtPassword.Password, txtEquipo.Text.ToUpper(), txtEmail.Text);          //CREAMOS USUARIO
-                            var msgCreacionTeam = AutoClosingMessageBox.Show(
-                            text: "CREANDO EQUIPO...",
+
+                        bdServer.GenerarEquipo(bdServer.DevuelveUsuario(), txtEquipo.Text.ToUpper());                 //GENERAMOS EQUIPO -> DRAFT JUGADORES
+                            var msgDraft = AutoClosingMessageBox.Show(
+                            text: "HACIENDO DRAFT...",
                             caption: "EQUIPO DE 11FREAKS",
                             timeout: 1500,
                             buttons: MessageBoxButtons.OK);
-                        bdServer.CrearEquipo(txtEquipo.Text, txtAbreviatura.Text, "1");     //CREAMOS EQUIPO -> LO METEMOS EN LIGA 1
 
                         var mensajeTemporal = AutoClosingMessageBox.Show(
                         text: "**USUARIO CREADO**    ID EQUIPO",

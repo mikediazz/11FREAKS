@@ -27,6 +27,6 @@ namespace _11FREAKS.Datos
             Ciudad = ciudad;
         }
 
-        public Equipo() { }                         
+        public Equipo() { }
     }
 }

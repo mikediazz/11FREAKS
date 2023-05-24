@@ -41,7 +41,7 @@
                 <ToolTip Content="Introduzca Nombre Usuario"/>
             </TextBox.ToolTip>
         </TextBox>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Center" Margin="0,337,0,0"  VerticalAlignment="Top" RenderTransformOrigin="0.542,-2.225" Width="230" Height="40" FontSize="25">
+        <PasswordBox x:Name="txtPassword" Password="1234" HorizontalAlignment="Center" Margin="0,337,0,0"  VerticalAlignment="Top" RenderTransformOrigin="0.542,-2.225" Width="230" Height="40" FontSize="25">
             <PasswordBox.ToolTip>
                 <ToolTip Content="Introduzca Su Contraseña"/>
             </PasswordBox.ToolTip>

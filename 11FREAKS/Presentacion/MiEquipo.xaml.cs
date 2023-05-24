@@ -462,10 +462,6 @@ namespace _11FREAKS.Presentacion
                         buttons: MessageBoxButtons.OK);
                     }
 
-                    
-  
-
-
 
                 }
             }
@@ -491,6 +487,11 @@ namespace _11FREAKS.Presentacion
             this.Hide();
             principal.Visibility = Visibility.Visible;
             this.Close();
+        }
+
+        private void menuMiEquipo_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -84,6 +84,8 @@ namespace _11FREAKS.Presentacion
                         Thread thMailBienvenida = new Thread(() => mailBienvenida.CorreoBienvenida(txtEmail.Text));
                         thMailBienvenida.Start();
 
+                       // bdServer.GenerarEquipo();
+
                         Principal principal = new Principal(inicio, bdServer, txtUsuario.Text);
                         this.Hide();
                         principal.ShowDialog();

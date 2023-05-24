@@ -19,11 +19,13 @@ namespace _11FREAKS.Datos
         private MySqlDataReader lector;
         //private string connectionString = "server=localhost;user=root;password=CIFP1;database=11freaks";
         private string connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
-        private string nomusuario;
+        private string nomusuario, nomJugador;
         private string password;
         private bool permisos;
         private string equipo;
         private string correo;
+        private string activo;
+        private int idEquipo;
         private bool conDisponible=false;
 
 
@@ -65,6 +67,8 @@ namespace _11FREAKS.Datos
                             correo = lector.GetString(3);
                             //ALMACENARÍA IMAGEN FOTO PERFIL
                             equipo = lector["Equipo"].ToString();
+                            activo = lector.GetString(6);
+                            idEquipo = lector.GetInt32(7);
                             conDisponible = true;
                         }
                     }
@@ -104,7 +108,7 @@ namespace _11FREAKS.Datos
         ///     Devuelve un Booleano con el Resultado de la Operación
         ///     <see cref="bool"/>
         /// </returns>
-        public bool CrearUsuario(string usuario, string contraseña, string equipo, string correo)
+        public bool CrearUsuario(string usuario, string contraseña, string equipo, string correo, int idEquipo)
         {
             bool conDisponible = false;
 
@@ -125,11 +129,12 @@ namespace _11FREAKS.Datos
 
             try
             {
+                conexion = null;
                 if (conexion == null)
                 {
                     connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
                     conexion = new MySqlConnection(connectionString);
-                    comando = new MySqlCommand("INSERT INTO usuarios VALUES ( '" + usuario + "' , '" + hash + "', 'false', '" + correo + "', NULL , '" + equipo + "', 'true'); ", conexion);
+                    comando = new MySqlCommand("INSERT INTO usuarios VALUES ( '" + usuario + "' , '" + hash + "', 'false', '" + correo + "', NULL , '" + equipo + "', 'true', "+idEquipo+"); ", conexion);
                     
                     conexion.Open();
                     comando.ExecuteNonQuery();
@@ -172,13 +177,8 @@ namespace _11FREAKS.Datos
         /// <param name="liga">
         ///     Recibimos id Equipo Favorito (PUEDE SER NULO)
         /// </param>
-        /// <returns>
-        ///     Devuelve un Booleano con el Resultado de la Operación
-        ///     <see cref="bool"/>
-        /// </returns>
-        public bool CrearEquipo(string equipo, string abreviatura, string liga)
+        public void CrearEquipo(string equipo, string abreviatura, string liga)
         {
-            bool conDisponible = false;
             conexion = null;
 
             try
@@ -195,13 +195,11 @@ namespace _11FREAKS.Datos
                     conexion.Close();
 
                     MessageBox.Show(equipo + "HA SIDO INSCRITO EN LA LIGA "+liga+"!");
-                    conDisponible = true;
 
                 }
                 else
                 {
                     MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
-                    conDisponible = false;
                 }
 
 
@@ -211,12 +209,106 @@ namespace _11FREAKS.Datos
                 MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
             }
 
-
-
-            return conDisponible;
         }
 
 
+
+
+
+
+
+        /// <summary>
+        ///     Método para obtener Email actual
+        /// </summary>
+        /// <returns>
+        ///     Devuelve Nombre Email actual
+        /// </returns>
+        public string DevuelveCorreo()
+        {
+            return correo;
+        }
+
+
+        /// <summary>
+        ///     Método para obtener Usuario actual
+        /// </summary>
+        /// <returns>
+        ///     Devuelve Usuario actual
+        /// </returns>
+        public string DevuelveUsuario()
+        {
+            return nomusuario;
+        }
+
+
+
+        /// <summary>
+        ///     Método para consultar el estado de la cuenta
+        /// </summary>
+        /// <returns>
+        ///     Devuelve si el usuario ha sido la cuenta está activa
+        /// </returns>
+        public string DevuelveActivo()
+        {
+            return activo;
+        }
+
+
+
+        /// <summary>
+        ///     Método para consultar idEquipo del usuario actual
+        /// </summary>
+        /// <returns>
+        ///     Devuelve idEquipo del usuario actual
+        /// </returns>
+        public int DevuelveIdEquipo()
+        {
+            return idEquipo;
+        }
+
+
+
+
+
+
+
+
+
+        public int DevuelveIdEquipo(string nombreEquipo)
+        {
+           
+            using (MySqlConnection conexion = new MySqlConnection(connectionString))
+            {
+
+                try
+                {
+                    conexion.Open();
+                    comando = new MySqlCommand("SELECT idEquipo FROM equipos WHERE Nombre='" + nombreEquipo + "'", conexion);
+                    lector = comando.ExecuteReader();
+
+                    if (lector.HasRows)                                                              //BUSCAMOS USUARIO
+                    {
+                        if (lector.Read())
+                        {                                                         //DEVOLVEMOS IDEQUIPO DEL USUARIO INTRODUCIDO POR TECLADO
+                            idEquipo = lector.GetInt32(0);;
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTE USUARIO...s                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN " + ex.Message);
+                }
+
+            }//FIN USING 
+            return idEquipo;
+        }
 
 
 
@@ -277,8 +369,7 @@ namespace _11FREAKS.Datos
                 if (contMayusPass > 0 && contNumPass > 0 && simbolosPass == false)
                 {
                     validezPass = true;
-                    MessageBox.Show("PASS " + validezPass);
-
+                    //MessageBox.Show("PASS " + validezPass);
                 }
             }
 
@@ -301,7 +392,7 @@ namespace _11FREAKS.Datos
                 if (simbolosUser == false)
                 {
                     validezUser = true;
-                    MessageBox.Show("USER " + validezUser);
+                    //MessageBox.Show("USER " + validezUser);
                 }
 
 
@@ -414,6 +505,270 @@ namespace _11FREAKS.Datos
 
             return conDisponible;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        ///     Método para generar equipos de forma aleatoria para cada jugador
+        /// </summary>
+        /// <param name="idEquipo">
+        ///     Recibimos idEquipo del Usuario
+        /// </param>
+        public void GenerarEquipo(string idEquipo, string nomEquipo)
+        {
+
+
+            Random random = new Random();
+            int cantJugadores = 25;
+            int cont = 0;
+            int contPOR = 0, contDFC=0, contMC=0, contDEL=0;
+            int idMin = 20;
+            int idMax = 386828;
+            int idJug=-2;
+            int idEq=-2;
+            string nomJug = string.Empty, pos=string.Empty;
+
+            int[] jugadores = new int[cantJugadores];
+            for (int i = 0; i < jugadores.Length; i++)              //INICIALIZAMOS A 0 EL ARRAY DE JUGADORES
+            {
+                jugadores[i] = 0;
+            }
+
+            while (cont < cantJugadores)
+            {
+
+                int id= random.Next(idMin, idMax + 1);                        //GENERAMOS IDJUGADOR RANDOM
+
+                try
+                {
+                    conexion = null;
+                    if (conexion == null)
+                    {
+                        connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
+                        conexion = new MySqlConnection(connectionString);
+                        comando = new MySqlCommand("SELECT idjugador, idEquipo, Nombre, Posicion FROM jugadores WHERE idjugador=" +id, conexion);
+
+                        conexion.Open();
+                        lector=comando.ExecuteReader();
+                        
+                        if (lector.HasRows)                                                              
+                        {                                                               //BUSCAMOS IDJUGADOR
+                            if (lector.Read())
+                            {                                                           //ALMACENAMOS IDJUGADOR
+                                idJug = lector.GetInt32(0);
+                                idEq = lector.GetInt32(1);
+                                nomJug = lector.GetString(2);
+                                pos = lector.GetString(3);
+                                //MessageBox.Show(idJug+ "\t"+nomJug+"\t"+idEq);
+                                if (idEq == (-1))
+                                {
+                                    bool jugadorRepetido = false;
+
+                                    for (int i = 0; i < jugadores.Length; i++)
+                                    {
+                                        if (jugadores[i] == idJug)  // COMPROBAMOS QUE EL JUGADOR NO HUBIERA SIDO SELECCIONADO ANTERIORMENTE
+                                        {
+                                            jugadorRepetido = true;
+                                            break;
+                                        }
+                                    }
+
+                                    if (!jugadorRepetido)
+                                    {
+                                        switch (pos)
+                                        {
+                                            case "Portero":
+                                                if (contPOR < 3)
+                                                {
+                                                    contPOR++;
+                                                    jugadores[cont] = idJug;  // ASIGNAR PORTERO AL JUGADOR
+                                                    cont++;
+                                                }
+                                                break;
+                                            case "Defensor":
+                                                if (contDFC < 8)
+                                                {
+                                                    contDFC++;
+                                                    jugadores[cont] = idJug;  // ASIGNAR DEFENSOR AL JUGADOR
+                                                    cont++;
+                                                }
+                                                break;
+                                            case "Medio":
+                                                if (contMC < 8)
+                                                {
+                                                    contMC++;
+                                                    jugadores[cont] = idJug;  // ASIGNAR MEDIO AL JUGADOR
+                                                    cont++;
+                                                }
+                                                break;
+                                            case "Atacante":
+                                                if (contDEL < 6)
+                                                {
+                                                    contDEL++;
+                                                    jugadores[cont] = idJug;  // ASIGNAR DELANTERO AL JUGADOR
+                                                    cont++;
+                                                }
+                                                break;
+                                        }
+                                    }
+                                }
+
+                            
+                            }
+
+                        }
+                        else
+                        {                                                                          //SI NO EXISTE JUGADOR...                                                                     
+                            //MessageBox.Show("NO SE ENCONTRARON JUGADORES");
+                        }
+
+                            conexion.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
+                        conDisponible = false;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+                }
+
+
+            }//FIN WHILE
+
+            MessageBox.Show("PORTEROS " + contPOR + "\tDEFENSORES " + contDFC + "\tMEDIOS " + contMC + "\tATACANTES " + contDEL);
+
+            for (int i = 0; i < jugadores.Length; i++)
+            {
+                Traspaso(DevuelveIdEquipo(nomEquipo), jugadores[i]);           //TRASPASAMOS LOS JUGADORES A SU NUEVO EQUIPO
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+        public string BuscarJugadorPorId(string idJugador)
+        {
+
+            using (MySqlConnection conexion = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conexion.Open();
+                    comando = new MySqlCommand("SELECT * FROM jugadores WHERE idjugador='" + idJugador + "'; ", conexion);
+                    lector = comando.ExecuteReader();
+
+                    if (lector.HasRows)                                                              //BUSCAMOS USUARIO
+                    {
+                        if (lector.Read())
+                        {                                                         //COMPROBAMOS USUARIO Y SI ES ADMIN
+                            nomJugador = lector.GetString(2);
+                         /*   password = lector["Password"].ToString();
+                            permisos = Boolean.Parse(lector["Permisos"].ToString());
+                            correo = lector.GetString(3);
+                            //ALMACENARÍA IMAGEN FOTO PERFIL
+                            equipo = lector["Equipo"].ToString();
+                            activo = lector.GetString(6);
+                            idEquipo = lector.GetInt32(7);*/
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTE USUARIO...s                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS+++");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN " + ex.Message);
+                }
+
+            }//FIN USING 
+            return nomJugador;
+        }
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        ///     Método para hacer traspaso jugador (CREACIÓN EQUIPO)
+        /// </summary>
+        /// <param name="idEquipo">
+        ///     Recibimos id Equipo Destino
+        /// </param>
+        /// <param name="idJugador">
+        ///     Recibimos id Jugador
+        /// </param>
+        public void Traspaso (int idEquipo, int idJugador)
+        {
+
+
+            try
+            {
+                conexion = null;
+                if (conexion == null)
+                {
+                    connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("UPDATE jugadores SET idEquipo="+idEquipo+" WHERE idjugador="+idJugador+"; ", conexion);
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show(BuscarJugadorPorId(idJugador.ToString()) + " HA SIDO TRASPASADO");
+                    
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
