@@ -28,7 +28,9 @@
                 <ToolTip Content="Longitud Mínima Contraseña será de 7 caracteres, Contendrá al menos una Mayúscula, y no puede contener Caracteres Especiales "/>
             </Label.ToolTip>
         </Label>
-        <Button x:Name="btnRegistrarse" Content="CREAR CUENTA" Margin="333,271,48,0" VerticalAlignment="Top" Height="44" FontSize="16" FontWeight="Bold" Click="btnRegistrarse_Click">
+        <Button x:Name="btnRegistrarse" Content="CREAR CUENTA" Margin="362,271,48,0" VerticalAlignment="Top" Height="44" FontSize="16" FontWeight="Bold" Click="btnRegistrarse_Click"
+                
+                >
             <Button.ToolTip>
                 <ToolTip Content="PULSE PARA CREAR SU CUENTA"/>
             </Button.ToolTip>
@@ -85,6 +87,20 @@
                 <ToolTip Content="El Usuario Tendrá una longitud máxima de 20 caracteres"/>
             </Label.ToolTip>
         </Label>
+
+
+        <Button Content="CREAR CUENTA" Width="100" Height="40" Background="LightBlue" Foreground="White" Margin="383,341,317,53" Click="Button_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
     </Grid>
 

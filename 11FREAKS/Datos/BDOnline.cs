@@ -7,7 +7,8 @@ using System.Windows;
 using System.Security.Cryptography;
 using System.Security.Policy;
 using MySql.Data.MySqlClient;
-
+using System.Collections;
+using System.Data.SQLite;
 
 namespace _11FREAKS.Datos
 {
@@ -164,6 +165,81 @@ namespace _11FREAKS.Datos
 
 
 
+        /// <summary>
+        ///     Método para crear Usuario (ADMIN) --> Encriptamos Contraseña
+        /// </summary>
+        /// <param name="usuario">
+        ///     Recibimos Usuario
+        /// </param>
+        /// <param name="contraseña">
+        ///     Recibimos Contraseña del Usuario
+        /// </param>
+        /// <param name="correo">
+        ///     Recibimos correo del Admin
+        /// </param>
+        /// <returns>
+        ///     Devuelve un Booleano con el Resultado de la Operación
+        ///     <see cref="bool"/>
+        /// </returns>
+        public bool CrearUsuario(string usuario, string contraseña, string correo)
+        {
+            bool conDisponible = false;
+
+            //////// HASHEO PASSWORD ////////
+            string hash = String.Empty;
+
+            using (SHA256 sha256 = SHA256.Create())         // Inicializamos SHA256
+            {
+                byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(contraseña));  //Hasheamos Password
+
+                foreach (byte b in hashValue) //Convertimos el Hash de Byte[] -> String
+                {
+                    hash += $"{b:X2}";
+                }
+            }
+
+            // MessageBox.Show("EL HASH DE LA CONTRASEÑA ES -->"+hash);
+
+            try
+            {
+                conexion = null;
+                if (conexion == null)
+                {
+                    connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("INSERT INTO usuarios VALUES ( '" + usuario + "' , '" + hash + "', 'true', '" + correo + "', NULL , NULL, DEFAULT, NULL);", conexion);
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show("BIENVENIDO " + usuario + ", AHORA FORMAS PARTE DE 11FREAKS COMO ADMIN!");
+                    conDisponible = true;
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
+                    conDisponible = false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+            }
+
+
+
+            return conDisponible;
+        }
+
+
+
+
+
+
+
+
 
         /// <summary>
         ///     Método para crear EQUIPO (SIGN UP)
@@ -210,6 +286,148 @@ namespace _11FREAKS.Datos
             }
 
         }
+
+
+
+
+
+
+
+        public void CambiarContraseña(string nuevaPass)
+        {
+            if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+
+            //////// HASHEO PASSWORD ////////
+            string hash = String.Empty;
+
+            using (SHA256 sha256 = SHA256.Create())         // Inicializamos SHA256
+            {
+                byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(nuevaPass));  //Hasheamos Password
+
+                foreach (byte b in hashValue) //Convertimos el Hash de Byte[] -> String
+                {
+                    hash += $"{b:X2}";
+                }
+            }
+
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("UPDATE usuarios SET Password='" + hash + "' WHERE Usuario='" + nomusuario + "'", conexion);
+
+                    conexion.Open();                                                                         //CARGAMOS TODOS LOS DATOS ACTUALIZADOSs
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show("HAS CAMBIADO TU CONTRASEÑA");
+
+                }
+                else
+                {
+                    MessageBox.Show("*NO SE PUDO COMPLETAR LA OPERACIÓN*");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+        }
+
+
+
+
+
+
+
+
+        public void CambiarCorreo(string usuario, string nuevoCorreo)
+        {
+            if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("UPDATE usuarios SET Email= '" + nuevoCorreo + "' WHERE Usuario='" + usuario + "'", conexion);
+
+                    conexion.Open();                                                                         //REALIZAMOS OPERACIÓN
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show("SE HA ACTUALIZADO EL CORREO DE SU CUENTA " + usuario);
+
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+
+        }
+
+
+
+        public void DarPermisos(string usuario)
+        {
+            if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("UPDATE usuarios SET Permisos= 'true' WHERE Usuario='" + usuario + "'", conexion);
+
+                    conexion.Open();                                                                         //CARGAMOS TODOS LOS DATOS ACTUALIZADOS
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show("SE HAN OTORGADO PERMISOS DE ADMIN A " + usuario);
+
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -397,7 +615,6 @@ namespace _11FREAKS.Datos
 
 
             }
-            // MessageBox.Show("VALIDEZ USUARIO-> "+validezUser+ "\tPASSWORD-> "+validezPass);
 
             if (validezUser && validezPass)      //COMPROBAMOS QUE HAYAN PASADO LA PRUEBA USUARIO Y CONTRASEÑA
             {
@@ -407,6 +624,185 @@ namespace _11FREAKS.Datos
             return validador;
         }
 
+
+
+
+
+
+
+
+        /// <summary>
+        ///     Función Para Mostrar Todos los Usuarios Registrados
+        /// </summary>
+        ///<returns>
+        ///     Devuelve un ArrayList con todos los Usuario Registrados
+        ///     <see cref="ArrayList"/>
+        /// </returns>
+
+        public ArrayList ConsultaUsuarios()                             //MÉTODO CONEXIÓN BBDD SQLITE
+        {
+            ArrayList listaUsuarios = new ArrayList();                    //INICIALIZAMOS LISTA CADA VEZ QUE LLAMEMOS AL MÉTODO
+            string userName = string.Empty;
+            bool permisosUser;
+
+            if (conexion != null)                                       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+
+            try
+            {
+
+                if (conexion == null)
+                {
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("SELECT * FROM Usuarios ", conexion);
+
+                    conexion.Open();
+                    lector = comando.ExecuteReader();
+                    if (lector.HasRows)                                                             //BUSCAMOS USUARIO
+                    {
+                        while (lector.Read())
+                        {                                                         //COMPROBAMOS USUARIO Y SI ES ADMIN
+                            userName = lector.GetString(0);
+                            permisosUser = Boolean.Parse(lector["Permisos"].ToString());
+
+                            if (permisosUser == true)
+                            {
+                                listaUsuarios.Add("#" + userName);              //PONEMOS HASHTAG PARA INDICAR QUE ES ADMIN
+                            }
+                            else
+                            {
+                                listaUsuarios.Add(userName);
+                            }
+
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTE USUARIO...s                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+
+            return listaUsuarios;
+
+        }
+
+
+
+
+
+
+        /// <summary>
+        ///     Función Para Borrar Usuario
+        /// </summary>
+        /// <param name="usuario">
+        ///     Recibimos Usuario  Para Hacer Borrado
+        /// </param>
+        public void BorrarUsuario(string usuario)
+        {
+
+            try
+            {
+                conexion = null;
+                if (conexion == null)
+                {
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("DELETE from usuarios WHERE Usuario = '" + usuario + "' ; ", conexion);
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery().ToString();         
+                    conexion.Close();
+
+                    MessageBox.Show(usuario + " , HA SIDO ELIMINADO");
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+            }
+
+        }
+
+
+
+
+
+        /// <summary>
+        ///     Método para obtener Email de un tercero
+        /// </summary>
+        /// <returns>
+        ///     Devuelve Nombre Email de un tercero
+        /// </returns>
+        public string DevuelveCorreo(string usuario)
+        {
+            string correo = null;
+
+            if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("SELECT * FROM usuarios WHERE Usuario='" + usuario + "'", conexion);
+
+                    conexion.Open();
+                    lector = comando.ExecuteReader();
+                    if (lector.HasRows)                                                             //BUSCAMOS USUARIO
+                    {
+                        if (lector.Read())
+                        {                                                         //OBTENEMOS CAMPO DESEADO
+                            correo = lector.GetString(3);
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTE USUARIO...s                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+            return correo;
+        }
 
 
 

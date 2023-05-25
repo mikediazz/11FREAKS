@@ -83,15 +83,15 @@
             </MenuItem>
 
 
-            <MenuItem x:Name="menuClasificacion" Header="CLASIFICACIÓN" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" >
+            <MenuItem x:Name="menuOjeadores" Header="OJEADORES" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" >
                 <MenuItem x:Name="menuVerClasificacion" Header="VER CLASIFICACIÓN" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuVerClasificacion_Click">
                     <MenuItem.ToolTip>
-                        <ToolTip Content="ECHA UN VISTAZO A COMO LA LIGA"/>
+                        <ToolTip Content="ECHA UN VISTAZO A COMO LALIGA ACTUALMENTE EN LA REALIDAD"/>
                     </MenuItem.ToolTip>
                 </MenuItem>
                 <MenuItem x:Name="menuMaximosGoleadores" Header="TOP GOLEADORES" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuMaximosGoleadores_Click">
                     <MenuItem.ToolTip>
-                        <ToolTip Content="ESTOS SON LOS GOLEADORES DE LA LIGA"/>
+                        <ToolTip Content="ESTOS SON LOS GOLEADORES DE LALIGA EN LA REALIDAD"/>
                     </MenuItem.ToolTip>
                 </MenuItem>
                 <MenuItem x:Name="menuMaximosAsistentes" Header="TOP ASISTENTES" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuMaximosAsistentes_Click">
@@ -106,9 +106,12 @@
                 </MenuItem>
                 <MenuItem x:Name="menuMaximosAmarillas" Header="TOP AMARILLAS" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuMaximosAmarillas_Click">
                     <MenuItem.ToolTip>
-                        <ToolTip Content="ESTOS SON LOS JUGADOERS CON MÁS AMARILLAS DE LA LIGA"/>
+                        <ToolTip Content="ESTOS SON LOS JUGADOERS CON MÁS AMARILLAS DE LALIGA EN LA REALIDAD"/>
                     </MenuItem.ToolTip>
                 </MenuItem>
+                <MenuItem.ToolTip>
+                    <ToolTip Content="ECHA UN VISTAZO AL BOLETIN DE OJEADORES PARA VER COMO LALIGA ACTUALMENTE EN LA REALIDAD"/>
+                </MenuItem.ToolTip>
             </MenuItem>
 
 

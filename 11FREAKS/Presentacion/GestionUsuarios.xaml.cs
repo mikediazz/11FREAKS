@@ -22,6 +22,7 @@ namespace _11FREAKS.Presentacion
     public partial class GestionUsuarios : Window
     {
         private Datos.BaseDatos miBaseDatos;
+        private Datos.BDOnline bdServer;
         Principal principal;
         int caso;
 
@@ -37,6 +38,7 @@ namespace _11FREAKS.Presentacion
             InitializeComponent();
             principal= fprincipal;
             miBaseDatos = bbdd;
+            bdServer = new BDOnline();
             caso=tipoCaso;
 
 
@@ -94,9 +96,9 @@ namespace _11FREAKS.Presentacion
                 {
                     case 1:             //SIGN UP ADMIN
                         
-                        if (miBaseDatos.CompruebaPassword(txtUsuario.Text, txtPassword.Password))
+                        if (bdServer.CompruebaPassword(txtUsuario.Text, txtPassword.Password))
                         {
-                            if (miBaseDatos.Conectar(txtUsuario.Text, txtPassword.Password) == true)
+                            if (bdServer.ConectarServer(txtUsuario.Text, txtPassword.Password) == true)
                             {
                                 var mensajeInvalidUsername = AutoClosingMessageBox.Show(
                                 text: "Whoops! YA EXISTE ESTE USUARIO",
@@ -111,8 +113,8 @@ namespace _11FREAKS.Presentacion
                                 caption: "EQUIPO DE 11FREAKS",
                                 timeout: 1500,
                                 buttons: MessageBoxButtons.OK);
-                                miBaseDatos.CrearUsuario(txtUsuario.Text, txtPassword.Password, true, null, txtEmail.Text);  //CREAMOS ADMIN
-
+                                //miBaseDatos.CrearUsuario(txtUsuario.Text, txtPassword.Password, true, null, txtEmail.Text);  //CREAMOS ADMIN
+                                bdServer.CrearUsuario(txtUsuario.Text, txtPassword.Password, txtEmail.Text);  //CREAMOS ADMIN
                                 this.Hide();
                                 principal.ShowDialog();
                             }
@@ -152,7 +154,7 @@ namespace _11FREAKS.Presentacion
                         }
                         else
                         {
-                            miBaseDatos.CambiarContraseña(txtPassword.Password);
+                            bdServer.CambiarContraseña(txtPassword.Password);
 
                             var mensajeTemporal = AutoClosingMessageBox.Show(           //ALERTA INFORMATIVA
                             text: "SU CONTRASEÑA HA SIDO RESTABLECIDA",
@@ -161,7 +163,7 @@ namespace _11FREAKS.Presentacion
                             buttons: MessageBoxButtons.OK);
 
                             Correo correoPass = new Correo();
-                            correoPass.CorreoContraseña(miBaseDatos.DevuelveCorreo());     //ENVIAMOS CORREO INFORMATIVO AL USUARIO
+                            correoPass.CorreoContraseña(bdServer.DevuelveCorreo());     //ENVIAMOS CORREO INFORMATIVO AL USUARIO
                             this.Close();
                         }
 
@@ -173,9 +175,10 @@ namespace _11FREAKS.Presentacion
 
 
                     case 4:
-                        miBaseDatos.CambiarCorreo(miBaseDatos.DevuelveUsuario(),miBaseDatos.DevuelveCorreo());
+                        bdServer.CambiarCorreo(bdServer.DevuelveUsuario(),bdServer.DevuelveCorreo());
+                        
                         Correo correo = new Correo();
-                        correo.CorreoCambioEmail(miBaseDatos.DevuelveCorreo());     //ENVIAMOS CORREO INFORMATIVO AL USUARIO
+                        correo.CorreoCambioEmail(bdServer.DevuelveCorreo());     //ENVIAMOS CORREO INFORMATIVO AL USUARIO
                         this.Close();
                         break;
 

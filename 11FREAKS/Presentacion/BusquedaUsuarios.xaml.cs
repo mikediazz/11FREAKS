@@ -25,12 +25,12 @@ namespace _11FREAKS.Presentacion
 
         public delegate void MiEvento();
         public event MiEvento miEvento;
-        private Datos.BaseDatos miBaseDatos;
+        private Datos.BDOnline bdServer;
 
         public BusquedaUsuarios()
         {
-            InitializeComponent();
-            miBaseDatos= new Datos.BaseDatos();                             //INICIALIZO BASE DATOS
+            InitializeComponent();                          
+            bdServer = new Datos.BDOnline();                                    //INICIALIZAMOS BASE DATOS
         }
 
         /// <summary>
@@ -42,9 +42,9 @@ namespace _11FREAKS.Presentacion
 
             try
             {
-                for (int i = 0; i < miBaseDatos.ConsultaUsuarios().Count; i++)
+                for (int i = 0; i < bdServer.ConsultaUsuarios().Count; i++)
                 {
-                    listBoxUsuarios.Items.Add(miBaseDatos.ConsultaUsuarios()[i]);
+                    listBoxUsuarios.Items.Add(bdServer.ConsultaUsuarios()[i]);
                 }
             }
             catch (Exception ex)
@@ -100,10 +100,9 @@ namespace _11FREAKS.Presentacion
             {
                 MessageBox.Show("USUARIO SELECCIONADO -->" + auxNom);
 
-                string correoBaneado= miBaseDatos.DevuelveCorreo(auxNom);           //ERROR AL REALIZAR CONEXIÓN 
+                string correoBaneado= bdServer.DevuelveCorreo(auxNom);           //ERROR AL REALIZAR CONEXIÓN 
                 MessageBox.Show("EMAIL DE USUARIO A BANEAR "+correoBaneado);
-
-                miBaseDatos.BorrarUsuario(auxNom);
+                bdServer.BorrarUsuario(auxNom);
                 listBoxUsuarios.Items.RemoveAt(listBoxUsuarios.SelectedIndex);
 
                 Correo correo = new Correo();
@@ -124,7 +123,7 @@ namespace _11FREAKS.Presentacion
             }
             else
             {
-                miBaseDatos.DarPermisos(auxNom);
+                bdServer.DarPermisos(auxNom);
             }
 
 

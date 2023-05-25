@@ -173,15 +173,9 @@ namespace _11FREAKS.Presentacion
             return comprobador;
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
 
-
-
-
-
-
-
-
-
-
+        }
     }
 }
