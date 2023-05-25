@@ -762,7 +762,7 @@ namespace _11FREAKS.Datos
         ///     Devuelve Objeto Equipo, o Nulo en su defecto
         /// </returns>
 
-        public Equipo MiInfoEquipo(string id)                             //MÉTODO CONEXIÓN BBDD SQLITE
+       /* public Equipo MiInfoEquipo(string id)                             //MÉTODO CONEXIÓN BBDD SQLITE
         {
             Equipo equipo = null;
 
@@ -817,7 +817,7 @@ namespace _11FREAKS.Datos
 
             return equipo;
 
-        }
+        }*/
 
 
 

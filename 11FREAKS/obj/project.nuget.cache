@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NUh9uVjEfi89PhMWNcA9XXINuhg4iq5mgeIMM2wuDxkSqPwuV+BQCkDMZaDLuBmcWCCPyL2Cs0TnEXQQnHz3HQ==",
+  "dgSpecHash": "glgPDsf5KiT/krcpr2gsI0AdaCP7mC30B40Uzn3NvAuT+r/RfkM9FKv74JzZ9V3L429QxqqEIl1AXzLXwnEgvw==",
   "success": true,
   "projectFilePath": "C:\\Users\\mdnon\\Desktop\\2DAM\\DI\\EjerDI\\11FREAKS\\11FREAKS\\11FREAKS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mdnon\\.nuget\\packages\\autoclosingmessagebox\\1.0.0.5\\autoclosingmessagebox.1.0.0.5.nupkg.sha512",
     "C:\\Users\\mdnon\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
+    "C:\\Users\\mdnon\\.nuget\\packages\\extended.wpf.toolkit\\4.5.0\\extended.wpf.toolkit.4.5.0.nupkg.sha512",
     "C:\\Users\\mdnon\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\mdnon\\.nuget\\packages\\itext7\\7.2.5\\itext7.7.2.5.nupkg.sha512",
     "C:\\Users\\mdnon\\.nuget\\packages\\itext7.commons\\7.2.5\\itext7.commons.7.2.5.nupkg.sha512",

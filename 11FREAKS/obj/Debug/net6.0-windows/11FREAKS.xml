@@ -169,17 +169,6 @@
                 Recibimos el Nombre del Equipo
             </param>
         </member>
-        <member name="M:_11FREAKS.Datos.BaseDatos.MiInfoEquipo(System.String)">
-            <summary>
-                Función Para Obtener información de la BD de un Equipo
-            </summary>
-            <param name="id">
-                Recibimos Id del Equipo a Consultar
-            </param>
-            <returns>
-                Devuelve Objeto Equipo, o Nulo en su defecto
-            </returns>
-        </member>
         <member name="M:_11FREAKS.Datos.BaseDatos.CambiarEquipo(System.String,System.String)">
             <summary>
                 Función Para Obtener información de la BD de un Equipo
@@ -200,7 +189,7 @@
                  <see cref="T:System.Collections.ArrayList"/>
              </returns>
         </member>
-        <member name="M:_11FREAKS.Datos.BDOnline.CrearUsuario(System.String,System.String,System.String,System.String)">
+        <member name="M:_11FREAKS.Datos.BDOnline.CrearUsuario(System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
                 Método para crer Usuario (SIGN UP) --> Encriptamos Contraseña
             </summary>
@@ -212,6 +201,24 @@
             </param>
             <param name="idEquipo">
                 Recibimos id Equipo Favorito (PUEDE SER NULO)
+            </param>
+            <returns>
+                Devuelve un Booleano con el Resultado de la Operación
+                <see cref="T:System.Boolean"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.CrearUsuario(System.String,System.String,System.String)">
+            <summary>
+                Método para crear Usuario (ADMIN) --> Encriptamos Contraseña
+            </summary>
+            <param name="usuario">
+                Recibimos Usuario
+            </param>
+            <param name="contraseña">
+                Recibimos Contraseña del Usuario
+            </param>
+            <param name="correo">
+                Recibimos correo del Admin
             </param>
             <returns>
                 Devuelve un Booleano con el Resultado de la Operación
@@ -231,9 +238,37 @@
             <param name="liga">
                 Recibimos id Equipo Favorito (PUEDE SER NULO)
             </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveCorreo">
+            <summary>
+                Método para obtener Email actual
+            </summary>
             <returns>
-                Devuelve un Booleano con el Resultado de la Operación
-                <see cref="T:System.Boolean"/>
+                Devuelve Nombre Email actual
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveUsuario">
+            <summary>
+                Método para obtener Usuario actual
+            </summary>
+            <returns>
+                Devuelve Usuario actual
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveActivo">
+            <summary>
+                Método para consultar el estado de la cuenta
+            </summary>
+            <returns>
+                Devuelve si el usuario ha sido la cuenta está activa
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveIdEquipo">
+            <summary>
+                Método para consultar idEquipo del usuario actual
+            </summary>
+            <returns>
+                Devuelve idEquipo del usuario actual
             </returns>
         </member>
         <member name="M:_11FREAKS.Datos.BDOnline.CompruebaPassword(System.String,System.String)">
@@ -245,6 +280,58 @@
             </param>
             <returns>
                 Devuelve si cumple los requisitos mínimos de seguridad
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.ConsultaUsuarios">
+             <summary>
+                 Función Para Mostrar Todos los Usuarios Registrados
+             </summary>
+            <returns>
+                 Devuelve un ArrayList con todos los Usuario Registrados
+                 <see cref="T:System.Collections.ArrayList"/>
+             </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveJugadoresEquipo(System.Int32)">
+             <summary>
+                 Función Para Mostrar Todos los Usuarios Registrados
+             </summary>
+            <returns>
+                 Devuelve un ArrayList con todos los Usuario Registrados
+                 <see cref="T:System.Collections.ArrayList"/>
+             </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveJugadoresLiga(System.String)">
+             <summary>
+                 Función Para Mostrar Todos los Usuarios Registrados
+             </summary>
+            <returns>
+                 Devuelve un ArrayList con todos los Usuario Registrados
+                 <see cref="T:System.Collections.ArrayList"/>
+             </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveEquiposLiga(System.String)">
+             <summary>
+                 Función Para Mostrar Todos los Equipos de una misma Liga
+             </summary>
+            <returns>
+                 Devuelve un ArrayList con todos los Equipos de una liga
+                 <see cref="T:System.Collections.ArrayList"/>
+             </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.BorrarUsuario(System.String)">
+            <summary>
+                Función Para Borrar Usuario
+            </summary>
+            <param name="usuario">
+                Recibimos Usuario  Para Hacer Borrado
+            </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveCorreo(System.String)">
+            <summary>
+                Método para obtener Email de un tercero
+            </summary>
+            <returns>
+                Devuelve Nombre Email de un tercero
             </returns>
         </member>
         <member name="M:_11FREAKS.Datos.BDOnline.CompruebaPermisos">
@@ -293,6 +380,25 @@
                 Devuelve un Booleano con el Resultado de la Operación
                 <see cref="T:System.Boolean"/>
             </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.GenerarEquipo(System.String,System.String)">
+            <summary>
+                Método para generar equipos de forma aleatoria para cada jugador
+            </summary>
+            <param name="idEquipo">
+                Recibimos idEquipo del Usuario
+            </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.Traspaso(System.Int32,System.Int32)">
+            <summary>
+                Método para hacer traspaso jugador (CREACIÓN EQUIPO)
+            </summary>
+            <param name="idEquipo">
+                Recibimos id Equipo Destino
+            </param>
+            <param name="idJugador">
+                Recibimos id Jugador
+            </param>
         </member>
         <member name="T:_11FREAKS.Presentacion.BusquedaUsuarios">
             <summary>
@@ -407,11 +513,6 @@
         <member name="M:_11FREAKS.Presentacion.MiEquipo.miListBox_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
             <summary>
             Método Controla el Indice de Lista en Plantilla para Mostrar su Foto
-            </summary>
-        </member>
-        <member name="M:_11FREAKS.Presentacion.MiEquipo.menuEstadisticasEquipo_Click(System.Object,System.Windows.RoutedEventArgs)">
-            <summary>
-            Método Vinculado al Botón Estadiísticas Equipo
             </summary>
         </member>
         <member name="M:_11FREAKS.Presentacion.MiEquipo.MenuItem_Click_1(System.Object,System.Windows.RoutedEventArgs)">

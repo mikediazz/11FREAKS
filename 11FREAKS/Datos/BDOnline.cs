@@ -709,6 +709,240 @@ namespace _11FREAKS.Datos
 
 
 
+
+
+
+        /// <summary>
+        ///     Función Para Mostrar Todos los Usuarios Registrados
+        /// </summary>
+        ///<returns>
+        ///     Devuelve un ArrayList con todos los Usuario Registrados
+        ///     <see cref="ArrayList"/>
+        /// </returns>
+
+        public ArrayList DevuelveJugadoresEquipo(int idEquipo)                  
+        {
+            ArrayList listaJugadores = new ArrayList();                    //INICIALIZAMOS LISTA CADA VEZ QUE LLAMEMOS AL MÉTODO
+
+            if (conexion != null)                                       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+            
+            try
+            {
+
+                if (conexion == null)
+                {
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("SELECT * FROM jugadores WHERE idEquipo=16 ;", conexion);
+
+                    conexion.Open();
+                    lector = comando.ExecuteReader();
+                    if (lector.HasRows)                                                             //BUSCAMOS JUGADORES
+                    {
+                        while (lector.Read())                                                       //OBTENEMOS DATOS JUGADOR
+                        {
+                            Jugador jugador = new Jugador(
+                                lector.GetInt32(0),
+                                lector.GetInt32(1),
+                                lector.GetString(2),
+                                lector.GetInt32(3),
+                                lector.GetInt32(4),
+                                lector.GetString(5),
+                                lector.GetString(6),
+                                lector.GetString(7),
+                                lector.GetString(8),
+                                lector.GetString(9),
+                                lector.GetInt32(10),
+                                lector.GetString(11)
+                            );
+
+                            listaJugadores.Add( jugador );                                          //AÑADIMOS JUGADOR A LA LISTA
+
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTEN JUGADORES...                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+
+            return listaJugadores;
+
+        }
+
+
+
+
+
+        /// <summary>
+        ///     Función Para Mostrar Todos los Usuarios Registrados
+        /// </summary>
+        ///<returns>
+        ///     Devuelve un ArrayList con todos los Usuario Registrados
+        ///     <see cref="ArrayList"/>
+        /// </returns>
+
+        public ArrayList DevuelveJugadoresLiga(string liga)
+        {
+            ArrayList listaJugadores = new ArrayList();                    //INICIALIZAMOS LISTA CADA VEZ QUE LLAMEMOS AL MÉTODO
+
+            if (conexion != null)                                       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("SELECT * FROM usuarios WHERE idEquipo!=null ;", conexion);     //CAMBIAR CUANDO EXISTAN MÁS LIGAS
+
+                    conexion.Open();
+                    lector = comando.ExecuteReader();
+                    if (lector.HasRows)                                                             //BUSCAMOS USAURIO
+                    {
+                        while (lector.Read())                                                       //OBTENEMOS DATOS USAURIO
+                        {
+                            Usuarios usuario = new Usuarios(
+                                lector.GetString(0),
+                                lector.GetString(1),
+                                lector.GetString(2),
+                                lector.GetString(3),
+                                lector.GetString(4),
+                                lector.GetString(5),
+                                lector.GetString(6),
+                                lector.GetInt32(7)
+                            );
+
+                            listaJugadores.Add(usuario);                                          //AÑADIMOS USAURIO A LA LISTA
+
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTEN USAURIOS...                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+
+            return listaJugadores;
+        }
+
+
+
+
+
+
+        /// <summary>
+        ///     Función Para Mostrar Todos los Equipos de una misma Liga
+        /// </summary>
+        ///<returns>
+        ///     Devuelve un ArrayList con todos los Equipos de una liga
+        ///     <see cref="ArrayList"/>
+        /// </returns>
+
+        public ArrayList DevuelveEquiposLiga(string liga)
+        {
+            ArrayList listaEquipos = new ArrayList();                    //INICIALIZAMOS LISTA CADA VEZ QUE LLAMEMOS AL MÉTODO
+
+            if (conexion != null)                                       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("SELECT * FROM equipos WHERE idLiga=1 ;", conexion);     //CAMBIAR CUANDO EXISTAN MÁS LIGAS
+
+                    conexion.Open();
+                    lector = comando.ExecuteReader();
+                    if (lector.HasRows)                                                             //BUSCAMOS EQUIPO
+                    {
+                        while (lector.Read())                                                       //OBTENEMOS DATOS EQUIPO
+                        {
+                            Equipo equipo = new Equipo(
+                                lector.GetInt32(0),
+                                lector.GetString(1),
+                                lector.GetString(2),
+                                lector.GetString(3),
+                                lector.GetInt32(4),
+                                lector.GetInt32(5),
+                                lector.GetInt32(6),
+                                lector.GetInt32(7),
+                                lector.GetInt32(8),
+                                lector.GetInt32(9)
+                            );
+
+                            listaEquipos.Add(equipo);                                          //AÑADIMOS EQUIPO A LA LISTA
+
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTEN USAURIOS...                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+
+            return listaEquipos;
+        }
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         ///     Función Para Borrar Usuario
         /// </summary>

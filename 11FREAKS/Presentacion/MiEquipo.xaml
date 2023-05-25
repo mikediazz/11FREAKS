@@ -9,16 +9,16 @@
         Title="MiEquipo" Height="700" Width="1200" Icon="/Resources/Logo11Freaks.png" WindowState="Maximized" ResizeMode="NoResize">
 
     <Window.Resources>
-        
+
     </Window.Resources>
-    
-    
+
+
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/campoFutbol.avif" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <Image x:Name="escudoEquipo" HorizontalAlignment="Right" Height="200" Width="200" Margin="665,50,0,0" VerticalAlignment="Top"  />
+        <Image x:Name="escudoEquipo" HorizontalAlignment="Right" Height="200" Width="200" Margin="665,50,0,0" VerticalAlignment="Top" />
 
 
 
@@ -144,7 +144,72 @@
             </ListBox.ToolTip>
         </ListBox>
 
-        <Image x:Name="foto"  HorizontalAlignment="Left"  Height="200" Width="200" VerticalAlignment="Center" Margin="75,0,0,0" />
+        <Image x:Name="foto"  HorizontalAlignment="Left"  Height="200" Width="200" VerticalAlignment="Top" Margin="77,235,0,0" />
+
+
+
+        <ListBox x:Name="jugadoresListBox" Height="600" Width="450" ToolTip="ESTA ES TU PLANTILLA" SelectionChanged="jugadoresListBox_SelectionChanged" HorizontalAlignment="Center" Margin="0,71,0,13">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="250"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding Foto}" Width="100" Height="100" Margin="10" ClipToBounds="True">
+                            <Image.Clip>
+                                <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
+                            </Image.Clip>
+                        </Image>
+                        <StackPanel Grid.Column="1" Margin="10">
+                            <TextBlock Text="{Binding Nombre}" FontWeight="Bold" FontSize="23"/>
+                            <TextBlock Text="{Binding Posicion}" FontStyle="Italic" FontSize="14">
+                                <Run Text="    #"/>
+                                <Run Text="{Binding Dorsal}"/>
+                            </TextBlock>
+                            <TextBlock Text="{Binding Equipo}"/>
+                            <TextBlock FontSize="14" FontWeight="Bold">
+                                <Run Text="{Binding Valor}"/>
+                                <Run Text="€"/>
+                            </TextBlock>
+                        </StackPanel>
+                        <Image Source="{Binding Escudo}" Width="50" Height="50" Grid.Column="2" HorizontalAlignment="Right" Margin="30,50"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.Resources>
+                <Style TargetType="ListBox">
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="5"/>
+                    <Setter Property="Background" Value="#E8E8E8"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBox">
+                                <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="25">
+                                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                                          VerticalScrollBarVisibility="Hidden">
+                                        <ItemsPresenter/>
+                                    </ScrollViewer>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+                
+            </ListBox.Resources>
+        </ListBox>
+
+
+
+
+
+
+
+
+
 
     </Grid>
 </Window>

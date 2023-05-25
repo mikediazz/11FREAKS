@@ -56,7 +56,7 @@
             </MenuItem>
 
             <MenuItem x:Name="menuMiLiga" Header="MI LIGA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuMiEquipo_Click">
-                <MenuItem x:Name="menuMiClasificacion" Header="CLASIFICACIÓN" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCambiarMiEquipo_Click" >
+                <MenuItem x:Name="menuMiClasificacion" Header="CLASIFICACIÓN" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuMiClasificacion_Click"  >
                     <MenuItem.ToolTip>
                         <ToolTip Content="VER CLASIFICACIÓN"/>
                     </MenuItem.ToolTip>
@@ -208,7 +208,54 @@
                 <ToolTip Content="PUEDE OCULTAR ESTA VISTA PULSANDO CLICK DERECHO, O BUSCAR INFORMACIÓN DESDE CLASIFICACIÓN"/>
             </ListBox.ToolTip>
         </ListBox>
-        <Label x:Name="lblJugadores" Content="JUGADORES" HorizontalAlignment="Left" Margin="128,78,0,0" VerticalAlignment="Top" Height="483" Width="815" Foreground="White"/>
+
+
+
+
+
+        <ListBox x:Name="equiposLigaListBox" Height="600" Width="450" ToolTip="ESTA ES TU PLANTILLA"  HorizontalAlignment="Center" Margin="0,71,0,13" SelectionChanged="equiposLigaListBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="250"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="10">
+                            <TextBlock Text="{Binding Posicion}" FontWeight="Bold" FontSize="23"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Margin="10">
+                            <TextBlock FontWeight="Bold" Text="{Binding Nombre}"  FontSize="20"/>
+                            <TextBlock FontStyle="Italic" Text="{Binding Abreviatura}"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.Resources>
+                <Style TargetType="ListBox">
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="5"/>
+                    <Setter Property="Background" Value="#E8E8E8"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBox">
+                                <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="25">
+                                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                                          VerticalScrollBarVisibility="Hidden">
+                                        <ItemsPresenter/>
+                                    </ScrollViewer>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+            </ListBox.Resources>
+        </ListBox>
 
 
 

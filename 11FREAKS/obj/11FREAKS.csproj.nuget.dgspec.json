@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[1.0.0.5, )"
             },
+            "Extended.Wpf.Toolkit": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.33, )"

@@ -9,24 +9,33 @@ namespace _11FREAKS.Datos
     public class Equipo
     {
 
-        public string Id { get; set; }
+        public int idEquipo { get; set; }                                   //PROPIEDADES
+        public string idLiga { get; set; }
         public string Nombre { get; set; }
-        public string AñoFundacion { get; set; }
-        public string Logo { get; set; }
-        public string Estadio { get; set; }
-        public string Ciudad { get; set; }
+        public string Abreviatura { get; set; }
+        public int Posicion { get; set; }
+        public int Puntos { get; set; }
+        public int Presupuesto { get; set; }
+        public int Victorias { get; set; }
+        public int Empates { get; set; }
+        public int Derrotas { get; set; }
 
 
-        public Equipo(string id, string nombre, string añoFundacion, string logo, string estadio, string ciudad)
+
+        public Equipo() { }                                                 //CONTRUCTOR POR DEFECTO
+
+        public Equipo(int idEquipo, string idLiga, string nombre, string abreviatura, int posicion, int puntos, int presupuesto, int victorias, int empates, int derrotas)
         {
-            Id = id;
+            this.idEquipo = idEquipo;
+            this.idLiga = idLiga;
             Nombre = nombre;
-            AñoFundacion = añoFundacion;
-            Logo = logo;
-            Estadio = estadio;
-            Ciudad = ciudad;
+            Abreviatura = abreviatura;
+            Posicion = posicion;
+            Puntos = puntos;
+            Presupuesto = presupuesto;
+            Victorias = victorias;
+            Empates = empates;
+            Derrotas = derrotas;
         }
-
-        public Equipo() { }
     }
 }

@@ -24,7 +24,12 @@ namespace _11FREAKS.Presentacion
     /// </summary>
     public partial class MiEquipo : Window
     {
+
+
+
+
         private Datos.BaseDatos miBaseDatos;
+        private Datos.BDOnline bdServer;
         Principal principal;
 
         private string idEquipo;
@@ -34,43 +39,49 @@ namespace _11FREAKS.Presentacion
         {
             InitializeComponent();
             principal = p;
-            miBaseDatos = bd;
-            fotosJugadores = new ArrayList();
+            //miBaseDatos = bd;
+            bdServer=new Datos.BDOnline();
 
-            if (miBaseDatos.DevuelveEquipoFav() == null)
-            {
-                idEquipo = miBaseDatos.DevuelveEquipoFav();
-                var mensajeTemporal = AutoClosingMessageBox.Show(
-                text: "Whoops! Parece que no tienes ningún equipo favorito ",
-                caption: "EQUIPO DE 11FREAKS",
-                timeout: 4000,
-                buttons: MessageBoxButtons.OK);
-            }
-            else
-            {
-                idEquipo = miBaseDatos.DevuelveEquipoFav();
-                EquipoFav = miBaseDatos.MiInfoEquipo(idEquipo);       //OBTENEMOS OBJETO EQUIPO FAVORITO
-                try
-                {
-                    var mensajeTemporal = AutoClosingMessageBox.Show(
-                    text: "BIENVENIDO A LA PESTAÑA PERSONALIZADA DEL " + EquipoFav.Nombre,
-                    caption: "EQUIPO DE 11FREAKS",
-                    timeout: 2000,
-                    buttons: MessageBoxButtons.OK);
-                    escudoEquipo.Source = new BitmapImage(new Uri(EquipoFav.Logo));     //MOSTRAMOS ESCUDO DEL EQUIPO
-                }
-                catch (Exception ex)
-                {
-                    var mensajeTemporalError = AutoClosingMessageBox.Show(
-                    text: "Whoops! Estamos teniendo dificultades " + ex.Message,
-                    caption: "EQUIPO DE 11FREAKS",
-                    timeout: 4000,
-                    buttons: MessageBoxButtons.OK);
-                }
+            //fotosJugadores = new ArrayList();
+
+            jugadoresListBox.ItemsSource = bdServer.DevuelveJugadoresEquipo(bdServer.DevuelveIdEquipo());               //CARGAMOS JUGADORES DEL EQUIPO DEL JUGADOR
 
 
-            }
 
+            /*   if (miBaseDatos.DevuelveEquipoFav() == null)
+               {
+                   idEquipo = miBaseDatos.DevuelveEquipoFav();
+                   var mensajeTemporal = AutoClosingMessageBox.Show(
+                   text: "Whoops! Parece que no tienes ningún equipo favorito ",
+                   caption: "EQUIPO DE 11FREAKS",
+                   timeout: 4000,
+                   buttons: MessageBoxButtons.OK);
+               }
+               else
+               {
+                   idEquipo = miBaseDatos.DevuelveEquipoFav();
+                   EquipoFav = miBaseDatos.MiInfoEquipo(idEquipo);       //OBTENEMOS OBJETO EQUIPO FAVORITO
+                   try
+                   {
+                       var mensajeTemporal = AutoClosingMessageBox.Show(
+                       text: "BIENVENIDO A LA PESTAÑA PERSONALIZADA DEL " + EquipoFav.Nombre,
+                       caption: "EQUIPO DE 11FREAKS",
+                       timeout: 2000,
+                       buttons: MessageBoxButtons.OK);
+                       escudoEquipo.Source = new BitmapImage(new Uri(EquipoFav.Logo));     //MOSTRAMOS ESCUDO DEL EQUIPO
+                   }
+                   catch (Exception ex)
+                   {
+                       var mensajeTemporalError = AutoClosingMessageBox.Show(
+                       text: "Whoops! Estamos teniendo dificultades " + ex.Message,
+                       caption: "EQUIPO DE 11FREAKS",
+                       timeout: 4000,
+                       buttons: MessageBoxButtons.OK);
+                   }
+
+
+               }
+            */
 
 
         }
@@ -127,7 +138,7 @@ namespace _11FREAKS.Presentacion
         /// </summary>
         private async void menuPlantilla_Click(object sender, RoutedEventArgs e)
         {
-            string respuesta;
+         /*   string respuesta;
             JsonDocument jsonBingMaps;
 
             try
@@ -189,7 +200,7 @@ namespace _11FREAKS.Presentacion
                 caption: "EQUIPO DE 11FREAKS",
                 timeout: 5000,
                 buttons: MessageBoxButtons.OK);
-            }
+            }*/
         }
 
         /// <summary>
@@ -227,7 +238,7 @@ namespace _11FREAKS.Presentacion
         /// <summary>
         /// Método Vinculado al Botón Estadiísticas Equipo
         /// </summary>
-        private async void menuEstadisticasEquipo_Click(object sender, RoutedEventArgs e)
+     /*   private async void menuEstadisticasEquipo_Click(object sender, RoutedEventArgs e)
         {
             string respuesta;
             JsonDocument jsonBingMaps;
@@ -278,7 +289,7 @@ namespace _11FREAKS.Presentacion
                              "\n\tVISITANTE | " + jsonBingMaps.RootElement.GetProperty("response").GetProperty("goals").GetProperty("for").GetProperty("total").GetProperty("away").ToString() +
                              "  PROMEDIO " + jsonBingMaps.RootElement.GetProperty("response").GetProperty("goals").GetProperty("against").GetProperty("average").GetProperty("away").ToString();
 
-        }
+        }*/
 
 
         /// <summary>
@@ -313,7 +324,7 @@ namespace _11FREAKS.Presentacion
         /// </summary>
         private async void menuLesiones_Click(object sender, RoutedEventArgs e)
         {
-            string respuesta;
+        /*    string respuesta;
             JsonDocument jsonBingMaps;
 
             try
@@ -375,7 +386,7 @@ namespace _11FREAKS.Presentacion
                 caption: "EQUIPO DE 11FREAKS",
                 timeout: 5000,
                 buttons: MessageBoxButtons.OK);
-            }
+            }*/
         }
 
 
@@ -387,7 +398,7 @@ namespace _11FREAKS.Presentacion
 
         private async void menuTraspasos_Click(object sender, RoutedEventArgs e)
         {
-            string respuesta;
+         /*   string respuesta;
             JsonDocument jsonBingMaps;
 
             try
@@ -490,6 +501,55 @@ namespace _11FREAKS.Presentacion
         }
 
         private void menuMiEquipo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void jugadoresListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Jugador jugadorSeleccionado = jugadoresListBox.SelectedItem as Jugador;
+
+            if (jugadorSeleccionado != null)
+            {
+                int idJugador = jugadorSeleccionado.idJugador;
+                string nombreJugador = jugadorSeleccionado.Nombre;
+
+                var mensajeTemporal2 = AutoClosingMessageBox.Show(
+                text: $"ID del Jugador: {idJugador}",
+                caption: "EQUIPO DE 11FREAKS",
+                timeout: 5000,
+                buttons: MessageBoxButtons.OK);
+
+                var mensajeTemporal3 = AutoClosingMessageBox.Show(
+                text: $"Nombre del Jugador: {nombreJugador}",
+                caption: "EQUIPO DE 11FREAKS",
+                timeout: 5000,
+                buttons: MessageBoxButtons.OK);
+
+            }*/
+        }
+
+        private void menuVolverPrincipal_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuMiEquipo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuEstadisticasEquipo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void jugadoresListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void menuSalir_Click(object sender, RoutedEventArgs e)
         {
 
         }

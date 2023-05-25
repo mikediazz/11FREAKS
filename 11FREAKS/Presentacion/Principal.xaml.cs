@@ -45,6 +45,8 @@ namespace _11FREAKS.Presentacion
                 menuOpcAdmin.Visibility = Visibility.Visible;
             }
 
+            equiposLigaListBox.ItemsSource = bdServer.DevuelveEquiposLiga("1");               //CARGAMOS EQUIPOS DE LA LIGA
+
         }
 
         /// <summary>
@@ -633,6 +635,16 @@ namespace _11FREAKS.Presentacion
         }
 
         private void menuAjustarVolumen_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuMiClasificacion_Click(object sender, RoutedEventArgs e)
+        {
+            //MÉTODO VER CLASIFICACIÓN MI LIGA
+        }
+
+        private void equiposLigaListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

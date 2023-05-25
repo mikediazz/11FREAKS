@@ -31,10 +31,10 @@
       <Argument Key="maxVersionParts" Value="" xmlns="" />
     </TransformComponentArguments>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\11FREAKS\11FREAKS.csproj" xmlns="" />
+      <DocumentationSource sourceFile="..\11FREAKS\11FREAKS.csproj" subFolders="True" />
     </DocumentationSources>
-    <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
-    <SyntaxFilters>Standard</SyntaxFilters>
+    <HelpFileFormat>HtmlHelp1, MSHelpViewer, Website</HelpFileFormat>
+    <SyntaxFilters>C#, Visual Basic, Visual Basic Usage, Managed C++, F#, XAML Usage</SyntaxFilters>
     <PresentationStyle>VS2013</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>
     <KeepLogFile>True</KeepLogFile>
