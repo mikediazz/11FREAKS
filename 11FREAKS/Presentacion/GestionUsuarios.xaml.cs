@@ -31,14 +31,15 @@ namespace _11FREAKS.Presentacion
          Caso 1| Sign up Admin
          Caso 2| Cambio de Nombre de Usuario
          Caso 3| Cambio de Contraseña
+         Caso 4| Cambio de Email
          */
 
-        public GestionUsuarios(Principal fprincipal, BaseDatos bbdd, int tipoCaso)
+        public GestionUsuarios(Principal fprincipal, BDOnline bbdd, int tipoCaso)
         {
             InitializeComponent();
             principal= fprincipal;
-            miBaseDatos = bbdd;
-            bdServer = new BDOnline();
+            // miBaseDatos = bbdd;
+            bdServer = bbdd;
             caso=tipoCaso;
 
 
@@ -176,7 +177,11 @@ namespace _11FREAKS.Presentacion
 
                     case 4:
                         bdServer.CambiarCorreo(bdServer.DevuelveUsuario(),bdServer.DevuelveCorreo());
-                        
+                        var mensajePrueba = AutoClosingMessageBox.Show(
+                        text: "CAMBIAR CORREO ",
+                        caption: "EQUIPO DE 11FREAKS",
+                        timeout: 3000,
+                        buttons: MessageBoxButtons.OK);
                         Correo correo = new Correo();
                         correo.CorreoCambioEmail(bdServer.DevuelveCorreo());     //ENVIAMOS CORREO INFORMATIVO AL USUARIO
                         this.Close();
@@ -184,11 +189,11 @@ namespace _11FREAKS.Presentacion
 
 
                     default:
-                        var mensajePrueba = AutoClosingMessageBox.Show(
+                       /* var mensajePrueba = AutoClosingMessageBox.Show(
                         text: "**NO ENTRO EN LOS CASOS** " + caso,
                         caption: "EQUIPO DE 11FREAKS",
                         timeout: 3000,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                         this.Close();
                         break;
                 }

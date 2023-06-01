@@ -70,6 +70,7 @@ namespace _11FREAKS.Datos
                             equipo = lector["Equipo"].ToString();
                             activo = lector.GetString(6);
                             idEquipo = lector.GetInt32(7);
+                            MessageBox.Show("LECTOR IDEQUIPO"+lector.GetInt32(7).ToString());
                             conDisponible = true;
                         }
                     }
@@ -481,6 +482,7 @@ namespace _11FREAKS.Datos
         /// </returns>
         public int DevuelveIdEquipo()
         {
+            MessageBox.Show("IDEQUIPO\t" + idEquipo.ToString());
             return idEquipo;
         }
 
@@ -736,7 +738,7 @@ namespace _11FREAKS.Datos
                 if (conexion == null)
                 {
                     conexion = new MySqlConnection(connectionString);
-                    comando = new MySqlCommand("SELECT * FROM jugadores WHERE idEquipo=16 ;", conexion);
+                    comando = new MySqlCommand("SELECT * FROM jugadores WHERE idEquipo= "+idEquipo+";", conexion);
 
                     conexion.Open();
                     lector = comando.ExecuteReader();

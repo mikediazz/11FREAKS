@@ -41,6 +41,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoClosingMessageBox" Version="1.0.0.5" />
+    <PackageReference Include="EWSoftware.SHFB" Version="2023.3.4" />
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.5.0" />
     <PackageReference Include="itext7" Version="7.2.5" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />

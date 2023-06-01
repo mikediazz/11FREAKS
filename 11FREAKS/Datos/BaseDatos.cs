@@ -235,7 +235,7 @@ namespace _11FREAKS.Datos
             return idEquipoFav;
         }
 
-
+        
 
         /// <summary>
         ///     Método para Comprobar que la Contraseña es Segura 

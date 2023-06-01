@@ -535,6 +535,19 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:_11FREAKS.Presentacion.Partido">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            Partido
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:_11FREAKS.Presentacion.Principal">
             <summary>
             Clase Interacción con Principal.xaml || Ventana Principal del Proyecto

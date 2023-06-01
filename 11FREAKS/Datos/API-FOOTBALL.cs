@@ -34,7 +34,7 @@ namespace _11FREAKS.Datos
             ArrayList fotosJugadores= new ArrayList();
             ArrayList resultados = new ArrayList();
             string resultadoJugador=String.Empty;
-            int currentPage =2;
+            int currentPage =1;
             int totalPaginas=500;       //PONEMOS NÚMERO GRANDE COMO PRUEBA
             int contJugadores=0;
 

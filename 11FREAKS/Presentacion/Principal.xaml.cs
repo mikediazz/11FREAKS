@@ -118,7 +118,7 @@ namespace _11FREAKS.Presentacion
         /// </summary>
         private void menuAñadirAdmin_Click(object sender, RoutedEventArgs e)
         {
-            GestionUsuarios gesUsers = new GestionUsuarios(this,miBaseDatos,1);     //CASO DE USO PARA AÑADIR ADMIN
+            GestionUsuarios gesUsers = new GestionUsuarios(this,bdServer,1);     //CASO DE USO PARA AÑADIR ADMIN
             this.Hide();
             gesUsers.ShowDialog();
         }
@@ -478,7 +478,7 @@ namespace _11FREAKS.Presentacion
         /// </summary>
         private void menuVerEquipo_Click(object sender, RoutedEventArgs e)
         {
-            MiEquipo miEquipo = new MiEquipo(this, miBaseDatos);
+            MiEquipo miEquipo = new MiEquipo(this, bdServer);
             miEquipo.Show();
             this.Hide();
         }
@@ -590,13 +590,13 @@ namespace _11FREAKS.Presentacion
 
         private void menuCambiarUsuario_Click(object sender, RoutedEventArgs e)
         {
-            GestionUsuarios gest = new GestionUsuarios(this,miBaseDatos, 2);
+            GestionUsuarios gest = new GestionUsuarios(this, bdServer, 2);
             gest.ShowDialog();
         }
 
         private void menuCambiarContraseña_Click(object sender, RoutedEventArgs e)
         {
-            GestionUsuarios gest = new GestionUsuarios(this,miBaseDatos, 3);
+            GestionUsuarios gest = new GestionUsuarios(this, bdServer, 3);
             gest.ShowDialog();
         }
 
@@ -630,7 +630,7 @@ namespace _11FREAKS.Presentacion
 
         private void menuCambiarCorreo_Click(object sender, RoutedEventArgs e)
         {
-            GestionUsuarios gest = new GestionUsuarios(this, miBaseDatos, 4);
+            GestionUsuarios gest = new GestionUsuarios(this, bdServer, 4);
             gest.ShowDialog();
         }
 
@@ -646,6 +646,13 @@ namespace _11FREAKS.Presentacion
 
         private void equiposLigaListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
+        }
+
+        private void menuJugarPartido_Click(object sender, RoutedEventArgs e)
+        {
+            Partido partido = new Partido(this, bdServer);
+            partido.ShowDialog();
 
         }
     }

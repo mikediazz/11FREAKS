@@ -35,12 +35,12 @@ namespace _11FREAKS.Presentacion
         private string idEquipo;
         private Equipo EquipoFav;
         ArrayList fotosJugadores;
-        public MiEquipo(Principal p, Datos.BaseDatos bd)
+        public MiEquipo(Principal p, Datos.BDOnline bd)
         {
             InitializeComponent();
             principal = p;
             //miBaseDatos = bd;
-            bdServer=new Datos.BDOnline();
+            bdServer = bd;
 
             //fotosJugadores = new ArrayList();
 

@@ -15,10 +15,12 @@
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)obfuscar\2.2.37\build\obfuscar.props" Condition="Exists('$(NuGetPackageRoot)obfuscar\2.2.37\build\obfuscar.props')" />
+    <Import Project="$(NuGetPackageRoot)ewsoftware.shfb\2023.3.4\build\EWSoftware.SHFB.props" Condition="Exists('$(NuGetPackageRoot)ewsoftware.shfb\2023.3.4\build\EWSoftware.SHFB.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Xaml_Behaviors_Wpf Condition=" '$(PkgMicrosoft_Xaml_Behaviors_Wpf)' == '' ">C:\Users\mdnon\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.31</PkgMicrosoft_Xaml_Behaviors_Wpf>
     <PkgObfuscar Condition=" '$(PkgObfuscar)' == '' ">C:\Users\mdnon\.nuget\packages\obfuscar\2.2.37</PkgObfuscar>
     <PkgExtended_Wpf_Toolkit Condition=" '$(PkgExtended_Wpf_Toolkit)' == '' ">C:\Users\mdnon\.nuget\packages\extended.wpf.toolkit\4.5.0</PkgExtended_Wpf_Toolkit>
+    <PkgEWSoftware_SHFB Condition=" '$(PkgEWSoftware_SHFB)' == '' ">C:\Users\mdnon\.nuget\packages\ewsoftware.shfb\2023.3.4</PkgEWSoftware_SHFB>
   </PropertyGroup>
 </Project>

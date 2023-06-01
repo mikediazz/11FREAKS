@@ -109,3 +109,5 @@ C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\bin\Debug\net6.0-windows
 C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\bin\Debug\net6.0-windows\ru\Xceed.Wpf.AvalonDock.NET5.resources.dll
 C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\bin\Debug\net6.0-windows\sv\Xceed.Wpf.AvalonDock.NET5.resources.dll
 C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\bin\Debug\net6.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.NET5.resources.dll
+C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows\Presentacion\Partido.g.cs
+C:\Users\mdnon\Desktop\2DAM\DI\EjerDI\11FREAKS\11FREAKS\obj\Debug\net6.0-windows\Presentacion\Partido.baml

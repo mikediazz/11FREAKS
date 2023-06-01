@@ -9,6 +9,7 @@
       "11FREAKS/1.0.0": {
         "dependencies": {
           "AutoClosingMessageBox": "1.0.0.5",
+          "EWSoftware.SHFB": "2023.3.4",
           "Extended.Wpf.Toolkit": "4.5.0",
           "MySql.Data": "8.0.33",
           "Obfuscar": "2.2.37",
@@ -31,6 +32,7 @@
         }
       },
       "BouncyCastle/1.8.9": {},
+      "EWSoftware.SHFB/2023.3.4": {},
       "Extended.Wpf.Toolkit/4.5.0": {
         "runtime": {
           "lib/net5.0/Xceed.Wpf.AvalonDock.NET5.dll": {
@@ -1062,6 +1064,13 @@
       "sha512": "sha512-axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
       "path": "bouncycastle/1.8.9",
       "hashPath": "bouncycastle.1.8.9.nupkg.sha512"
+    },
+    "EWSoftware.SHFB/2023.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0jNbJYKJBCdyjLdp+UmuBquzY3v78BBfFCi8x92/MhFTdfp7GdPQrM5Hio0i4ygaGBqPGHZGeS6RsPPqUiPjEA==",
+      "path": "ewsoftware.shfb/2023.3.4",
+      "hashPath": "ewsoftware.shfb.2023.3.4.nupkg.sha512"
     },
     "Extended.Wpf.Toolkit/4.5.0": {
       "type": "package",

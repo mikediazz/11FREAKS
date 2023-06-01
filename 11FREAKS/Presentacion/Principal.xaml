@@ -66,6 +66,11 @@
                         <ToolTip Content="CONSULTA LOS EQUIPOS DE LA LIGA"/>
                     </MenuItem.ToolTip>
                 </MenuItem>
+                <MenuItem x:Name="menuJugarPartido" Header="JUGAR PARTIDO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuJugarPartido_Click" >
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="DISPUTA PARTIDO"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
             </MenuItem>
 
 
@@ -213,7 +218,7 @@
 
 
 
-        <ListBox x:Name="equiposLigaListBox" Height="600" Width="450" ToolTip="ESTA ES TU PLANTILLA"  HorizontalAlignment="Center" Margin="0,71,0,13" SelectionChanged="equiposLigaListBox_SelectionChanged">
+        <ListBox Visibility="Hidden" x:Name="equiposLigaListBox" Height="600" Width="450" ToolTip="ESTA ES TU PLANTILLA"  HorizontalAlignment="Center" Margin="0,71,0,13" SelectionChanged="equiposLigaListBox_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>

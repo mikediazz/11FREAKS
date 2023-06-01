@@ -28,20 +28,20 @@
                 <ToolTip Content="Longitud Mínima Contraseña será de 7 caracteres, Contendrá al menos una Mayúscula, y no puede contener Caracteres Especiales "/>
             </Label.ToolTip>
         </Label>
-        <Button x:Name="btnRegistrarse" Content="CREAR CUENTA" Margin="362,271,48,0" VerticalAlignment="Top" Height="44" FontSize="16" FontWeight="Bold" Click="btnRegistrarse_Click"
+        <Button x:Name="btnRegistrarse" Visibility="Hidden" Content="CREAR CUENTA" Margin="362,271,48,0" VerticalAlignment="Top" Height="44" FontSize="16" FontWeight="Bold" Click="btnRegistrarse_Click"
                 
                 >
             <Button.ToolTip>
                 <ToolTip Content="PULSE PARA CREAR SU CUENTA"/>
             </Button.ToolTip>
         </Button>
-        <Label Content="EQUIPO" HorizontalAlignment="Left" Margin="380,168,0,0" VerticalAlignment="Top" Width="95" Height="28" FontWeight="Bold">
+        <Label Content="EQUIPO" HorizontalAlignment="Left" Margin="370,134,0,0" VerticalAlignment="Top" Width="95" Height="28" FontWeight="Bold">
             <Label.ToolTip>
                 <ToolTip Content="Longitud Mínima Contraseña será de 7 caracteres"/>
             </Label.ToolTip>
         </Label>
 
-        <TextBox x:Name="txtEmail" Text="md.nonpersonal@gmail.com" Visibility="Visible" HorizontalAlignment="Left" Margin="109,284,0,0"  VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.542,-2.225" Height="22">
+        <TextBox x:Name="txtEmail" Text="correo@gmail.com" Visibility="Visible" HorizontalAlignment="Left" Margin="109,284,0,0"  VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.542,-2.225" Height="22">
             <TextBox.ToolTip>
                 <ToolTip Content="Introduzca Dirección de Correo de contacto"/>
             </TextBox.ToolTip>
@@ -51,17 +51,17 @@
                 <ToolTip Content="Introduzca un Email de contacto"/>
             </Label.ToolTip>
         </Label>
-        <TextBox x:Name="txtEquipo" Text="FORTNITE FC" HorizontalAlignment="Left" Margin="377,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="22" TextChanged="txtEquipo_TextChanged" >
+        <TextBox x:Name="txtEquipo" Text="ANIQUILADORES FC" HorizontalAlignment="Left" Margin="367,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="22" TextChanged="txtEquipo_TextChanged" >
             <TextBox.ToolTip>
                 <ToolTip Content="Introduzca Nombre Su Equipo"/>
             </TextBox.ToolTip>
         </TextBox>
-        <Label x:Name="lblAbrev" Content="ABREVIATURA" HorizontalAlignment="Left" Margin="567,167,0,0" VerticalAlignment="Top" Width="95" Height="28" FontWeight="Bold">
+        <Label x:Name="lblAbrev" Content="ABREVIATURA" HorizontalAlignment="Left" Margin="557,133,0,0" VerticalAlignment="Top" Width="95" Height="28" FontWeight="Bold">
             <Label.ToolTip>
                 <ToolTip Content="Longitud Mínima Contraseña será de 3 caracteres"/>
             </Label.ToolTip>
         </Label>
-        <TextBox x:Name="txtAbreviatura" Text="FRT" HorizontalAlignment="Left" Margin="565,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="22" TextChanged="txtEquipo_TextChanged" >
+        <TextBox x:Name="txtAbreviatura" Text="ANI" HorizontalAlignment="Left" Margin="555,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="22" TextChanged="txtEquipo_TextChanged" >
             <TextBox.ToolTip>
                 <ToolTip Content="Introduzca Abreviatura de su Equipo"/>
             </TextBox.ToolTip>
@@ -82,14 +82,14 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Label Content="LOGIN" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="35" Foreground="#FFC5C5C6" VerticalAlignment="Top" Width="168" Height="49" FontWeight="Bold" Margin="0,32,0,0">
+        <Label Content="SIGN UP" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="35" Foreground="#FFC5C5C6" VerticalAlignment="Top" Width="168" Height="49" FontWeight="Bold" Margin="0,32,0,0">
             <Label.ToolTip>
                 <ToolTip Content="El Usuario Tendrá una longitud máxima de 20 caracteres"/>
             </Label.ToolTip>
         </Label>
 
 
-        <Button Content="CREAR CUENTA" Width="100" Height="40" Background="LightBlue" Foreground="White" Margin="383,341,317,53" Click="Button_Click">
+        <Button Content="CREAR CUENTA" Background="LightBlue" Foreground="White" Margin="453,235,196,145" Click="Button_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}"
