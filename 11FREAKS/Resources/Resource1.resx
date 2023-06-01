@@ -154,6 +154,9 @@
   <data name="Logo11Freaks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Logo11Freaks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="penaltiPov" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>penaltiPov.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="skip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>skip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

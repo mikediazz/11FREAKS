@@ -23,6 +23,7 @@
     <None Remove="Resources\iconoUsuario.png" />
     <None Remove="Resources\Intro11Freaks.mp4" />
     <None Remove="Resources\Logo11Freaks.png" />
+    <None Remove="Resources\penaltiPov.png" />
     <None Remove="Resources\skip.png" />
     <None Remove="Resources\volumenAct.png" />
   </ItemGroup>
@@ -89,6 +90,9 @@
     </Content>
     <Resource Include="Resources\Logo11Freaks.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\penaltiPov.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\skip.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -22,6 +22,9 @@
     <Compile Update="Presentacion\Partido.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Presentacion\Penalti.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Presentacion\Principal.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -51,6 +54,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Presentacion\Partido.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Presentacion\Penalti.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Presentacion\Principal.xaml">

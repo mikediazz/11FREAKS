@@ -58,7 +58,7 @@ namespace _11FREAKS.Presentacion
              timer.Start();*/
 
 
-
+            
 
 
 
@@ -410,6 +410,8 @@ namespace _11FREAKS.Presentacion
                     timeout: 1500,
                     buttons: MessageBoxButtons.OK);
                     ElegirBando(7, local, visitante);
+                    Penalti penalti = new Penalti(this, bdServer);              //ABRIMOS VENTANA LANZAMIENTO PENALTI
+                    penalti.ShowDialog();
                     return 7;
 
                 case int n when (n >= 74 && n <= 93):
@@ -599,6 +601,11 @@ namespace _11FREAKS.Presentacion
 
 
 
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;        //CANCELAMOS CIERRE VENTANA
         }
     }
 }

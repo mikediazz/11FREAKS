@@ -548,6 +548,19 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:_11FREAKS.Presentacion.Penalti">
+            <summary>
+            Lógica de interacción para Penalti.xaml
+            </summary>
+            <summary>
+            Penalti
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Penalti.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:_11FREAKS.Presentacion.Principal">
             <summary>
             Clase Interacción con Principal.xaml || Ventana Principal del Proyecto
@@ -724,6 +737,11 @@
             </summary>
         </member>
         <member name="P:_11FREAKS.Resources.Resource1.Logo11Freaks">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.penaltiPov">
             <summary>
               Busca un recurso adaptado de tipo System.Drawing.Bitmap.
             </summary>
