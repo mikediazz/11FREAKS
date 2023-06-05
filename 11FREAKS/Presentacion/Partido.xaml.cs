@@ -32,15 +32,18 @@ namespace _11FREAKS.Presentacion
         List<int> listaEventos;
         int local = 50;                         //Gestión Probabilidad Victoria Ambos Equipos
         int visitante = 50;
-        int golesLocal = 0;
-        int golesVisitante = 0;
+        public int GolesLocal { get; set; }
+        public int GolesVisitante { get; set; }
 
-        public Partido(Principal ppal, BDOnline bd)
+    public Partido(Principal ppal, BDOnline bd)
         {
             InitializeComponent();
 
             this.principal = ppal;
             this.bdServer = bd;
+
+            GolesLocal = 0;
+            GolesVisitante = 0;
             //dispatcherTimer = new DispatcherTimer();        //GESTIONA HORA DEL SISTEMA
             temporizador = new System.Windows.Threading.DispatcherTimer();
             temporizador.Interval = new TimeSpan(0, 0, 0, 1);
@@ -483,15 +486,15 @@ namespace _11FREAKS.Presentacion
                     case 1:                  //GOL
                         local += 10;
                         visitante -= 10;
-                        golesLocal++;
-                        lblMarcador.Content = golesLocal + "-" + golesVisitante;       //ACTUALIZAMOS MARCADOR
+                        GolesLocal++;
+                        lblMarcador.Content = GolesLocal + "-" + GolesVisitante;       //ACTUALIZAMOS MARCADOR
                         break;
 
                     case 2:                 //AUTOGOL
                         local -= 12;
                         visitante += 12;
-                        golesVisitante++;
-                        lblMarcador.Content = golesLocal + "-" + golesVisitante;       //ACTUALIZAMOS MARCADOR
+                        GolesVisitante++;
+                        lblMarcador.Content = GolesLocal + "-" + GolesVisitante;       //ACTUALIZAMOS MARCADOR
                         break;
 
                     case 3:                 //GOL ANULADO
@@ -510,7 +513,7 @@ namespace _11FREAKS.Presentacion
                         break;
 
                     case 7:                 //PENALTI
-                        local += 7;                 //GESTIONAR SI SE MARCA O SE FALLA EL PENALTI
+                        local += 7;                 
                         visitante -= 7;
                         break;
 
@@ -546,15 +549,15 @@ namespace _11FREAKS.Presentacion
                     case 1:                  //GOL
                         visitante += 10;
                         local -= 10;
-                        golesVisitante++;
-                        lblMarcador.Content = golesLocal + "-" + golesVisitante;      //ACTUALIZAMOS MARCADOR
+                        GolesVisitante++;
+                        lblMarcador.Content = GolesLocal + "-" + GolesVisitante;      //ACTUALIZAMOS MARCADOR
                         break;
 
                     case 2:                 //AUTOGOL
                         visitante -= 12;
                         local += 12;
-                        golesLocal++;
-                        lblMarcador.Content = golesLocal + "-" + golesVisitante;       //ACTUALIZAMOS MARCADOR
+                        GolesLocal++;
+                        lblMarcador.Content = GolesLocal + "-" + GolesVisitante;       //ACTUALIZAMOS MARCADOR
                         break;
 
                     case 3:                 //GOL ANULADO
@@ -573,7 +576,7 @@ namespace _11FREAKS.Presentacion
                         break;
 
                     case 7:                 //PENALTI
-                        visitante += 7;                 //GESTIONAR SI SE MARCA O SE FALLA EL PENALTI
+                        visitante += 7;                 
                         local -= 7;
                         break;
 
@@ -607,5 +610,24 @@ namespace _11FREAKS.Presentacion
         {
             e.Cancel = true;        //CANCELAMOS CIERRE VENTANA
         }
+
+
+
+        private void AbrirVentanaPenalti()
+        {
+            Penalti ventanaPenalti = new Penalti(this, bdServer);
+            ventanaPenalti.ShowDialog();
+
+            
+            bool valorGol = ventanaPenalti.Gol; // Acceder al valor después de que se cierre la ventana "Penalti"
+            var msgEvento10 = AutoClosingMessageBox.Show(
+            text: "RESULTADO DEL PENALTI\t" +valorGol,
+            caption: "ÁRBITRO",
+            timeout: 1500,
+            buttons: MessageBoxButtons.OK);
+
+        }
+
+
     }
 }

@@ -23,6 +23,9 @@ namespace _11FREAKS.Presentacion
     {
         Partido partido;
         BDOnline bdServer;
+        public bool Gol { get; set; }
+        bool permitirClosing = false;
+
 
 
         public Penalti(Partido part, BDOnline bd)
@@ -34,46 +37,53 @@ namespace _11FREAKS.Presentacion
 
         private void OnCellClick(object sender, RoutedEventArgs e)
         {
-            Button cell = (Button)sender;
+            Button celda = (Button)sender;
 
 
-            int row = Grid.GetRow(cell);                // Obtén la posición de la celda en la cuadrícula
-            int column = Grid.GetColumn(cell);
+            int fila = Grid.GetRow(celda);                // Obtén la posición de la celda en la cuadrícula
+            int columna = Grid.GetColumn(celda);
 
 
-            bool isGoal = DetermineGoal(row, column);   // Realiza la lógica del lanzamiento de penalti
+            Gol = DeterminarGol(fila, columna);   // Realiza la lógica del lanzamiento de penalti y almacena en variable "gol"
 
-            if (isGoal)
+            if (Gol)
             {
-                cell.Background = Brushes.Green;
+                celda.Background = Brushes.Green;
                 MessageBox.Show("¡Goooooool!");         // La celda seleccionada fue un gol
                 Thread.Sleep(5000);
-                cell.Background = Brushes.LightGray;
+                celda.Background = Brushes.LightGray;
+                partido.GolesLocal += 1;                // Sumamos gol al equipo local
             }
             else
             {
-                cell.Background = Brushes.Red;
+                celda.Background = Brushes.Red;
                 MessageBox.Show("¡El portero ha parado el disparo!");   // La celda seleccionada fue parada por el portero
                 Thread.Sleep(5000);
-                cell.Background = Brushes.LightGray;
-
-
+                celda.Background = Brushes.LightGray;
             }
+
+            partido.lblMarcador.Content = partido.GolesLocal + "-" + partido.GolesVisitante;       //ACTUALIZAMOS MARCADOR TRAS EL PENALTI
+
+            permitirClosing = true;             //Permitimos que se pueda cerrar la ventana
+            this.Close();
+
+
+
         }
 
 
 
 
 
-        private bool DetermineGoal(int row, int column)
+        private bool DeterminarGol(int fila, int columna)
         {
             // Genera aleatoriamente la ubicación de las celdas que serán falsas (paradas del portero)
-            List<Tuple<int, int>> blockedCells = GenerateBlockedCells();
+            List<Tuple<int, int>> blockedCells = GeneraParadas();
 
             // Comprueba si la celda seleccionada está bloqueada
             foreach (var blockedCell in blockedCells)
             {
-                if (blockedCell.Item1 == row && blockedCell.Item2 == column)
+                if (blockedCell.Item1 == fila && blockedCell.Item2 == columna)
                 {
                     return false; // El lanzamiento fue parado por el portero
                 }
@@ -82,26 +92,25 @@ namespace _11FREAKS.Presentacion
             return true; // El lanzamiento fue un gol
         }
 
-        private List<Tuple<int, int>> GenerateBlockedCells()
+        private List<Tuple<int, int>> GeneraParadas()
         {
             List<Tuple<int, int>> blockedCells = new List<Tuple<int, int>>();
             Random random = new Random();
 
-            int totalCells = 9;  // Número total de celdas en la portería
-            int blockedCellsCount = 3;  // Número de celdas que serán paradas del portero
+            int totalCeldas = 9;    //Número total de celdas en la portería
+            int celdasParadas = 3;  //Número de celdas que serán paradas del portero
 
             // Genera aleatoriamente las celdas bloqueadas
-            while (blockedCells.Count < blockedCellsCount)
+            while (blockedCells.Count < celdasParadas)
             {
-                int row = random.Next(3);  // Número de filas en la cuadrícula (0-2)
-                int column = random.Next(3);  // Número de columnas en la cuadrícula (0-2)
+                int fila = random.Next(3);              //Número de filas en la cuadrícula (0-2)
+                int columna = random.Next(3);           //Número de columnas en la cuadrícula (0-2)
 
-                Tuple<int, int> cell = new Tuple<int, int>(row, column);
+                Tuple<int, int> celda = new Tuple<int, int>(fila, columna);
 
-                // Verifica si la celda ya está bloqueada
-                if (!blockedCells.Contains(cell))
+                if (!blockedCells.Contains(celda))       // Verifica si la celda ya está bloqueada
                 {
-                    blockedCells.Add(cell);
+                    blockedCells.Add(celda);
                 }
             }
 
@@ -110,7 +119,11 @@ namespace _11FREAKS.Presentacion
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            e.Cancel = true;        //CANCELAMOS CIERRE VENTANA
+            if (permitirClosing==false)
+            {
+                e.Cancel = true;        //Cancelamos cierre ventana
+            }
+            
         }
     }
 }

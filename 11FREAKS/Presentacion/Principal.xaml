@@ -218,7 +218,7 @@
 
 
 
-        <ListBox Visibility="Hidden" x:Name="equiposLigaListBox" Height="600" Width="450" ToolTip="ESTA ES TU PLANTILLA"  HorizontalAlignment="Center" Margin="0,71,0,13" SelectionChanged="equiposLigaListBox_SelectionChanged">
+        <ListBox Visibility="Visible" x:Name="equiposLigaListBox" Height="600" Width="450" ToolTip="ESTA ES TU PLANTILLA"  HorizontalAlignment="Center" Margin="0,71,0,13" SelectionChanged="equiposLigaListBox_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
