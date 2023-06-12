@@ -10,13 +10,23 @@ using System.Windows;
 
 namespace _11FREAKS.Datos
 {
+    /// <summary>
+    ///     Clase para la gestión de envío de Correo Automátivos
+    /// </summary>
     internal class Correo
     {
 
-
+        /// <summary>
+        /// Contructor vacío clase Correo
+        /// </summary>
         public Correo() { } //CONSTRUCTOR VACÍO
 
-
+        /// <summary>
+        /// Método envía correo de bienvenida (Al Registrarse)
+        /// </summary>
+        /// <param name="email">
+        ///     Recibimos email del usuario
+        /// </param>
         public void CorreoBienvenida(string email)
         {
             System.Windows.Application.Current.Dispatcher.Invoke(new Action(() =>
@@ -54,7 +64,12 @@ namespace _11FREAKS.Datos
 
 
 
-
+        /// <summary>
+        /// Método envía correo al usuario tras restablecer su contraseña
+        /// </summary>
+        /// <param name="email">
+        ///     Recibimos email del usuario
+        /// </param>
         public void CorreoContraseña(string email)
         {
             using (MailMessage correo = new MailMessage())
@@ -85,8 +100,12 @@ namespace _11FREAKS.Datos
 
 
 
-
-
+        /// <summary>
+        /// Método envía correo al usuario tras restablecer su email asociado
+        /// </summary>
+        /// <param name="email">
+        ///     Recibimos email del usuario
+        /// </param>
         public void CorreoCambioEmail(string email)
         {
             using (MailMessage correo = new MailMessage())
@@ -117,9 +136,12 @@ namespace _11FREAKS.Datos
 
 
 
-
-
-
+        /// <summary>
+        /// Método envía correo al usuario tras eliminar su cuenta
+        /// </summary>
+        /// <param name="email">
+        ///     Recibimos email del usuario
+        /// </param>
         public void CorreoCuentaEliminada(string email)
         {
             using (MailMessage correo = new MailMessage())
@@ -152,7 +174,12 @@ namespace _11FREAKS.Datos
 
 
 
-
+        /// <summary>
+        /// Método envía correo al usuario tras ser baneado
+        /// </summary>
+        /// <param name="email">
+        ///     Recibimos email del usuario
+        /// </param>
         public void CorreoBaneo(string email)
         {
             using (MailMessage correo = new MailMessage())

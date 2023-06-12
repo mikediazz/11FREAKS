@@ -71,12 +71,10 @@ namespace _11FREAKS.Presentacion
         }
 
         private void listBoxUsuarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-            //MessageBox.Show(listBoxUsuarios.SelectedIndex.ToString());
-            
-            
+        { 
+            //MessageBox.Show(listBoxUsuarios.SelectedIndex.ToString());  
         }
+
 
         /// <summary>
         ///     Función Gestiona Interacción con Elementos de ListBox Usuarios --> Permite Borrado de Usuarios
@@ -112,6 +110,10 @@ namespace _11FREAKS.Presentacion
 
         }
 
+
+        /// <summary>
+        ///     Función Gestiona Interacción con Elementos de ListBox Usuarios --> Permite Otorgar Permisos
+        /// </summary>
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
             string auxNom = listBoxUsuarios.Items[listBoxUsuarios.SelectedIndex].ToString();
@@ -125,15 +127,11 @@ namespace _11FREAKS.Presentacion
             {
                 bdServer.DarPermisos(auxNom);
             }
-
-
             if (esAdmin == '#')
             {
                 MessageBox.Show("ESTE USUARIO ES ADMINISTRADOR");
             }
-
-
-            
+ 
         }
     }
 }

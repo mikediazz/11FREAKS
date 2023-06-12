@@ -18,11 +18,12 @@ using System.Windows.Forms;
 using System.Windows.Media.Animation;
 using System.Security.Cryptography;
 using _11FREAKS.Datos;
+using System.Threading;
 
 namespace _11FREAKS.Presentacion
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Clase que gestiona la Ventana Partido
     /// </summary>
     public partial class Partido : Window
     {
@@ -34,8 +35,27 @@ namespace _11FREAKS.Presentacion
         int visitante = 50;
         public int GolesLocal { get; set; }
         public int GolesVisitante { get; set; }
+        bool permitirCierre = false;
+        int idEvento=-1;
 
-    public Partido(Principal ppal, BDOnline bd)
+            //VARIABLES TIEMPO
+            int i = 1;
+            int u = 0;
+            int segundo = 0;
+            int minuto = 0;
+            int numero = 0;
+            bool primeraParte = true;  //INFORMA SI EL PARTIDO SE ENCUENTRA EN LA 1º PARTE
+            bool segundaParte = false;  //INFORMA SI EL PARTIDO SE ENCUENTRA EN LA 1º PARTE
+            int descuento1 = 0;     //TIEMPO DESCUENTO PRIMERA MITAD
+            int descuento2 = 0;     //TIEMPO DESCUENTO SEGUNDA MITAD
+            int tiempo1 = 45;       //DURACIÓN PRIMERA MITAD
+            int tiempo2 = 90;       //DURACIÓN SEGUNDA MITAD
+            bool cartelonDto1 = false;       //INFORMA SI SE HA MOSTRADO EL DESCUENTO DEL 1º TIEMPO AL USUARIO
+            bool cartelonDto2 = false;       //INFORMA SI SE HA MOSTRADO EL DESCUENTO DEL 2º TIEMPO AL USUARIO
+            System.Windows.Threading.DispatcherTimer temporizador;
+
+
+        public Partido(Principal ppal, BDOnline bd)
         {
             InitializeComponent();
 
@@ -49,96 +69,38 @@ namespace _11FREAKS.Presentacion
             temporizador.Interval = new TimeSpan(0, 0, 0, 1);
             temporizador.Tick += new EventHandler(temporizador_tick);
 
-
-
         }
 
+        /// <summary>
+        /// Método que al cargar ventana Partido, llama a los método encargados de generar los eventos y en el minuto en el que se producirán
+        /// </summary>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            /* DispatcherTimer timer = new DispatcherTimer();
-             timer.Interval = TimeSpan.FromSeconds(1);
-             timer.Tick += timer_Tick;
-             timer.Start();*/
-
-
-            
-
-
-
-            /*string encriptado=Encriptar("Probando7");
-
-             var msgDescuento = AutoClosingMessageBox.Show(
-             text: "-" + encriptado + "-",
-             caption: "ÁRBITRO",
-             timeout: 1500,
-             buttons: MessageBoxButtons.OK);*/
-
-
-
             listaEventos = SituarEventos(NumeroEventos());             //GENERAMOS NÚMERO DE EVENTOS QUE TENDRÁ EL PARTIDO Y EL MINUTO EN EL QUE SE PRODUCIRÁN
 
+            if (WindowState == WindowState.Maximized)
+            {
+                double width = ActualWidth;
+                double height = ActualHeight;
+                System.Windows.MessageBox.Show(width+"x"+height);
 
-
-
-
+                // Haz lo que necesites con las dimensiones de la ventana maximizada
+            }
         }
 
-        void timer_Tick(object sender, EventArgs e)
-        {
-            // lblCrono.Content = DateTime.Now.ToString();
-        }
 
-        System.Windows.Threading.DispatcherTimer temporizador;
-
-        // variables
-        int i = 1;
-        int u = 0;
-        int segundo = 0;
-        int minuto = 0;
-        int numero = 0;
-        bool primeraParte = true;  //INFORMA SI EL PARTIDO SE ENCUENTRA EN LA 1º PARTE
-        bool segundaParte = false;  //INFORMA SI EL PARTIDO SE ENCUENTRA EN LA 1º PARTE
-        int descuento1 = 0;     //TIEMPO DESCUENTO PRIMERA MITAD
-        int descuento2 = 0;     //TIEMPO DESCUENTO SEGUNDA MITAD
-        int tiempo1 = 45;       //DURACIÓN PRIMERA MITAD
-        int tiempo2 = 90;       //DURACIÓN SEGUNDA MITAD
-        bool cartelonDto1 = false;       //INFORMA SI SE HA MOSTRADO EL DESCUENTO DEL 1º TIEMPO AL USUARIO
-        bool cartelonDto2 = false;       //INFORMA SI SE HA MOSTRADO EL DESCUENTO DEL 2º TIEMPO AL USUARIO
-
+        /// <summary>
+        /// Método se encarga de que pasen los minutos 
+        /// </summary>
         public void temporizador_tick(object sender, EventArgs e)
         {
 
-            /*if (segundo == 60)
-            {
-                minuto++;
-                i = 0;
-                segundo = 0;
-            }
-            if (minuto == 60)
-            {
-
-                hora++;
-                minuto = 0;
-                segundo = 0;
-                i = 0;
-            }
-            lblCrono.Content = hora.ToString("00") + ":" + minuto.ToString("00") + ":" + segundo.ToString("00");
-             */
-
-
-
             if (listaEventos.Any(x => x == i))
             {
-                /* var msgDescuento = AutoClosingMessageBox.Show(                                ////////////////////////////////// MUESTRA MINUTRO EN EL QUE SUCEDE UN EVENTO /////////////////////////////////
-                 text: "EVENTO EN EL " + i + " '",
-                 caption: "ÁRBITRO",
-                 timeout: 1500,
-                 buttons: MessageBoxButtons.OK);*/
+                idEvento=EleccionEvento();
 
-                //ElegirBando(EleccionEvento(),local, visitante);
-                EleccionEvento();
+                recursoEvento.Source = new Uri(bdServer.DevuelveRecursoEvento(idEvento));       //LLAMAR MÉTODO QUE MUESTRE RECURSO EVENTO
             }
-
 
 
             if (i > 44)                     //TIEMPO HASTA QUE SE MUESTRA CARTELÓN CON DESCUENTO
@@ -181,9 +143,6 @@ namespace _11FREAKS.Presentacion
             //internal async Task
 
 
-
-
-
             lblCrono.Content = minuto.ToString("00") + "'";         //ACTUALIZA MINUTO DEL PARTIDO
 
             i++;                //CRONO
@@ -194,7 +153,9 @@ namespace _11FREAKS.Presentacion
 
 
 
-
+        /// <summary>
+        /// OnClick botón Iniciar
+        /// </summary>
         private void btnIniciar_Click(object sender, RoutedEventArgs e)     //INICIO CRONOMETRO
         {
             temporizador.Start();
@@ -220,11 +181,10 @@ namespace _11FREAKS.Presentacion
 
         }
 
-        private void btnPausar_Click(object sender, RoutedEventArgs e)
-        {
-            FinalizarPartido();         //INVOCAMOS AL MÉTODO FINALIZAAR PARTIDO
-        }
 
+        /// <summary>
+        /// Método que gestiona la finalización del partido
+        /// </summary>
         private void FinalizarPartido()
         {
             if (temporizador.IsEnabled)
@@ -237,8 +197,30 @@ namespace _11FREAKS.Presentacion
                 lblCrono.Visibility = Visibility.Collapsed;
             }
             lblCrono.Content = string.Empty;
+
+
+            if(GolesLocal>GolesVisitante)                                       //ACTUALIZAMOS ESTADÍSTICAS EQUIPO TRAS EL PARTIDO
+            {
+                bdServer.ResultadosPartido(1, GolesLocal, GolesVisitante);      //VICTORIA
+            }else if (GolesLocal == GolesVisitante)
+            {
+                bdServer.ResultadosPartido(0, GolesLocal, GolesVisitante);      //EMPATE
+            }
+            else
+            {
+                bdServer.ResultadosPartido(2, GolesLocal, GolesVisitante);      //DERROTA
+            }
+
+            bdServer.ActualizacionClasificacion();                              //TRAS FINALIZAR EL PARTIDO, ACTUALIZAMOS CLASIFICACIÓN DE LA LIGA
+
+            Thread.Sleep(3000);                                                 //ESPERAMOS 3 SEGUNDOS Y CERRAMOS LA VENTANA
+            this.Close();
         }
 
+
+        /// <summary>
+        /// Método que gestiona el descanso del partido
+        /// </summary>
         private void DescansoPartido()
         {
             if (temporizador.IsEnabled)
@@ -252,6 +234,13 @@ namespace _11FREAKS.Presentacion
             }
         }
 
+        /// <summary>
+        /// Método que asigna los tiempos de descuento del partido
+        /// </summary>
+        /// <returns>
+        ///     Devuelve minutos de descuento
+        ///     <see cref="int"/>
+        /// </returns>
         private int TiempoDescuento()
         {
             var random = new Random();
@@ -265,13 +254,13 @@ namespace _11FREAKS.Presentacion
             return descuento;
         }
 
-
-        private string GenerarEvento()
-        {
-            return "gol";
-        }
-
-
+        /// <summary>
+        /// Método que genera aleatoriamente el número de eventos que tendrán lugar en el partido
+        /// </summary>
+        /// <returns>
+        ///     Devuelve número de eventos que tendrá el partido
+        ///     <see cref="int"/>
+        /// </returns>
         private int NumeroEventos()
         {
             var random = new Random();
@@ -280,6 +269,16 @@ namespace _11FREAKS.Presentacion
         }
 
 
+        /// <summary>
+        /// Método que asigna cada evento a un minuto del partido de forma aleatoria
+        /// </summary>
+        /// <param name="numEventos">
+        ///     Recibimos número de eventos totales del partido
+        /// </param>
+        /// <returns>
+        ///     Devuelve lista ordenada con los minutos en los que ocurrirán los eventos
+        ///     <see cref="List"/>
+        /// </returns>
         private List<int> SituarEventos(int numEventos)
         {
             List<int> listaEventos = new List<int>();
@@ -291,58 +290,18 @@ namespace _11FREAKS.Presentacion
             }
             listaEventos.Sort();                                //ORDENAMOS EVENTOS POR ORDEN CRONOLÓGICO EN EL PARTIDO
 
-            /* foreach (int minutoEvento in listaEventos)
-             {
- C
-             }*/
-
             return listaEventos;
         }
 
 
-        static string Encriptar(string entrada)
-        {
-            /*
-            StringBuilder sb = new StringBuilder();
 
-            // Initialize a MD5 hash object
-            using (MD5 md5 = MD5.Create())
-            {
-                // Compute the hash of the given string
-                byte[] valorHash = md5.ComputeHash(Encoding.UTF8.GetBytes(entrada));
-
-                // Convert the byte array to string format
-                foreach (byte b in valorHash)
-                {
-                    sb.Append($"{b:X2}");
-                }
-            }
-
-            return sb.ToString();*/
-
-
-            string hash = String.Empty;
-
-            // Initialize a SHA256 hash object
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                // Compute the hash of the given string
-                byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(entrada));
-
-                // Convert the byte array to string format
-                foreach (byte b in hashValue)
-                {
-                    hash += $"{b:X2}";
-                }
-            }
-
-            return hash;
-        }
-
-
-
-
-
+        /// <summary>
+        /// Método que asigna cada evento del partido
+        /// </summary>
+        /// <returns>
+        ///     Devuelve idEvento
+        ///     <see cref="int"/>
+        /// </returns>
         public int EleccionEvento()
         {
             Random random = new Random();
@@ -350,121 +309,134 @@ namespace _11FREAKS.Presentacion
 
             switch (aleatorio)
             {
+                case int n when (n >= 1 && n <= 1):           // ROJA (1%)
+                    var msgEvento5 = AutoClosingMessageBox.Show(
+                        text: "ROJA! EL JUGADOR SE PERDERÁ EL PRÓXIMO PARTIDO",
+                        caption: "ÁRBITRO",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
+                    ElegirBando(6, local, visitante);
+                    return 6;
 
-                case int n when (n >= 1 && n <= 15):
+                case int n when (n >= 2 && n <= 3):           // AUTOGOL (2%)
+                    var msgEvento1 = AutoClosingMessageBox.Show(
+                        text: "NOOO! GOL EN PROPIA",
+                        caption: "ÁRBITRO",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
+                    ElegirBando(2, local, visitante);
+                    return 2;
+
+                case int n when (n >= 4 && n <= 8):           // GOL ANULADO (5%)
+                    var msgEvento2 = AutoClosingMessageBox.Show(
+                        text: "TRAS SER REVISADO, EL GOL HA SIDO ANULADO",
+                        caption: "ÁRBITRO",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
+                    ElegirBando(3, local, visitante);
+                    return 3;
+
+                case int n when (n >= 9 && n <= 18):          // GOL (10%)
                     var msgEvento = AutoClosingMessageBox.Show(
-                    text: "GOOOOL",
-                    caption: "ÁRBITRO",
-                    timeout: 1500,
-                    buttons: MessageBoxButtons.OK);
+                        text: "GOOOOL",
+                        caption: "ÁRBITRO",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
                     Random bando = new Random();
                     ElegirBando(1, local, visitante);
                     return 1;
 
-                case int n when (n >= 16 && n <= 18):
-                    var msgEvento1 = AutoClosingMessageBox.Show(
-                    text: "NOOO! GOL EN PROPIA",
-                    caption: "ÁRBITRO",
-                    timeout: 1500,
-                    buttons: MessageBoxButtons.OK);
-                    ElegirBando(2, local, visitante);
-                    return 2;
-
-                case 19:
-                    var msgEvento2 = AutoClosingMessageBox.Show(
-                    text: "TRAS SER REVISADO, EL GOL HA SIDO ANULADO",
-                    caption: "ÁRBITRO",
-                    timeout: 1500,
-                    buttons: MessageBoxButtons.OK);
-                    ElegirBando(3, local, visitante);
-                    return 3;
-
-                case int n when (n >= 20 && n <= 44):
+                case int n when (n >= 19 && n <= 44):          // FALTA (26%)
                     var msgEvento3 = AutoClosingMessageBox.Show(
-                    text: "FALTA",
-                    caption: "ÁRBITRO",
-                    timeout: 1500,
-                    buttons: MessageBoxButtons.OK);
-                    ElegirBando(4, local, visitante);                //ASIGNAMOS EL EQUIPO QUE HAYA HECHO LA FALTA
+                        text: "FALTA",
+                        caption: "ÁRBITRO",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
+                    ElegirBando(4, local, visitante);
                     return 4;
 
-                case int n when (n >= 45 && n <= 61):
+                case int n when (n >= 45 && n <= 60):          // AMARILLA (16%)
                     var msgEvento4 = AutoClosingMessageBox.Show(
-                    text: "AMARILLA",
-                    caption: "ÁRBITRO",
-                    timeout: 1500,
-                    buttons: MessageBoxButtons.OK);
+                        text: "AMARILLA",
+                        caption: "ÁRBITRO",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
                     ElegirBando(5, local, visitante);
                     return 5;
 
-                case int n when (n >= 62 && n <= 66):
-                    var msgEvento5 = AutoClosingMessageBox.Show(
-                     text: "ROJA! EL JUGADOR SE PERDERÁ EL PRÓXIMO PARTIDO",
-                     caption: "ÁRBITRO",
-                     timeout: 1500,
-                     buttons: MessageBoxButtons.OK);
-                    ElegirBando(6, local, visitante);
-                    return 6;
-
-                case int n when (n >= 67 && n <= 73):
-                    var msgEvento6 = AutoClosingMessageBox.Show(
-                    text: "PENALTI!!!",
-                    caption: "ÁRBITRO",
-                    timeout: 1500,
-                    buttons: MessageBoxButtons.OK);
-                    ElegirBando(7, local, visitante);
-                    Penalti penalti = new Penalti(this, bdServer);              //ABRIMOS VENTANA LANZAMIENTO PENALTI
-                    penalti.ShowDialog();
-                    return 7;
-
-                case int n when (n >= 74 && n <= 93):
-                    var msgEvento7 = AutoClosingMessageBox.Show(
-                    text: "SAQUE DE ESQUINA",
-                    caption: "ÁRBITRO",
-                    timeout: 1500,
-                    buttons: MessageBoxButtons.OK);
-                    ElegirBando(8, local, visitante);
-                    return 8;
-
-                case 94:
-                    var msgEvento8 = AutoClosingMessageBox.Show(
-                    text: "PINTA MAL, PARECE QUE NO PODRÁ CONTINUAR",
-                    caption: "ÁRBITRO",
-                    timeout: 1500,
-                    buttons: MessageBoxButtons.OK);
-                    ElegirBando(9, local, visitante);
-                    return 9;
-
-                case int n when (n >= 95 && n <= 97):
+                case int n when (n >= 61 && n <= 64):          // PALO (4%)
                     var msgEvento9 = AutoClosingMessageBox.Show(
-                    text: "AL PALOO, ESO HA ESTADO CERCA",
-                    caption: "ÁRBITRO",
-                    timeout: 1500,
-                    buttons: MessageBoxButtons.OK);
+                        text: "AL PALOO, ESO HA ESTADO CERCA",
+                        caption: "ÁRBITRO",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
                     ElegirBando(10, local, visitante);
                     return 10;
 
-                case int n when (n >= 98 && n <= 100):
+                case int n when (n >= 65 && n <= 66):          // LESIÓN (2%)
+                    var msgEvento8 = AutoClosingMessageBox.Show(
+                        text: "PINTA MAL, PARECE QUE NO PODRÁ CONTINUAR",
+                        caption: "ÁRBITRO",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
+                    ElegirBando(9, local, visitante);
+                    return 9;
+
+                case int n when (n >= 67 && n <= 91):          // SAQUE DE ESQUINA (25%)
+                    var msgEvento7 = AutoClosingMessageBox.Show(
+                        text: "SAQUE DE ESQUINA",
+                        caption: "ÁRBITRO",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
+                    ElegirBando(8, local, visitante);
+                    return 8;
+
+                case int n when (n >= 92 && n <= 96):          // PENALTI (5%)
+                    var msgEvento6 = AutoClosingMessageBox.Show(
+                        text: "PENALTI!!!",
+                        caption: "ÁRBITRO",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
+                    ElegirBando(7, local, visitante);
+                    Penalti penalti = new Penalti(this, bdServer);  // ABRIMOS VENTANA LANZAMIENTO PENALTI
+                    penalti.ShowDialog();
+                    return 7;
+
+                case int n when (n >= 97 && n <= 100):         // FUERA DE JUEGO (15%)
                     var msgEvento10 = AutoClosingMessageBox.Show(
-                    text: "EL JUGADOR ESTABA ADELANTADO",
-                    caption: "ÁRBITRO",
-                    timeout: 1500,
-                    buttons: MessageBoxButtons.OK);
+                        text: "FUERA DE JUEGO",
+                        caption: "ÁRBITRO",
+                        timeout: 1500,
+                        buttons: MessageBoxButtons.OK);
                     ElegirBando(11, local, visitante);
                     return 11;
 
-                default:                //DEVUELVE -1 EN CASO DE ERROR
+                default:                // DEVUELVE -1 EN CASO DE ERROR
                     return -1;
-
-
-
-
             }
         }
 
 
 
 
+
+
+        /// <summary>
+        /// Método que asinga cada evento a cada equipo
+        /// </summary>
+        /// <param name="evento">
+        ///     Recibimos evento al cual se le asignará un equipo
+        /// </param>
+        /// <param name="local">
+        ///     Recibimos probabilidad de victoria del equipo local
+        /// </param>
+        /// <param name="visitante">
+        ///     Recibimos probabilidad de victoria del equipo visitante
+        /// </param>
+        /// <returns>
+        ///     Devuelve el equipo al cual a sido asignado el evento pasado por parámetro
+        ///     <see cref="string"/>
+        /// </returns>
         public string ElegirBando(int evento, int local, int visitante)
         {
             string resultado = string.Empty;
@@ -606,13 +578,25 @@ namespace _11FREAKS.Presentacion
 
         }
 
+        /// <summary>
+        /// Método que gestiona si se puede cerrar o no la ventana Partido
+        /// </summary>
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            e.Cancel = true;        //CANCELAMOS CIERRE VENTANA
+            if (permitirCierre==false) {
+                e.Cancel = true;        //CANCELAMOS CIERRE VENTANA
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+            
         }
 
 
-
+        /// <summary>
+        /// Método que abre la ventana Penalti y recoge el resultado del mismo
+        /// </summary>
         private void AbrirVentanaPenalti()
         {
             Penalti ventanaPenalti = new Penalti(this, bdServer);
@@ -628,6 +612,9 @@ namespace _11FREAKS.Presentacion
 
         }
 
-
+        private void recursoEvento_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            recursoEvento.Source = null;
+        }
     }
 }

@@ -25,12 +25,10 @@ namespace _11FREAKS.Presentacion
     public partial class MiEquipo : Window
     {
 
-
-
-
         private Datos.BaseDatos miBaseDatos;
         private Datos.BDOnline bdServer;
         Principal principal;
+        private Equipo equipo;
 
         private string idEquipo;
         private Equipo EquipoFav;
@@ -41,12 +39,19 @@ namespace _11FREAKS.Presentacion
             principal = p;
             //miBaseDatos = bd;
             bdServer = bd;
-
-            //fotosJugadores = new ArrayList();
+            equipo=bdServer.DevuelveEquipo();                                   
 
             jugadoresListBox.ItemsSource = bdServer.DevuelveJugadoresEquipo(bdServer.DevuelveIdEquipo());               //CARGAMOS JUGADORES DEL EQUIPO DEL JUGADOR
 
+            lblPresupuesto.Content = "PRESUPUESTO\t"+bdServer.DevuelvePresupuesto().ToString()+" €";                    //CARGAMOS ESTADÍSTICAS EQUIPO
+            lblGoles.Content = "\t  GOLES\nA FAVOR\t"+equipo.GolesAFavor+"\nEN CONTRA\t"+equipo.GolesEnContra;
+            lblResultados.Content = "\t   RESULTADOS\nVICTORIAS\t" + equipo.Victorias + "\nEMPATES\t" + equipo.Empates + "\nDERROTAS\t" + equipo.Derrotas;
 
+
+
+
+
+            //fotosJugadores = new ArrayList();
 
             /*   if (miBaseDatos.DevuelveEquipoFav() == null)
                {
@@ -297,9 +302,9 @@ namespace _11FREAKS.Presentacion
         /// </summary>
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            formacion.Visibility = Visibility.Hidden;
-            racha.Visibility = Visibility.Hidden;
-            goles.Visibility = Visibility.Hidden;
+            lblResultados.Visibility = Visibility.Hidden;
+            lblGoles.Visibility = Visibility.Hidden;
+            lblPresupuesto.Visibility = Visibility.Hidden;
         }
 
 
@@ -390,7 +395,12 @@ namespace _11FREAKS.Presentacion
         }
 
 
-
+        private void menuVolverPrincipal_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            principal.Visibility = Visibility.Visible;
+            this.Close();
+        }
 
 
 
@@ -487,18 +497,6 @@ namespace _11FREAKS.Presentacion
             }
         }
 
-        private void menuSalir_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-            principal.Close();
-        }
-
-        private void menuVolverPrincipal_Click(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-            principal.Visibility = Visibility.Visible;
-            this.Close();
-        }
 
         private void menuMiEquipo_Click(object sender, RoutedEventArgs e)
         {
@@ -529,9 +527,10 @@ namespace _11FREAKS.Presentacion
             }*/
         }
 
-        private void menuVolverPrincipal_Click(object sender, RoutedEventArgs e)
+        private void menuSalir_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
+            principal.Close();
         }
 
         private void menuMiEquipo_Click(object sender, RoutedEventArgs e)
@@ -549,9 +548,44 @@ namespace _11FREAKS.Presentacion
 
         }
 
-        private void menuSalir_Click(object sender, RoutedEventArgs e)
-        {
 
+        private void jugadoresListBox_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            Jugador jugadorSeleccionado = (Jugador)jugadoresListBox.SelectedItem;
+
+            if (jugadorSeleccionado != null)
+            {
+                ContextMenu menu = new ContextMenu();  //CREAMOS MENÚ CONTEXTUAL
+
+                MenuItem venderMenuItem = new MenuItem();           //CREAMOS OPCIONES
+                venderMenuItem.Header = "VENDER";
+                venderMenuItem.Click += (s, args) =>
+                {
+                    bdServer.VenderJugador(jugadorSeleccionado.idEquipo, jugadorSeleccionado.idJugador, jugadorSeleccionado.Valor);
+                };
+
+                MenuItem estadisticasMenuItem = new MenuItem();     
+                estadisticasMenuItem.Header = "ESTADÍSTICAS";
+                estadisticasMenuItem.Click += (s, args) =>
+                {
+                    //bdServer.VenderJugador(jugadorSeleccionado);
+                };
+
+
+                menu.Items.Add(venderMenuItem);     //AGREGAMOS OPCIO0NES AL MENÚ
+                menu.Items.Add(estadisticasMenuItem);
+
+               
+                menu.IsOpen = true;         //GESTIÓN MENÚ CONTEXTUAL
+                e.Handled = true;
+            }
         }
+
+
+
+
+
+
+
     }
 }

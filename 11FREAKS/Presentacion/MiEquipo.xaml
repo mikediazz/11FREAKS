@@ -77,11 +77,7 @@
                 </MenuItem.ToolTip>
             </MenuItem>
 
-            <MenuItem x:Name="menuAyuda" Header="AYUDA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuAyuda_Click">
-
-            </MenuItem>
-
-
+            <MenuItem x:Name="menuAyuda" Header="AYUDA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuAyuda_Click"></MenuItem>
 
             <MenuItem  x:Name="menuOpcAdmin" Header="OPCIONES ADMIN"  FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" IsEnabled="False" Visibility="Hidden">
                 <MenuItem x:Name="menuBorrarUsuario" Header="Borrar Usuario" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuBorrarUsuario_Click"/>
@@ -94,13 +90,11 @@
                         <ToolTip Content="HAGA CONSULTA GENÉRICO O INDIVIDUALIZADA DE LOS USUARIOS"/>
                     </MenuItem.ToolTip>
                 </MenuItem>
-
-
             </MenuItem>
-
+            
         </Menu>
 
-        <Label x:Name="formacion" Content="FORMACION" Visibility="Hidden"  Margin="940,191,10,455" Height="60" Width="280" HorizontalContentAlignment="Center" FontWeight="Black" FontSize="15" BorderBrush="White" BorderThickness="10" Background="DarkGreen" Foreground="White">
+        <Label x:Name="lblResultados" Content="RESULTADOS" Visibility="Visible"  Margin="862,229,58,285" Height="150" Width="280" HorizontalContentAlignment="Left" FontWeight="Black" FontSize="15" BorderBrush="White" BorderThickness="10" Background="DarkGreen" Foreground="White">
             <Label.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="OCULTAR" Click="MenuItem_Click_1"/>
@@ -111,7 +105,7 @@
             </Label.ToolTip>
         </Label>
 
-        <Label x:Name="goles" Content="GOLES" Visibility="Hidden"  Margin="75,210,600,342" FontWeight="Black" FontSize="15" BorderBrush="White" BorderThickness="10" Background="DarkGreen" Foreground="White">
+        <Label x:Name="lblGoles" Content="GOLES" Visibility="Visible" Height="120" Width="240" FontWeight="Black" FontSize="15" BorderBrush="White" BorderThickness="10" Background="DarkGreen" Foreground="White" Margin="850,462,90,102">
             <Label.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="OCULTAR" Click="MenuItem_Click_1"/>
@@ -122,7 +116,8 @@
             </Label.ToolTip>
         </Label>
 
-        <Label x:Name="racha" Content="RACHA" Visibility="Hidden" VerticalAlignment="Top" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Height="70" Width="370" FontWeight="Black" FontSize="15" BorderBrush="White" BorderThickness="10" Background="DarkGreen" Foreground="White" Margin="0,55,0,0">
+
+        <Label x:Name="lblPresupuesto" Content="PRESUPUESTO " Visibility="Visible" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="62" Width="339" FontWeight="Black" FontSize="15" BorderBrush="White" BorderThickness="10" Background="DarkGreen" Foreground="White" Margin="852,104,9,0">
             <Label.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="OCULTAR" Click="MenuItem_Click_1"/>
@@ -132,6 +127,8 @@
                 <ToolTip Content="PUEDE OCULTAR ESTAS VISTAS PULSANDO CLICK DERECHO"/>
             </Label.ToolTip>
         </Label>
+
+
 
         <ListBox x:Name="miListBox" Visibility="Hidden" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800" Height="350" SelectionChanged="miListBox_SelectionChanged">
             <ListBox.ContextMenu>
@@ -148,7 +145,7 @@
 
 
 
-        <ListBox x:Name="jugadoresListBox" Height="600" Width="450" ToolTip="ESTA ES TU PLANTILLA" SelectionChanged="jugadoresListBox_SelectionChanged" HorizontalAlignment="Center" Margin="0,71,0,13">
+        <ListBox x:Name="jugadoresListBox" Height="600" Width="450" ToolTip="ESTA ES TU PLANTILLA" SelectionChanged="jugadoresListBox_SelectionChanged" HorizontalAlignment="Center" Margin="0,71,0,13" MouseLeftButtonUp="jugadoresListBox_MouseLeftButtonUp">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -198,7 +195,7 @@
                         </Setter.Value>
                     </Setter>
                 </Style>
-                
+
             </ListBox.Resources>
         </ListBox>
 

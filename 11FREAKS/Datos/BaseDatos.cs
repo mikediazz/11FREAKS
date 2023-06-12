@@ -10,9 +10,14 @@ using System.Collections;
 using System.Security.Cryptography;
 using System.Security.Policy;
 
+/// <summary>
+/// Clase para la gestión de datos de 11Freaks (APIs, Base Datos...)
+/// </summary>
 namespace _11FREAKS.Datos
 {
-
+    /// <summary>
+    /// Clase para la gestión de la Base de Datos (SQLITE --> MODO OFFLINE)
+    /// </summary>
     public class BaseDatos
     {
         private SQLiteConnection conexion;

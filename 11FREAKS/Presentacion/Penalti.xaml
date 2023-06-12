@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_11FREAKS.Presentacion"
         mc:Ignorable="d"
         d:DesignHeight="450" d:DesignWidth="800"
-        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
     <Grid>
 
         <Grid.Background>

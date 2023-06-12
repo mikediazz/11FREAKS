@@ -16,13 +16,15 @@ using System.Windows.Shapes;
 namespace _11FREAKS.Presentacion
 {
     /// <summary>
-    /// Lógica de interacción para Confirmacion.xaml
+    /// Ventana Auxiliar para pedir confirmación sobre diversas operaciones
     /// </summary>
     public partial class Confirmacion : Window
     {
         Principal principal;
         GestionUsuarios gestion;
         bool respuesta;
+
+
         public Confirmacion(Principal prin)
         {
             InitializeComponent();
@@ -39,6 +41,9 @@ namespace _11FREAKS.Presentacion
 
         }
 
+        /// <summary>
+        /// Lógica de la interacción con el botón "SI"
+        /// </summary>
         private void btnSi_Click(object sender, RoutedEventArgs e)
         {
             respuesta = true;
@@ -51,6 +56,10 @@ namespace _11FREAKS.Presentacion
             this.Close();
         }
 
+
+        /// <summary>
+        /// Lógica de la interacción con el botón "NO"
+        /// </summary>
         private void btnNo_Click(object sender, RoutedEventArgs e)
         {
             respuesta = false;
@@ -63,7 +72,9 @@ namespace _11FREAKS.Presentacion
             this.Close();
         }
 
-
+        /// <summary>
+        /// Devuelve el resultado de la elección
+        /// </summary>
         public bool DevuelveRespuesta()
         {
             return respuesta;

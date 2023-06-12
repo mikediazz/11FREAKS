@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace _11FREAKS.Datos
 {
+    /// <summary>
+    ///     Clase para la gestión de Equipos 
+    /// </summary>
     public class Equipo
     {
-
-        public int idEquipo { get; set; }                                   //PROPIEDADES
+        //PROPIEDADES
+        public int idEquipo { get; set; }                                   
         public string idLiga { get; set; }
         public string Nombre { get; set; }
         public string Abreviatura { get; set; }
@@ -19,6 +22,8 @@ namespace _11FREAKS.Datos
         public int Victorias { get; set; }
         public int Empates { get; set; }
         public int Derrotas { get; set; }
+        public int GolesAFavor { get; set; }
+        public int GolesEnContra { get; set; }
 
 
 
@@ -36,6 +41,8 @@ namespace _11FREAKS.Datos
             Victorias = victorias;
             Empates = empates;
             Derrotas = derrotas;
+            GolesAFavor = 0;
+            GolesEnContra=0;
         }
     }
 }

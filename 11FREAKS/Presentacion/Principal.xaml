@@ -4,6 +4,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:System="clr-namespace:System;assembly=System.Runtime"
+        xmlns:SystemData="clr-namespace:System.Data;assembly=System.Data"
         xmlns:local="clr-namespace:_11FREAKS.Presentacion"
         mc:Ignorable="d"
         Title="Principal" Height="700" Width="1200" Closed="Window_Closed" WindowState="Maximized" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Resources/Logo11Freaks.png">
@@ -39,6 +41,17 @@
             </Image.ToolTip>
         </Image>
 
+        
+        <DataGrid x:Name="tablaOjeadores" Height="450" Width="600" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+                <DataGridTextColumn Header="Equipo" Binding="{Binding Equipo}" />
+                <DataGridTextColumn Header="Amarillas" Binding="{Binding Estadistica}" />
+                <DataGridTextColumn Header="Partidos Jugados" Binding="{Binding PartidosJugados}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+
 
 
         <Menu Width="Auto" Height="50" Background="ForestGreen" VerticalAlignment="Top">
@@ -55,7 +68,7 @@
                 </MenuItem>
             </MenuItem>
 
-            <MenuItem x:Name="menuMiLiga" Header="MI LIGA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuMiEquipo_Click">
+            <MenuItem x:Name="menuMiLiga" Header="MI LIGA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White">
                 <MenuItem x:Name="menuMiClasificacion" Header="CLASIFICACIÓN" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuMiClasificacion_Click"  >
                     <MenuItem.ToolTip>
                         <ToolTip Content="VER CLASIFICACIÓN"/>
@@ -71,20 +84,18 @@
                         <ToolTip Content="DISPUTA PARTIDO"/>
                     </MenuItem.ToolTip>
                 </MenuItem>
+                <MenuItem x:Name="menuMercadoTraspasos" Header="MERCADO TRASPASOS" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuMercadoTraspasos_Click"   >
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="IR A MERCADO TRASPASOS"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
             </MenuItem>
 
 
-            <MenuItem x:Name="menuMiEquipo" Header="MI EQUIPO" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuMiEquipo_Click">
-                <MenuItem x:Name="menuCambiarMiEquipo" Header="CAMBIAR MI EQUIPO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuCambiarMiEquipo_Click" >
-                    <MenuItem.ToolTip>
-                        <ToolTip Content="CAMBIA TU EQUIPO FAVORITO"/>
-                    </MenuItem.ToolTip>
-                </MenuItem>
-                <MenuItem x:Name="menuVerEquipo" Header="IR A MI EQUIPO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuVerEquipo_Click">
-                    <MenuItem.ToolTip>
-                        <ToolTip Content="CONSULTA ESTADÍSTICAS Y DATOS DE TU EQUIPO FAVORITO"/>
-                    </MenuItem.ToolTip>
-                </MenuItem>
+            <MenuItem x:Name="menuMiEquipo" Header="MI EQUIPO" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White"  Click="menuVerEquipo_Click">
+                <MenuItem.ToolTip>
+                    <ToolTip Content="IR A MI EQUIPO"/>
+                </MenuItem.ToolTip>
             </MenuItem>
 
 
@@ -155,10 +166,21 @@
                 </MenuItem>
             </MenuItem>
 
-            <MenuItem x:Name="menuAyuda" Header="AYUDA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" Click="menuAyuda_Click">
+            <MenuItem x:Name="menuAyuda" Header="AYUDA" FontSize="20" Height="50" FontWeight="Heavy" Foreground="White" >
                 <MenuItem.ToolTip>
                     <ToolTip Content="AQUÍ PODRÁS ENCONTRAR LA AYUDA QUE NECESITAS"/>
                 </MenuItem.ToolTip>
+                <MenuItem x:Name="menuDocumentacion" Header="DOCUMENTACIÓN" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuDocumentacion_Click"  >
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="DOCUMENTACIÓN TÉCNICA DE 11FREAKS"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuAyudaUsuario" Header="AYUDA USUARIO" FontSize="15" Height="25" FontWeight="Heavy" Foreground="Black" Click="menuAyuda_Click" >
+                    <MenuItem.ToolTip>
+                        <ToolTip Content="GUÍA USUARIO DE 11FREAKS"/>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+
             </MenuItem>
 
 
@@ -218,7 +240,7 @@
 
 
 
-        <ListBox Visibility="Visible" x:Name="equiposLigaListBox" Height="600" Width="450" ToolTip="ESTA ES TU PLANTILLA"  HorizontalAlignment="Center" Margin="0,71,0,13" SelectionChanged="equiposLigaListBox_SelectionChanged">
+        <ListBox x:Name="jugadoresListBox" Height="600" Width="450" ToolTip="ESTA ES TU PLANTILLA" SelectionChanged="jugadoresListBox_SelectionChanged" HorizontalAlignment="Center" Margin="0,71,0,13">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -226,14 +248,24 @@
                             <ColumnDefinition Width="150"/>
                             <ColumnDefinition Width="250"/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel Grid.Column="0" Margin="10">
-                            <TextBlock Text="{Binding Posicion}" FontWeight="Bold" FontSize="23"/>
-                        </StackPanel>
-
+                        <Image Source="{Binding Foto}" Width="100" Height="100" Margin="10" ClipToBounds="True">
+                            <Image.Clip>
+                                <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
+                            </Image.Clip>
+                        </Image>
                         <StackPanel Grid.Column="1" Margin="10">
-                            <TextBlock FontWeight="Bold" Text="{Binding Nombre}"  FontSize="20"/>
-                            <TextBlock FontStyle="Italic" Text="{Binding Abreviatura}"></TextBlock>
+                            <TextBlock Text="{Binding Nombre}" FontWeight="Bold" FontSize="23"/>
+                            <TextBlock Text="{Binding Posicion}" FontStyle="Italic" FontSize="14">
+                                <Run Text="    #"/>
+                                <Run Text="{Binding Dorsal}"/>
+                            </TextBlock>
+                            <TextBlock Text="{Binding Equipo}"/>
+                            <TextBlock FontSize="14" FontWeight="Bold">
+                                <Run Text="{Binding Valor}"/>
+                                <Run Text="€"/>
+                            </TextBlock>
                         </StackPanel>
+                        <Image Source="{Binding Escudo}" Width="50" Height="50" Grid.Column="2" HorizontalAlignment="Right" Margin="30,50"/>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -261,6 +293,87 @@
 
             </ListBox.Resources>
         </ListBox>
+
+
+
+
+
+        <ListBox Visibility="Visible" x:Name="equiposLigaListBox" Height="600" Width="450" ToolTip="ESTA ES TU PLANTILLA"  HorizontalAlignment="Center" Margin="0,71,0,13" SelectionChanged="equiposLigaListBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="250"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="10">
+                            <TextBlock FontWeight="Bold" FontSize="23">
+                                <Run Text="{Binding Posicion}"/>
+                                <Run Text="º"/>
+                            </TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Margin="10">
+                            <TextBlock FontWeight="Bold" FontSize="23">
+                                <Run Text="{Binding Puntos}"/>
+                                <Run Text="pts"/>
+                            </TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2" Margin="10">
+                            <TextBlock FontWeight="Bold" FontSize="20" Text="{Binding Nombre}"/>
+                            <TextBlock FontStyle="Italic" Text="{Binding Abreviatura}"/>
+                        </StackPanel>
+                    </Grid>
+
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.Resources>
+                <Style TargetType="ListBox">
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="5"/>
+                    <Setter Property="Background" Value="#E8E8E8"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBox">
+                                <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="25">
+                                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                                          VerticalScrollBarVisibility="Hidden">
+                                        <ItemsPresenter/>
+                                    </ScrollViewer>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+            </ListBox.Resources>
+        </ListBox>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace _11FREAKS.Datos
 {
+    /// <summary>
+    ///     Clase para la gestión de Usuarios
+    /// </summary>
     public class Usuarios
     {
         public Usuarios(string usuario, string password, string permisos, string email, string imagen, string equipo, string activo, int idEquipo)
@@ -22,7 +25,9 @@ namespace _11FREAKS.Datos
 
         public Usuarios() { }                                   //CONSTRUCTOR POR DEFECTO
 
-        public string Usuario { get; set; }                    //PROPIEDADES
+
+        //PROPIEDADES
+        public string Usuario { get; set; }                    
         public string Password { get; set; }
         public string Permisos { get; set; }
         public string Email { get; set; }

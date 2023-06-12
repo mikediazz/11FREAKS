@@ -101,6 +101,16 @@ namespace _11FREAKS.Resources {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        public static byte[] bgPartido {
+            get {
+                object obj = ResourceManager.GetObject("bgPartido", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap bgSolid {

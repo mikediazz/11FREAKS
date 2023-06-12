@@ -12,6 +12,9 @@ using System.Data.SQLite;
 
 namespace _11FREAKS.Datos
 {
+    /// <summary>
+    /// Clase para la gestión de la Base de Datos (MySQLServer --> MODO ONLINE)
+    /// </summary>
     public class BDOnline
     {
         //VARIABLES
@@ -31,6 +34,19 @@ namespace _11FREAKS.Datos
 
 
 
+        /// <summary>
+        ///     Método para inicio de sesión de usuario
+        /// </summary>
+        /// <param name="usuario">
+        ///     Recibimos Usuario del Login
+        /// </param>
+        /// <param name="contraseña">
+        ///     Recibimos Contraseña del Usuario
+        /// </param>
+        /// <returns>
+        ///     Devuelve un Booleano con el Resultado de la Operación
+        ///     <see cref="bool"/>
+        /// </returns>
         public bool ConectarServer(string usuario, string contraseña){
 
             using (MySqlConnection conexion = new MySqlConnection(connectionString))
@@ -41,7 +57,7 @@ namespace _11FREAKS.Datos
 
                 using (SHA256 sha256 = SHA256.Create())         // Inicializamos a SHA256 la Contraseña de Login
                 {
-                    byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(contraseña));      //Hasheo
+                    byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(contraseña));      //Hasheo pass
 
                     foreach (byte b in hashValue)       //Convertimos Hash de Byte[] -> String
                     {
@@ -50,18 +66,16 @@ namespace _11FREAKS.Datos
                 }
 
 
-
-
                 try
                 {
                     conexion.Open();
                     comando = new MySqlCommand("SELECT * FROM usuarios WHERE Usuario='" + usuario + "' and Password='" + hash + "'", conexion);
                     lector = comando.ExecuteReader();
 
-                    if (lector.HasRows)                                                              //BUSCAMOS USUARIO
+                    if (lector.HasRows)                                           //BUSCAMOS USUARIO
                     {
                         if (lector.Read())
-                        {                                                         //COMPROBAMOS USUARIO Y SI ES ADMIN
+                        {                                                         //ALMACENAMOS VARIABLES USUARIO
                             nomusuario = lector.GetString(0);
                             password = lector["Password"].ToString();
                             permisos = Boolean.Parse(lector["Permisos"].ToString());
@@ -74,7 +88,7 @@ namespace _11FREAKS.Datos
                         }
                     }
                     else
-                    {                                                                          //SI NO EXISTE USUARIO...s                                                                     
+                    {                                                                          //SI NO EXISTE USUARIO...                                                                     
                         MessageBox.Show("NO SE ENCONTRARON REGISTROS+++");
                     }
 
@@ -126,8 +140,6 @@ namespace _11FREAKS.Datos
                 }
             }
 
-            // MessageBox.Show("EL HASH DE LA CONTRASEÑA ES -->"+hash);
-
             try
             {
                 conexion = null;
@@ -155,8 +167,6 @@ namespace _11FREAKS.Datos
             {
                 MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
             }
-
-
 
             return conDisponible;
         }
@@ -192,13 +202,11 @@ namespace _11FREAKS.Datos
             {
                 byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(contraseña));  //Hasheamos Password
 
-                foreach (byte b in hashValue) //Convertimos el Hash de Byte[] -> String
+                foreach (byte b in hashValue)   //Convertimos el Hash de Byte[] -> String
                 {
                     hash += $"{b:X2}";
                 }
             }
-
-            // MessageBox.Show("EL HASH DE LA CONTRASEÑA ES -->"+hash);
 
             try
             {
@@ -228,8 +236,6 @@ namespace _11FREAKS.Datos
                 MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
             }
 
-
-
             return conDisponible;
         }
 
@@ -256,7 +262,7 @@ namespace _11FREAKS.Datos
         public void CrearEquipo(string equipo, string abreviatura, string liga)
         {
             conexion = null;
-
+            
             try
             {
                 if (conexion == null)
@@ -293,6 +299,163 @@ namespace _11FREAKS.Datos
 
 
 
+        /// <summary>
+        ///     Método para actualizar los registros tras partido
+        /// </summary>
+        /// <param name="resultado">
+        ///     Recibimos Usuario
+        /// </param>
+        /// <param name="golesAFavor">
+        ///     Recibimos Contraseña del Usuario
+        /// </param>
+        /// <param name="golesEnContra">
+        ///     Recibimos correo del Admin
+        /// </param>
+        public void ResultadosPartido(int resultado, int golesAFavor, int golesEnContra)
+        {
+            if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+
+            switch (resultado)
+            {
+                case 0:         //EMPATES
+                    try
+                    {
+                        if (conexion == null)
+                        {
+                            conexion = new MySqlConnection(connectionString);
+                            comando = new MySqlCommand("UPDATE equipos SET Empates=Empates +1, Puntos=Puntos+1 , GolesAFavor=GolesAFavor+" + golesAFavor + " , GolesEnContra=GolesEnContra+ " + golesEnContra + "  WHERE idEquipo='" + idEquipo + "'", conexion);
+
+                            conexion.Open();                                                                         //CARGAMOS TODOS LOS DATOS ACTUALIZADOSs
+                            comando.ExecuteNonQuery();
+                            conexion.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("*NO SE PUDO COMPLETAR LA OPERACIÓN*");
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+                    }
+                    break;
+
+                case 1:         //VICTORIA
+                    try
+                    {
+                        if (conexion == null)
+                        {
+                            conexion = new MySqlConnection(connectionString);
+                            comando = new MySqlCommand("UPDATE equipos SET Victorias=Victorias +1 , Puntos=Puntos+3, GolesAFavor=GolesAFavor+" + golesAFavor + " , GolesEnContra=GolesEnContra+ "+golesEnContra+"  WHERE idEquipo='" + idEquipo + "'", conexion);
+
+                            conexion.Open();                                                                         //CARGAMOS TODOS LOS DATOS ACTUALIZADOSs
+                            comando.ExecuteNonQuery();
+                            conexion.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("*NO SE PUDO COMPLETAR LA OPERACIÓN*");
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+                    }
+                    break; 
+                
+                case 2:        //DERROTA
+                    try
+                    {
+                        if (conexion == null)
+                        {
+                            conexion = new MySqlConnection(connectionString);
+                            comando = new MySqlCommand("UPDATE equipos SET Derrotas=Derrotas+1 , GolesAFavor=GolesAFavor+" + golesAFavor + " , GolesEnContra=GolesEnContra+ " + golesEnContra + "  WHERE idEquipo='" + idEquipo + "'", conexion);
+
+                            conexion.Open();                                                                         //CARGAMOS TODOS LOS DATOS ACTUALIZADOSs
+                            comando.ExecuteNonQuery();
+                            conexion.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("*NO SE PUDO COMPLETAR LA OPERACIÓN*");
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+                    }
+                    break;
+            }
+
+        }
+
+
+
+
+
+
+        /// <summary>
+        ///     Método para actualizar la clasificación de la liga
+        /// </summary>
+        public void ActualizacionClasificacion()
+        {
+
+            ArrayList equiposOrdenados= new ArrayList();
+            equiposOrdenados = DevuelveEquiposLiga("-1");                   //CONSEGUIMOS EQUIPOS ORDENADOS POR PUNTOS
+
+
+            for (int i = 0; i < equiposOrdenados.Count; i++)        //CAMBIARÍA ID LIGA
+            {
+                var equipo =(Equipo)equiposOrdenados[i];           //OBTENEMOS CADA EQUIPO POR ORDEN
+
+                if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
+                {
+                    conexion.Close();
+                    conexion = null;
+                }
+
+                try
+                {
+                    if (conexion == null)
+                    {
+                        conexion = new MySqlConnection(connectionString);
+                        comando = new MySqlCommand($"UPDATE equipos SET Posicion = {i + 1} WHERE idEquipo = {equipo.idEquipo}", conexion);      //ACTUALIZAMOS POSICIÓN DE CADA EQUIPO
+
+                        conexion.Open();                                                                         
+                        comando.ExecuteNonQuery();
+                        conexion.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("*NO SE PUDO COMPLETAR LA OPERACIÓN*");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+                }
+            }
+
+        }
+
+
+
+
+
+        /// <summary>
+        ///     Método para cambiar contraseña de un usuario
+        /// </summary>
+        /// <param name="nuevaPass">
+        ///     Recibimos la nueva contraseña del usuario
+        /// </param>
         public void CambiarContraseña(string nuevaPass)
         {
             if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
@@ -346,7 +509,12 @@ namespace _11FREAKS.Datos
 
 
 
-
+        /// <summary>
+        ///     Método para cambiar email asociado de un usuario
+        /// </summary>
+        /// <param name="nuevoCorreo">
+        ///     Recibimos el nuevo correo contraseña del usuario
+        /// </param>
         public void CambiarCorreo(string usuario, string nuevoCorreo)
         {
             if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
@@ -383,7 +551,12 @@ namespace _11FREAKS.Datos
         }
 
 
-
+        /// <summary>
+        ///     Método para otorgar permisos a un usuario
+        /// </summary>
+        /// <param name="usuario">
+        ///     Recibimos Usuario
+        /// </param>
         public void DarPermisos(string usuario)
         {
             if (conexion != null)       //COMPROBAMOS LA CONEXIÓN
@@ -491,7 +664,16 @@ namespace _11FREAKS.Datos
 
 
 
-
+        /// <summary>
+        ///     Método para devolver idEquipo de un Equipo dado su nombre
+        /// </summary>
+        /// <param name="nombreEquipo">
+        ///     Recibimos Usuario
+        /// </param>
+        /// <returns>
+        ///     Devuelve idEquipo de un Equipo
+        ///     <see cref="int"/>
+        /// </returns>
         public int DevuelveIdEquipo(string nombreEquipo)
         {
            
@@ -532,6 +714,57 @@ namespace _11FREAKS.Datos
 
 
 
+        /// <summary>
+        ///     Método para devolver la url del recurso asociado a un evento
+        /// </summary>
+        /// <param name="idEvento">
+        ///     Recibimos Usuario
+        /// </param>
+        /// <returns>
+        ///     Devuelve url del recurso asociado
+        ///     <see cref="string"/>
+        /// </returns>
+        public string DevuelveRecursoEvento(int idEvento)
+        {
+            string urlRecurso=string.Empty;
+
+            using (MySqlConnection conexion = new MySqlConnection(connectionString))
+            {
+
+                try
+                {
+                    conexion.Open();
+                    comando = new MySqlCommand("SELECT Recurso FROM eventos WHERE idTipoEvento=" + idEvento, conexion);
+                    lector = comando.ExecuteReader();
+
+                    if (lector.HasRows)                                                              //BUSCAMOS USUARIO
+                    {
+                        if (lector.Read())
+                        {                                                         //DEVOLVEMOS IDEQUIPO DEL USUARIO INTRODUCIDO POR TECLADO
+                            urlRecurso = lector.GetString(0);
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTE USUARIO...s                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN " + ex.Message);
+                }
+
+            }//FIN USING 
+            return urlRecurso;
+        }
+
+
+
+
+
 
 
 
@@ -544,7 +777,8 @@ namespace _11FREAKS.Datos
         ///     Recibimos la Contraseña del Usuario
         /// </param>
         /// <returns>
-        ///     Devuelve si cumple los requisitos mínimos de seguridad
+        ///     Devuelve un Booleano con el Resultado de la Operación
+        ///     <see cref="bool"/>
         /// </returns>
         public bool CompruebaPassword(String usuario, String password)
         {
@@ -638,7 +872,6 @@ namespace _11FREAKS.Datos
         ///     Devuelve un ArrayList con todos los Usuario Registrados
         ///     <see cref="ArrayList"/>
         /// </returns>
-
         public ArrayList ConsultaUsuarios()                             //MÉTODO CONEXIÓN BBDD SQLITE
         {
             ArrayList listaUsuarios = new ArrayList();                    //INICIALIZAMOS LISTA CADA VEZ QUE LLAMEMOS AL MÉTODO
@@ -719,7 +952,6 @@ namespace _11FREAKS.Datos
         ///     Devuelve un ArrayList con todos los Usuario Registrados
         ///     <see cref="ArrayList"/>
         /// </returns>
-
         public ArrayList DevuelveJugadoresEquipo(int idEquipo)                  
         {
             ArrayList listaJugadores = new ArrayList();                    //INICIALIZAMOS LISTA CADA VEZ QUE LLAMEMOS AL MÉTODO
@@ -797,7 +1029,6 @@ namespace _11FREAKS.Datos
         ///     Devuelve un ArrayList con todos los Usuario Registrados
         ///     <see cref="ArrayList"/>
         /// </returns>
-
         public ArrayList DevuelveJugadoresLiga(string liga)
         {
             ArrayList listaJugadores = new ArrayList();                    //INICIALIZAMOS LISTA CADA VEZ QUE LLAMEMOS AL MÉTODO
@@ -864,13 +1095,12 @@ namespace _11FREAKS.Datos
 
 
         /// <summary>
-        ///     Función Para Mostrar Todos los Equipos de una misma Liga
+        ///     Función Para Devolver Todos los Equipos de una misma Liga
         /// </summary>
         ///<returns>
         ///     Devuelve un ArrayList con todos los Equipos de una liga
         ///     <see cref="ArrayList"/>
         /// </returns>
-
         public ArrayList DevuelveEquiposLiga(string liga)
         {
             ArrayList listaEquipos = new ArrayList();                    //INICIALIZAMOS LISTA CADA VEZ QUE LLAMEMOS AL MÉTODO
@@ -918,6 +1148,12 @@ namespace _11FREAKS.Datos
 
                     lector.Close();
                     conexion.Close();
+
+                    var equiposOrdenados = listaEquipos.Cast<Equipo>()                          //ORDENA EQUIPOS SEGÚN SU PUNTUACIÓN
+                    .OrderByDescending(e => e.Puntos)
+                    .ToList();
+
+                    listaEquipos = new ArrayList(equiposOrdenados);
                 }
                 else
                 {
@@ -935,7 +1171,85 @@ namespace _11FREAKS.Datos
 
 
 
+        /// <summary>
+        ///     Función Para Devolver Jugadores Trasferibles para el Mercado de Traspasos
+        /// </summary>
+        ///<returns>
+        ///     Devuelve un ArrayList con todos los jugadores que la liga
+        ///     <see cref="ArrayList"/>
+        /// </returns>
+        public ArrayList DevuelveTransferibles(int numMaximo,string liga)
+        {
+            ArrayList listaTransferibles = new ArrayList();             //INICIALIZAMOS LISTA CADA VEZ QUE LLAMEMOS AL MÉTODO
+            int numTransferiblesMax = numMaximo;
+            int cont = 0;
 
+            if (conexion != null)                                       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("SELECT * FROM jugadores WHERE idEquipo=-1  ;", conexion);     //CAMBIAR CUANDO EXISTAN MÁS LIGAS
+
+                    conexion.Open();
+                    lector = comando.ExecuteReader();
+                    if (lector.HasRows)                                                             //BUSCAMOS JUGADOR
+                    {
+                        while (lector.Read() && cont<=20)                                           //OBTENEMOS DATOS JUGADOR
+                        {
+                            Jugador jugador = new Jugador(
+                                lector.GetInt32(0),
+                                lector.GetInt32(1),
+                                lector.GetString(2),
+                                lector.GetInt32(3),
+                                lector.GetInt32(4),
+                                lector.GetString(5),
+                                lector.GetString(6),
+                                lector.GetString(7),
+                                lector.GetString(8),
+                                lector.GetString(9),
+                                lector.GetInt32(10),
+                                lector.GetString(11)
+                            );
+
+
+                            listaTransferibles.Add(jugador);                                        //AÑADIMOS JUGADOR A LA LISTA
+                            cont++;
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTEN JUGADORES...                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+
+                    /*var equiposOrdenados = listaEquipos.Cast<Equipo>()                          //ORDENA EQUIPOS SEGÚN SU PUNTUACIÓN
+                    .OrderByDescending(e => e.Puntos)
+                    .ToList();*/
+
+                    //listaEquipos = new ArrayList(equiposOrdenados);
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+
+            return listaTransferibles;
+        }
 
 
 
@@ -1043,12 +1357,81 @@ namespace _11FREAKS.Datos
 
 
         /// <summary>
+        ///     Función Para Devolver Objeto Equipo para su mejor manejo
+        /// </summary>
+        ///<returns>
+        ///     Devuelve un Objeto Equipo con todos los atributos que contiene la BD
+        ///     <see cref="Equipo"/>
+        /// </returns>
+        public Equipo DevuelveEquipo()
+        {
+            Equipo equipo=null;
+
+            if (conexion != null)                                       //COMPROBAMOS LA CONEXIÓN
+            {
+                conexion.Close();
+                conexion = null;
+            }
+
+            try
+            {
+                if (conexion == null)
+                {
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("SELECT * FROM equipos WHERE idEquipo="+idEquipo+";", conexion);     //CAMBIAR CUANDO EXISTAN MÁS LIGAS
+
+                    conexion.Open();
+                    lector = comando.ExecuteReader();
+                    if (lector.HasRows)                                                             //BUSCAMOS EQUIPO
+                    {
+                        while (lector.Read())                                                       //OBTENEMOS DATOS EQUIPO
+                        {
+                            equipo = new Equipo(
+                                lector.GetInt32(0),
+                                lector.GetString(1),
+                                lector.GetString(2),
+                                lector.GetString(3),
+                                lector.GetInt32(4),
+                                lector.GetInt32(5),
+                                lector.GetInt32(6),
+                                lector.GetInt32(7),
+                                lector.GetInt32(8),
+                                lector.GetInt32(9)
+                            );
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTEN EQUIPOS...                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN*\n" + ex.Message);
+            }
+
+            return equipo;
+        }
+
+
+
+
+
+        /// <summary>
         ///     Método para Comprobar los Permisos de un Usuario
         /// </summary>
         /// <returns>
         ///     Devuelve Si Un Usuario es Admin
         /// </returns>
-
         public bool CompruebaPermisos()
         {
             return permisos;                                        //DEVUELVE SI USUARIO ES ADMINISTRADOR
@@ -1135,13 +1518,6 @@ namespace _11FREAKS.Datos
 
             return conDisponible;
         }
-
-
-
-
-
-
-
 
 
 
@@ -1291,10 +1667,16 @@ namespace _11FREAKS.Datos
 
 
 
-
-
-
-
+        /// <summary>
+        ///     Método para devolver datos jugador dado su nombre (idJugador)
+        /// </summary>
+        /// <param name="idJugador">
+        ///     Recibimos Usuario
+        /// </param>
+        /// <returns>
+        ///     Devuelve nombre del jugador
+        ///     <see cref="string"/>
+        /// </returns>
         public string BuscarJugadorPorId(string idJugador)
         {
 
@@ -1306,10 +1688,10 @@ namespace _11FREAKS.Datos
                     comando = new MySqlCommand("SELECT * FROM jugadores WHERE idjugador='" + idJugador + "'; ", conexion);
                     lector = comando.ExecuteReader();
 
-                    if (lector.HasRows)                                                              //BUSCAMOS USUARIO
+                    if (lector.HasRows)                                                              //BUSCAMOS JUGADOR
                     {
                         if (lector.Read())
-                        {                                                         //COMPROBAMOS USUARIO Y SI ES ADMIN
+                        {                                                         //COMPROBAMOS SI HAY RESULTADOS
                             nomJugador = lector.GetString(2);
                          /*   password = lector["Password"].ToString();
                             permisos = Boolean.Parse(lector["Permisos"].ToString());
@@ -1321,8 +1703,8 @@ namespace _11FREAKS.Datos
                         }
                     }
                     else
-                    {                                                                          //SI NO EXISTE USUARIO...s                                                                     
-                        MessageBox.Show("NO SE ENCONTRARON REGISTROS+++");
+                    {                                                                          //SI NO EXISTE JUGADOR...                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
                     }
 
                     lector.Close();
@@ -1337,6 +1719,50 @@ namespace _11FREAKS.Datos
             return nomJugador;
         }
 
+
+
+        /// <summary>
+        ///     Método para devolver presupuesto de un equipo
+        /// </summary>
+        /// <returns>
+        ///     Devuelve presupuesto de un equipo
+        ///     <see cref="int"/>
+        /// </returns>
+        public int DevuelvePresupuesto()
+        {
+            int presupuesto=0;
+            
+            using (MySqlConnection conexion = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conexion.Open();
+                    comando = new MySqlCommand("SELECT Presupuesto FROM equipos WHERE idEquipo='" + idEquipo + "'; ", conexion);
+                    lector = comando.ExecuteReader();
+
+                    if (lector.HasRows)                                                              //BUSCAMOS EQUIPO
+                    {
+                        if (lector.Read())
+                        {                                                         //COMPROBAMOS SI HAY RESULTADOS
+                            presupuesto = lector.GetInt32(0);
+                        }
+                    }
+                    else
+                    {                                                                          //SI NO EXISTE EQUIPO...                                                                     
+                        MessageBox.Show("NO SE ENCONTRARON REGISTROS");
+                    }
+
+                    lector.Close();
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN " + ex.Message);
+                }
+
+            }//FIN USING 
+            return presupuesto;
+        }
 
 
 
@@ -1356,8 +1782,6 @@ namespace _11FREAKS.Datos
         /// </param>
         public void Traspaso (int idEquipo, int idJugador)
         {
-
-
             try
             {
                 conexion = null;
@@ -1391,16 +1815,164 @@ namespace _11FREAKS.Datos
 
 
 
+        /// <summary>
+        ///     Método para hacer traspaso jugador (MERCADO FICHAJES)
+        /// </summary>
+        /// <param name="precio">
+        ///     Recibimos valor del jugador
+        /// </param>
+        /// <param name="idEquipoActual">
+        ///     Recibimos id Equipo Actual
+        /// </param>
+        /// <param name="idEquipoDestino">
+        ///     Recibimos id Equipo Destino
+        /// </param>
+        /// <param name="idJugador">
+        ///     Recibimos id Jugador
+        /// </param>
+        public void Traspaso(int precio ,int idEquipoActual, int idEquipoDestino, int idJugador)
+        {
+
+
+            if (DevuelvePresupuesto() >precio)              //COMPROBAMOS QUE EL EQUIPO PUEDE HACER FRENTE AL FICHAJE
+            {
+                try
+                {
+                    conexion = null;
+                    if (conexion == null)
+                    {
+                        connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
+                        conexion = new MySqlConnection(connectionString);
+                        comando = new MySqlCommand("UPDATE equipos SET Presupuesto=Presupuesto-" +precio+ " WHERE idEquipo=" + idEquipoDestino + "; ", conexion);
+
+                        conexion.Open();
+                        comando.ExecuteNonQuery();
+                        conexion.Close();
+
+                        MessageBox.Show("CLÁSULA PAGADA");
+                    }
+                    else
+                    {
+                        MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN PAGO CLÁUSULA*");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+                }
+
+
+
+                try
+                {
+                    conexion = null;
+                    if (conexion == null)
+                    {
+                        connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
+                        conexion = new MySqlConnection(connectionString);
+                        comando = new MySqlCommand("UPDATE jugadores SET idEquipo=" + idEquipoDestino + " WHERE idjugador=" + idJugador + " AND idEquipo=" + idEquipoActual + "; ", conexion);
+
+                        conexion.Open();
+                        comando.ExecuteNonQuery();
+                        conexion.Close();
+
+                        MessageBox.Show(BuscarJugadorPorId(idJugador.ToString()).ToUpper() + " HA SIDO TRASPASADO");
+                    }
+                    else
+                    {
+                        MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("NO TIENES EL SUFICIENTE PRESUPUESTO PARA AFRONTAR ESTE FICHAJE");
+            }
 
 
 
 
 
+        }
 
 
 
 
+        /// <summary>
+        ///     Método para hacer venta jugador
+        /// </summary>
+        /// <param name="idEquipo">
+        ///     Recibimos id Equipo
+        /// </param>
+        /// <param name="idJugador">
+        ///     Recibimos id Jugador
+        /// </param>
+        /// <param name="precio">
+        ///     Recibimos valor de venta del jugador
+        /// </param>
+        public void VenderJugador(int idEquipo, int idJugador, int precio)
+        {
+            try
+            {
+                conexion = null;
+                if (conexion == null)
+                {
+                    connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("UPDATE jugadores SET idEquipo=-1  WHERE idjugador=" + idJugador + " AND idEquipo="+idEquipo+"; ", conexion);
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show(BuscarJugadorPorId(idJugador.ToString()) + " HA QUEDADO LIBRE");
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD1*");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+            }
 
 
+
+
+            try
+            {                                                       //EQUIPO OBTIENE DINERO POR LA VENTA
+                conexion = null;
+                if (conexion == null)
+                {
+                    connectionString = "Server=localhost;Database=11freaks;Uid=root;Pwd=CIFP1;";
+                    conexion = new MySqlConnection(connectionString);
+                    comando = new MySqlCommand("UPDATE equipos SET Presupuesto+Presupuesto-" + precio + " WHERE idEquipo=" + idEquipo + "; ", conexion);
+
+                    conexion.Open();
+                    comando.ExecuteNonQuery();
+                    conexion.Close();
+
+                    MessageBox.Show("CLÁSULA RECIBIDA");
+                }
+                else
+                {
+                    MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN PAGO CLÁUSULA*");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("*ERROR AL REALIZAR CONEXIÓN COD2*\n" + ex.Message);
+            }
+
+
+        }
     }
 }

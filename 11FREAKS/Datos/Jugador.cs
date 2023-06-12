@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace _11FREAKS.Datos
 {
+    /// <summary>
+    ///     Método para gestión de Jugadores
+    /// </summary>
     public class Jugador
     {
         public Jugador(int idJugador, int idEquipo, string nombre, int valor, int edad, string foto, string convocable, string dorsal, string escudo, string nacionalidad, int idEquipoOriginal, string posicion)
@@ -26,7 +29,8 @@ namespace _11FREAKS.Datos
 
         public Jugador(){}                                  //CONSTRUCTOR POR DEFECTO
 
-        public int idJugador { get; set; }                  //PROPIEDADES
+        //PROPIEDADES
+        public int idJugador { get; set; }               
         public int idEquipo { get; set; }
         public string Nombre { get; set; }
         public int Valor { get; set; }

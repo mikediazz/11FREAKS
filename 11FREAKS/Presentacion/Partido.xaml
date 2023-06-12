@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_11FREAKS.Presentacion"
         mc:Ignorable="d"
-        Title="Partido" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
+        d:DesignHeight="838.4" d:DesignWidth="1550.4"
+        Title="Partido" Loaded="Window_Loaded" Closing="Window_Closing" WindowState="Maximized">
+
     <Window.Resources>
         <Style x:Key="estiloMarcador" TargetType="Label">
             <Setter Property="FontFamily" Value="60s Scoreboard"/>
@@ -20,29 +22,63 @@
 
     <Grid>
 
-        <Button x:Name="btnIniciar" Content="INICIAR" HorizontalAlignment="Left" Margin="327,358,0,0" VerticalAlignment="Top" Height="56" Width="160" Click="btnIniciar_Click"/>
-        <Label x:Name="lblCrono" Content="EL PARTIDO ESTÁ A PUNTO DE EMPEZAR" FontSize="30" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="94,-4,81,305" Height="NaN" Width="NaN" RenderTransformOrigin="0.495,0.729">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="0.447"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="1.792"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label x:Name="lblInfo" Content="PARTIDO EN CURSO..." FontSize="30" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="104,69,71,232" Height="NaN" Width="NaN" RenderTransformOrigin="0.495,0.729">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="0.447"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="1.792"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label x:Name="lblMarcador" Style="{StaticResource estiloMarcador}" Content="0-0" FontSize="80" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="195,167,181,102"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/bgPartido.avif" Stretch="UniformToFill"/>
+        </Grid.Background>
 
+        <Button x:Name="btnIniciar" Content="INICIAR" HorizontalAlignment="Center" FontSize="50" Height="98" Width="286" Click="btnIniciar_Click" Margin="0,450,0,0" >
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#FF2ECC71" />
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="BorderBrush" Value="#FF27AE60" />
+                    <Setter Property="BorderThickness" Value="8" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="15">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <!-- Cambia el color de fondo al presionar o estar encima del botón -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF27AE60" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#FF1F8C4F" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Border x:Name="borderCrono" BorderBrush="#3F5163" BorderThickness="15" CornerRadius="7" Margin="0,0,0,555" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Label x:Name="lblCrono" Style="{StaticResource estiloMarcador}" Content="00" FontSize="30" Width="90" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White"/>
+        </Border>
+
+
+        <Label x:Name="lblInfo" Content="EL PARTIDO ESTÁ A PUNTO DE EMPEZAR" Foreground="White" FontSize="30" FontWeight="Bold" VerticalContentAlignment="Center" Height="50" Width="700" HorizontalContentAlignment="Center" Margin="0,50,0,200"  >
+        </Label>
+
+
+
+        <MediaElement x:Name="recursoEvento" Height="450" Width="750" MediaEnded="recursoEvento_MediaEnded" Margin="403,278,397,94" />
+
+        <Border x:Name="borderMarcador" BorderBrush="#3F5163" BorderThickness="15" CornerRadius="7" Margin="612,3,613,640" >
+            <Label x:Name="lblMarcador" Style="{StaticResource estiloMarcador}" Content="0-0" FontSize="80" FontWeight="Bold" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Margin="0,-2,-3,-1"/>
+        </Border>
+
+        <Border x:Name="borderLocal" BorderBrush="#3F5163" BorderThickness="15" CornerRadius="7" Margin="408,2,913,676" >
+            <Label x:Name="lblLocal" Style="{StaticResource estiloMarcador}" Content="LOCAL" FontSize="25" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,-2,-3,-1"/>
+        </Border>
+
+        <Border x:Name="borderVisitante" BorderBrush="#3F5163" BorderThickness="15" CornerRadius="7" Margin="920,3,399,675" >
+            <Label x:Name="lblVisitante" Style="{StaticResource estiloMarcador}" Content="VISITANTE" FontSize="25" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,-2,-3,-1"/>
+        </Border>
+        
     </Grid>
 </Window>
 

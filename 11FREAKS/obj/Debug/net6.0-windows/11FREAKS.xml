@@ -22,6 +22,61 @@
             Application Entry Point.
             </summary>
         </member>
+        <member name="T:_11FREAKS.Datos.API_FOOTBALL">
+            <summary>
+            Clase para la gestión de peticiones a la API
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.API_FOOTBALL.#ctor">
+            <summary>
+            Contructor Clase API por defecto (vacío) 
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.API_FOOTBALL.#ctor(_11FREAKS.Presentacion.Principal)">
+            <summary>
+            Contructor Clase API para Ventana Principal
+            </summary>
+            <param name="ppal"/>
+        </member>
+        <member name="M:_11FREAKS.Datos.API_FOOTBALL.JsonJugadores">
+            <summary>
+                Método para cargar jugadores desde API
+            </summary>
+            <returns>
+                Devuelve string con los datos de cada jugador
+                <see cref="T:System.String"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.API_FOOTBALL.MostrarClasificacion">
+            <summary>
+                Método para cargar máximos goleadores de LaLiga
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.API_FOOTBALL.MaximosGoleadores">
+            <summary>
+                Método para cargar clasificación de LaLiga
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.API_FOOTBALL.MaximosAsistentes">
+            <summary>
+                Método para cargar clasificación de LaLiga
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.API_FOOTBALL.MaximosExpulsados">
+            <summary>
+                Método para cargar jugadores más expulsados de LaLiga
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.API_FOOTBALL.MaximosAmarillas">
+            <summary>
+                Método para cargar jugadores que más tarjetas amarillas han recibido de LaLiga
+            </summary>
+        </member>
+        <member name="T:_11FREAKS.Datos.BaseDatos">
+            <summary>
+            Clase para la gestión de la Base de Datos (SQLITE --> MODO OFFLINE)
+            </summary>
+        </member>
         <member name="M:_11FREAKS.Datos.BaseDatos.Conectar(System.String,System.String)">
             <summary>
                 Función Para Hacer Conexión a BBDD
@@ -189,6 +244,26 @@
                  <see cref="T:System.Collections.ArrayList"/>
              </returns>
         </member>
+        <member name="T:_11FREAKS.Datos.BDOnline">
+            <summary>
+            Clase para la gestión de la Base de Datos (MySQLServer --> MODO ONLINE)
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.ConectarServer(System.String,System.String)">
+            <summary>
+                Método para inicio de sesión de usuario
+            </summary>
+            <param name="usuario">
+                Recibimos Usuario del Login
+            </param>
+            <param name="contraseña">
+                Recibimos Contraseña del Usuario
+            </param>
+            <returns>
+                Devuelve un Booleano con el Resultado de la Operación
+                <see cref="T:System.Boolean"/>
+            </returns>
+        </member>
         <member name="M:_11FREAKS.Datos.BDOnline.CrearUsuario(System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
                 Método para crer Usuario (SIGN UP) --> Encriptamos Contraseña
@@ -239,6 +314,49 @@
                 Recibimos id Equipo Favorito (PUEDE SER NULO)
             </param>
         </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.ResultadosPartido(System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Método para actualizar los registros tras partido
+            </summary>
+            <param name="resultado">
+                Recibimos Usuario
+            </param>
+            <param name="golesAFavor">
+                Recibimos Contraseña del Usuario
+            </param>
+            <param name="golesEnContra">
+                Recibimos correo del Admin
+            </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.ActualizacionClasificacion">
+            <summary>
+                Método para actualizar la clasificación de la liga
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.CambiarContraseña(System.String)">
+            <summary>
+                Método para cambiar contraseña de un usuario
+            </summary>
+            <param name="nuevaPass">
+                Recibimos la nueva contraseña del usuario
+            </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.CambiarCorreo(System.String,System.String)">
+            <summary>
+                Método para cambiar email asociado de un usuario
+            </summary>
+            <param name="nuevoCorreo">
+                Recibimos el nuevo correo contraseña del usuario
+            </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DarPermisos(System.String)">
+            <summary>
+                Método para otorgar permisos a un usuario
+            </summary>
+            <param name="usuario">
+                Recibimos Usuario
+            </param>
+        </member>
         <member name="M:_11FREAKS.Datos.BDOnline.DevuelveCorreo">
             <summary>
                 Método para obtener Email actual
@@ -271,6 +389,30 @@
                 Devuelve idEquipo del usuario actual
             </returns>
         </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveIdEquipo(System.String)">
+            <summary>
+                Método para devolver idEquipo de un Equipo dado su nombre
+            </summary>
+            <param name="nombreEquipo">
+                Recibimos Usuario
+            </param>
+            <returns>
+                Devuelve idEquipo de un Equipo
+                <see cref="T:System.Int32"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveRecursoEvento(System.Int32)">
+            <summary>
+                Método para devolver la url del recurso asociado a un evento
+            </summary>
+            <param name="idEvento">
+                Recibimos Usuario
+            </param>
+            <returns>
+                Devuelve url del recurso asociado
+                <see cref="T:System.String"/>
+            </returns>
+        </member>
         <member name="M:_11FREAKS.Datos.BDOnline.CompruebaPassword(System.String,System.String)">
             <summary>
                 Método para Comprobar que la Contraseña es Segura 
@@ -279,7 +421,8 @@
                 Recibimos la Contraseña del Usuario
             </param>
             <returns>
-                Devuelve si cumple los requisitos mínimos de seguridad
+                Devuelve un Booleano con el Resultado de la Operación
+                <see cref="T:System.Boolean"/>
             </returns>
         </member>
         <member name="M:_11FREAKS.Datos.BDOnline.ConsultaUsuarios">
@@ -311,10 +454,19 @@
         </member>
         <member name="M:_11FREAKS.Datos.BDOnline.DevuelveEquiposLiga(System.String)">
              <summary>
-                 Función Para Mostrar Todos los Equipos de una misma Liga
+                 Función Para Devolver Todos los Equipos de una misma Liga
              </summary>
             <returns>
                  Devuelve un ArrayList con todos los Equipos de una liga
+                 <see cref="T:System.Collections.ArrayList"/>
+             </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveTransferibles(System.Int32,System.String)">
+             <summary>
+                 Función Para Devolver Jugadores Trasferibles para el Mercado de Traspasos
+             </summary>
+            <returns>
+                 Devuelve un ArrayList con todos los jugadores que la liga
                  <see cref="T:System.Collections.ArrayList"/>
              </returns>
         </member>
@@ -333,6 +485,15 @@
             <returns>
                 Devuelve Nombre Email de un tercero
             </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelveEquipo">
+             <summary>
+                 Función Para Devolver Objeto Equipo para su mejor manejo
+             </summary>
+            <returns>
+                 Devuelve un Objeto Equipo con todos los atributos que contiene la BD
+                 <see cref="T:_11FREAKS.Datos.Equipo"/>
+             </returns>
         </member>
         <member name="M:_11FREAKS.Datos.BDOnline.CompruebaPermisos">
             <summary>
@@ -389,6 +550,27 @@
                 Recibimos idEquipo del Usuario
             </param>
         </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.BuscarJugadorPorId(System.String)">
+            <summary>
+                Método para devolver datos jugador dado su nombre (idJugador)
+            </summary>
+            <param name="idJugador">
+                Recibimos Usuario
+            </param>
+            <returns>
+                Devuelve nombre del jugador
+                <see cref="T:System.String"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.DevuelvePresupuesto">
+            <summary>
+                Método para devolver presupuesto de un equipo
+            </summary>
+            <returns>
+                Devuelve presupuesto de un equipo
+                <see cref="T:System.Int32"/>
+            </returns>
+        </member>
         <member name="M:_11FREAKS.Datos.BDOnline.Traspaso(System.Int32,System.Int32)">
             <summary>
                 Método para hacer traspaso jugador (CREACIÓN EQUIPO)
@@ -399,6 +581,102 @@
             <param name="idJugador">
                 Recibimos id Jugador
             </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.Traspaso(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Método para hacer traspaso jugador (MERCADO FICHAJES)
+            </summary>
+            <param name="precio">
+                Recibimos valor del jugador
+            </param>
+            <param name="idEquipoActual">
+                Recibimos id Equipo Actual
+            </param>
+            <param name="idEquipoDestino">
+                Recibimos id Equipo Destino
+            </param>
+            <param name="idJugador">
+                Recibimos id Jugador
+            </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.BDOnline.VenderJugador(System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Método para hacer venta jugador
+            </summary>
+            <param name="idEquipo">
+                Recibimos id Equipo
+            </param>
+            <param name="idJugador">
+                Recibimos id Jugador
+            </param>
+            <param name="precio">
+                Recibimos valor de venta del jugador
+            </param>
+        </member>
+        <member name="T:_11FREAKS.Datos.Correo">
+            <summary>
+                Clase para la gestión de envío de Correo Automátivos
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.Correo.#ctor">
+            <summary>
+            Contructor vacío clase Correo
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Datos.Correo.CorreoBienvenida(System.String)">
+            <summary>
+            Método envía correo de bienvenida (Al Registrarse)
+            </summary>
+            <param name="email">
+                Recibimos email del usuario
+            </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.Correo.CorreoContraseña(System.String)">
+            <summary>
+            Método envía correo al usuario tras restablecer su contraseña
+            </summary>
+            <param name="email">
+                Recibimos email del usuario
+            </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.Correo.CorreoCambioEmail(System.String)">
+            <summary>
+            Método envía correo al usuario tras restablecer su email asociado
+            </summary>
+            <param name="email">
+                Recibimos email del usuario
+            </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.Correo.CorreoCuentaEliminada(System.String)">
+            <summary>
+            Método envía correo al usuario tras eliminar su cuenta
+            </summary>
+            <param name="email">
+                Recibimos email del usuario
+            </param>
+        </member>
+        <member name="M:_11FREAKS.Datos.Correo.CorreoBaneo(System.String)">
+            <summary>
+            Método envía correo al usuario tras ser baneado
+            </summary>
+            <param name="email">
+                Recibimos email del usuario
+            </param>
+        </member>
+        <member name="T:_11FREAKS.Datos.Equipo">
+            <summary>
+                Clase para la gestión de Equipos 
+            </summary>
+        </member>
+        <member name="T:_11FREAKS.Datos.Jugador">
+            <summary>
+                Método para gestión de Jugadores
+            </summary>
+        </member>
+        <member name="T:_11FREAKS.Datos.Usuarios">
+            <summary>
+                Clase para la gestión de Usuarios
+            </summary>
         </member>
         <member name="T:_11FREAKS.Presentacion.BusquedaUsuarios">
             <summary>
@@ -418,6 +696,11 @@
                 Función Gestiona Interacción con Elementos de ListBox Usuarios --> Permite Borrado de Usuarios
             </summary>
         </member>
+        <member name="M:_11FREAKS.Presentacion.BusquedaUsuarios.MenuItem_Click_1(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+                Función Gestiona Interacción con Elementos de ListBox Usuarios --> Permite Otorgar Permisos
+            </summary>
+        </member>
         <member name="M:_11FREAKS.Presentacion.BusquedaUsuarios.InitializeComponent">
             <summary>
             InitializeComponent
@@ -425,10 +708,25 @@
         </member>
         <member name="T:_11FREAKS.Presentacion.Confirmacion">
             <summary>
-            Lógica de interacción para Confirmacion.xaml
+            Ventana Auxiliar para pedir confirmación sobre diversas operaciones
             </summary>
             <summary>
             Confirmacion
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Confirmacion.btnSi_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Lógica de la interacción con el botón "SI"
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Confirmacion.btnNo_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Lógica de la interacción con el botón "NO"
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Confirmacion.DevuelveRespuesta">
+            <summary>
+            Devuelve el resultado de la elección
             </summary>
         </member>
         <member name="M:_11FREAKS.Presentacion.Confirmacion.InitializeComponent">
@@ -537,10 +835,102 @@
         </member>
         <member name="T:_11FREAKS.Presentacion.Partido">
             <summary>
-            Interaction logic for MainWindow.xaml
+            Clase que gestiona la Ventana Partido
             </summary>
             <summary>
             Partido
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Método que al cargar ventana Partido, llama a los método encargados de generar los eventos y en el minuto en el que se producirán
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.temporizador_tick(System.Object,System.EventArgs)">
+            <summary>
+            Método se encarga de que pasen los minutos 
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.btnIniciar_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            OnClick botón Iniciar
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.FinalizarPartido">
+            <summary>
+            Método que gestiona la finalización del partido
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.DescansoPartido">
+            <summary>
+            Método que gestiona el descanso del partido
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.TiempoDescuento">
+            <summary>
+            Método que asigna los tiempos de descuento del partido
+            </summary>
+            <returns>
+                Devuelve minutos de descuento
+                <see cref="T:System.Int32"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.NumeroEventos">
+            <summary>
+            Método que genera aleatoriamente el número de eventos que tendrán lugar en el partido
+            </summary>
+            <returns>
+                Devuelve número de eventos que tendrá el partido
+                <see cref="T:System.Int32"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.SituarEventos(System.Int32)">
+            <summary>
+            Método que asigna cada evento a un minuto del partido de forma aleatoria
+            </summary>
+            <param name="numEventos">
+                Recibimos número de eventos totales del partido
+            </param>
+            <returns>
+                Devuelve lista ordenada con los minutos en los que ocurrirán los eventos
+                <see cref="T:System.Windows.Documents.List"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.EleccionEvento">
+            <summary>
+            Método que asigna cada evento del partido
+            </summary>
+            <returns>
+                Devuelve idEvento
+                <see cref="T:System.Int32"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.ElegirBando(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Método que asinga cada evento a cada equipo
+            </summary>
+            <param name="evento">
+                Recibimos evento al cual se le asignará un equipo
+            </param>
+            <param name="local">
+                Recibimos probabilidad de victoria del equipo local
+            </param>
+            <param name="visitante">
+                Recibimos probabilidad de victoria del equipo visitante
+            </param>
+            <returns>
+                Devuelve el equipo al cual a sido asignado el evento pasado por parámetro
+                <see cref="T:System.String"/>
+            </returns>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Método que gestiona si se puede cerrar o no la ventana Partido
+            </summary>
+        </member>
+        <member name="M:_11FREAKS.Presentacion.Partido.AbrirVentanaPenalti">
+            <summary>
+            Método que abre la ventana Penalti y recoge el resultado del mismo
             </summary>
         </member>
         <member name="M:_11FREAKS.Presentacion.Partido.InitializeComponent">
@@ -692,6 +1082,11 @@
             </summary>
         </member>
         <member name="P:_11FREAKS.Resources.Resource1.Ayuda11Freaks">
+            <summary>
+              Busca un recurso adaptado de tipo System.Byte[].
+            </summary>
+        </member>
+        <member name="P:_11FREAKS.Resources.Resource1.bgPartido">
             <summary>
               Busca un recurso adaptado de tipo System.Byte[].
             </summary>
