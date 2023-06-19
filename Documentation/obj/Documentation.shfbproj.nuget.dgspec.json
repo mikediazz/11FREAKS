@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\mdnon\\Desktop\\2DAM\\DI\\EjerDI\\11FREAKS\\Documentation\\Documentation.shfbproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mdnon\\Desktop\\2DAM\\DI\\EjerDI\\11FREAKS\\Documentation\\Documentation.shfbproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mdnon\\Desktop\\2DAM\\DI\\EjerDI\\11FREAKS\\Documentation\\Documentation.shfbproj",
+        "projectName": "Documentation",
+        "projectPath": "C:\\Users\\mdnon\\Desktop\\2DAM\\DI\\EjerDI\\11FREAKS\\Documentation\\Documentation.shfbproj",
+        "packagesPath": "C:\\Users\\mdnon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mdnon\\Desktop\\2DAM\\DI\\EjerDI\\11FREAKS\\Documentation\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mdnon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.33, )"
+            },
+            "System.Data.SQLite.Core": {
+              "target": "Package",
+              "version": "[1.0.117, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
