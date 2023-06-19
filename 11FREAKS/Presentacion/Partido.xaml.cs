@@ -82,9 +82,6 @@ namespace _11FREAKS.Presentacion
             {
                 double width = ActualWidth;
                 double height = ActualHeight;
-                System.Windows.MessageBox.Show(width+"x"+height);
-
-                // Haz lo que necesites con las dimensiones de la ventana maximizada
             }
         }
 
@@ -120,7 +117,6 @@ namespace _11FREAKS.Presentacion
                 i = 45;
                 lblCrono.Content = minuto.ToString("00") + "'";
                 descuento1 = 100;
-
             }
 
             //---------------- DESCANSO ----------------//
@@ -166,6 +162,8 @@ namespace _11FREAKS.Presentacion
                 temporizador.Stop();
                 numero = numero + 1;
             }
+
+            lblInfo.Content = ""; 
 
             /*                      ANIMACIÓN DE PARPADEO
              var fadeAnimation = new DoubleAnimation();
@@ -310,104 +308,104 @@ namespace _11FREAKS.Presentacion
             switch (aleatorio)
             {
                 case int n when (n >= 1 && n <= 1):           // ROJA (1%)
-                    var msgEvento5 = AutoClosingMessageBox.Show(
+                    /*var msgEvento5 = AutoClosingMessageBox.Show(
                         text: "ROJA! EL JUGADOR SE PERDERÁ EL PRÓXIMO PARTIDO",
                         caption: "ÁRBITRO",
                         timeout: 1500,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                     ElegirBando(6, local, visitante);
                     return 6;
 
                 case int n when (n >= 2 && n <= 3):           // AUTOGOL (2%)
-                    var msgEvento1 = AutoClosingMessageBox.Show(
+                    /*var msgEvento1 = AutoClosingMessageBox.Show(
                         text: "NOOO! GOL EN PROPIA",
                         caption: "ÁRBITRO",
                         timeout: 1500,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                     ElegirBando(2, local, visitante);
                     return 2;
 
                 case int n when (n >= 4 && n <= 8):           // GOL ANULADO (5%)
-                    var msgEvento2 = AutoClosingMessageBox.Show(
+                   /*var msgEvento2 = AutoClosingMessageBox.Show(
                         text: "TRAS SER REVISADO, EL GOL HA SIDO ANULADO",
                         caption: "ÁRBITRO",
                         timeout: 1500,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                     ElegirBando(3, local, visitante);
                     return 3;
 
                 case int n when (n >= 9 && n <= 18):          // GOL (10%)
-                    var msgEvento = AutoClosingMessageBox.Show(
+                    /*var msgEvento = AutoClosingMessageBox.Show(
                         text: "GOOOOL",
                         caption: "ÁRBITRO",
                         timeout: 1500,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                     Random bando = new Random();
                     ElegirBando(1, local, visitante);
                     return 1;
 
                 case int n when (n >= 19 && n <= 44):          // FALTA (26%)
-                    var msgEvento3 = AutoClosingMessageBox.Show(
+                    /*var msgEvento3 = AutoClosingMessageBox.Show(
                         text: "FALTA",
                         caption: "ÁRBITRO",
                         timeout: 1500,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                     ElegirBando(4, local, visitante);
                     return 4;
 
                 case int n when (n >= 45 && n <= 60):          // AMARILLA (16%)
-                    var msgEvento4 = AutoClosingMessageBox.Show(
+                    /*var msgEvento4 = AutoClosingMessageBox.Show(
                         text: "AMARILLA",
                         caption: "ÁRBITRO",
                         timeout: 1500,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                     ElegirBando(5, local, visitante);
                     return 5;
 
                 case int n when (n >= 61 && n <= 64):          // PALO (4%)
-                    var msgEvento9 = AutoClosingMessageBox.Show(
+                   /* var msgEvento9 = AutoClosingMessageBox.Show(
                         text: "AL PALOO, ESO HA ESTADO CERCA",
                         caption: "ÁRBITRO",
                         timeout: 1500,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                     ElegirBando(10, local, visitante);
                     return 10;
 
                 case int n when (n >= 65 && n <= 66):          // LESIÓN (2%)
-                    var msgEvento8 = AutoClosingMessageBox.Show(
+                   /* var msgEvento8 = AutoClosingMessageBox.Show(
                         text: "PINTA MAL, PARECE QUE NO PODRÁ CONTINUAR",
                         caption: "ÁRBITRO",
                         timeout: 1500,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                     ElegirBando(9, local, visitante);
                     return 9;
 
                 case int n when (n >= 67 && n <= 91):          // SAQUE DE ESQUINA (25%)
-                    var msgEvento7 = AutoClosingMessageBox.Show(
+                    /*var msgEvento7 = AutoClosingMessageBox.Show(
                         text: "SAQUE DE ESQUINA",
                         caption: "ÁRBITRO",
                         timeout: 1500,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                     ElegirBando(8, local, visitante);
                     return 8;
 
                 case int n when (n >= 92 && n <= 96):          // PENALTI (5%)
-                    var msgEvento6 = AutoClosingMessageBox.Show(
+                   /* var msgEvento6 = AutoClosingMessageBox.Show(
                         text: "PENALTI!!!",
                         caption: "ÁRBITRO",
                         timeout: 1500,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                     ElegirBando(7, local, visitante);
                     Penalti penalti = new Penalti(this, bdServer);  // ABRIMOS VENTANA LANZAMIENTO PENALTI
                     penalti.ShowDialog();
                     return 7;
 
                 case int n when (n >= 97 && n <= 100):         // FUERA DE JUEGO (15%)
-                    var msgEvento10 = AutoClosingMessageBox.Show(
+                   /* var msgEvento10 = AutoClosingMessageBox.Show(
                         text: "FUERA DE JUEGO",
                         caption: "ÁRBITRO",
                         timeout: 1500,
-                        buttons: MessageBoxButtons.OK);
+                        buttons: MessageBoxButtons.OK);*/
                     ElegirBando(11, local, visitante);
                     return 11;
 

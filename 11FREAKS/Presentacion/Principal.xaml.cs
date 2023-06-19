@@ -303,7 +303,7 @@ namespace _11FREAKS.Presentacion
 
         private void menuMiClasificacion_Click(object sender, RoutedEventArgs e)
         {
-            equiposLigaListBox.Visibility = Visibility.Visible;
+            VistaClasificacion();
         }
 
         private void equiposLigaListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -344,6 +344,7 @@ namespace _11FREAKS.Presentacion
         private void menuMercadoTraspasos_Click(object sender, RoutedEventArgs e)
         {
             jugadoresListBox.ItemsSource = bdServer.DevuelveTransferibles(20,"1");               //CARGAMOS JUGADORES DEL MERCADO
+            VistaMercadoFichajes();
         }
 
         private void jugadoresListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -414,6 +415,23 @@ namespace _11FREAKS.Presentacion
 
             }
             
+
+        }
+
+
+
+        public void VistaMercadoFichajes()
+        {
+            jugadoresListBox.Visibility=Visibility.Visible;
+            equiposLigaListBox.Visibility = Visibility.Collapsed;
+
+        }
+
+
+        public void VistaClasificacion()
+        {
+            jugadoresListBox.Visibility = Visibility.Collapsed;
+            equiposLigaListBox.Visibility = Visibility.Visible;
 
         }
 

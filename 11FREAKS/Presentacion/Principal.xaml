@@ -42,7 +42,7 @@
         </Image>
 
         
-        <DataGrid x:Name="tablaOjeadores" Height="450" Width="600" AutoGenerateColumns="False">
+        <DataGrid x:Name="tablaOjeadores" Visibility="Collapsed" Height="450" Width="600" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
                 <DataGridTextColumn Header="Equipo" Binding="{Binding Equipo}" />
